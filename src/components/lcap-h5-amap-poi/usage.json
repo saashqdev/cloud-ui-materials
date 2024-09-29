@@ -10,7 +10,7 @@
         "amap"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-amap-poi></lcap-h5-amap-poi>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-amap-poi></lcap-h5-amap-poi>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-amap-poi",
         "title": "地图选点",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-h5-amap-poi></lcap-h5-amap-poi>\n</template>\n"
             }

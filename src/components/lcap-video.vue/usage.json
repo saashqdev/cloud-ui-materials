@@ -10,7 +10,7 @@
         "Media"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-video :autoplay=\\\"false\\\" draggable :loop=\\\"false\\\"></lcap-video>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-video :autoplay=\\\"false\\\" draggable :loop=\\\"false\\\"></lcap-video>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-video",
         "title": "视频",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-video :autoplay=\"false\" draggable :loop=\"false\"></lcap-video>\n</template>\n"
             }

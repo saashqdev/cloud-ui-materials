@@ -1,40 +1,40 @@
 {
   "lcap-amap-nav/canto": {
     "type": "boolean",
-    "description": "是否开启导航"
+    "description": "Whether to enable navigation"
   },
   "lcap-amap-nav/lalg": {
     "type": "string",
-    "description": "位置坐标"
+    "description": "Location coordinates"
   },
   "lcap-amap-nav/label": {
     "type": "string",
-    "description": "导航页标题显示的名称"
+    "description": "The name displayed in the navigation page title"
   },
   "lcap-amap-nav/target": {
     "type": "string",
     "options": [
       {
         "value": "_blank",
-        "title": "新标签页"
+        "title": "New tab page"
       },
       {
         "value": "_self",
-        "title": "当前窗口"
+        "title": "Current window"
       },
       {
         "value": "_parent",
-        "title": "父级窗口"
+        "title": "Parent window"
       },
       {
         "value": "_top",
-        "title": "顶级窗口"
+        "title": "Top-level window"
       }
     ],
-    "description": "链接打开方式"
+    "description": "How to open link"
   },
   "lcap-amap-nav/callnativet": {
     "type": "boolean",
-    "description": "是否调起高德地图APP"
+    "description": "Whether to launch the Gaode Map APP"
   }
 }

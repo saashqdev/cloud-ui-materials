@@ -2,9 +2,9 @@
 <u-linear-layout gap="small" :class="$style.root" direction="vertical">
     <video :class="$style.video" ref="video" :width="width" :height="height"></video>
     <u-linear-layout gap="small">
-        <u-button @click="open()">开启</u-button>
-        <u-button @click="close()">关闭</u-button>
-        <u-button color="primary" @click="snapshot()">截图</u-button>
+        <u-button @click="open()">Open</u-button>
+        <u-button @click="close()">Close</u-button>
+        <u-button color="primary" @click="snapshot()">Screenshot</u-button>
     </u-linear-layout>
     <canvas v-show="false" ref="canvas"></canvas>
     <u-uploader v-if="url" ref="uploader" readonly
@@ -23,7 +23,7 @@
 </template>
 
 <script>
- // 一堆兼容代码
+ // A bunch of compatible code
 window.URL = (window.URL || window.webkitURL || window.mozURL || window.msURL);
 if (navigator.mediaDevices === undefined) {
     navigator.mediaDevices = {};
@@ -63,13 +63,13 @@ export default {
     },
     methods: {
         open() {
-            // 摄像头调用配置
+            // Camera call configuration
             const mediaOpts = {
                 audio: false,
                 // video: true,
-                // video: { facingMode: 'environment' }, // 或者 "user"
+                // video: { facingMode: 'environment' }, // or "user"
                 video: { width: this.width, height: this.height },
-                // video: { facingMode: { exact: "environment" } }// 或者 "user"
+                // video: { facingMode: { exact: "environment" } }// or "user"
             };
 
             navigator.mediaDevices.getUserMedia(mediaOpts)
@@ -87,7 +87,7 @@ export default {
         close() {
             this.mediaStreamTrack.getVideoTracks().forEach((track) => {
                 track.stop();
-                // context1.clearRect(0, 0,context1.width, context1.height);//清除画布
+                // context1.clearRect(0, 0,context1.width, context1.height);//Clear the canvas
             });
         },
         snapshot() {

@@ -3,7 +3,7 @@
 # UWorkflow 工作流程
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [添加左侧标签](#添加左侧标签)
     - [复杂场景](#复杂场景)
 - [UWorkflow API](#uworkflow-api)
@@ -17,8 +17,8 @@
 
 用于展示工作流程的图。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 使用`<u-workflow>`、`<u-workflow-item>`、`<u-workflow-branch>`三个组件组织图的基本结构。
 

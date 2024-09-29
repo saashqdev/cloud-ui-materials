@@ -10,7 +10,7 @@
         "InfoDisplay"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-community-tabs></lcap-community-tabs>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-community-tabs></lcap-community-tabs>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-community-tabs",
         "title": "社区定制选项卡",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-community-tabs></lcap-community-tabs>\n</template>\n"
             }

@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 ``` html
 <lcap-login src="http://nuims.kubevue.top" useGithub></lcap-login>

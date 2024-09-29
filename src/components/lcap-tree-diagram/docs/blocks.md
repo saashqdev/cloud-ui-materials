@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 ``` html
  <lcap-tree-diagram></lcap-tree-diagram>

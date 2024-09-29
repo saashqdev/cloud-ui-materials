@@ -4,8 +4,8 @@
 
 垂直展示的时间流信息。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <u-timeline>

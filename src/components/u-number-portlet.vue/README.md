@@ -2,8 +2,8 @@
 
 这里是数字窗格的基本描述。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <u-number-portlet title="服务数" :value="20"></u-number-portlet>

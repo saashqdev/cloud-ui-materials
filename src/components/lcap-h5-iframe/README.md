@@ -3,7 +3,7 @@
 # LcapH5Iframe iframe
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -12,8 +12,8 @@
 
 请在这里添加描述
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-h5-iframe src="https://sf.163.com"></lcap-h5-iframe>

@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 在组件上设置`lang`和`content`属性。
 

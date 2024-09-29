@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 使用`v-model`或`:value.sync`双向绑定。
 

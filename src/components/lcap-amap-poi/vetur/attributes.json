@@ -1,6 +1,6 @@
 {
   "lcap-amap-poi/city": {
     "type": "string",
-    "description": "默认城市"
+    "description": "Default city"
   }
 }

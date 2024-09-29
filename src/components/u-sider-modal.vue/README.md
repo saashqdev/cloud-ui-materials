@@ -3,7 +3,7 @@
 # USiderModal 侧边栏弹窗
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -13,8 +13,8 @@
 
 侧边栏弹窗组件
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 设置位置
 

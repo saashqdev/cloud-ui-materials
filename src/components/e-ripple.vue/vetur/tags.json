@@ -3,6 +3,6 @@
     "attributes": [
       "color"
     ],
-    "description": "波纹，插入到需要添加波纹的元素或组件内部"
+    "description": "Ripple, inserted inside the element or component where the ripple needs to be added"
   }
 }

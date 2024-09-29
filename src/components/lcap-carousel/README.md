@@ -3,7 +3,7 @@
 # LcapCarousel 文字滚动条
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -13,8 +13,8 @@
 
 文字滚动条
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` vue
 <template>

@@ -10,7 +10,7 @@
         "Editor"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-rich-text-editor></lcap-rich-text-editor>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-rich-text-editor></lcap-rich-text-editor>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-rich-text-editor",
         "title": "富文本编辑器",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-rich-text-editor></lcap-rich-text-editor>\n</template>\n"
             }

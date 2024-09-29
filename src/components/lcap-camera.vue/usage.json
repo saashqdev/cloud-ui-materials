@@ -1,26 +1,26 @@
 {
     "symbol": "lcap-camera",
-    "name": "摄像头",
+    "name": "Camera",
     "version": "0.1.7",
     "icon": "demo",
     "repoAddr": "",
     "depDescription": {},
-    "description": "开启/关闭摄影头，支持截图、上传等功能",
+    "description": "Turn on/off the camera, support screenshot, upload and other functions",
     "labels": [
         "Form"
     ],
-    "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-camera list-type=\\\"image\\\"\\n    url=\\\"/gateway/lowcode/api/v1/app/upload\\\" url-field=\\\"result\\\"\\n    converter=\\\"json\\\">\\n</lcap-camera>\\n</template>\\n\"}]",
+    "screenShot": "https://static-vusion.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-camera list-type=\\\"image\\\"\\n    url=\\\"/gateway/lowcode/api/v1/app/upload\\\" url-field=\\\"result\\\"\\n    converter=\\\"json\\\">\\n</lcap-camera>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-camera",
-        "title": "摄像头",
-        "description": "开启/关闭摄影头，支持截图、上传等功能",
+        "title": "Camera",
+        "description": "Turn on/off the camera, support screenshot, upload and other functions",
         "category": "Form",
-        "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
+        "screenShot": "https://static-vusion.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-camera list-type=\"image\"\n    url=\"/gateway/lowcode/api/v1/app/upload\" url-field=\"result\"\n    converter=\"json\">\n</lcap-camera>\n</template>\n"
             }
@@ -42,53 +42,53 @@
             },
             {
                 "name": "value",
-                "title": "当前文件列表",
+                "title": "Current File List",
                 "type": "Array",
                 "model": true,
                 "sync": true,
                 "default": [],
-                "description": "当前文件列表"
+                "description": "Current file list"
             },
             {
                 "name": "url",
-                "title": "上传地址",
+                "title": "Upload Address",
                 "type": "string",
                 "required": true,
                 "compType": "interfaceSelect",
                 "default": null,
-                "description": "上传的地址"
+                "description": "Upload address"
             }
         ],
         "methods": [
             {
                 "name": "open",
-                "title": "开启摄像头",
-                "description": "开启摄像头",
+                "title": "Open Camera",
+                "description": "Open the camera",
                 "params": []
             },
             {
                 "name": "close",
-                "title": "关闭摄像头",
-                "description": "关闭摄像头",
+                "title": "Close camera",
+                "description": "Turn off camera",
                 "params": []
             },
             {
                 "name": "snapshot",
                 "title": "截图",
-                "description": "截图并且上传",
+                "description": "Take screenshot and upload",
                 "params": []
             }
         ],
         "events": [
             {
                 "name": "send",
-                "title": "发送时",
-                "description": "刚发送时触发",
+                "title": "When sending",
+                "description": "Triggered when just sent",
                 "params": [
                     {
                         "name": "$event",
                         "type": "object",
-                        "description": "自定义事件对象",
+                        "description": "Custom event object",
                         "schema": {
                             "$ref": "#/systemTypes/UploadEvent"
                         }
@@ -96,29 +96,29 @@
                     {
                         "name": "$event.data",
                         "type": "object",
-                        "description": "进度相关信息"
+                        "description": "Progress related information"
                     },
                     {
                         "name": "$event.preventDefault",
                         "type": "Function",
-                        "description": "阻止上传流程"
+                        "description": "Block the upload process"
                     },
                     {
                         "name": "senderVM",
                         "type": "UUploader",
-                        "description": "发送事件对象"
+                        "description": "Send event object"
                     }
                 ]
             },
             {
                 "name": "progress",
-                "title": "进度改变时",
-                "description": "发送进度改变时触发，在上传进度条时使用",
+                "title": "When progress changes",
+                "description": "Triggered when the sending progress changes, used when uploading the progress bar",
                 "params": [
                     {
                         "name": "$event",
                         "type": "object",
-                        "description": "自定义事件对象",
+                        "description": "Custom event object",
                         "schema": {
                             "$ref": "#/systemTypes/UploadEvent"
                         }
@@ -126,24 +126,24 @@
                     {
                         "name": "$event.data",
                         "type": "object",
-                        "description": "进度相关信息"
+                        "description": "Progress related information"
                     },
                     {
                         "name": "senderVM",
                         "type": "UUploader",
-                        "description": "发送事件对象"
+                        "description": "Send event object"
                     }
                 ]
             },
             {
                 "name": "complete",
-                "title": "上传完成时",
-                "description": "上传完成时触发",
+                "title": "Upload completed",
+                "description": "Triggered when upload is completed",
                 "params": [
                     {
                         "name": "$event",
                         "type": "object",
-                        "description": "自定义事件对象",
+                        "description": "Custom event object",
                         "schema": {
                             "$ref": "#/systemTypes/UploadEvent"
                         }
@@ -151,24 +151,24 @@
                     {
                         "name": "$event.xml",
                         "type": "string",
-                        "description": "服务器回传信息"
+                        "description": "Server response information"
                     },
                     {
                         "name": "senderVM",
                         "type": "UUploader",
-                        "description": "发送事件对象"
+                        "description": "Send event object"
                     }
                 ]
             },
             {
                 "name": "success",
-                "title": "上传成功时",
-                "description": "上传成功时触发",
+                "title": "Upload Successfully",
+                "description": "Triggered when upload is successful",
                 "params": [
                     {
                         "name": "$event",
                         "type": "object",
-                        "description": "自定义事件对象",
+                        "description": "Custom event object",
                         "schema": {
                             "$ref": "#/systemTypes/UploadEvent"
                         }
@@ -176,29 +176,29 @@
                     {
                         "name": "$event.data",
                         "type": "object",
-                        "description": "服务器回传信息对象"
+                        "description": "Server returns information object"
                     },
                     {
                         "name": "$event.file",
                         "type": "object",
-                        "description": "上传文件信息，不包含文件主体内容"
+                        "description": "Upload file information, excluding the file body content"
                     },
                     {
                         "name": "senderVM",
                         "type": "UUploader",
-                        "description": "发送事件对象"
+                        "description": "Send event object"
                     }
                 ]
             },
             {
                 "name": "error",
-                "title": "上传错误时",
-                "description": "上传报错时触发",
+                "title": "Upload Error",
+                "description": "Triggered when an upload error occurs",
                 "params": [
                     {
                         "name": "$event",
                         "type": "object",
-                        "description": "自定义事件对象",
+                        "description": "Custom event object",
                         "schema": {
                             "$ref": "#/systemTypes/UploadErrorEvent"
                         }
@@ -206,32 +206,32 @@
                     {
                         "name": "$event.name",
                         "type": "string",
-                        "description": "错误名"
+                        "description": "Error name"
                     },
                     {
                         "name": "$event.message",
                         "type": "string",
-                        "description": "错误描述"
+                        "description": "Error description"
                     },
                     {
                         "name": "$event.extensions",
                         "type": "string",
-                        "description": "限制类型"
+                        "description": "Restriction type"
                     },
                     {
                         "name": "$event.maxSize",
                         "type": "number",
-                        "description": "限制大小"
+                        "description": "Limit size"
                     },
                     {
                         "name": "$event.size",
                         "type": "number",
-                        "description": "当前大小"
+                        "description": "Current size"
                     },
                     {
                         "name": "senderVM",
                         "type": "UUploader",
-                        "description": "发送事件对象"
+                        "description": "Send event object"
                     }
                 ]
             }

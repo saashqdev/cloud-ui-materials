@@ -1,26 +1,26 @@
 {
     "symbol": "lcap-amap-nav",
-    "name": "地图导航",
+    "name": "Map Navigation",
     "version": "0.1.3",
     "icon": "amapnav",
     "repoAddr": "",
     "depDescription": {},
-    "description": "地图导航",
+    "description": "Map navigation",
     "labels": [
         "amap"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-amap-nav></lcap-amap-nav>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-amap- nav></lcap-amap-nav>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-amap-nav",
-        "title": "地图导航",
-        "description": "地图导航",
+        "title": "Map Navigation",
+        "description": "Map navigation",
         "category": "amap",
         "screenShot": "",
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-amap-nav></lcap-amap-nav>\n</template>\n"
             }
@@ -28,54 +28,54 @@
         "attrs": [
             {
                 "name": "canto",
-                "title": "是否开启导航",
+                "title": "Whether to Enable Navigation",
                 "type": "boolean",
                 "default": true,
-                "description": "是否开启导航"
+                "description": "Whether to enable navigation"
             },
             {
                 "name": "lalg",
-                "title": "位置坐标",
+                "title": "Location Coordinates",
                 "type": "string",
-                "description": "位置坐标"
+                "description": "Location coordinates"
             },
             {
                 "name": "label",
-                "title": "导航名称",
+                "title": "Navigation Name",
                 "type": "string",
-                "description": "导航页标题显示的名称"
+                "description": "The name displayed in the navigation page title"
             },
             {
                 "name": "target",
-                "title": "打开方式",
+                "title": "Open With",
                 "type": "string",
                 "options": [
                     {
                         "value": "_blank",
-                        "title": "新标签页"
+                        "title": "New Tab Page"
                     },
                     {
                         "value": "_self",
-                        "title": "当前窗口"
+                        "title": "Current Window"
                     },
                     {
                         "value": "_parent",
-                        "title": "父级窗口"
+                        "title": "Parent Window"
                     },
                     {
                         "value": "_top",
-                        "title": "顶级窗口"
+                        "title": "Top-Level Window"
                     }
                 ],
                 "default": "_self",
-                "description": "链接打开方式"
+                "description": "How to Open Link"
             },
             {
                 "name": "callnativet",
-                "title": "是否调起高德地图APP",
+                "title": "Whether to Launch the Gaode Map APP",
                 "type": "boolean",
                 "default": true,
-                "description": "是否调起高德地图APP"
+                "description": "Whether to launch the Gaode Map APP"
             }
         ],
         "children": []

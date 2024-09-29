@@ -3,7 +3,7 @@
 # URegionSelect 地区选择
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [双向绑定](#双向绑定)
     - [Placeholder](#placeholder)
     - [隐藏空列表](#隐藏空列表)
@@ -15,8 +15,8 @@
 
 该组件从 UCascadeSelect 继承，仅填充了中国的行政区数据，其他功能与 UCascadeSelect 相同。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <u-linear-layout direction="vertical">

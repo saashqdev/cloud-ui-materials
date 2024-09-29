@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 ``` html
 <lcap-amap-poi></lcap-amap-poi>

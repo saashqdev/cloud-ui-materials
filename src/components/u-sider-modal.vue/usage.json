@@ -10,7 +10,7 @@
         "Container"
     ],
     "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/u-sider-modal@0.2.24/screenshots/0.png",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<u-sider-modal></u-sider-modal>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<u-sider-modal></u-sider-modal>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "u-sider-modal",
         "title": "侧边栏弹窗",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<u-sider-modal></u-sider-modal>\n</template>\n"
             }

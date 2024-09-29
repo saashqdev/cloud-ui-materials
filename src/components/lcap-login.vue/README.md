@@ -3,7 +3,7 @@
 # LcapLogin 登录
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -12,8 +12,8 @@
 
 账号与权限中心的统一认证登录组件
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-login src="http://nuims.kubevue.top"></lcap-login>

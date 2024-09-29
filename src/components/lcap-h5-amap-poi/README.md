@@ -3,7 +3,7 @@
 # LcapH5AmapPoi 地图选点
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -13,8 +13,8 @@
 
 地图选点
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-h5-amap-poi></lcap-h5-amap-poi>

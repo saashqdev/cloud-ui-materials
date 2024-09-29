@@ -1,10 +1,10 @@
-### 基本用法
+### Basic Usage
 
 ``` html
 <lcap-camera></lcap-camera>
 ```
 
-### 默认值
+### Default Value
 
 ```vue
 <template>

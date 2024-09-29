@@ -87,7 +87,7 @@
 
 可以用来展示一张图片，支持设置图片地址。
 
-## 示例
+## Example
 ### Blowers Etc-Air compressor 1
 
 ``` html

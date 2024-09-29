@@ -10,7 +10,7 @@
         "Runtime"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-tk-sfriends></lcap-h5-tk-sfriends>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-tk-sfriends></lcap-h5-tk-sfriends>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-tk-sfriends",
         "title": "泰康sdk分享朋友",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-h5-tk-sfriends></lcap-h5-tk-sfriends>\n</template>\n"
             }

@@ -10,7 +10,7 @@
         "InfoDisplay"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-carousel></lcap-carousel>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-carousel></lcap-carousel>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-carousel",
         "title": "文字滚动条",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-carousel></lcap-carousel>\n</template>\n"
             }

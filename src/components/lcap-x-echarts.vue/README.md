@@ -3,7 +3,7 @@
 # LcapXEcharts 百度图表
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [添加边框](#添加边框)
     - [设置宽高](#设置宽高)
 - [API]()
@@ -22,8 +22,8 @@
 
 更多详细信息请参考 [Echarts 的 API 文档](https://echarts.apache.org/zh/api.html)。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` vue
 <template>

@@ -3,7 +3,7 @@
 # URelationsDiagram 关系图
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [图例与配色](#图例与配色)
     - [节点形状](#节点形状)
     - [曲线类型](#曲线类型)
@@ -19,8 +19,8 @@
 
 基于 [Cytoscape.js](https://js.cytoscape.org)，传入节点和边的数据来表达各种关系的 Canvas 图。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 在`data`属性中传入`nodes`和`edges`的数据。
 

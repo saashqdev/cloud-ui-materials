@@ -10,7 +10,7 @@
         "Container"
     ],
     "screenShot": "http://haproxy-ceph-rgw.qa-ci-lowcode.service.163.org/test/packages/lcap-h5-iframe@0.1.1/screenshots/0.png",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-iframe src=\\\"https://sf.163.com\\\"></lcap-h5-iframe>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-iframe src=\\\"https://sf.163.com\\\"></lcap-h5-iframe>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-iframe",
         "title": "iframe",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-h5-iframe src=\"https://sf.163.com\"></lcap-h5-iframe>\n</template>\n"
             }

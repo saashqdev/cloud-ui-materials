@@ -1,137 +1,137 @@
 - name: lcap-camera
-  title: 摄像头
-  description: 开启/关闭摄影头，支持截图、上传等功能
+  title: Camera
+  description: Turn on/off the camera, support screenshot, upload, etc.
   labels: [Form]
   icon: demo
   attrs:
     - name: width
-      title: 宽度
+      title: Width
       type: string
       default: 800
-      description: 宽度
+      description: Width
     - name: height
-      title: 高度
+      title: Height
       type: string
       default: 600
-      description: 高度
+      description: Height
     - name: value
-      title: 当前文件列表
+      title: Current File List
       type: Array
       model: true
       sync: true
       default: []
-      description: 当前文件列表
+      description: Current file list
     - name: url
-      title: 上传地址
+      title: Upload Address
       type: string
       required: true
       compType: interfaceSelect
       default:
-      description: 上传的地址
+      description: Upload address
   events:
     - name: send
-      title: 发送时
-      description: 刚发送时触发
+      title: When Sending
+      description: Triggered when just sent
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: '#/systemTypes/UploadEvent'
         - name: $event.data
           type: object
-          description: 进度相关信息
+          description: Progress related information
         - name: $event.preventDefault
           type: Function
-          description: 阻止上传流程
+          description: Block the upload process
         - name: senderVM
           type: UUploader
-          description: 发送事件对象
+          description: Send event object
     - name: progress
-      title: 进度改变时
-      description: 发送进度改变时触发，在上传进度条时使用
+      title: When Progress Changes
+      description: Triggered when the sending progress changes, used when uploading the progress bar
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: '#/systemTypes/UploadEvent'
         - name: $event.data
           type: object
-          description: 进度相关信息
+          description: Progress related information
         - name: senderVM
           type: UUploader
-          description: 发送事件对象
+          description: Send event object
     - name: complete
-      title: 上传完成时
-      description: 上传完成时触发
+      title: When the Upload is Complete
+      description: Triggered when the upload is complete
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: '#/systemTypes/UploadEvent'
         - name: $event.xml
           type: string
-          description: 服务器回传信息
+          description: Server response information
         - name: senderVM
           type: UUploader
-          description: 发送事件对象
+          description: Send event object
     - name: success
-      title: 上传成功时
-      description: 上传成功时触发
+      title: When the upload is successful
+      description: Triggered when upload is successful
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: '#/systemTypes/UploadEvent'
         - name: $event.data
           type: object
-          description: 服务器回传信息对象
+          description: Server return information object
         - name: $event.file
           type: object
-          description: 上传文件信息，不包含文件主体内容
+          description: Upload file information, excluding the file body content
         - name: senderVM
           type: UUploader
-          description: 发送事件对象
+          description: Send event object
     - name: error
-      title: 上传错误时
-      description: 上传报错时触发
+      title: Upload Error
+      description: Triggered when an upload error occurs
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: '#/systemTypes/UploadErrorEvent'
         - name: $event.name
           type: string
-          description: 错误名
+          description: Error name
         - name: $event.message
           type: string
-          description: 错误描述
+          description: Error description
         - name: $event.extensions
           type: string
-          description: 限制类型
+          description: Restriction type
         - name: $event.maxSize
           type: number
-          description: 限制大小
+          description: Limit size
         - name: $event.size
           type: number
-          description: 当前大小
+          description: Current size
         - name: senderVM
           type: UUploader
-          description: 发送事件对象
+          description: Send event object
   methods:
     - name: open
-      title: 开启摄像头
-      description: 开启摄像头
+      title: Open the Camera
+      description: Turn on the camera
       params: []
     - name: close
-      title: 关闭摄像头
-      description: 关闭摄像头
+      title: Turn Off the Camera
+      description: Turn off the camera
       params: []
     - name: snapshot
-      title: 截图
-      description: 截图并且上传
+      title: Screenshot
+      description: Take a screenshot and upload it
       params: []

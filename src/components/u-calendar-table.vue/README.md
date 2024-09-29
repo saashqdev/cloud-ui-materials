@@ -3,7 +3,7 @@
 # UCalendarTable 日历表格
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -13,8 +13,8 @@
 
 用于展示大量结构化数据。支持按月展示月内每天的数据。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ```vue
 <template>

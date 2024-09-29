@@ -3,7 +3,7 @@
 # XAceEditor Ace编辑器
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [设置语言](#设置语言)
     - [设置主题](#设置主题)
     - [只读和禁用](#只读和禁用)
@@ -16,8 +16,8 @@
 
 本组件对 Ace Editor 进行了 Vue 的封装，添加样式修饰，接入了 Cloud UI 表单验证体系。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 使用`v-model`或`:value.sync`双向绑定。
 

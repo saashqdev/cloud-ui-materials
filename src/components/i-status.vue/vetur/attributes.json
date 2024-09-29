@@ -1,7 +1,7 @@
 {
   "i-status/name": {
     "type": "string",
-    "description": "图标名称"
+    "description": "Icon name"
   },
   "i-status/size": {
     "type": "enum",
@@ -10,6 +10,6 @@
       "normal",
       "large"
     ],
-    "description": "图标尺寸"
+    "description": "Icon size"
   }
 }

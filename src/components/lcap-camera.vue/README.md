@@ -1,27 +1,27 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapCamera 摄像头
+# LcapCamera Camera
 
-- [示例](#示例)
-    - [基本用法](#基本用法)
-    - [默认值](#默认值)
-- [API]()
+- [Example](#example)
+    - [Basic Usage](#Basic Usage)
+    - [Default Value](#default value)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **Form**
 
-开启/关闭摄影头，支持截图、上传等功能
+Turn on/off the camera, support screenshots, uploads and other functions
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-camera></lcap-camera>
 ```
 
-### 默认值
+### Default Value
 
 ```vue
 <template>
@@ -47,88 +47,88 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| width | string |  | `800` | 宽度 |
-| height | string |  | `600` | 高度 |
-| value.sync, v-model | Array |  | `[]` | 当前文件列表 |
-| url | string |  |  | 上传的地址 |
+| width | string | | `800` | Width |
+| height | string | | `600` | Height |
+| value.sync, v-model | Array | | `[]` | Current file list |
+| url | string | | | Upload address |
 
 ### Events
 
 #### @send
 
-刚发送时触发
+Triggered when just sent
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.data | object | 进度相关信息 |
-| $event.preventDefault | Function | 阻止上传流程 |
-| senderVM | UUploader | 发送事件对象 |
+| $event | object | Custom event object |
+| $event.data | object | Progress related information |
+| $event.preventDefault | Function | Prevent upload process |
+| senderVM | UUploader | Send event object |
 
 #### @progress
 
-发送进度改变时触发，在上传进度条时使用
+Triggered when sending progress changes, used when uploading progress bar
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.data | object | 进度相关信息 |
-| senderVM | UUploader | 发送事件对象 |
+| $event | object | Custom event object |
+| $event.data | object | Progress related information |
+| senderVM | UUploader | Send event object |
 
 #### @complete
 
-上传完成时触发
+Triggered when upload is complete
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.xml | string | 服务器回传信息 |
-| senderVM | UUploader | 发送事件对象 |
+| $event | object | Custom event object |
+| $event.xml | string | Server response information |
+| senderVM | UUploader | Send event object |
 
 #### @success
 
-上传成功时触发
+Triggered when upload is successful
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.data | object | 服务器回传信息对象 |
-| $event.file | object | 上传文件信息，不包含文件主体内容 |
-| senderVM | UUploader | 发送事件对象 |
+| $event | object | Custom event object |
+| $event.data | object | Server returns information object |
+| $event.file | object | Upload file information, excluding file body content |
+| senderVM | UUploader | Send event object |
 
 #### @error
 
-上传报错时触发
+Triggered when an upload error occurs
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.name | string | 错误名 |
-| $event.message | string | 错误描述 |
-| $event.extensions | string | 限制类型 |
-| $event.maxSize | number | 限制大小 |
-| $event.size | number | 当前大小 |
-| senderVM | UUploader | 发送事件对象 |
+| $event | object | Custom event object |
+| $event.name | string | Error name |
+| $event.message | string | Error description |
+| $event.extensions | string | Restriction type |
+| $event.maxSize | number | Limit size |
+| $event.size | number | Current size |
+| senderVM | UUploader | Send event object |
 
 Methods
 
 #### open()
 
-开启摄像头
+Turn on camera
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### close()
 
-关闭摄像头
+Turn off camera
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### snapshot()
 
-截图并且上传
+Take a screenshot and upload it
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

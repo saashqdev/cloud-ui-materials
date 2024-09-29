@@ -3,7 +3,7 @@
 # UColorPicker 颜色选择器
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [直接使用调色板](#直接使用调色板)
     - [直接使用默认值](#直接使用默认值)
 - [UColorPicker API](#ucolorpicker-api)
@@ -17,8 +17,8 @@
 
 用于选择颜色的组件。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` vue
 <template>

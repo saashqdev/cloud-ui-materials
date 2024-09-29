@@ -1,20 +1,20 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapAmapPoi 地图选点
+# LcapAmapPoi Map Point Selection
 
-- [示例](#示例)
-    - [基本用法](#基本用法)
-- [API]()
+- [Example](#example)
+    - [Basic Usage](#Basic Usage)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **amap**
 
-地图选点
+Map point selection
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-amap-poi></lcap-amap-poi>
@@ -25,17 +25,17 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| city | string |  |  | 默认城市 |
+| city | string | | | Default city |
 
 ### Events
 
 #### @select
 
-点被选中后，可以调用逻辑（如，选择城北体育公园后，自动在详细地址输入框填充详细地址信息）
+After the click is selected, the logic can be called (for example, after selecting Chengbei Sports Park, the detailed address information will be automatically filled in the detailed address input box)
 
 Methods
 
 #### poiPicked()
 
-POI点被选中后，获取经纬度以及详细地址信息
+After the POI point is selected, obtain the longitude, latitude and detailed address information
 

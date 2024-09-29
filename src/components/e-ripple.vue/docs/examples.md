@@ -1,13 +1,13 @@
-### 基本用法
+### Basic Usage
 
 ``` html
 <u-linear-layout>
     <u-button>
-        按钮
+        Button
         <e-ripple></e-ripple>
     </u-button>
     <u-button color="primary">
-        按钮
+        Button
         <e-ripple color="light"></e-ripple>
     </u-button>
 </u-linear-layout>

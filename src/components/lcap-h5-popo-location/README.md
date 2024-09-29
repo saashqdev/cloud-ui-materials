@@ -3,7 +3,7 @@
 # LcapH5PopoLocation popo定位
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -13,8 +13,8 @@
 
 请在这里添加描述
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-h5-popo-location></lcap-h5-popo-location>

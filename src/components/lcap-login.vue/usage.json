@@ -10,7 +10,7 @@
         "runtime"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-login src=\\\"http://nuims.kubevue.top\\\"></lcap-login>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-login src=\\\"http://nuims.kubevue.top\\\"></lcap-login>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-login",
         "title": "登录",
@@ -19,7 +19,7 @@
         "screenShot": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-login src=\"http://nuims.kubevue.top\"></lcap-login>\n</template>\n"
             }

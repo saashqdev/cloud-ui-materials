@@ -3,7 +3,7 @@
 # LcapSignature 签名板
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [切换语言版本](#切换语言版本)
     - [关闭笔锋](#关闭笔锋)
     - [是否允许重新签名](#是否允许重新签名)
@@ -19,8 +19,8 @@
 
 用于获取电子签名
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-signature></lcap-signature>

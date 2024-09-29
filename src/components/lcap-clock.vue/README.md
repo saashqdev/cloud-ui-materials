@@ -3,7 +3,7 @@
 # LcapClock 时间
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [格式化设置](#格式化设置)
 - [API]()
     - [Props/Attrs](#propsattrs)
@@ -12,8 +12,8 @@
 
 时间显示器
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-clock></lcap-clock>

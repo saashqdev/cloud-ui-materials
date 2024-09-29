@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 使用`<u-workflow>`、`<u-workflow-item>`、`<u-workflow-branch>`三个组件组织图的基本结构。
 

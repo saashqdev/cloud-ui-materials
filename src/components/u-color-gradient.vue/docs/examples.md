@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 ``` html
 <u-linear-layout direction="vertical" gap="small">
@@ -24,7 +24,7 @@
 </u-linear-layout>
 ```
 
-### 基本用法
+### Basic Usage
 
 ``` html
 <u-linear-layout direction="vertical" gap="small">

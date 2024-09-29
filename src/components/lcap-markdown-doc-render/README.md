@@ -3,7 +3,7 @@
 # LcapMarkdownDocRender 文档渲染组件
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -12,8 +12,8 @@
 
 渲染Markdown文档的组件
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` vue
 <template>

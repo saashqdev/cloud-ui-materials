@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 在`data`属性中传入`nodes`和`edges`的数据。
 

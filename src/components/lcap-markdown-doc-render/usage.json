@@ -10,7 +10,7 @@
         "Other"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-markdown-doc-render></lcap-markdown-doc-render>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-markdown-doc-render></lcap-markdown-doc-render>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-markdown-doc-render",
         "title": "文档渲染组件",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-markdown-doc-render></lcap-markdown-doc-render>\n</template>\n"
             }

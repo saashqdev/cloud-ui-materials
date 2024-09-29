@@ -3,12 +3,12 @@
 # USummaryCard 摘要卡片
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Slots](#slots)
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <u-summary-card>

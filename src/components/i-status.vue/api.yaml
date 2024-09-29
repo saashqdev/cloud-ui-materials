@@ -1,15 +1,15 @@
 - name: i-status
-  title: 状态图标
-  description: 请在这里添加描述
+  title: Status Icon
+  description: Please add a description here
   attrs:
     - name: name
       type: string
-      description: 图标名称
+      description: Icon name
     - name: size
       type: enum
       options: [small, normal, large]
       default: normal
-      description: 图标尺寸
+      description: Icon size
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.

@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/i-status.vue",
-  "description": "状态图标",
+  "description": "Status icon",
   "version": "0.1.1",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -36,7 +36,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "状态图标",
+    "title": "Status icon",
     "category": "icon",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

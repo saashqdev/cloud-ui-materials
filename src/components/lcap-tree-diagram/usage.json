@@ -10,7 +10,7 @@
         "Other"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n <lcap-tree-diagram></lcap-tree-diagram>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n <lcap-tree-diagram></lcap-tree-diagram>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-tree-diagram",
         "title": "树状结构图",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n <lcap-tree-diagram></lcap-tree-diagram>\n</template>\n"
             }

@@ -7,7 +7,7 @@
     - [引入](#引入)
     - [打包配置](#打包配置)
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
@@ -49,8 +49,8 @@ install(Vue, { XHighlight });
 
 或者用 dll 进行处理。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 在组件上设置`lang`和`content`属性。
 

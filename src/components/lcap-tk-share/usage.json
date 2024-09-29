@@ -10,7 +10,7 @@
         "Runtime"
     ],
     "screenShot": "http://ceph.lcap.ha.test.com/lcap-test-static/packages/lcap-h5-tk-share@0.1.9/screenshots/0.png",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-tk-share></lcap-h5-tk-share>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-tk-share></lcap-h5-tk-share>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-tk-share",
         "title": "泰康sdk分享",
@@ -20,7 +20,7 @@
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-h5-tk-share></lcap-h5-tk-share>\n</template>\n"
             }

@@ -3,7 +3,7 @@
 # UChip 薯条
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [可删除的](#可删除的)
 - [API]()
     - [Props/Attrs](#propsattrs)
@@ -14,8 +14,8 @@
 
 类似于标签组件，用于条目的增删改查。
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <u-chip>Chip</u-chip>

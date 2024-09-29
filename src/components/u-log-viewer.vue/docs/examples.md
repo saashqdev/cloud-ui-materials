@@ -1,4 +1,4 @@
-### 基本用法
+### Basic Usage
 
 将日志直接传入`content`属性。
 

@@ -3,7 +3,7 @@
 # LcapRichTextEditor 富文本编辑器
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [只读模式](#只读模式)
     - [可选功能](#可选功能)
     - [表单校验](#表单校验)
@@ -16,8 +16,8 @@
 
 基于第三方富文本插件Quill Editor进行封装
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 通过双向绑定输入内容
 

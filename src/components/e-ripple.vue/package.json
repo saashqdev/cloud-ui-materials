@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/e-ripple.vue",
-  "description": "波纹，插入到需要添加波纹的元素或组件内部。",
+  "description": "Ripple, inserted inside the element or component where the ripple needs to be added.",
   "version": "0.9.1",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -35,7 +35,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "波纹",
+    "title": "Ripple",
     "category": "effect",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

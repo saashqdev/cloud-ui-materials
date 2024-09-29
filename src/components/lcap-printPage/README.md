@@ -3,7 +3,7 @@
 # LcapPrintPage 页面打印
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [开启自动下载](#开启自动下载)
     - [修改生成的文件类型为图片](#修改生成的文件类型为图片)
     - [控制打印的DOM元素](#控制打印的dom元素)
@@ -21,8 +21,8 @@
 
 打印当前页面内容生成PDF或图片
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-printPage></lcap-printPage>

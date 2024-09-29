@@ -1,26 +1,26 @@
 {
     "symbol": "lcap-amap-poi",
-    "name": "地图选点",
+    "name": "Map point selection",
     "version": "0.1.3",
     "icon": "amappoi",
     "repoAddr": "",
     "depDescription": {},
-    "description": "地图选点",
+    "description": "Map point selection",
     "labels": [
         "amap"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-amap-poi></lcap-amap-poi>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-amap- poi></lcap-amap-poi>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-amap-poi",
-        "title": "地图选点",
-        "description": "地图选点",
+        "title": "Map Point Selection",
+        "description": "Map point selection",
         "category": "amap",
         "screenShot": "",
         "drawings": "",
         "blocks": [
             {
-                "title": "基本用法",
+                "title": "Basic Usage",
                 "description": "",
                 "code": "<template>\n<lcap-amap-poi></lcap-amap-poi>\n</template>\n"
             }
@@ -28,23 +28,23 @@
         "attrs": [
             {
                 "name": "city",
-                "title": "默认城市",
+                "title": "Default City",
                 "type": "string",
-                "description": "默认城市"
+                "description": "Default city"
             }
         ],
         "methods": [
             {
                 "name": "poiPicked",
-                "title": "POI点",
-                "description": "POI点被选中后，获取经纬度以及详细地址信息"
+                "title": "POI Point",
+                "description": "After the POI point is selected, obtain the longitude, latitude and detailed address information"
             }
         ],
         "events": [
             {
                 "name": "select",
-                "title": "选择后",
-                "description": "点被选中后，可以调用逻辑（如，选择城北体育公园后，自动在详细地址输入框填充详细地址信息）"
+                "title": "After Selection",
+                "description": "After the point is selected, logic can be called (for example, after selecting Chengbei Sports Park, detailed address information will be automatically filled in the detailed address input box)"
             }
         ],
         "children": []

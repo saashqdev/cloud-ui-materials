@@ -3,7 +3,7 @@
 # LcapWangEditor 富文本
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [自定义上传地址](#自定义上传地址)
     - [只读模式](#只读模式)
     - [表单验证](#表单验证)
@@ -15,8 +15,8 @@
 
 请在这里添加描述
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
 <lcap-wang-editor value="<p>hello</p><img src='https://p3-passport.byteimg.com/img/user-avatar/834687b5e4137f4d998a95be7330f543~180x180.awebp'>"></lcap-wang-editor>

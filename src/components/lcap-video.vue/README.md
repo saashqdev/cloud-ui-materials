@@ -3,7 +3,7 @@
 # LcapVideo 视频
 
 - [示例](#示例)
-    - [基本用法](#基本用法)
+    - [Basic Usage](#Basic Usage)
     - [断点播放](#断点播放)
 - [API]()
     - [Props/Attrs](#propsattrs)
@@ -14,8 +14,8 @@
 
 基于 video.js 的视频播放组件
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` vue
 <template>

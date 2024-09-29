@@ -1,21 +1,21 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapAmapNav 地图导航
+# LcapAmapNav Map Navigation
 
-- [示例](#示例)
-    - [基本用法](#基本用法)
-- [API]()
+- [Example](#example)
+    - [Basic Usage](#Basic Usage)
+-[API]()
     - [Props/Attrs](#propsattrs)
 
-**amap**
+**AMAP**
 
-地图导航
+Map navigation
 
-## 示例
-### 基本用法
+## Example
+### Basic Usage
 
 ``` html
-<lcap-amap-nav label="钱江新城" lalg="120.213982,30.250397" target="_blank"></lcap-amap-nav>
+<lcap-amap-nav label="New York City" lalg="120.213982,30.250397" target="_blank"></lcap-amap-nav>
 ```
 
 ## API
@@ -23,9 +23,9 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| canto | boolean |  | `true` | 是否开启导航 |
-| lalg | string |  |  | 位置坐标 |
-| label | string |  |  | 导航页标题显示的名称 |
-| target | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'_self'` | 链接打开方式 |
-| callnativet | boolean |  | `true` | 是否调起高德地图APP |
+| canto | boolean | | `true` | Whether to enable navigation |
+| lalg | string | | | Location coordinates |
+| label | string | | | The name displayed in the navigation page title |
+| target | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'_self'` | Link opens Way |
+| callnativet | boolean | | `true` | Whether to call Amap APP |
 
