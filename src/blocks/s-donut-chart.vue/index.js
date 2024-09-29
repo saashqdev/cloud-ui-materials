@@ -15,7 +15,7 @@ export default {
             asyncLib,
             options: {
                 title: {
-                    text: '甜圈图示例',
+                    text: 'Donut Chart Example',
                     x: 'left',
                 },
                 tooltip: {
@@ -23,13 +23,13 @@ export default {
                     formatter: '{a} <br/>{b}: {c} ({d}%)',
                 },
                 legend: {
-                    orient: 'vertical',
+                    orientation: 'vertical',
                     x: 'right',
-                    data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
+                    data: ['Direct Access', 'Email Marketing', 'Affiliate Advertising', 'Video Advertising', 'Search Engine'],
                 },
                 series: [
                     {
-                        name: '访问来源',
+                        name: 'Visit Source',
                         type: 'pie',
                         radius: ['45%', '60%'],
                         avoidLabelOverlap: false,
@@ -56,11 +56,11 @@ export default {
                             borderColor: 'white',
                         },
                         data: [
-                            { value: 335, name: '直接访问' },
-                            { value: 310, name: '邮件营销' },
-                            { value: 234, name: '联盟广告' },
-                            { value: 135, name: '视频广告' },
-                            { value: 1548, name: '搜索引擎' },
+                            { value: 335, name: 'Direct Access' },
+                            { value: 310, name: 'Email Marketing' },
+                            { value: 234, name: 'Affiliate Advertising' },
+                            { value: 135, name: 'Video Advertisement' },
+                            { value: 1548, name: 'Search Engine' },
                         ],
                     },
                 ],

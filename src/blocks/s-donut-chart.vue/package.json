@@ -2,7 +2,7 @@
   "name": "@cloud-ui/s-donut-chart.vue",
   "description": "Cloud UI - SDonutChart",
   "version": "0.1.3",
-  "author": "Rainfore <rainforest92@126.com>",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -39,14 +39,14 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "甜圈图",
+    "title": "Donut diagram",
     "category": "chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [
       "https://unpkg.com/@cloud-ui/s-donut-chart.vue@0.1.3/screenshots/0.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   }
 }

@@ -33,14 +33,14 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "基础详情",
+    "title": "Basic details",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-basic-detail.vue@0.1.5/screenshots/0.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "dependencies": {},

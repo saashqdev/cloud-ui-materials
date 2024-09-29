@@ -1,6 +1,6 @@
-# SBasicDetail 基础详情
+# SBasicDetail Basic Details
 
-请在这里添加描述
+Please add description here
 
 ``` html
 <s-basic-detail></s-basic-detail>

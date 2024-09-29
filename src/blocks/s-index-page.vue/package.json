@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/s-index-page.vue",
-  "description": "首页",
+  "description": "Home Page",
   "version": "0.1.4",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -29,14 +29,14 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "首页",
+    "title": "Home Page",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-index-page.vue@0.1.1/screenshots/0.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "dependencies": {},

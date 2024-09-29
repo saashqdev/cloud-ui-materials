@@ -32,7 +32,7 @@
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "dependencies": {},

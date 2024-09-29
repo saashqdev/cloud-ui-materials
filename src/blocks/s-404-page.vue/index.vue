@@ -3,8 +3,8 @@
     <u-linear-layout direction="vertical" justify="center">
         <img src="https://static-kubevue.s3.amazonaws.com/assets/error-code.svg" width="240">
         <h1 :class="$style.title">404</h1>
-        <h2 :class="$style.h2">抱歉，你访问的页面不存在</h2>
-        <u-button color="primary" shape="round" href="/">返回首页</u-button>
+        <h2 :class="$style.h2">Sorry, the page you visited does not exist</h2>
+        <u-button color="primary" shape="round" href="/">Return to homepage</u-button>
     </u-linear-layout>
 </u-linear-layout>
 </template>

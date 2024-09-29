@@ -1,6 +1,6 @@
-# SBasicForm 基础表单
+# SBasicForm Basic Form
 
-用于创建提交的基础表单。
+The base form used to create submissions.
 
 ``` html
 <s-basic-form></s-basic-form>

@@ -7,8 +7,8 @@ export default {
                 position: '',
                 remark: '',
             },
-            tip: '用户首次使用 OpenID 登录平台需要向管理员申请权限，请填写以下信息并提交',
-            secondTip: '平台相关使用，请咨询：admin.netease.com'
+            tip: 'Users who use OpenID to log in to the platform for the first time need to apply for permission from the administrator. Please fill in the following information and submit',
+            secondTip: 'For platform related usage, please consult: admin.kubeworkz.com'
         };
     },
     computed: {
@@ -21,16 +21,16 @@ export default {
     methods: {
         submit() {
             this.hasSubmit = true;
-            // 举例
+            // Example
             // const params = Object.assign({}, this.form)
             // userService.apply(params).then((result) => {
-            //     this.hasSubmit = true;
+            // this.hasSubmit = true;
             // });
         },
         logout() {
-           //登出处理逻辑
+           // Logout processing logic
            this.hasSubmit = false;
-           // 举例
+           // Example
             // userService.logout().then((result) => {
             //     this.hasSubmit = false;
             // });

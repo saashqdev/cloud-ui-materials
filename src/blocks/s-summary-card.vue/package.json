@@ -2,7 +2,7 @@
   "name": "@cloud-ui/s-summary-card.vue",
   "description": "Cloud UI - SSummaryCard",
   "version": "0.1.3",
-  "author": "Rainfore <rainforest92@126.com>",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -40,8 +40,8 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "摘要卡片",
-    "team": "网易云计算前端",
+    "title": "Summary card",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public",
     "category": "chart",
     "base": "vue",

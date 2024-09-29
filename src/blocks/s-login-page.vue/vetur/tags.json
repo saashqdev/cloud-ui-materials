@@ -3,10 +3,10 @@
     "attributes": [
       "src",
       "useNormal",
-      "useQZ",
+      "useKW",
       "useLDAP",
       "exdays"
     ],
-    "description": "账号与权限中心的统一认证登录组件"
+    "description": "Unified authentication login component of account and authority center"
   }
 }

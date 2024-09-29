@@ -1,6 +1,6 @@
-# SLoginPage 登录页
+# SLoginPage Login Page
 
-预置了账号与权限中心登录组件的页面。
+The page with account and permission center login components is preset.
 
 ``` html
 <s-login-page></s-login-page>

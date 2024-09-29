@@ -1,6 +1,6 @@
-# SFormExpander 表单展开器
+# SFormExpander Form Expander
 
-表单的展开与收起。
+Expand and collapse the form.
 
 ``` html
 <s-form-expander></s-form-expander>

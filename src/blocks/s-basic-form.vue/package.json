@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/s-basic-form.vue",
-  "description": "用于创建提交的基础表单",
+  "description": "Basic form used to create submissions",
   "version": "0.2.3",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -33,14 +33,14 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "基础表单",
+    "title": "Basic form",
     "category": "form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-basic-form.vue@0.2.3/screenshots/0.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "dependencies": {},

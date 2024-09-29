@@ -1,17 +1,17 @@
 <template>
 <u-linear-layout direction="vertical">
     <u-form gap="large" @validate="valid = $event.valid">
-        <u-form-item label="名称" required rules="required | alphaNumDash | rangeLength(1,63)">
-            <u-input v-model="model.name" size="huge medium" maxlength="24" placeholder="由1-63个小写字母，数字，中划线组成"></u-input>
+        <u-form-item label="Name" required rules="required | alphaNumDash | rangeLength(1,63)">
+            <u-input v-model="model.name" size="huge medium" maxlength="24" placeholder="Composed of 1-63 lowercase letters, numbers, and underscores"></u-input>
         </u-form-item>
-        <u-form-item label="描述">
+        <u-form-item label="Descriptiopn">
             <u-input v-model="model.description" size="huge medium"></u-input>
         </u-form-item>
         <u-form-item>
             <u-button color="primary"
                 :disabled="!canSubmit || submitting"
                 :icon="submitting ? 'loading' : ''" @click="submit()">
-                提交修改
+                Submit Changes
             </u-button>
         </u-form-item>
     </u-form>

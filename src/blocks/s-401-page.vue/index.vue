@@ -3,10 +3,10 @@
     <u-linear-layout direction="vertical" justify="center">
         <img src="https://static-kubevue.s3.amazonaws.com/assets/error-code.svg" width="240">
         <h1 :class="$style.title">401</h1>
-        <h2 :class="$style.h2">你没有访问该页面的权限</h2>
+        <h2 :class="$style.h2">You do not have permission to access this page</h2>
         <u-linear-layout>
-            <u-button color="primary" shape="round" href="/login">重新登录</u-button>
-            <u-button shape="round" href="/">返回首页</u-button>
+            <u-button color="primary" shape="round" href="/login">Log in again</u-button>
+            <u-button shape="round" href="/">Return to homepage</u-button>
         </u-linear-layout>
     </u-linear-layout>
 </u-linear-layout>

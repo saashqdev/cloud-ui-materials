@@ -1,4 +1,4 @@
-# SBarChart 柱状图
+# SBarChart Bar Chart
 
 ``` html
 <s-bar-chart></s-bar-chart>

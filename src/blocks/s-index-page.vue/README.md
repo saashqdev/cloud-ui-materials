@@ -1,6 +1,6 @@
-# 首页
+# Home Page
 
-首页
+Front Page
 
 ``` html
 <s-index-page></s-index-page>

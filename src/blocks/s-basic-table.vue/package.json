@@ -33,14 +33,14 @@
   },
   "kubevue": {
     "type": "block",
-    "title": "基础表格",
+    "title": "Basic table",
     "category": "table",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-basic-table.vue@0.2.2/screenshots/0.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "dependencies": {},

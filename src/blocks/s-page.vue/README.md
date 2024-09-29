@@ -1,6 +1,6 @@
-# SPage 通用页面布局
+# SPage General Page Layout
 
-只有顶部栏和底部栏的通用页面布局。
+Generic page layout with only top and bottom bars.
 
 ``` html
 <div style="position: relative;">

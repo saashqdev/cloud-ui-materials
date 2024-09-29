@@ -1,6 +1,6 @@
-# SFilterTable 筛选表格
+# SFilterTable Filter Table
 
-请在这里添加描述
+Please add description here
 
 ``` html
 <s-filter-table></s-filter-table>

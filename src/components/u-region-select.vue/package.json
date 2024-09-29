@@ -55,7 +55,7 @@
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-region-select.vue@0.9.0/screenshots/2.png",
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-region-select.vue@0.9.0/screenshots/3.png"
     ],
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public"
   },
   "devDependencies": {

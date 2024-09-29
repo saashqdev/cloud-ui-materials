@@ -58,7 +58,7 @@
     "category": "chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
-    "team": "网易云计算前端",
+    "team": "Kubeworkz Cloud Computing Front End",
     "access": "public",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/lcap-x-echarts@0.9.3/screenshots/0.png",

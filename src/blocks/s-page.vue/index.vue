@@ -6,7 +6,7 @@
                 <u-linear-layout gap="small">
                     <u-image fit="cover" src="https://static-kubevue.s3.amazonaws.com/assets/lcap-logo-light.svg"
                         style="width: 28px; height: 28px; margin: 18px 14px; --custom-start: auto; vertical-align: middle;"></u-image>
-                    <u-text text="应用名称" size="large" style="color: white; --custom-start: auto; vertical-align: middle;"></u-text>
+                    <u-text text="Application Name" size="large" style="color: white; --custom-start: auto; vertical-align: middle;"></u-text>
                 </u-linear-layout>
             </template>
             <template #default>
@@ -25,13 +25,13 @@
                     </template>
                     <template #default>
                         <u-navbar-menu>
-                            <u-navbar-menu-item @click="logout">安全退出</u-navbar-menu-item>
+                            <u-navbar-menu-item @click="logout">Logout</u-navbar-menu-item>
                         </u-navbar-menu>
                     </template>
                 </u-navbar-dropdown>
                 <template v-else>
                     <u-navbar>
-                        <u-navbar-item href="/login">登录</u-navbar-item>
+                        <u-navbar-item href="/login">Log In</u-navbar-item>
                     </u-navbar>
                 </template>
             </template>
@@ -68,7 +68,7 @@ export default {
     },
     methods: {
         logout() {
-            this.$confirm('确定退出登录吗？', '提示')
+            this.$confirm('Are you sure you want to log out? ', 'Hint')
                 .then(() => this.$auth && this.$auth.logout())
                 .then(() => {
                     this.eraseCookie();

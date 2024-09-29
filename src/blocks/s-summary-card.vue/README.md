@@ -1,4 +1,4 @@
-# SSummaryCard 摘要卡片
+# SSummaryCard Summary Card
 
 ``` html
 <s-summary-card></s-summary-card>

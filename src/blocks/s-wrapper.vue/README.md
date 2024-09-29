@@ -1,6 +1,6 @@
-# SWrapper 空白页
+# SWrapper Blank Page
 
-空白页。
+Blank page.
 
 ``` html
 <s-wrapper></s-wrapper>

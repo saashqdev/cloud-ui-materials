@@ -1,6 +1,6 @@
-# SInfoList 信息列表
+# SInfoList Information List
 
-请在这里添加描述
+Please add description here
 
 ``` html
 <s-info-list></s-info-list>
