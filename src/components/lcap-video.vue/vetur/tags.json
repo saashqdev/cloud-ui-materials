@@ -1,0 +1,13 @@
+{
+  "lcap-video": {
+    "attributes": [
+      "src",
+      "poster",
+      "breakProgress",
+      "autoplay",
+      "draggable",
+      "loop"
+    ],
+    "description": "基于 video.js 的视频播放组件"
+  }
+}

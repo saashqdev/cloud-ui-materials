@@ -1,0 +1,62 @@
+{
+  "name": "@cloud-ui/u-color-picker.vue",
+  "description": "颜色选择器",
+  "version": "0.1.5",
+  "main": "./index.js",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saashqdev/cloud-ui-materials.git",
+    "directory": "src/components/u-color-picker.vue"
+  },
+  "homepage": "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-color-picker.vue@0.1.5/index.html",
+  "license": "MIT",
+  "keywords": [
+    "kubevue",
+    "material",
+    "component"
+  ],
+  "scripts": {
+    "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
+    "build:theme": "../../../node_modules/.bin/vue-cli-service library-build --dest dist-theme",
+    "build:raw": "../../../node_modules/.bin/vue-cli-service library-build --kubevue-mode raw --dest dist-raw",
+    "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
+    "deploy": "kubevue deploy",
+    "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && kubevue readme && kubevue vetur",
+    "release": "kubevue publish"
+  },
+  "vuePlugins": {
+    "resolveFrom": "../../../"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "kubevue": {
+    "type": "component",
+    "title": "颜色选择器",
+    "category": "form",
+    "base": "vue",
+    "ui": "cloud-ui.kubevue",
+    "screenshots": [
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-color-picker.vue@0.1.4/screenshots/0.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-color-picker.vue@0.1.4/screenshots/1.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-color-picker.vue@0.1.4/screenshots/2.png"
+    ],
+    "team": "网易云计算前端",
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "@vue/cli-service": "^4.4.1",
+    "cloud-ui.kubevue": "^0.9.13",
+    "vue": "^2.6.10",
+    "vue-cli-plugin-kubevue": "^0.11.11"
+  },
+  "vetur": {
+    "tags": "./vetur/tags.json",
+    "attributes": "./vetur/attributes.json"
+  }
+}

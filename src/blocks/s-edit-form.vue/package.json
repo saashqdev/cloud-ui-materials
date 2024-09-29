@@ -1,0 +1,52 @@
+{
+  "name": "@cloud-ui/s-edit-form.vue",
+  "description": "",
+  "version": "0.1.3",
+  "main": "./index.js",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saashqdev/cloud-ui-materials.git",
+    "directory": "src/blocks/s-edit-form.vue"
+  },
+  "homepage": "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-edit-form.vue@0.1.3/index.html",
+  "license": "MIT",
+  "keywords": [
+    "kubevue",
+    "material",
+    "block"
+  ],
+  "scripts": {
+    "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
+    "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
+    "screenshot": "kubevue screenshot public/index.html --code-example --smart-crop --package",
+    "deploy": "kubevue deploy && kubevue deploy screenshots",
+    "prepublishOnly": "npm run build:doc && npm run screenshot && kubevue readme && kubevue vetur"
+  },
+  "vuePlugins": {
+    "resolveFrom": "../../../"
+  },
+  "babel": {
+    "presets": [
+      "@vue/babel-preset-app"
+    ]
+  },
+  "kubevue": {
+    "type": "block",
+    "title": "修改表单",
+    "category": "form",
+    "base": "vue",
+    "ui": "cloud-ui.kubevue",
+    "screenshots": [
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/s-edit-form.vue@0.1.3/screenshots/0.png"
+    ],
+    "team": "网易云计算前端",
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "vue": "^2.6.10",
+    "cloud-ui.kubevue": "^0.9.5"
+  }
+}

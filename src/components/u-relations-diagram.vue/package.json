@@ -1,0 +1,69 @@
+{
+  "name": "@cloud-ui/u-relations-diagram.vue",
+  "description": "基于 [Cytoscape.js](https://js.cytoscape.org)，传入节点和边的数据来表达各种关系的 Canvas 图。",
+  "version": "0.9.0",
+  "main": "./index.js",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saashqdev/cloud-ui-materials.git",
+    "directory": "src/components/u-relations-diagram.vue"
+  },
+  "homepage": "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.9.0/index.html",
+  "license": "MIT",
+  "keywords": [
+    "kubevue",
+    "material",
+    "component"
+  ],
+  "scripts": {
+    "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
+    "build:theme": "../../../node_modules/.bin/vue-cli-service library-build --dest dist-theme",
+    "build:raw": "../../../node_modules/.bin/vue-cli-service library-build --kubevue-mode raw --dest dist-raw",
+    "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
+    "screenshot": "kubevue screenshot public/index.html --code-example --smart-crop --package",
+    "deploy": "kubevue deploy && kubevue deploy screenshots",
+    "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && npm run screenshot && kubevue readme && kubevue vetur",
+    "release": "kubevue publish"
+  },
+  "vuePlugins": {
+    "resolveFrom": "../../../"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "kubevue": {
+    "type": "component",
+    "title": "关系图",
+    "category": "chart",
+    "base": "vue",
+    "ui": "cloud-ui.kubevue",
+    "screenshots": [
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/0.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/1.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/2.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/3.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/4.png",
+      "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-relations-diagram.vue@0.1.2/screenshots/5.png"
+    ],
+    "team": "网易云计算前端",
+    "access": "public"
+  },
+  "dependencies": {
+    "vue-cytoscape": "^1.0.8"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@vue/cli-service": "^4.4.1",
+    "vue-cli-plugin-kubevue": "^0.11.11",
+    "vue": "^2.6.10",
+    "cloud-ui.kubevue": "^0.9.13",
+    "lodash": "^4.17.15"
+  },
+  "vetur": {
+    "tags": "./vetur/tags.json",
+    "attributes": "./vetur/attributes.json"
+  }
+}

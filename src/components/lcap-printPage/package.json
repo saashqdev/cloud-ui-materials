@@ -1,0 +1,62 @@
+{
+  "name": "lcap-printPage",
+  "description": "",
+  "version": "0.1.2",
+  "main": "./index.js",
+  "author": "",
+  "repository": "",
+  "homepage": "http://static-kubevue.s3.amazonaws.com/lcap-printPage@0.1.2/index.html",
+  "license": "MIT",
+  "keywords": [
+    "lcap",
+    "material",
+    "component"
+  ],
+  "scripts": {
+    "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
+    "build:theme": "../../../node_modules/.bin/vue-cli-service library-build --dest dist-theme",
+    "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
+    "build": "npm run build:theme && npm run build:doc",
+    "deploy": "lcap deploy && lcap deploy dist-theme",
+    "usage": "lcap usage",
+    "prepublishOnly": "npm run build && lcap usage && lcap readme && lcap vetur",
+    "release": "lcap publish"
+  },
+  "vuePlugins": {
+    "resolveFrom": "../../../"
+  },
+  "babel": {
+    "presets": [
+      "@vue/babel-preset-app"
+    ]
+  },
+  "kubevue": {
+    "type": "component",
+    "title": "页面打印",
+    "category": "Other",
+    "base": "vue",
+    "ui": "cloud-ui.kubevue",
+    "screenshots": [],
+    "team": "",
+    "access": "public"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@vue/cli-service": "^4.4.1",
+    "vue-cli-plugin-kubevue": "^0.13.3",
+    "vue": "^2.6.10",
+    "cloud-ui.kubevue": "^0.11.20"
+  },
+  "vetur": {
+    "tags": "./vetur/tags.json",
+    "attributes": "./vetur/attributes.json"
+  },
+  "template": {
+    "inited": true
+  }
+}
