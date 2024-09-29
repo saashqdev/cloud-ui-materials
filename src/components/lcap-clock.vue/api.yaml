@@ -1,10 +1,10 @@
 - name: lcap-clock
-  title: 时间
+  title: Time
   labels: [Display]
   icon: time-picker
-  description: 时间显示器
+  description: Time display
   attrs:
     - name: format
       type: string
       default: YYYY-MM-DD HH:mm
-      description: 支持对时间格式化
+      description: Supports time formatting

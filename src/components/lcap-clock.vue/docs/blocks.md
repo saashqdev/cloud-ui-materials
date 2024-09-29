@@ -4,7 +4,7 @@
 <lcap-clock></lcap-clock>
 ```
 
-### 格式化设置
+### Format Settings
 
 ``` html
 <lcap-clock format="YYYY-MM-DD"></lcap-clock>

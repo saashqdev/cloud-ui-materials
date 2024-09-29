@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "时间",
+    "title": "Time",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

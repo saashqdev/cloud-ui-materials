@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "文字滚动条",
+    "title": "Text scroll bar",
     "category": "InfoDisplay",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

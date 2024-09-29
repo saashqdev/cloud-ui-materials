@@ -1,12 +1,12 @@
 - name: lcap-configable-demo
   icon: image
-  title: 图片展示
+  title: Picture Display
   labels: [Display]
-  description: 可以用来展示一张图片，支持设置图片地址。
+  description: Can be used to display a picture and supports setting the picture address.
   attrs:
     - name: src
-      title: 地址
+      title: Address
       type: string
       default: ''
-      description: 图片地址
+      description: Image address
   slots: false

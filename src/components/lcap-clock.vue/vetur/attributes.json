@@ -1,6 +1,6 @@
 {
   "lcap-clock/format": {
     "type": "string",
-    "description": "支持对时间格式化"
+    "description": "Support time formatting"
   }
 }

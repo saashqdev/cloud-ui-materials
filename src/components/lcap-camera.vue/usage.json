@@ -28,17 +28,17 @@
         "attrs": [
             {
                 "name": "width",
-                "title": "宽度",
+                "title": "Width",
                 "type": "string",
                 "default": 800,
-                "description": "宽度"
+                "description": "Width"
             },
             {
                 "name": "height",
-                "title": "高度",
+                "title": "Height",
                 "type": "string",
                 "default": 600,
-                "description": "高度"
+                "description": "Height"
             },
             {
                 "name": "value",
@@ -68,13 +68,13 @@
             },
             {
                 "name": "close",
-                "title": "Close camera",
+                "title": "Close Camera",
                 "description": "Turn off camera",
                 "params": []
             },
             {
                 "name": "snapshot",
-                "title": "截图",
+                "title": "Screenshot",
                 "description": "Take screenshot and upload",
                 "params": []
             }
@@ -112,7 +112,7 @@
             },
             {
                 "name": "progress",
-                "title": "When progress changes",
+                "title": "When Progress Changes",
                 "description": "Triggered when the sending progress changes, used when uploading the progress bar",
                 "params": [
                     {
@@ -137,7 +137,7 @@
             },
             {
                 "name": "complete",
-                "title": "Upload completed",
+                "title": "Upload Completed",
                 "description": "Triggered when upload is completed",
                 "params": [
                     {

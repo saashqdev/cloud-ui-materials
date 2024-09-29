@@ -22,18 +22,18 @@ export default {
     }
   },
   mounted() {
-    this.dataList = ["第1条数据xxxxxxxxxxx",
-      "第2条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第3条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第4条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第5条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第6条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第7条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第8条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第9条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第10条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第11条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第12条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    this.dataList = ["No. 1 data xxxxxxxxxxx",
+      "Item 2 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 3 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 4 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 5 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 6 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 7 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 8 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 9 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 10 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 11 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 12 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     ];
   },
   methods: {

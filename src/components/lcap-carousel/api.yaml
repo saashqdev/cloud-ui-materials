@@ -1,38 +1,38 @@
 - name: lcap-carousel
-  title: 文字滚动条
-  description: 文字滚动条
+  title: Text Scroll Bar
+  description: Text scroll bar
   labels: [InfoDisplay]
   icon: default
   attrs:
     - name: data-source
-      title: 数据源
+      title: Data Source
       type: Array
       default: []
-      description: 文本列表
+      description: Text list
     - name: speed
-      title: 滚动速度
+      title: Scroll Seed
       type: Number
       default: 30
-      description: 滚动速度
+      description: Scroll speed
     - name: hoverStop
-      title: 开启悬停
+      title: Enable Hover
       type: Boolean
       default: false
-      description: 鼠标悬浮时停止滚动
+      description: Stop scrolling when the mouse is hovering
     - name: gap
-      title: 间隔
+      title: Interval
       type: Number
       default: 20
-      description: 间隔,单位px
+      description: Interval, unit px
   events:
     - name: click
-      title: 点击
-      description: 点击时触发的事件
+      title: Click
+      description: Event triggered when clicked
       params:
         - name: $event
           type: any
-          description: 当前值
+          description: Current value
   methods:
     - name: reload
-      description: 清除缓存，重新加载
+      description: Clear cache and reload
       params: []

@@ -20,32 +20,32 @@
 export default {
     name: 'lcap-carousel',
     props: {
-        // 传递过来的字符串数组
+        // The passed string array
         dataSource: {
             type: [Function, Array, Object],
             default: () => [],
         },
-        // 播放速度
+        // Playback speed
         speed: {
             type: Number,
             default: 30,
         },
-        // 每次移动的像素 太大会导致 "很卡" 的视觉效果
+        // If the pixels moved each time are too large, it will cause a "very stuck" visual effect.
         movePx: {
             type: Number,
             default: 2,
         },
-        // 两个文本之间的间距
+        // Space between two texts
         gap: {
             type: Number,
             default: 10,
         },
-        // 每次元素停留显示的时间
+        // The time the element stays displayed each time
         waitTime: {
             type: Number,
             default: 0,
         },
-        // 是否鼠标放上去后停止移动
+        // Whether to stop moving after the mouse is placed on it
         hoverStop: {
             type: Boolean,
             default: true,
@@ -79,7 +79,7 @@ export default {
         },
     },
     beforeDestroy() {
-        // 组件销毁时 清除定时器
+        // Clear the timer when the component is destroyed
         clearInterval(this.timer);
     },
     methods: {
@@ -90,18 +90,18 @@ export default {
             });
         },
         renderDom() {
-            // 获取外面盒子的Dom元素
+            // Get the Dom element of the outer box
             const outBox = this.$refs.outBox;
-            // 获取里面面盒子的Dom元素
+            // Get the Dom element of the box inside
             const box = this.$refs.box;
             const outWidth = outBox.offsetWidth;
-            // 设置起始播放的位置 父盒子的最右侧出现
+            //Set the starting playback position to appear on the rightmost side of the parent box
             const startX = outWidth;
             box.style.transform = `translateX(${startX}px)`;
             this.x = startX;
-            // 获取第一个子元素的宽度
+            // Get the width of the first child element
             this.childWidth = [...box.childNodes][this.index].offsetWidth;
-            // 获取子元素的总宽度
+            // Get the total width of child elements
             this.timer = setInterval(() => {
                 if (!this.isScrolling)
                     return;
@@ -117,14 +117,14 @@ export default {
                 box.style.transform = `translateX(${this.x}px)`;
                 this.x -= this.movePx;
                 if (-this.x >= totalChildWidth) {
-                    // 播放完之后就重新开始播放
+                    // Restart playback after finishing playing
                     this.x = startX;
                     this.index = 0;
                     this.childWidth = childNodes[this.index].offsetWidth;
                     return;
                 }
                 if (-this.x >= this.childWidth && this.waitTime) {
-                    // 如果过了第index个元素 开始等待
+                    // If the index element is passed, start waiting
                     this.index++;
                     this.childWidth += childNodes[this.index].offsetWidth;
                     this.isScrolling = false;
@@ -135,7 +135,7 @@ export default {
             }, this.speed);
         },
         /**
-         * @descript 鼠标放上去触发
+         * @descript Triggered by placing the mouse on it
          */
         mouseenter() {
             if (!this.hoverStop)
@@ -143,7 +143,7 @@ export default {
             this.isScrolling = false;
         },
         /**
-         * @descript 鼠标离开触发
+         * @descript Triggered when mouse leaves
          */
         mouseleave() {
             this.isScrolling = true;

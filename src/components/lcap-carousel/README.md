@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapCarousel 文字滚动条
+# LcapCarousel text scroll bar
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **InfoDisplay**
 
-文字滚动条
+Text scroll bar
 
 ## Example
 ### Basic Usage
@@ -38,18 +38,18 @@ export default {
     }
   },
   mounted() {
-    this.dataList = ["第1条数据xxxxxxxxxxx",
-      "第2条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第3条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第4条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第5条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第6条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第7条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第8条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第9条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第10条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第11条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "第12条数据xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    this.dataList = ["No. 1 data xxxxxxxxxxx",
+      "Item 2 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 3 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 4 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 5 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 6 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 7 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 8 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 9 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 10 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 11 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "Item 12 data xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     ];
   },
   methods: {
@@ -66,26 +66,26 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| data-source | Array |  | `[]` | 文本列表 |
-| speed | Number |  | `30` | 滚动速度 |
-| hoverStop | Boolean |  | `false` | 鼠标悬浮时停止滚动 |
-| gap | Number |  | `20` | 间隔,单位px |
+| data-source | Array | | `[]` | Text list |
+| speed | Number | | `30` | Scroll speed |
+| hoverStop | Boolean | | `false` | Stop scrolling when the mouse is hovering |
+| gap | Number | | `20` | Interval, unit px |
 
 ### Events
 
 #### @click
 
-点击时触发的事件
+Event triggered when clicked
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | any | 当前值 |
+| $event | any | Current value |
 
 Methods
 
 #### reload()
 
-清除缓存，重新加载
+Clear cache and reload
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

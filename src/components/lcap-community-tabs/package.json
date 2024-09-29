@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "社区定制选项卡",
+    "title": "Community customization tab",
     "category": "InfoDisplay",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

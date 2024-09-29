@@ -1,16 +1,16 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapClock 时间
+# LcapClock Time
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [格式化设置](#格式化设置)
-- [API]()
+    - [Format Settings](#Formatting Settings)
+-[API]()
     - [Props/Attrs](#propsattrs)
 
 **Display**
 
-时间显示器
+Time display
 
 ## Example
 ### Basic Usage
@@ -19,7 +19,7 @@
 <lcap-clock></lcap-clock>
 ```
 
-### 格式化设置
+### Format Settings
 
 ``` html
 <lcap-clock format="YYYY-MM-DD"></lcap-clock>
@@ -30,5 +30,5 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| format | string |  | `'YYYY-MM-DD HH:mm'` | 支持对时间格式化 |
+| format | string | | `'YYYY-MM-DD HH:mm'` | Supports time formatting |
 

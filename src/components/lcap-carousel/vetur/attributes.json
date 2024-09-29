@@ -1,18 +1,18 @@
 {
   "lcap-carousel/data-source": {
     "type": "Array",
-    "description": "文本列表"
+    "description": "Text list"
   },
   "lcap-carousel/speed": {
     "type": "Number",
-    "description": "滚动速度"
+    "description": "scroll speed"
   },
   "lcap-carousel/hoverStop": {
     "type": "Boolean",
-    "description": "鼠标悬浮时停止滚动"
+    "description": "Stop scrolling when the mouse is hovering"
   },
   "lcap-carousel/gap": {
     "type": "Number",
-    "description": "间隔,单位px"
+    "description": "Interval, unit px"
   }
 }
