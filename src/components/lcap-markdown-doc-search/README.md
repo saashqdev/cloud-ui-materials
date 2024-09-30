@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapMarkdownDocSearch 文档搜索框
+# LcapMarkdownDocSearch Document Search Box
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **Other**
 
-请在这里添加描述
+Please add description here
 
 ## Example
 ### Basic Usage
@@ -22,7 +22,7 @@
 
   <lcap-markdown-doc-search
     ref="search"
-    placeholder="请输入"
+    placeholder="Please enter"
     :value.sync="value"
     :data-source="suggestions"
     text-field="highlightedTitle"
@@ -31,7 +31,7 @@
     @change="onChange"
   ></lcap-markdown-doc-search>
 
-  <button @click="onSearch">搜索</button>  
+  <button @click="onSearch">Search</button>  
 </div> 
 
 
@@ -58,11 +58,11 @@ export default {
         this.suggestions = [
         {
           "esId": "2614959179281664",
-          "highlightedContent": "<mark>组件</mark>列表  该<mark>组件</mark>可将其他<mark>组件</mark>根据动态数据源进行动态展示，如根据列表数据循环展示 N 个文本/标签等。  <mark>组件</mark>说明  属性  «<mark>组件</mark>通用属性请参见<mark>组件</mark>通用说明。»  数据属性  «<mark>组件</mark>数据源、数据类型、初始加载属性请参见<mark>组件</mark>数据源说明。»  样式属性  - 每行排列项数：支持定义每一行排列的项数，为空时会自适应宽度并自动换行。",
-          "highlightedTitle": "<mark>组件</mark>列表"
+          "highlightedContent": "<mark>Component</mark> List This <mark>Component</mark> can dynamically display other <mark>Components</mark> according to dynamic data sources, such as looping and displaying N texts/labels according to list data. <mark>Component</mark> Description Properties«For <mark>Component</mark> general properties, please refer to <mark>Component</mark> General Description.» Data Properties«For <mark>Component</mark> data source, data type, and initial loading properties, please refer to <mark>Component</mark> data source description.» Style Properties- Number of items per row: Supports defining the number of items per row. When empty, it will adapt to the width and automatically wrap.",
+          "highlightedTitle": "<mark>Components</mark> List"
         },
           
-          {"esId":"2614959176684800","highlightedContent":"<mark>组件</mark>通用说明  每个<mark>组件</mark>都包含属性、事件和样式。其中大部分功能以及设置方式相同，本节对<mark>组件</mark>的通用属性做详细说明。  属性  基础信息  - <mark>组件</mark>名称：由字母、数字和下划线组成，用于在表达式中引用、权限上报等场景。  - 是否控制权限：可根据角色设置权限，对无权限的角色的用户隐藏该<mark>组件</mark>，设置权限前，必须先设置<mark>组件</mark>名称。","highlightedTitle":"组件通用说明"},{"esId":"2614959180682496","highlightedContent":"案例  使用<mark>组件</mark>列表实现一个每行展示6个标签的效果  1、页面拖入<mark>组件</mark>列表  2、绑定数据源、设置每行排列项数  3、拖入标签<mark>组件</mark>  4、标签<mark>组件</mark>设值  5、效果展示","highlightedTitle":"组件列表"},{"esId":"2614959180272896","highlightedContent":"- 只读：设置多行输入<mark>组件</mark>只读。  - 禁用：设置多行输入<mark>组件</mark>禁用变灰不可编辑。  <mark>组件</mark>事件  - 支持基本的手势事件：获得焦点和失去焦点。","highlightedTitle":"多行输入"},{"esId":"2614959178183936","highlightedContent":"- 禁用：禁用开关，开启后鼠标移入<mark>组件</mark>区域内无法点击，且会显示禁用标记。  - 标签：顶部自定义提示文本。  - flag标志：是否右上角有flag标志。  事件  - 面包屑<mark>组件</mark>支持<mark>组件</mark>事件。     - <mark>组件</mark>事件：选择前、输入时、选择后、改变后。  - 面包屑选项支持鼠标事件和<mark>组件</mark>事件。     - 鼠标事件：点击。     - <mark>组件</mark>事件：选择前。  样式  样式说明请参见<mark>组件</mark>通用说明。","highlightedTitle":"胶囊"},{"esId":"2614959177823488","highlightedContent":"<mark>组件</mark>说明  属性  «<mark>组件</mark>通用属性请参见<mark>组件</mark>通用说明。»  - 标识：锚点的唯一标识，用于跳转链接。  事件  锚点<mark>组件</mark>不支持设置事件。  样式  样式说明请参见<mark>组件</mark>通用说明。  注意事项  - 锚点<mark>组件</mark>默认为空容器，支持拖入其他<mark>组件</mark>，不影响锚点正常跳转功能。  - 锚点<mark>组件</mark>发布后不直接显示。  案例  功能需求  搭配目录<mark>组件</mark>实现锚点指定位置的跳转。  操作步骤  1.","highlightedTitle":"锚点"},{"esId":"2614959180559616","highlightedContent":"| 事件名   | 触发条件                 |  | -------- | ------------------------ |  | 获得焦点 | 多行<mark>组件</mark>输入框聚焦时触发 |  | 失去焦点 | 多行<mark>组件</mark>输入框失焦时触发 |  - 支持输入<mark>组件</mark>常见的<mark>组件</mark>事件：输入前，改变后，清空后。","highlightedTitle":"单行输入"},{"esId":"2614959179961600","highlightedContent":"<mark>组件</mark>通用说明  每个<mark>组件</mark>都包含属性、事件和样式。其中大部分功能以及设置方式相同，本节对<mark>组件</mark>的通用属性做详细说明。  属性  基础信息  - <mark>组件</mark>名称：由字母、数字和下划线组成，用于在表达式中引用、权限上报等场景。  - 是否控制权限：可根据角色设置权限，对无权限的角色的用户隐藏该<mark>组件</mark>，设置权限前，必须先设置<mark>组件</mark>名称。","highlightedTitle":"组件通用说明"},{"esId":"2614959177340160","highlightedContent":"徽章中可自定义添加<mark>组件</mark>。  <mark>组件</mark>说明  属性  «<mark>组件</mark>通用属性请参见<mark>组件</mark>通用说明。»  - 值：当前提醒消息条数，支持动态绑定。  - 最大值：提醒消息的最大值，超过最大值将不再显示准确的数字，用最大值+代替，如99+。  - 插入右上角：开启时提醒角标位置显示在右上角，关闭时提醒角标显示在<mark>组件</mark>右侧。  事件  徽章<mark>组件</mark>不支持设置事件。  样式  样式说明请参见<mark>组件</mark>通用说明。","highlightedTitle":"徽章"},{"esId":"2614959178069248","highlightedContent":"目录  支持通过目录<mark>组件</mark>来标识长页面中当前所处的位置，以及页面跳转等功能。  <mark>组件</mark>说明  属性  «<mark>组件</mark>通用属性请参见<mark>组件</mark>通用说明。»  目录<mark>组件</mark>  - 选中值：通过<mark>组件</mark>进行选择后，最终选中的值，支持双向绑定到变量。  目录节点  - 选项值：集合的元素类型中，用于标识选中值的属性。  - 链接类型：支持页面跳转、普通链接、下载链接。  - 链接地址：链接的详细地址。","highlightedTitle":"目录"}];
+          {"esId":"2614959176684800","highlightedContent":"<mark>Component</mark>General Description Each <mark>Component</mark> contains properties, events, and styles. Most of the functions and settings are the same. This section describes the common properties of <mark>Component</mark> in detail. Basic property information - <mark>Component</mark> name: It consists of letters, numbers, and underscores. It is used for reference in expressions, permission reporting, and other scenarios. - Whether to control permissions: You can set permissions based on roles, and hide the <mark>component</mark> from users with roles without permissions. Before setting permissions, you must first set the <mark>component</mark> name. ","highlightedTitle":"General description of components"},{"esId":"2614959180682496","highlightedContent":"Example: Use the <mark>component</mark> list to achieve an effect of displaying 6 labels per row. 1. Drag the <mark>component</mark> list into the page. 2. Bind the data source and set the number of items per row. 3. Drag the label <mark>component</mark> into the page. 4. Set the value of the label <mark>component</mark>. 5. Effect display","highlightedTitle":"Component list"},{"esId":"2614959180272896","highlightedContent":"- Read-only: Set the multi-line input <mark>component</mark> to read-only. - Disable: Set the multi-line input <mark>component</mark> to be disabled and grayed out and cannot be edited. <mark>component</mark> events - Support basic gesture events: get focus and lose focus. ","highlightedTitle":"Multi-line input"},{"esId":"2614959178183936","highlightedContent":"- Disable: Disable the switch. After turning it on, the mouse cannot be clicked when it moves into the <mark>component</mark> area, and a disabled mark will be displayed. - Label: Customized prompt text at the top. - Flag: Whether there is a flag in the upper right corner. Events - Breadcrumbs <mark>component</mark> supports <mark>component</mark> events. - <mark>component</mark> events: before selection, input, after selection, after change. - Breadcrumbs options support mouse events and <mark>component</mark> events. - Mouse event: click. - <mark>component</mark> events: before selection. Style For style description, please refer to the <mark>component</mark> general description. ","highlightedTitle":"Capsule"},{"esId":"2614959177823488","highlightedContent":"<mark>Component</mark>Description Attributes«<mark>Component</mark>General Attributes, please refer to <mark>Component</mark>General Description. » - Identifier: The unique identifier of the anchor, used for jump links. Event anchor<mark>Component</mark> does not support setting events. Style style description, please refer to <mark>Component</mark>General Description. Notes- The anchor<mark>Component</mark> is an empty container by default, and supports dragging in other<mark>Components</mark> without affecting the normal jump function of the anchor. - The anchor<mark>Component</mark> is not displayed directly after release. Case function requirements are matched with the directory<mark>Component</mark> to realize the jump to the specified position of the anchor. Operation steps 1.","highlightedTitle":"Anchor"},{"esId":"2614959180559616","highlightedContent":"| Event name| Trigger condition| | -------- | ------------------------ | | Get focus| Triggered when the multi-line <mark>component</mark> input box is focused| | Lose focus| Triggered when the multi-line <mark>component</mark> input box loses focus| - Support input <mark>component</mark> Common <mark>component</mark> events: before input, after change, after clearing. ","highlightedTitle":"Single-line input"},{"esId":"2614959179961600","highlightedContent":"General description of <mark>component</mark> Each <mark>component</mark> contains properties, events, and styles. Most of the functions and settings are the same. This section describes the general properties of <mark>component</mark> in detail. Basic property information - <mark>Component</mark> name: composed of letters, numbers and underscores, used for reference in expressions, permission reporting and other scenarios. - Whether to control permissions: permissions can be set according to roles, and the <mark>Component</mark> can be hidden from users with roles without permissions. Before setting permissions, the <mark>Component</mark> name must be set first. ","highlightedTitle":"General description of components"},{"esId":"2614959177340160","highlightedContent":"You can customize the badge by adding <mark>components</mark>. <mark>Components</mark> Description Properties«For <mark>Components</mark> common properties, please refer to <mark>Components</mark> General Description.» - Value: The current number of reminder messages, supporting dynamic binding. - Maximum value: The maximum value of the reminder message. If the maximum value is exceeded, the exact number will no longer be displayed, and the maximum value + will be used instead, such as 99+. - Insert in the upper right corner: When turned on, the reminder badge position is displayed in the upper right corner, and when turned off, the reminder badge is displayed on the right side of the <mark>Component</mark>. Event badge <mark>Component</mark> does not support setting events. Style Style description, please refer to the general description of <mark>component</mark>. ","highlightedTitle":"Badge"},{"esId":"2614959178069248","highlightedContent":"Directory supports the use of the directory <mark>component</mark> to identify the current position in a long page, as well as page jump and other functions. <mark>Component</mark> Description Attributes «For the general attributes of <mark>Component</mark>, please refer to the general description of <mark>Component</mark>. » Directory <mark>Component</mark> - Selected value: After selecting through <mark>Component</mark>, the final selected value supports two-way binding to variables. Directory node - Option value: The attribute used to identify the selected value in the element type of the collection. - Link type: supports page jump, normal link, and download link. - Link address: The detailed address of the link. ","highlightedTitle":"Directory"}];
         }
       }, 0)
     },
@@ -84,136 +84,136 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | String |  |  | 输入的值 |
-| data-source | Array\<Item\> |  |  | 搜索结果列表数据 |
-| data-schema | schema |  |  | 选择器每一行的数据类型 |
-| text-field | string |  | `'text'` | 显示结果项标题字段的属性 |
-| description-field | string |  |  | 用于显示结果项描述字段的属性 |
-| loading | boolean |  | `false` | 用于显示加载状态 |
-| align | string | `[object Object]`<br/>`[object Object]` | `'left'` | undefined |
-| clearable | boolean |  |  | 开启并在输入框有内容时会显示清除按钮 |
-| placeholder | string |  |  | 为空时的提示文本 |
+| value.sync, v-model | String | | | Input value |
+| data-source | Array\<Item\> | | | Search result list data |
+| data-schema | schema | | | The data type of each row of the selector |
+| text-field | string | | `'text'` | Properties that display the title field of the result item |
+| description-field | string | | | Attribute used to display the description field of the result item |
+| loading | boolean | | `false` | Used to display loading status |
+| align | string | `[object Object]`<br/>`[object Object]` | `'left'` | Undefined |
+| clearable | boolean | | | Enable and display the clear button when the input box has content |
+| placeholder | string | | | Prompt text when empty |
 | maxlength | number |  |  |  |
-| autofocus | boolean |  | `false` | 是否自动获取焦点 |
-| readonly | boolean |  | `false` |  |
-| disabled | boolean |  | `false` |  |
-| width | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'normal'` | 设置单行输入框宽度大小 |
-| height | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'normal'` | 设置单行输入框高度大小 |
-| prefix | icon |  | `''` |  |
-| suffix | icon |  | `''` |  |
-| border-radius | string |  | `'0px'` | undefined |
+| autofocus | boolean | | `false` | Whether to automatically obtain focus |
+| readonly | boolean | | `false` | |
+| disabled | boolean | | `false` | |
+| width | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object] `<br/>`[object Object]`<br/>`[object Object]` | `'normal'` | Set the width of the single-line input box |
+| height | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object] `<br/>`[object Object]`<br/>`[object Object]` | `'normal'` | Set the height of the single-line input box |
+| prefix | icon | | `''` | |
+| suffix | icon | | `''` | |
+| border-radius | string | | `'0px'` | Undefined |
 
 ### Events
 
 #### @select
 
-选择结果时触发
+Triggered when a result is selected
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.item | object | 选择项相关对象 |
+| $event.item | object | Object related to selection item |
 
 #### @before-input
 
-输入前触发。可以在这个阶段阻止输入，或者修改输入的值 $event.value
+Trigger before input. You can block input at this stage, or modify the value of the input $event.value
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.oldValue | string | 旧的值 |
-| $event.value | string | 输入框的值 |
-| $event.preventDefault | Function | 阻止输入流程 |
+| $event | object | Custom event object |
+| $event.oldValue | string | Old value |
+| $event.value | string | The value of the input box |
+| $event.preventDefault | Function | Prevent input flow |
 
 #### @input
 
-输入时触发。
+Fires on input.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | 输入框的值 |
+| $event | string | Value of input box |
 
 #### @change
 
-值变化时触发。（注意：与原生事件不同）
+Fires when the value changes. (Note: Different from native events)
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.value | string | 改变后的值 |
-| $event.oldValue | string | 旧的值 |
+| $event | object | Custom event object |
+| $event.value | string | Changed value |
+| $event.oldValue | string | Old value |
 
 #### @focus
 
-获得焦点时触发。
+Triggered when focus is obtained.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | FocusEvent | 原生事件对象 |
+| $event | FocusEvent | Native event object |
 
 #### @blur
 
-失去焦点时触发。
+Fired when focus is lost.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | FocusEvent | 原生事件对象 |
+| $event | FocusEvent | Native event object |
 
 #### @before-clear
 
-清空前触发。
+Triggered before clearing.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.value | string | 清空后的值 |
-| $event.oldValue | string | 待清空的值 |
-| $event.preventDefault | Function | 阻止清空流程 |
+| $event | object | Custom event object |
+| $event.value | string | Cleared value |
+| $event.oldValue | string | The value to be cleared |
+| $event.preventDefault | Function | Prevent the clearing process |
 
 #### @clear
 
-清空后触发。
+Triggered after clearing.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 自定义事件对象 |
-| $event.value | string | 清空后的值 |
-| $event.oldValue | string | 旧的值 |
+| $event | object | Custom event object |
+| $event.value | string | Cleared value |
+| $event.oldValue | string | Old value |
 
 #### @click-prefix
 
-点击前缀图标后触发
+Triggered after clicking the prefix icon
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 鼠标事件对象 |
+| $event | object | Mouse event object |
 
 #### @click-suffix
 
-点击后缀图标后触发
+Triggered after clicking the suffix icon
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 鼠标事件对象 |
+| $event | object | Mouse event object |
 
 Methods
 
 #### focus()
 
-让输入框获取焦点。
+Let the input box get focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### blur()
 
-让输入框失去焦点。
+Let the input box lose focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### clear()
 
-清空输入框。
+Clear the input box.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

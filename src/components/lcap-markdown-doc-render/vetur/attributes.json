@@ -1,28 +1,28 @@
 {
   "lcap-markdown-doc-render/text": {
     "type": "string",
-    "description": "需要传入的文本"
+    "description": "Text to be passed in"
   },
   "lcap-markdown-doc-render/scrollContainer": {
     "type": "string",
     "options": [
       {
         "value": "window",
-        "title": "窗口"
+        "title": "Window"
       },
       {
         "value": "root",
-        "title": "根节点"
+        "title": "Root Node"
       }
     ],
-    "description": "监听文档滚动的容器"
+    "description": "Container that monitors document scrolling"
   },
   "lcap-markdown-doc-render/outline-position-top": {
     "type": "number",
-    "description": "当滚动容器为窗口时生效"
+    "description": "Effective when the scroll container is a window"
   },
   "lcap-markdown-doc-render/outline-position-right": {
     "type": "number",
-    "description": "当滚动容器为窗口时生效"
+    "description": "Effective when the scroll container is a window"
   }
 }

@@ -5,7 +5,7 @@
   "main": "./index.js",
   "author": "",
   "repository": "",
-  "homepage": "http://lcap-official-bucket.codewave.s3.amazonaws.com/lcap-markdown-doc-search@0.1.6/index.html",
+  "homepage": "http://lcap-official-bucket.saashq.s3.amazonaws.com/lcap-markdown-doc-search@0.1.6/index.html",
   "license": "MIT",
   "keywords": [
     "lcap",
@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "文档搜索框",
+    "title": "Document search box",
     "category": "Other",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

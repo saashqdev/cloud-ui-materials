@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "Markdown文档渲染组件",
+    "title": "Markdown Document Rendering Component",
     "category": "Other",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

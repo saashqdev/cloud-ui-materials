@@ -10,6 +10,6 @@
       "download",
       "fileType"
     ],
-    "description": "打印当前页面内容生成PDF或图片"
+    "description": "Print the current page content to generate PDF or pictures"
   }
 }

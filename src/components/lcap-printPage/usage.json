@@ -1,20 +1,20 @@
 {
     "symbol": "lcap-printPage",
-    "name": "页面打印",
+    "name": "Page printing",
     "version": "0.1.2",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "打印当前页面内容生成PDF或图片",
+    "description": "Print the current page content to generate PDF or pictures",
     "labels": [
         "Other"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-printPage></lcap-printPage>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-printPage> </lcap-printPage>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-printPage",
-        "title": "页面打印",
-        "description": "打印当前页面内容生成PDF或图片",
+        "title": "Page Printing",
+        "description": "Print the current page content to generate PDF or pictures",
         "category": "Other",
         "screenShot": "",
         "drawings": "",
@@ -28,56 +28,56 @@
         "attrs": [
             {
                 "name": "hidden",
-                "title": "隐藏组件",
+                "title": "Hidden Component",
                 "type": "boolean",
                 "default": false,
-                "description": "是否显示打印按钮"
+                "description": "Whether to display the print button"
             },
             {
                 "name": "fileName",
-                "title": "文件名称",
+                "title": "File Name",
                 "type": "string",
-                "default": "文件导出",
-                "description": "设置打印的文件名称"
+                "default": "File export",
+                "description": "Set the printed file name"
             },
             {
                 "name": "printDOM",
-                "title": "打印的DOM节点",
+                "title": "Printed DOM Node",
                 "type": "string",
                 "default": "body",
-                "description": "设置打印的DOM节点"
+                "description": "Set the printed DOM node"
             },
             {
                 "name": "isNotFullPage",
-                "title": "PDF是否分页",
+                "title": "Whether the PDF is Paginated",
                 "type": "boolean",
                 "default": false,
-                "description": "打印的PDF是否分页"
+                "description": "Whether the printed PDF is paginated"
             },
             {
                 "name": "canvasWidth",
-                "title": "打印文件宽度",
+                "title": "Print file width",
                 "type": "number|string",
                 "default": 1000,
-                "description": "设置打印文件的宽度"
+                "description": "Set the width of the print file"
             },
             {
                 "name": "canvasHeight",
-                "title": "打印文件高度",
+                "title": "Print File Height",
                 "type": "number|string",
                 "default": 800,
-                "description": "设置打印文件的高度"
+                "description": "Set the height of the print file"
             },
             {
                 "name": "download",
-                "title": "是否自动下载文件",
+                "title": "Whether to Automatically Download Files",
                 "type": "boolean",
                 "default": false,
-                "description": "是否自动下载打印的文件"
+                "description": "Whether to automatically download printed files"
             },
             {
                 "name": "fileType",
-                "title": "文件类型",
+                "title": "File Type",
                 "options": [
                     {
                         "value": "pdf",
@@ -90,32 +90,32 @@
                 ],
                 "type": "string",
                 "default": "pdf",
-                "description": "设置打印的文件类型"
+                "description": "Set the file type for printing"
             }
         ],
         "methods": [
             {
                 "name": "printPage",
-                "title": "打印当前页面",
-                "description": "打印当前页面",
+                "title": "Print Current Page",
+                "description": "Print the current page",
                 "params": []
             }
         ],
         "events": [
             {
                 "name": "print",
-                "title": "打印时",
+                "title": "When Printing",
                 "params": [
                     {
                         "name": "$event.file",
                         "type": "any",
-                        "description": "返还打印的文件流",
+                        "description": "Return the printed file stream",
                         "schema": {
                             "$ref": "#/basicTypes/Binary"
                         }
                     }
                 ],
-                "description": "打印时触发"
+                "description": "Triggered when printing"
             }
         ],
         "children": []

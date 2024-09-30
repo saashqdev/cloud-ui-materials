@@ -20,7 +20,7 @@ export default {
     props: {
         download: {type: Boolean, default: false},
         hidden: {type: Boolean, default: false},
-        fileName: {type: String, default: '文件导出'},
+        fileName: {type: String, default: 'File export'},
         canvasWidth: undefined,
         canvasHeight: undefined,
         fileType: {type: String, default: 'pdf'},
@@ -43,14 +43,14 @@ export default {
                     let canvasWidth = this.canvasHeight === 'auto' ? document.body.clientWidth : this.canvasWidth;
                     let canvasHeight = this.canvasHeight === 'auto' ? document.body.clientHeight : this.canvasHeight;
                     this.getPdf({
-                        element: document.querySelector('body'),  // pdf模板节点：上面第一步中的模板内容节点
-                        title: this.fileName,  // pdf文件名
-                        allowDownload: this.download,  // 是否允许下载
-                        fileType: this.fileType,  // 文件类型
-                        isFullPage: !this.isNotFullPage,   // pdf尺寸：true为不分页的长文件，false为A4分页的文件
+                        element: document.querySelector('body'), // pdf template node: the template content node in the first step above
+                        title: this.fileName, // pdf file name
+                        allowDownload: this.download, // Whether to allow downloading
+                        fileType: this.fileType, // file type
+                        isFullPage: !this.isNotFullPage, // pdf size: true for long files without pagination, false for A4 paginated files
                         canvasOptions: {
                             height: canvasHeight,
-                            width: canvasWidth, // 画布尺寸
+                            width: canvasWidth, // Canvas size
                         }
                     }).then((res) => {
                         this.$emit('print', res);
@@ -63,7 +63,7 @@ export default {
 
         getPdf({element, title, allowDownload, fileType, isFullPage, canvasOptions = {}}) {
             return new Promise((resolve, reject) => {
-                // 定义canvas画布的属性，避免生成的pdf文件尺寸不统一
+                // Define the properties of canvas to avoid uneven sizes of generated PDF files
                 let {scale = 2, width, height} = canvasOptions;
                 width = width || element.clientWidth;
                 height = height || element.clientHeight;
@@ -88,17 +88,17 @@ export default {
                         let imgWidth;
                         let imgHeight;
                         if (isFullPage) {
-                            // 全屏长图
+                            // Full screen long image
                             imgWidth = (contentWidth / scale) * 0.75;
                             imgHeight = (contentHeight / scale) * 0.75;
-                            PDF = new jsPDF('', 'pt', [imgWidth, imgHeight]);  // [imgWidth, imgHeight] 为PDF宽高
+                            PDF = new jsPDF('', 'pt', [imgWidth, imgHeight]); // [imgWidth, imgHeight] is the PDF width and height
                             PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
                         } else {
-                            // A4纸截图
+                            // A4 paper screenshot
                             imgWidth = 595;
                             imgHeight = (imgWidth / contentWidth) * contentHeight;
                             let position = 0;
-                            let pageHeight = (contentWidth / imgWidth) * 842; // A4一页的高度
+                            let pageHeight = (contentWidth / imgWidth) * 842; // Height of A4 page
                             PDF = new JsPDF('', 'pt', 'a4');
                             if (contentHeight < pageHeight) {
                                 PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
@@ -113,14 +113,14 @@ export default {
                                 }
                             }
                         }
-                        const fileURL = PDF.output('blob');  // 生成pdf文件的url
+                        const fileURL = PDF.output('blob'); // Generate the url of the pdf file
                         // console.log('file', fileURL);
                         if (fileType === 'png' && allowDownload) {
                             canvas.toBlob(function (blob) {
                                 saveAs(blob, title + '.png');
                             });
                         } else if (fileType === 'pdf' && allowDownload) {
-                            PDF.save(title + '.pdf');  // 保存pdf文件
+                            PDF.save(title + '.pdf'); // Save pdf file
                         }
                         resolve(fileURL);
                     })

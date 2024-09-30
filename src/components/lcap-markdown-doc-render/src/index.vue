@@ -10,14 +10,14 @@
     <div class="anchor-wrap" :style="anchorStyle">
         <div class="foldIcon" v-if="tocData && tocData.length">
             <div 
-                v-tooltip.top="pinned ? '隐藏目录' : '显示目录'" 
-                style="display: inline-block" 
-                @click="pinToc()"  
+            v-tooltip.top="pinned ? 'Hide directory' : 'Show directory'"
+                style="display: inline-block"
+                @click="pinToc()"
                 :class="['iconItem', pinned ? 'show' : 'hide']">
             </div>
 
             <div
-                v-tooltip.top="toggle ? '全部收起' : '全部展开'" 
+                v-tooltip.top="toggle ? 'Collapse all' : 'Expand all'" 
                 style="display: inline-block; margin-left: 10px"
                 @click="toggleAll()" 
                 :class="['iconItem', toggle ? 'fold' : 'unfold']"
@@ -68,7 +68,7 @@ const md = new MarkdownIt({
   highlight,
 });
 
-// 添加我们自定义的链接规则
+// Add our custom link rulesAdd our custom link rules
 // md.linkify.add('inner-link:', {
 //   validate: /^\.\.?\//,
 //   normalize: match => {
@@ -190,32 +190,32 @@ export default {
             let htmlString = md.render(text)
             const headers = extractHeaders(text, ['h2', 'h3', 'h4', 'h5'], md)
 
-            // 处理a签
-            // 创建DOM解析器对象
+            // Process a sign
+            // Create DOM parser object
             const parser = new DOMParser();
 
-            // 解析HTML字符串为DOM元素
+            // Parse HTML strings into DOM elements
             const doc = parser.parseFromString(htmlString, "text/html");
 
-            // 获取所有a标签
+            // Get all a tags
             const links = doc.getElementsByTagName("a");
 
-            // 遍历所有a标签，替换href属性为点击事件
+            // Traverse all a tags and replace the href attribute with the click event
             for (let i = 0; i < links.length; i++) {
                 const link = links[i];
                 const href = link.getAttribute("href");
 
-                // 跳转链接
+                // Jump link
                 if (!/^#/.test(href)) {
                     link.removeAttribute("href");
                     link.setAttribute("_href", href)
-                } else { // 内部锚点
+                } else { // internal anchor point
                     link.removeAttribute("href");
                     link.setAttribute("slug", href.replace(/^#/, ''))
                 }
             }
 
-            // 将修改后的DOM元素转换回HTML字符串
+            // Convert modified DOM elements back to HTML strings
             const modifiedHtmlString = doc.documentElement.outerHTML;
 
             this.tocData = this.getTocData(headers) || [];
@@ -256,9 +256,9 @@ export default {
             return result;
         },
         handleTocSelected(node) {
-            // 获取最准确的位置信息
+            // Get the most accurate location information
             this.initHeadersTopDistance();
-            // 阻止锚点定位时所触发的滚动事件
+            // Prevent scrolling events triggered when anchor point positioning
             clickFlag = true;
 
             this.curTocItem.value = node.slug;
@@ -271,7 +271,7 @@ export default {
         handleToggleToc(node) {
             const headers = document.querySelectorAll(".markdown-root .content h2, .markdown-root .content h3, .markdown-root .content h4, .markdown-root .content h5");
             const tocList = document.querySelectorAll(".tocItem");
-            // 折叠时高亮父目录部分，展开式高亮对应显示的子目录部分
+            // Highlight the parent directory part when folded, and highlight the corresponding displayed subdirectory part when expanded.
             if (node.expanded) {
                 this.curTocItem.value = lastTocItem;
             } else {
@@ -314,7 +314,7 @@ export default {
                 const headers = document.querySelectorAll(".markdown-root .content h2, .markdown-root .content h3, .markdown-root .content h4, .markdown-root .content h5");
                 const tocList = document.querySelectorAll(".tocItem");
 
-                // 判断当前滚动的高度是否大于前一个节点的高度,小于后一个节点的高度
+                // Determine whether the current scroll height is greater than the height of the previous node and less than the height of the next node
                 if (this.getElementTopDistance(headers[0]) > curHeight) {
                     ref.value = headers[0]?.id;
                     activeTocItem = tocList[0];
@@ -333,7 +333,7 @@ export default {
                         }
                     }
                 }
-                // 循环判断当前activeTocItem是否在可视区域内,不在的话高亮父目录节点
+                // Loop to determine whether the current activeTocItem is within the visible area. If not, highlight the parent directory node.
                 if (activeTocItem) {
                     curTocIndex = getParentTocIndex(activeTocItem, curTocIndex, tocList);
                     ref.value = headers[curTocIndex]?.id;
@@ -389,7 +389,7 @@ export default {
 
             this.headersTop = map;
         },
-        // 页面滚动时给地址栏加hash
+        // Add a hash to the address bar when the page scrolls
         setActiveHash() {
             const sidebarLinks = [].slice.call(document.querySelectorAll('.sidebar-link'))
             const anchors = [].slice.call(document.querySelectorAll('.header-anchor'))

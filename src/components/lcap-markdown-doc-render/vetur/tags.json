@@ -6,6 +6,6 @@
       "outline-position-top",
       "outline-position-right"
     ],
-    "description": "渲染Markdown文档的组件"
+    "description": "Component that renders Markdown documents"
   }
 }

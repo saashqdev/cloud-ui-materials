@@ -1,25 +1,25 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapPrintPage 页面打印
+# LcapPrintPage Page Printing
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [开启自动下载](#开启自动下载)
-    - [修改生成的文件类型为图片](#修改生成的文件类型为图片)
-    - [控制打印的DOM元素](#控制打印的dom元素)
-    - [开启PDF分页](#开启pdf分页)
-    - [设置生成的文件名称](#设置生成的文件名称)
-    - [设置隐藏组件](#设置隐藏组件)
-    - [控制打印宽度](#控制打印宽度)
-    - [控制打印宽度,根据页面宽高自动调整](#控制打印宽度根据页面宽高自动调整)
-- [API]()
+    - [Turn on Automatic Download](#turn on automatic download)
+    - [Modify the Generated File Type to Image](#Modify the generated file type to image)
+    - [Control Printing DOM Elements](#Control printing DOM elements)
+    - [Turn on PDF Pagination](#turn on pdf pagination)
+    - [Set the Generated File Name](#Set the generated file name)
+    - [Set Hidden Components](#sethidden components)
+    - [Control Printing Width](#Control printing width)
+    - [Control Printing Width, Automatically Adjust According to Page Width and Height] (#Control printing width, automatically adjust according to page width and height)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **Other**
 
-打印当前页面内容生成PDF或图片
+Print the current page content to generate PDF or pictures
 
 ## Example
 ### Basic Usage
@@ -28,42 +28,42 @@
 <lcap-printPage></lcap-printPage>
 ```
 
-### 开启自动下载
+### Turn on Automatic Download
 ``` html
 <lcap-printPage :download=true></lcap-printPage>
 ```
 
-### 修改生成的文件类型为图片
+### Modify the Generated File Type to Image
 ``` html
 <lcap-printPage :download=true fileType="png"></lcap-printPage>
 ```
 
-### 控制打印的DOM元素
+### Control Printed DOM Elements
 ``` html
 <lcap-printPage :download=true printDOM="body"></lcap-printPage>
 ```
 
-### 开启PDF分页
+### Turn on PDF Pagination
 ``` html
 <lcap-printPage :download=true canvasWidth="auto" canvasHeight="auto" :isNotFullPage=true></lcap-printPage>
 ```
 
-### 设置生成的文件名称
+### Set the Generated File Name
 ``` html
-<lcap-printPage :download=true fileName="自定义文件名"></lcap-printPage>
+<lcap-printPage :download=true fileName="custom file name"></lcap-printPage>
 ```
 
-### 设置隐藏组件
+### Set Hidden Components
 ``` html
 <lcap-printPage :hidden=true></lcap-printPage>
 ```
 
-### 控制打印宽度
+### Control Printing Width
 ``` html
 <lcap-printPage :download=true :canvasWidth=1200></lcap-printPage>
 ```
 
-### 控制打印宽度,根据页面宽高自动调整
+### Control the Printing Width and Automatically Adjust it According to the Page Width and Height
 ``` html
 <lcap-printPage :download=true canvasWidth="auto" canvasHeight="auto"></lcap-printPage>
 ```
@@ -73,30 +73,30 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| hidden | boolean |  | `false` | 是否显示打印按钮 |
-| fileName | string |  | `'文件导出'` | 设置打印的文件名称 |
-| printDOM | string |  | `'body'` | 设置打印的DOM节点 |
-| isNotFullPage | boolean |  | `false` | 打印的PDF是否分页 |
-| canvasWidth | number\|string |  | `1000` | 设置打印文件的宽度 |
-| canvasHeight | number\|string |  | `800` | 设置打印文件的高度 |
-| download | boolean |  | `false` | 是否自动下载打印的文件 |
-| fileType | string | `[object Object]`<br/>`[object Object]` | `'pdf'` | 设置打印的文件类型 |
+| hidden | boolean | | `false` | Whether to display the print button |
+| fileName | string | | `'File export'` | Set the file name for printing |
+| printDOM | string | | `'body'` | Set the printed DOM node |
+| isNotFullPage | boolean | | `false` | Whether the printed PDF is paginated |
+| canvasWidth | number\|string | | `1000` | Set the width of the print file |
+| canvasHeight | number\|string | | `800` | Set the height of the print file |
+| download | boolean | | `false` | Whether to automatically download printed files |
+| fileType | string | `[object Object]`<br/>`[object Object]` | `'pdf'` | Set the file type for printing |
 
 ### Events
 
 #### @print
 
-打印时触发
+Triggered when printing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.file | any | 返还打印的文件流 |
+| $event.file | any | Returns the printed file stream |
 
 Methods
 
 #### printPage()
 
-打印当前页面
+Print current page
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

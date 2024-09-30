@@ -32,7 +32,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "页面打印",
+    "title": "Page printing",
     "category": "Other",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

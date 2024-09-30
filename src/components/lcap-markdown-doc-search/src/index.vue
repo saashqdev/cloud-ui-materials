@@ -38,7 +38,7 @@
       :class="{ [`align-${align}`]: true }"
     >
         <li class="total-suggestions">
-            <u-loading size="small"></u-loading> 正在加载中...
+            <u-loading size="small"></u-loading>Loading...
         </li>
     </ul>
     <ul
@@ -47,7 +47,7 @@
       :class="{ [`align-${align}`]: true }"
       @mouseleave="onMouseLeave"
     >
-        <li class="total-suggestions">共搜索到{{ suggestions.length || 0 }}条内容</li>
+        <li class="total-suggestions">A total of {{ suggestions.length || 0 }} items found</li>
         <li
             v-for="(s, i) in suggestions"
             :key="i"

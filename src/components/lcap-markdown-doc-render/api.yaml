@@ -1,42 +1,42 @@
 - name: lcap-markdown-doc-render
-  title: 文档渲染组件
-  description: 渲染Markdown文档的组件
+  title: Document Rendering Component
+  description: Component that renders Markdown documents
   labels: [Other]
   icon: default
   attrs:
     - name: text
-      title: 文本
+      title: Text
       type: string
       default: ""
-      description: 需要传入的文本
+      description: The text that needs to be passed in
     - name: scrollContainer
-      title: 滚动容器
+      title: Scroll Container
       type: string
       default: window
-      description: 监听文档滚动的容器
+      description: Container that monitors document scrolling
       options:
         - value: window
-          title: 窗口
+          title: Window
         - value: root
-          title: 根节点
+          title: Root Node
       advance: true
     - name: outline-position-top
-      title: 大纲定位距离窗口上
-      type: number
+      title: Outline Positioning Distance on Window
+      type:number
       default: 200
-      description: 当滚动容器为窗口时生效
+      description: Effective when the scroll container is a window
     - name: outline-position-right
-      title: 大纲定位距离窗口右
+      title: Outline Positioning Distance Right of Window
       type: number
       default: 0
-      description: 当滚动容器为窗口时生效
+      description: Effective when the scroll container is a window
   events:
     - name: link
-      title: 点击链接时
+      title: When Clicking the Link
       params:
         - name: $event
           type: string
-          description: 链接地址
-          schema:
+          description: Link address
+          Schema:
             $ref: "#/basicTypes/String"
-      description: 点击链接时触发的事件
+      description: Event triggered when a link is clicked

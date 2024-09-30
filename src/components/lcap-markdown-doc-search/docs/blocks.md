@@ -1,5 +1,5 @@
 ### Basic Usage
 
 ``` html
-<lcap-markdown-doc-search placeholder="请输入"></lcap-markdown-doc-search>
+<lcap-markdown-doc-search placeholder="Please enter"></lcap-markdown-doc-search>
 ```

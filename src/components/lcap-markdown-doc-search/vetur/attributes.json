@@ -1,48 +1,48 @@
 {
   "lcap-markdown-doc-search/value": {
     "type": "String",
-    "description": "输入的值"
+    "description": "Input value"
   },
   "lcap-markdown-doc-search/data-source": {
     "type": "Array<Item>",
-    "description": "搜索结果列表数据"
+    "description": "Search result list data"
   },
   "lcap-markdown-doc-search/data-schema": {
     "type": "schema",
-    "description": "选择器每一行的数据类型"
+    "description": "Data type of each row of the selector"
   },
   "lcap-markdown-doc-search/text-field": {
     "type": "string",
-    "description": "显示结果项标题字段的属性"
+    "description": "Display the properties of the result item title field"
   },
   "lcap-markdown-doc-search/description-field": {
     "type": "string",
-    "description": "用于显示结果项描述字段的属性"
+    "description": "Attribute used to display the description field of the result item"
   },
   "lcap-markdown-doc-search/loading": {
     "type": "boolean",
-    "description": "用于显示加载状态"
+    "description": "Used to display loading status"
   },
   "lcap-markdown-doc-search/align": {
     "type": "string",
     "options": [
       {
         "value": "left",
-        "title": "左"
+        "title": "Left"
       },
       {
         "value": "right",
-        "title": "右"
+        "title": "Right"
       }
     ]
   },
   "lcap-markdown-doc-search/clearable": {
     "type": "boolean",
-    "description": "开启并在输入框有内容时会显示清除按钮"
+    "description": "Enable and display the clear button when there is content in the input box"
   },
   "lcap-markdown-doc-search/placeholder": {
     "type": "string",
-    "description": "为空时的提示文本"
+    "description": "Prompt text when empty"
   },
   "lcap-markdown-doc-search/maxlength": {
     "type": "number",
@@ -50,7 +50,7 @@
   },
   "lcap-markdown-doc-search/autofocus": {
     "type": "boolean",
-    "description": "是否自动获取焦点"
+    "description": "Whether to automatically obtain focus"
   },
   "lcap-markdown-doc-search/readonly": {
     "type": "boolean",
@@ -65,23 +65,23 @@
     "options": [
       {
         "value": "full",
-        "title": "占满"
+        "title": "Full"
       },
       {
         "value": "huge",
-        "title": "巨大"
+        "title": "Huge"
       },
       {
         "value": "large",
-        "title": "大"
+        "title": "Large"
       },
       {
         "value": "medium",
-        "title": "中型"
+        "title": "Medium"
       },
       {
         "value": "normal",
-        "title": "正常"
+        "title": "Normal"
       },
       {
         "value": "small",
@@ -89,44 +89,44 @@
       },
       {
         "value": "mini",
-        "title": "迷你"
+        "title": "mini"
       }
     ],
-    "description": "设置单行输入框宽度大小"
+    "description": "Set the width of the single-line input box"
   },
   "lcap-markdown-doc-search/height": {
     "type": "string",
     "options": [
       {
         "value": "full",
-        "title": "占满"
+        "title": "Full"
       },
       {
         "value": "huge",
-        "title": "巨大"
+        "title": "Huge"
       },
       {
         "value": "large",
-        "title": "大"
+        "title": "Large"
       },
       {
         "value": "medium",
-        "title": "中型"
+        "title": "Medium"
       },
       {
         "value": "normal",
-        "title": "正常"
+        "title": "Normal"
       },
       {
         "value": "small",
-        "title": "小"
+        "title": "Small"
       },
       {
         "value": "mini",
-        "title": "迷你"
+        "title": "Mini"
       }
     ],
-    "description": "设置单行输入框高度大小"
+    "description": "Set the height of the single-line input box"
   },
   "lcap-markdown-doc-search/prefix": {
     "type": "icon",

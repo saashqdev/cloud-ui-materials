@@ -1,31 +1,30 @@
-{
-  "lcap-printPage/hidden": {
+{"lcap-printPage/hidden": {
     "type": "boolean",
-    "description": "是否显示打印按钮"
+    "description": "Whether to display the print button"
   },
   "lcap-printPage/fileName": {
     "type": "string",
-    "description": "设置打印的文件名称"
+    "description": "Set the printed file name"
   },
   "lcap-printPage/printDOM": {
     "type": "string",
-    "description": "设置打印的DOM节点"
+    "description": "Set the printed DOM node"
   },
   "lcap-printPage/isNotFullPage": {
     "type": "boolean",
-    "description": "打印的PDF是否分页"
+    "description": "Whether the printed PDF is paginated"
   },
   "lcap-printPage/canvasWidth": {
     "type": "number|string",
-    "description": "设置打印文件的宽度"
+    "description": "Set the width of the print file"
   },
   "lcap-printPage/canvasHeight": {
     "type": "number|string",
-    "description": "设置打印文件的高度"
+    "description": "Set the height of the print file"
   },
   "lcap-printPage/download": {
     "type": "boolean",
-    "description": "是否自动下载打印的文件"
+    "description": "Whether to automatically download printed files"
   },
   "lcap-printPage/fileType": {
     "type": "string",
@@ -39,6 +38,6 @@
         "title": "PNG"
       }
     ],
-    "description": "设置打印的文件类型"
+    "description": "Set the file type for printing"
   }
 }

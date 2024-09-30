@@ -1,20 +1,19 @@
-{
-    "symbol": "lcap-markdown-doc-render",
-    "name": "文档渲染组件",
+{"symbol": "lcap-markdown-doc-render",
+    "name": "Document rendering component",
     "version": "0.1.5",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "渲染Markdown文档的组件",
+    "description": "Component that renders Markdown documents",
     "labels": [
         "Other"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-markdown-doc-render></lcap-markdown-doc-render>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-markdown- doc-render></lcap-markdown-doc-render>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-markdown-doc-render",
-        "title": "文档渲染组件",
-        "description": "渲染Markdown文档的组件",
+        "title": "Document Rendering Component",
+        "description": "Component that renders Markdown documents",
         "category": "Other",
         "screenShot": "",
         "drawings": "",
@@ -28,59 +27,59 @@
         "attrs": [
             {
                 "name": "text",
-                "title": "文本",
+                "title": "Text",
                 "type": "string",
                 "default": "",
-                "description": "需要传入的文本"
+                "description": "Text to be passed in"
             },
             {
                 "name": "scrollContainer",
-                "title": "滚动容器",
+                "title": "Scrolling Container",
                 "type": "string",
                 "default": "window",
-                "description": "监听文档滚动的容器",
+                "description": "Container that monitors document scrolling",
                 "options": [
                     {
                         "value": "window",
-                        "title": "窗口"
+                        "title": "Window"
                     },
                     {
                         "value": "root",
-                        "title": "根节点"
+                        "title": "Root Node"
                     }
                 ],
                 "advance": true
             },
             {
                 "name": "outline-position-top",
-                "title": "大纲定位距离窗口上",
+                "title": "Outline Positioning Distance Window",
                 "type": "number",
                 "default": 200,
-                "description": "当滚动容器为窗口时生效"
+                "description": "Effective when the scroll container is a window"
             },
             {
                 "name": "outline-position-right",
-                "title": "大纲定位距离窗口右",
+                "title": "Outline Positioning Distance Right of Window",
                 "type": "number",
                 "default": 0,
-                "description": "当滚动容器为窗口时生效"
+                "description": "Effective when the scroll container is a window"
             }
         ],
         "events": [
             {
                 "name": "link",
-                "title": "点击链接时",
+                "title": "When the Link is Clicked",
                 "params": [
                     {
                         "name": "$event",
                         "type": "string",
-                        "description": "链接地址",
+                        "description": "Link Address",
                         "schema": {
                             "$ref": "#/basicTypes/String"
                         }
                     }
                 ],
-                "description": "点击链接时触发的事件"
+                "description": "Event triggered when a link is clicked"
             }
         ],
         "children": []

@@ -1,257 +1,257 @@
 - name: lcap-markdown-doc-search
-  title: 文档搜索框
-  description: 请在这里添加描述
+  title: Document Search Box
+  description: Please add a description here
   labels: [Other]
   icon: default
   attrs:
     - name: value
-      title: 值
+      title: Value
       type: String
-      description: 输入的值
+      description: The value of the input
       sync: true
       model: true
     - name: data-source
-      title: 结果列表数据
+      title: Result List Data
       type: Array<Item>
-      description: 搜索结果列表数据
+      description: Search result list data
     - name: data-schema
-      title: 数据类型
+      title: Data Type
       type: schema
-      description: 选择器每一行的数据类型
+      description: The data type of each row of the selector
       compType: dataTypeSelect
     - name: text-field
-      title: 结果项标题字段
+      title: Result Item Title Field
       type: string
       default: text
-      description: 显示结果项标题字段的属性
+      description: Displays the properties of the result item title field
     - name: description-field
-      title: 结果项描述字段
+      title: Result Item Description Field
       type: string
-      description: 用于显示结果项描述字段的属性
+      description: Attribute used to display the description field of the result item
     - name: loading
-      title: 加载状态
+      title: Loading Status
       type: boolean
-      description: 用于显示加载状态
+      description: Used to display the loading status
       default: false
     - name: align
-      title: 结果列表对齐
+      title: Result List Alignment
       type: string
       default: left
       options:
         - value: left
-          title: 左
+          title: Left
         - value: right
-          title: 右
+          title: Right
     - name: clearable
-      title: 清除按钮
+      title: Clear Button
       type: boolean
-      description: 开启并在输入框有内容时会显示清除按钮
+      description: When enabled, a clear button will be displayed when there is content in the input box
     - name: placeholder
-      title: 占位符
+      title: Placeholder
       type: string
-      description: 为空时的提示文本
+      description: The prompt text when it is empty
     - name: maxlength
-      title: 最大长度
+      title: Maximum Length
       type: number
       description: ""
     - name: autofocus
-      title: 自动获取焦点
+      title: Automatically Get Focus
       type: boolean
       default: false
-      description: 是否自动获取焦点
+      description: Whether to automatically get the focus
       designer-value: false
     - name: readonly
-      title: 只读
+      title: Read-Only
       type: boolean
       default: false
       description: ""
     - name: disabled
-      title: 禁用
+      title: Disable
       type: boolean
       default: false
       description: ""
     - name: width
-      title: 宽度
+      title: Width
       type: string
       options:
         - value: full
-          title: 占满
+          title: Full
         - value: huge
-          title: 巨大
+          title: Huge
         - value: large
-          title: 大
+          title: Large
         - value: medium
-          title: 中型
+          title: Medium
         - value: normal
-          title: 正常
+          title: Normal
         - value: small
-          title: 小
+          title: Small
         - value: mini
-          title: 迷你
+          title: Mini
       default: normal
-      description: 设置单行输入框宽度大小
+      description: Set the width of the single-line input box
     - name: height
-      title: 高度
+      title: Height
       type: string
       options:
         - value: full
-          title: 占满
+          title: Full
         - value: huge
-          title: 巨大
+          title: Huge
         - value: large
-          title: 大
+          title: Large
         - value: medium
-          title: 中型
+          title: Medium
         - value: normal
-          title: 正常
+          title: Normal
         - value: small
-          title: 小
+          title: Small
         - value: mini
-          title: 迷你
+          title: Mini
       default: normal
-      description: 设置单行输入框高度大小
+      description: Set the height of the single-line input box
     - name: prefix
-      title: 前缀图标
+      title: Prefix Icon
       type: icon
       description: ""
       default: ""
       clearable: true
     - name: suffix
-      title: 后缀图标
+      title: Suffix Icon
       type: icon
       description: ""
       default: ""
       clearable: true
     - name: border-radius
-      title: 圆角
+      title: Rounded Corners
       type: string
       default: 0px
   events:
     - name: select
-      title: 选择时
-      description: 选择结果时触发
+      title: When Selecting
+      description: Triggered when a result is selected
       params:
         - name: $event.item
           type: object
-          description: 选择项相关对象
+          description: Selection related object
     - name: before-input
-      title: 输入前
+      title: Before Input
       advanced: true
-      description: 输入前触发。可以在这个阶段阻止输入，或者修改输入的值 $event.value
+      description: Triggered before input. You can prevent input at this stage, or modify the input value $event.value
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: "#/systemTypes/ChangeEvent"
         - name: $event.oldValue
           type: string
-          description: 旧的值
+          description: Old value
         - name: $event.value
           type: string
-          description: 输入框的值
+          description: The value of the input box
         - name: $event.preventDefault
           type: Function
-          description: 阻止输入流程
+          description: Block input flow
     - name: input
-      title: 输入时
-      description: 输入时触发。
+      title: When Entering
+      description: Triggered on input.
       params:
         - name: $event
           type: string
-          description: 输入框的值
+          description: The value of the input box
     - name: change
-      title: 改变后
-      description: 值变化时触发。（注意：与原生事件不同）
+      title: After the change
+      description: Triggered when the value changes. (Note - different from native events)
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: "#/systemTypes/ChangeEvent"
         - name: $event.value
           type: string
-          description: 改变后的值
+          description: The changed value
         - name: $event.oldValue
           type: string
-          description: 旧的值
+          description: Old value
     - name: focus
-      title: 获得焦点
-      description: 获得焦点时触发。
+      title: Get Focus
+      description: Fired when the focus is obtained.
       params:
         - name: $event
           type: FocusEvent
-          description: 原生事件对象
+          description: Native event object
           schema:
             $ref: "#/systemTypes/FocusEvent"
     - name: blur
-      title: 失去焦点
-      description: 失去焦点时触发。
+      title: Lost Focus
+      description: Fired when losing focus.
       params:
         - name: $event
           type: FocusEvent
-          description: 原生事件对象
+          description: Native event object
           schema:
             $ref: "#/systemTypes/FocusEvent"
     - name: before-clear
-      title: 清空前
-      description: 清空前触发。
+      Title: Before Clearing
+      description: Triggered before clearing.
       advanced: true
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: "#/systemTypes/ChangeEvent"
         - name: $event.value
           type: string
-          description: 清空后的值
+          description: The value after clearing
         - name: $event.oldValue
           type: string
-          description: 待清空的值
+          description: The value to be cleared
         - name: $event.preventDefault
           type: Function
-          description: 阻止清空流程
+          description: Prevent the clearing process
     - name: clear
-      title: 清空后
-      description: 清空后触发。
+      Title: After Clearing
+      description: Triggered after clearing.
       params:
         - name: $event
           type: object
-          description: 自定义事件对象
+          description: Custom event object
           schema:
             $ref: "#/systemTypes/ChangeEvent"
         - name: $event.value
           type: string
-          description: 清空后的值
+          description: The value after clearing
         - name: $event.oldValue
           type: string
-          description: 旧的值
+          description: Old value
     - name: click-prefix
-      title: 点击前缀图标
-      description: 点击前缀图标后触发
+      title: Click the Prefix Icon
+      description: Triggered after clicking the prefix icon
       params:
         - name: $event
           type: object
-          description: 鼠标事件对象
+          description: Mouse event object
           schema:
             $ref: "#/systemTypes/MouseEvent"
     - name: click-suffix
-      title: 点击后缀图标
-      description: 点击后缀图标后触发
+      title: Click the Suffix Icon
+      description: Triggered after clicking the suffix icon
       params:
         - name: $event
           type: object
-          description: 鼠标事件对象
+          description: Mouse event object
           schema:
             $ref: "#/systemTypes/MouseEvent"
   methods:
     - name: focus
-      description: 让输入框获取焦点。
+      description: Make the input box get focus.
       params: []
     - name: blur
-      description: 让输入框失去焦点。
+      description: Make the input box lose focus.
       params: []
     - name: clear
-      description: 清空输入框。
+      description: Clear the input box.
       params: []
