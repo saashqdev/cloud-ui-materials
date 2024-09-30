@@ -3,7 +3,7 @@
   "description": "",
   "version": "1.0.0",
   "main": "./index.js",
-  "author": "daysai",
+  "author": "kubevue",
   "repository": "",
   "homepage": "https://static-kubevue.s3.amazonaws.com/packages/lcap-login@0.4.5/index.html",
   "license": "MIT",
@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "登录组件",
+    "title": "Login component",
     "category": "form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -9,14 +9,14 @@
     "labels": [
         "Form"
     ],
-    "screenShot": "https://static-vusion.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
+    "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
     "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-camera list-type=\\\"image\\\"\\n    url=\\\"/gateway/lowcode/api/v1/app/upload\\\" url-field=\\\"result\\\"\\n    converter=\\\"json\\\">\\n</lcap-camera>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-camera",
         "title": "Camera",
         "description": "Turn on/off the camera, support screenshot, upload and other functions",
         "category": "Form",
-        "screenShot": "https://static-vusion.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
+        "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-camera@0.1.7/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {

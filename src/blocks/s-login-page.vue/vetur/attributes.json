@@ -7,9 +7,9 @@
     "type": "boolean",
     "description": "Whether to enable normal login, enabled by default"
   },
-  "s-login/useQZ": {
+  "s-login/useKW": {
     "type": "boolean",
-    "description": "Whether to enable Qingzhou login, closed by default"
+    "description": "Whether to enable Kubeworkz login, closed by default"
   },
   "s-login/useLDAP": {
     "type": "boolean",

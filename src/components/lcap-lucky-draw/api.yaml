@@ -1,235 +1,234 @@
 - name: lcap-lucky-draw
-  title: 九宫格抽奖
-  description: 九宫格抽奖组价
+  title: Nine-Grid Lucky Draw
+  description: Nine-grid lottery set price
   labels: [Other]
   icon: default
   attrs:
     - name: width
       type: string
-      title: 宽度
+      title: Width
       default: 375px
-      description: 设置九宫格宽度
-      group: 基础配置信息
+      description: Set the width of the nine-grid grid
+      group: Basic configuration information
     - name: height
       type: string
-      title: 高度
+      title: Height
       default: 375px
-      description: 设置九宫格高度
-      group: 基础配置信息
+      description: Set the height of the nine-grid
+      group: Basic configuration information
     - name: return_prize
-      title: 后端返还的奖品名称
+      title: The Name of the Prize Returned by the Backend
       type: string
       default: ""
-      description: 后端返还的奖品信息，设置后各自的抽奖概率无效
-      group: 基础配置信息
+      description: Prize information returned by the backend. After setting, the respective lottery probability will be invalid.
+      group: Basic configuration information
     - name: prize_popup
-      title: 开启默认中奖弹窗
+      title: Open the Default Winning Pop-up Window
       type: boolean
       default: false
-      description: 是否开启默认中奖弹窗
-      group: 基础配置信息
+      description: Whether to open the default winning pop-up window
+      group: Basic configuration information
     - name: background_color
-      title: 背景颜色
+      title: Background Color
       type: string
       default: ""
-      description: 设置背景颜色（例：#FFFFFF）
-      group: 基础配置信息
+      description: Set the background color (e.g. #FFFFFF)
+      group: Basic configuration information
     - name: start_img
-      title: 抽奖开始按钮图片
+      title: Lucky Draw Start Button Image
       type: image
       compType: linkInput
       default: ""
-      description: 设置抽奖开始按钮图片
-      group: 基础配置信息
+      description: Set the lottery start button image
+      group: Basic configuration information
     - name: font_color
-      title: 奖品字体颜色
+      title: Award Font Color
       type: string
       default: ""
-      description: 设置所有奖品文字的图片颜色
-      group: 基础配置信息
+      description: Set the image color of all prize text
+      group: Basic configuration information
     - name: font_top_padding
-      title: 奖品文字距离顶部的距离（px）
+      title: Distance from the Top of the Award Text (px)
       type: string
       default: "60px"
-      description: 设置奖品文字距离顶部的距离（默认：60px）
-      group: 基础配置信息
+      description: Set the distance between the award text and the top (default - 60px)
+      group: Basic configuration information
     - name: font_size
-      title: 奖品文字字体大小（px）
+      title: Prize Text Font Size (px)
       type: string
       default: "22px"
-      description: 设置奖品文字距离顶部的距离（默认：22px）
-      group: 基础配置信息
-
+      description: Set the distance between the award text and the top (default - 22px)
+      group: Basic configuration information
     - name: block1_img
-      title: 格子1奖品图片
+      title: Grid 1 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子1奖品图片
-      group: 格子1配置信息
+      description: Set the prize image for grid 1
+      group: Grid 1 configuration information
     - name: block1_name
-      title: 格子1名称
+      title: Grid 1 Name
       type: string
-      default: "奖品1"
-      description: 设置格子1的奖品名字
-      group: 格子1配置信息
+      default: "Prize 1"
+      description: Set the prize name for grid 1
+      group: Grid 1 configuration information
     - name: block1_chance
-      title: 格子1中奖概率
+      title: Winning Probability of Grid 1
       type: number
       default: '10'
-      description: 设置奖品1的中奖概率
-      group: 格子1配置信息
+      description: Set the probability of winning prize 1
+      group: Grid 1 configuration information
 
     - name: block2_img
-      title: 格子2奖品图片
+      title: Grid 2 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子2奖品图片
-      group: 格子2配置信息
+      description: Set the prize image for grid 2
+      group: Grid 2 configuration information
     - name: block2_name
-      title: 格子2名称
+      title: Grid 2 Name
       type: string
-      default: "奖品2"
-      description: 设置格子2的奖品名字
-      group: 格子2配置信息
+      default: "Prize 2"
+      description: Set the prize name for grid 2
+      group: Grid 2 configuration information
     - name: block2_chance
-      title: 格子2中奖概率
+      Title: Winning Probability of Grid 2
       type: number
       default: '10'
-      description: 设置奖品2的中奖概率
-      group: 格子2配置信息
+      description: Set the probability of winning prize 2
+      group: Grid 2 configuration information
 
     - name: block3_img
-      title: 格子3奖品图片
+      title: Grid 3 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子3奖品图片
-      group: 格子3配置信息
+      description: Set the grid 3 prize image
+      group: Grid 3 configuration information
     - name: block3_name
-      title: 格子3名称
+      title: Grid 3 Name
       type: string
-      default: "奖品3"
-      description: 设置格子3的奖品名字
-      group: 格子3配置信息
+      default: "Prize 3"
+      description: Set the prize name for grid 3
+      group: Grid 3 configuration information
     - name: block3_chance
-      title: 格子3中奖概率
+      title: Winning Probability of Grid 3
       type: number
       default: '10'
-      description: 设置奖品3的中奖概率
-      group: 格子3配置信息
+      description: Set the probability of winning prize 3
+      group: Grid 3 configuration information
 
     - name: block4_img
-      title: 格子4奖品图片
+      title: Grid 4 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子4奖品图片
-      group: 格子4配置信息
+      description: Set grid 4 prize image
+      group: Grid 4 Configuration Information
     - name: block4_name
-      title: 格子4名称
+      Title: Grid 4 Name
       type: string
-      default: "奖品4"
-      description: 设置格子4的奖品名字
-      group: 格子4配置信息
+      default: "Prize 4"
+      description: Set the prize name for grid 4
+      group: Grid 4 configuration information
     - name: block4_chance
-      title: 格子4中奖概率
+      title: Winning Probability of Grid 4
       type: number
       default: '10'
-      description: 设置奖品4的概率
-      group: 格子4配置信息
+      description: Set the probability of prize 4
+      group: Grid 4 configuration information
 
     - name: block5_img
-      title: 格子5奖品图片
+      title: Grid 5 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子5奖品图片
-      group: 格子5配置信息
+      description: Set grid 5 prize picture
+      group: Grid 5 configuration information
     - name: block5_name
-      title: 格子5名称
+      Title: Grid 5 Name
       type: string
-      default: "奖品5"
-      description: 设置格子5的奖品名字
-      group: 格子5配置信息
+      default: "Prize 5"
+      description: Set the prize name for grid 5
+      group: Grid 5 configuration information
     - name: block5_chance
-      title: 格子5中奖概率
+      title: Winning Probability of Grid 5
       type: number
       default: '10'
-      description: 设置奖品5的中奖概率
-      group: 格子5配置信息
+      description: Set the probability of winning prize 5
+      group: Grid 5 configuration information
 
     - name: block6_img
-      title: 格子6奖品图片
+      title: Grid 6 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子6奖品图片
-      group: 格子6配置信息
+      description: Set grid 6 prize image
+      group: Grid 6 configuration information
     - name: block6_name
-      title: 格子6名称
+      Title: Grid 6 Name
       type: string
-      default: "奖品6"
-      description: 设置格子6的奖品名字
-      group: 格子6配置信息
+      default: "Prize 6"
+      description: Set the prize name for grid 6
+      group: Grid 6 configuration information
     - name: block6_chance
-      title: 格子6中奖概率
+      title: Winning Probability of Grid 6
       type: number
       default: '10'
-      description: 设置奖品6的中奖概率
-      group: 格子6配置信息
+      description: Set the probability of winning prize 6
+      group: Grid 6 configuration information
 
     - name: block7_img
-      title: 格子7奖品图片
+      title: Grid 7 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子7奖品图片
-      group: 格子7配置信息
+      description: Set the grid 7 prize picture
+      group: Grid 7 configuration information
     - name: block7_name
-      title: 格子7名称
+      Title: Grid 7 Name
       type: string
-      default: "奖品7"
-      description: 设置格子7的奖品名字
-      group: 格子7配置信息
+      default: "Prize 7"
+      description: Set the prize name for grid 7
+      group: Grid 7 configuration information
     - name: block7_chance
-      title: 格子7中奖概率
+      title: Winning Probability of Grid 7
       type: number
       default: '10'
-      description: 设置奖品7的中奖概率
-      group: 格子7配置信息
+      description: Set the probability of winning prize 7
+      group: Grid 7 configuration information
 
     - name: block8_img
-      title: 格子8奖品图片
+      title: Grid 8 Prize Picture
       type: image
       compType: linkInput
       default: ""
-      description: 设置格子8奖品图片
-      group: 格子8配置信息
+      description: Set the grid 8 prize picture
+      group: Grid 8 configuration information
     - name: block8_name
-      title: 格子8名称
+      Title: Grid 8 Name
       type: string
-      default: "奖品8"
-      description: 设置格子8的奖品名字
-      group: 格子8配置信息
+      default: "Prize 8"
+      description: Set the prize name for grid 8
+      group: Grid 8 configuration information
     - name: block8_chance
-      title: 格子8概率
+      title: Grid 8 Probability
       type: number
       default: '10'
-      description: 设置奖品8的中奖概率
-      group: 格子8配置信息
+      description: Set the probability of winning prize 8
+      group: Grid 8 configuration information
 
   events:
     - name: start
-      title: 抽奖开始时
-      description: 抽奖时开始时触发
+      Title: When the Lottery Starts
+      description: Triggered when the lottery starts
     - name: end
-      title: 抽奖结束时
+      title: When the Lottery Ends
       params:
         - name: $event
           type: any
-          description: 返还奖品
+          description: Return prize
           schema:
             $ref: "#/basicTypes/String"
-      description: 抽奖时结束时触发
+      description: Triggered when the lottery ends

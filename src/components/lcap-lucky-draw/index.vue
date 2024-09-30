@@ -18,11 +18,11 @@
       @ok="handleOk"
       :mode=false
       size="small"
-      title="抽奖结果"
+      title="Lottery Results"
     >
       <div slot="body">
         <div class="result">
-            <span>恭喜您获得{{ currentPrize }}!</span>
+            <span>Congratulations on winning {{ currentPrize }}!</span>
         </div>
       </div>
     </u-modal>
@@ -183,9 +183,9 @@ export default {
     return_prize: {type: String, default: ""},
   },
   methods: {
-    // 点击抽奖按钮会触发star回调
+    // Clicking the lottery button will trigger the star callback
     startCallback() {
-      // 调用抽奖组件的play方法开始游戏
+      // Call the play method of the lottery component to start the game
       this.$emit('start');
       this.currentPrize = '';
       this.$refs.myLucky.play();
@@ -198,7 +198,7 @@ export default {
         }
       }, 1500);
     },
-    // 抽奖结束会触发end回调
+    // The end of the lottery will trigger the end callback
     endCallback(prize) {
       this.visible = true;
       this.currentPrize = prize.fonts[0].text;

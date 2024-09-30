@@ -5,7 +5,7 @@
 ```
 
 
-### 工行登录
+### ICBC login
 
 ``` html
 <lcap-login src="http://nuims.kubevue.top" useIcbc hasUserCenter></lcap-login>

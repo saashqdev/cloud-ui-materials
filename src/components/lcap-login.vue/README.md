@@ -1,16 +1,16 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapLogin 登录
+# LcapLogin Login
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
 
-**runtime**
+**Runtime**
 
-账号与权限中心的统一认证登录组件
+Unified authentication login component of account and authority center
 
 ## Example
 ### Basic Usage
@@ -24,33 +24,33 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| useNormal | boolean |  | `true` | 是否开启普通登录，默认开启 |
-| useQZ | boolean |  | `false` | 是否开启轻舟登录，默认关闭 |
-| useLdap | boolean |  | `false` | 是否开启LDAP登录，默认关闭 |
-| useNetease | boolean |  | `false` | 是否开启OpenID登录，默认关闭 |
-| useGithub | boolean |  | `false` | 是否开启Github登录，默认关闭 |
-| useWechat | boolean |  | `false` | 是否开启微信登录，默认关闭 |
-| useIcbc | boolean |  | `false` | 是否开启工行登录，默认关闭 |
-| exdays | number |  | `1` | 设置 Cookie 过期天数 |
+| useNormal | boolean | | `true` | Whether to enable normal login, enabled by default |
+| useKW | boolean | | `false` | Whether to enable Qingzhou login, closed by default |
+| useLdap | boolean | | `false` | Whether to enable LDAP login, closed by default |
+| useSaasHQ | boolean | | `false` | Whether to enable OpenID login, closed by default |
+| useGithub | boolean | | `false` | Whether to enable Github login, closed by default |
+| useFB | boolean | | `false` | Whether to enable WeChat login, closed by default |
+| useIcbc | boolean | | `false` | Whether to enable ICBC login, closed by default |
+| exdays | number | | `1` | Set cookie expiration days |
 
 ### Events
 
 #### @success
 
-登录成功后触发
+Triggered after successful login
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.Authorization | string | 登录成功后为用户颁发的 AccessToken |
-| $event.UserId | string | 用户 ID |
-| $event.UserName | string | 用户名 |
-| $event.Message | string | 登录成功的信息 |
+| $event.Authorization | string | AccessToken issued to the user after successful login |
+| $event.UserId | string | User ID |
+| $event.UserName | string | Username |
+| $event.Message | string | Login successful message |
 
 #### @error
 
-登录失败后触发
+Triggered after failed login
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.Message | string | 登录失败的信息 |
+| $event.Message | string | Login failure message |
 

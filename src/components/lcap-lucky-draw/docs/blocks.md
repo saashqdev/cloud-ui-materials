@@ -2,14 +2,14 @@
 
 ``` html
 <lcap-lucky-draw
-    block1_name="奖品1"
-    block2_name="奖品2"
-    block3_name="奖品3"
-    block4_name="奖品4"
-    block5_name="奖品5"
-    block6_name="奖品6"
-    block7_name="奖品7"
-    block8_name="奖品8"
+    block1_name="Prize 1"
+    block2_name="Prize 2"
+    block3_name="Prize 3"
+    block4_name="Prize 4"
+    block5_name="Prize 5"
+    block6_name="Prize 6"
+    block7_name="Prize 7"
+    block8_name="Prize 8"
 >
 </lcap-lucky-draw>
 ```

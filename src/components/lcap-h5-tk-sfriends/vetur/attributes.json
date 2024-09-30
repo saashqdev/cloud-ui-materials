@@ -1,26 +1,26 @@
 {
   "lcap-h5-tk-sfriends/value": {
     "type": "number, string, object",
-    "description": "需要传入的值"
+    "description": "The value that needs to be passed in"
   },
   "lcap-h5-tk-sfriends/secret": {
     "type": "string",
-    "description": "秘钥,字母或数字,不使用可不填"
+    "description": "Secret key, letters or numbers, please leave it blank if not used"
   },
   "lcap-h5-tk-sfriends/shareUrl": {
     "type": "string",
-    "description": "分享地址(默认为当前页地址)"
+    "description": "Share address (default is current page address)"
   },
   "lcap-h5-tk-sfriends/shareTitle": {
     "type": "string",
-    "description": "微信标题(默认为当前页标题)"
+    "description": "FB title (default is the current page title)"
   },
   "lcap-h5-tk-sfriends/shareBitmap": {
     "type": "image",
-    "description": "分享图片的URL(过大或者不可访问会导致失败)"
+    "description": "The URL of the shared image (too large or inaccessible will cause failure)"
   },
   "lcap-h5-tk-sfriends/shareIntroduce": {
     "type": "string",
-    "description": "分享简介"
+    "description": "Share profile"
   }
 }

@@ -1,34 +1,34 @@
 {
   "lcap-login/useNormal": {
     "type": "boolean",
-    "description": "是否开启普通登录，默认开启"
+    "description": "Whether to enable normal login, enabled by default"
   },
-  "lcap-login/useQZ": {
+  "lcap-login/useKW": {
     "type": "boolean",
-    "description": "是否开启轻舟登录，默认关闭"
+    "description": "Whether to enable Kubeworkz login, closed by default"
   },
   "lcap-login/useLdap": {
     "type": "boolean",
-    "description": "是否开启LDAP登录，默认关闭"
+    "description": "Whether to enable LDAP login, it is closed by default"
   },
-  "lcap-login/useNetease": {
+  "lcap-login/useSaasHQ": {
     "type": "boolean",
-    "description": "是否开启OpenID登录，默认关闭"
+    "description": "Whether to enable OpenID login, it is closed by default"
   },
   "lcap-login/useGithub": {
     "type": "boolean",
-    "description": "是否开启Github登录，默认关闭"
+    "description": "Whether to enable Github login, it is closed by default"
   },
-  "lcap-login/useWechat": {
+  "lcap-login/useFB": {
     "type": "boolean",
-    "description": "是否开启微信登录，默认关闭"
+    "description": "Whether to enable FB login, closed by default"
   },
   "lcap-login/useIcbc": {
     "type": "boolean",
-    "description": "是否开启工行登录，默认关闭"
+    "description": "Whether to enable ICBC login, closed by default"
   },
   "lcap-login/exdays": {
     "type": "number",
-    "description": "设置 Cookie 过期天数"
+    "description": "Set cookie expiration days"
   }
 }

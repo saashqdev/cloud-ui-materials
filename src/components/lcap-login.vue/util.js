@@ -37,25 +37,24 @@ export const getTenant = () => {
     return isEnv(hostArr[0]) ? hostArr[1] : hostArr[0];
 };
 
-// 登录相关配置
+// Login related configuration
 export const LOGIN_TYPES_MAP = {
-    Normal: { Short: '普通', Full: '普通登录' },
-    QZ: { Short: '轻舟', Full: '轻舟登录' },
-    Ldap: { Short: 'LDAP', Full: 'LDAP 登录' },
-    Wechat: { Short: '微信', Full: '微信登录' },
-    Baidu: { Short: '百度', Full: '百度登录' },
-    Github: { Short: 'Github', Full: 'Github 登录' },
-    Netease: { Short: 'OpenID', Full: 'OpenID 登录' },
-    Urs: { Short: 'Urs', Full: 'Urs 登录' },
-    Icbc: { Short: '工行', Full: '工行登录' },
+    Normal: { Short: 'Normal', Full: 'Normal login' },
+    KW: { Short: 'Kubeworkz', Full: 'Kubeworkz login' },
+    Ldap: { Short: 'LDAP', Full: 'LDAP login' },
+    FB: { Short: 'FB', Full: 'Facebook login' },
+    Github: { Short: 'Github', Full: 'Github login' },
+    SaasHQ: { Short: 'OpenID', Full: 'OpenID login' },
+    Urs: { Short: 'Urs', Full: 'Urs login' },
+    Icbc: { Short: 'ICBC', Full: 'ICBC login' },
 };
 export const TAB_MAP = {
     Normal: LOGIN_TYPES_MAP.Normal.Full,
-    QZ: LOGIN_TYPES_MAP.QZ.Short,
+    KW: LOGIN_TYPES_MAP.KW.Short,
     Ldap: LOGIN_TYPES_MAP.Ldap.Short,
 };
-// 非 AUTH 登陆，通过账号密码形式登陆
+// Non-AUTH login, login through account and password
 export const NO_AUTH_LIST = Object.keys(TAB_MAP);
-// AUTH 登陆，通过链接跳转形式登陆
+// AUTH login, login through link jump form
 export const AUTH_LIST = Object.keys(LOGIN_TYPES_MAP)
     .filter((key) => !NO_AUTH_LIST.includes(key));

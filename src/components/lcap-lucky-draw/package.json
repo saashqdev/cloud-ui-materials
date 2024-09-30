@@ -34,7 +34,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "九宫格抽奖",
+    "title": "Nine Palaces Lottery",
     "category": "Other",
     "base": "vue",
     "ui": "cloud-ui.kubevue",
