@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "复杂报表展示层",
+    "title": "Complex report presentation layer",
     "category": "DataDisplay",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

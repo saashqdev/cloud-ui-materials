@@ -1,94 +1,94 @@
 {
   "lcap-gantt/data-source": {
     "type": "Array<Item> | Function | object | DataSource",
-    "description": "甘特图的数据源，数据集对象或者返回数据集的逻辑"
+    "description": "The data source of the Gantt chart, the data set object or the logic of returning the data set"
   },
   "lcap-gantt/data-schema": {
     "type": "schema",
-    "description": "集合类型每一元素的数据类型"
+    "description": "The data type of each element of the collection type"
   },
   "lcap-gantt/text-field": {
     "type": "string",
-    "description": "设置泳道图文本字段"
+    "description": "Set the swimlane diagram text field"
   },
   "lcap-gantt/start-field": {
     "type": "string",
-    "description": "设置泳道图开始日期字段"
+    "description": "Set the swim lane chart start date field"
   },
   "lcap-gantt/duration-field": {
     "type": "string",
-    "description": "设置泳道图持续时间字段"
+    "description": "Set the swim lane chart duration field"
   },
   "lcap-gantt/progress-field": {
     "type": "string",
-    "description": "设置泳道图进度字段"
+    "description": "Set swim lane chart progress field"
   },
   "lcap-gantt/id-field": {
     "type": "string",
-    "description": "设置泳道图id字段"
+    "description": "Set the swimlane map id field"
   },
   "lcap-gantt/parent-field": {
     "type": "string",
-    "description": "设置泳道图父级字段"
+    "description": "Set the parent field of the swim lane chart"
   },
   "lcap-gantt/color-field": {
     "type": "string",
-    "description": "设置泳道图数据颜色字段"
+    "description": "Set swim lane chart data color field"
   },
   "lcap-gantt/icon-field": {
     "type": "string",
-    "description": "设置数据列表图标字段，仅支持png,jpg类型的图片链接"
+    "description": "Set the data list icon field. Only png and jpg type image links are supported."
   },
   "lcap-gantt/ganttTableConfig": {
     "type": "Array<Item>",
-    "description": "配置甘特图表格相"
+    "description": "Configuring the Gantt chart phase"
   },
   "lcap-gantt/taskView": {
     "type": "string",
     "options": [
       {
         "value": "d",
-        "title": "日"
+        "title": "Day"
       },
       {
         "value": "w",
-        "title": "周"
+        "title": "Week"
       },
       {
         "value": "m",
-        "title": "月"
+        "title": "Month"
       },
       {
         "value": "y",
-        "title": "年"
+        "title": "Year"
       }
     ],
-    "description": "切换日期视图"
+    "description": "Switch date view"
   },
   "lcap-gantt/showToday": {
     "type": "boolean",
-    "description": "设置显示今日标记线"
+    "description": "Set to display today's mark line"
   },
   "lcap-gantt/skins": {
     "type": "string",
     "options": [
       {
         "value": "default",
-        "title": "默认"
+        "title": "Default"
       },
       {
         "value": "skyblue",
-        "title": "天蓝"
+        "title": "Sky Blue"
       },
       {
         "value": "meadow",
-        "title": "草地"
+        "title": "Grassland"
       },
       {
         "value": "broadway",
-        "title": "百老汇"
+        "title": "Broadway"
       }
     ],
-    "description": "设置甘特图皮肤"
+    "description": "Set Gantt chart skin"
   }
 }

@@ -32,7 +32,7 @@ export default {
     var config = GC.Spread.Sheets.Designer.DefaultConfig
     config.commandMap = {
       Welcome: {
-        title: "导入逻辑",
+        title: "Import Logic",
         text: "Welcome",
         iconClass: "ribbon-button-welcome",
         bigButton: "true",
@@ -43,7 +43,7 @@ export default {
       },
     }
     config.ribbon[0].buttonGroups.unshift({
-      label: "导入逻辑",
+      label: "Import Logic",
       thumbnailClass: "welcome",
       commandGroup: {
         children: [
@@ -90,7 +90,7 @@ export default {
       ss.resumePaint;
     },
 
-    //4:- 创建refresh函数
+    //4:- Create refresh function
     refresh() {
       var ss = GC.Spread.Sheets.findControl(document.getElementById("ss"));
       var sheet = ss.getActiveSheet();

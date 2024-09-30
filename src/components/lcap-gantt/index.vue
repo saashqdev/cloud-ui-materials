@@ -2,17 +2,17 @@
   <div class="ganttRoot">
     <u-linear-layout type="flex" justify="space-between" class="functionBar">
       <div>
-        <u-input placeholder="请输入任务名称" v-model="searchTitle" class="searchInput"></u-input>
-        <u-button class="ganttSearchButton" icon="search" text="搜索" color="primary" @click="searchTask">搜索</u-button>
+        <u-input placeholder="Please enter the task name" v-model="searchTitle" class="searchInput"></u-input>
+        <u-button class="ganttSearchButton" icon="search" text="Search" color="primary" @click="searchTask">Search</u-button>
       </div>
       <div>
         <u-select v-model="defaultDateView" @select="ganttChangeDateView($event)">
-          <u-select-item value="y">年</u-select-item>
-          <u-select-item value="m">月</u-select-item>
-          <u-select-item value="w">周</u-select-item>
-          <u-select-item value="d">日</u-select-item>
+          <u-select-item value="y">Year</u-select-item>
+          <u-select-item value="m">Month</u-select-item>
+          <u-select-item value="w">Week</u-select-item>
+          <u-select-item value="d">Day</u-select-item>
         </u-select>
-        <u-button class="showTodayButton" icon="" v-if="showToday" @click="changeToday">今天</u-button>
+        <u-button class="showTodayButton" icon="" v-if="showToday" @click="changeToday">Today</u-button>
       </div>
     </u-linear-layout>
     <div id="gantt" ref="gantt" class="ganttContainer"/>
@@ -21,7 +21,7 @@
 
 <script>
 import {gantt} from 'dhtmlx-gantt';
-import 'dhtmlx-gantt/codebase/dhtmlxgantt.css'; // 样式模块
+import 'dhtmlx-gantt/codebase/dhtmlxgantt.css'; // Style module
 import {locale} from "@/locale";
 import {basicConfig, initialData, ganttPlugins, basicTemplate} from "@/ganttConfig";
 import supportDataSource from "@/mixins/support.datasource";
@@ -60,7 +60,7 @@ export default {
   },
   mixins: [supportDataSource],
   mounted() {
-    // 监听style样式变化
+    // Monitor style changes
     this.customStyle = this.parseCustomStyle(this.$el);
     const observer = new MutationObserver(function (mutations) {
       mutations.map(function (mutation) {
@@ -83,7 +83,7 @@ export default {
       handler() {
         this.$nextTick(() => {
           this.initGantt();
-          this.ganttChangeEvent();//交互事件
+          this.ganttChangeEvent();// interaction events
         });
       },
       deep: true,
@@ -136,7 +136,7 @@ export default {
     initGantt() {
       gantt.clearAll();
       gantt.locale = locale;
-      // 启用动态加载
+      // Enable dynamic loading
       gantt.config = {
         ...gantt.config,
         ...basicConfig,
@@ -176,68 +176,68 @@ export default {
         return '';
       }
     },
-    // 今日线
+    // Today's line
     createTodayLine() {
-      var dateToStr = gantt.date.date_to_str("%Y年%M%d日");
+      var dateToStr = gantt.date.date_to_str("%Y year %M%d day");
       var markerId = gantt.addMarker({
         id: 'markerLine',
         start_date: new Date(),
         css: "today",
-        text: "今日",
+        text: "Today",
         title: dateToStr(new Date())
       });
       gantt.updateMarker(markerId);
     },
-    //定位到今日线
+    // Locate today's line
     changeToday() {
       this.$nextTick(() => {
         let ganTT = document.getElementsByClassName('gantt_marker today')
         if (ganTT.length > 0) {
           gantt.scrollTo(ganTT[0].offsetLeft - 300, null);
         } else {
-          console.log('图上未显示今日标记线');
+          console.log('Today\'s marker line is not shown on the chart');
         }
       })
     },
     changeTaskColor() {
       gantt.templates.task_class = function (start, end, task) {
-        // task.state值为default/unfinished/finished/canceled其中一种
+        // The task.state value is one of default/unfinished/finished/canceled
         return `milestone-${task.state}`;
       }
     },
-    // 切换年月周日视图
+    // Switch year, month, and day view
     ganttChangeDateView(event) {
       switch (event.value) {
         case 'y':
           gantt.config.scale_unit = "year";
           gantt.config.step = 1;
           gantt.config.subscales = null;
-          gantt.config.date_scale = "%Y年";
+          gantt.config.date_scale = "%Y year";
           gantt.templates.date_scale = null;
           break;
         case 'm':
           gantt.config.scale_unit = 'month';
           gantt.config.step = 1;
-          gantt.config.date_scale = "%m月";
+          gantt.config.date_scale = "%mmonth";
           gantt.templates.date_scale = null;
           break;
         case 'w':
           gantt.config.scale_unit = 'week';
           gantt.config.step = 1;
-          gantt.config.date_scale = "第%w周";
+          gantt.config.date_scale = "Week %w";
           gantt.templates.date_scale = null;
           break;
         case 'd':
           gantt.config.scale_unit = 'day';
           gantt.config.step = 1;
-          gantt.config.date_scale = "%m月%d日";
+          gantt.config.date_scale = "%m month %d day";
           gantt.templates.date_scale = null;
           break;
       }
       gantt.render();
     },
 
-    // gantt交互事件注册
+    // gantt interaction event registration
     ganttChangeEvent() {
       this.ganttEvent.onTaskClick = gantt.attachEvent("onTaskClick", (id, e) => {
         const task = gantt.getTask(id);
@@ -247,7 +247,7 @@ export default {
         this.$emit('scaleClick', date);
       });
 
-      // gantt渲染
+      // gantt rendering
       this.ganttEvent.onGanttReady = gantt.attachEvent("onGanttReady", () => {
         gantt.templates.tooltip_text = (start, end, task) => {
           let template = "";
@@ -260,9 +260,9 @@ export default {
               template += `<b>${item.labelField}:</b> ${task[currentField]}<br/>`;
             }
           }
-          template += "<b>开始时间:</b> "
+          template += "<b>Start time:</b> "
             + moment(start).format('YYYY-MM-DD')
-            + "<br/><b>结束时间:</b> "
+            + "<br/><b>End time:</b> "
             + moment(new Date(end).valueOf() - 1000 * 60 * 60 * 24).format('YYYY-MM-DD');
           return template;
         }
@@ -279,23 +279,23 @@ export default {
           }
         };
       });
-      // 修改默认弹窗
+      // Modify the default pop-up window
       gantt.attachEvent("onBeforeLightbox", (id) => {
         let task = gantt.getTask(id);
         task.proTemplate = `${gantt.locale.labels.taskProjectType_0}`
         return true;
       });
-      // 用户完成拖动并释放鼠标
+      // The user finishes dragging and releases the mouse
       this.ganttEvent.onAfterTaskChanged = gantt.attachEvent("onAfterTaskChanged", (id, mode, task) => {
         clearTimeout(this.timer)
         this.timer = setTimeout(() => {
           gantt.render();
         }, 500)
       });
-      // 保存新增
+      // Save new
       this.ganttEvent.onLightboxSave = gantt.attachEvent("onLightboxSave", (id, item) => {
         if (!item.text) {
-          this.$toast.error("请填写计划名称!");
+          this.$toast.error("Please fill in the plan name!");
           return false;
         }
         return true;
@@ -335,7 +335,7 @@ export default {
     initSkins() {
       switch (this.skins) {
         case 'default':
-          require('dhtmlx-gantt/codebase/dhtmlxgantt.css'); // 样式模块
+          require('dhtmlx-gantt/codebase/dhtmlxgantt.css'); // style module
           break;
         case 'skyblue':
           require('dhtmlx-gantt/codebase/skins/dhtmlxgantt_skyblue.css');

@@ -5,7 +5,7 @@
   "main": "./index.js",
   "author": "",
   "repository": "",
-  "homepage": "http://haproxy-ceph-rgw.qa-ci-lowcode.service.163.org/test/lcap-excel@0.1.1/index.html",
+  "homepage": "http://haproxy-ceph-rgw.qa-ci-lowcode.service.saashqdev.org/test/lcap-excel@0.1.1/index.html",
   "license": "MIT",
   "keywords": [
     "lcap",
@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "低代码表格控件",
+    "title": "Low Code Table Control",
     "category": "Form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -5,7 +5,7 @@ export default {
         dataSchema: { type: String, default: 'entity' },
         textField: { type: String, default: 'text' },
         valueField: { type: String, default: 'value' },
-        treeSelectTip: { type: String, default: '请绑定数据源' },
+        treeSelectTip: { type: String, default: 'Please bind data source' },
     },
     data() {
         return {
