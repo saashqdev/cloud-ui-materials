@@ -32,42 +32,42 @@ export default {
   },
   methods: {
     async getLocation() {
-      // 判断 POPO是否对应用授权
+      // Determine whether POPO authorizes the application
       const { status } = await pp.checkSetting({
         scope: "location",
       });
       if (status === 0) {
-        // 未知状态(用户未设置过该权限的状态）
+        // Unknown status (the user has not set this permission status)
         window.vant.VanDialog.confirm({
-          message: "未设置定位权限，需要授权吗?",
+          message: "Location permission is not set, do you need authorization?",
         })
           .then(async () => {
             const isAllowed = await pp.authorize({
               scope: "location",
-              description: "应用申请获取设备的地理位置信息",
+              description: "Apply to obtain the geographical location information of the device",
             });
             if (isAllowed) {
               pp.showToast({
-                title: "POPO授权成功",
+                title: "POPO authorization successful",
               });
               this.allPermissionGranted();
             } else {
-              // 提示用户未开启定位权限，显示开启定位权限提示按钮，用户点击按钮后调用pp.openSetting()。
-              // 或者在此弹出提示询问用户是否需要去设置页面开启权限。(等同于pp.checkSetting返回status == 1的逻辑)
+              // Prompt the user that the positioning permission has not been enabled, display the prompt button to enable positioning permission, and call pp.openSetting() after the user clicks the button.
+              // Or a prompt will pop up here to ask the user whether he or she needs to go to the settings page to enable permissions. (Equivalent to the logic of pp.checkSetting returning status == 1)
             }
           })
           .catch(() => {});
       } else if (status === 1) {
-        // 没有权限
+        // permission denied
         window.vant.VanDialog.confirm({
-          message: "无权限，需要去设置页开启权限吗?",
+          message: "No permission. Do I need to go to the settings page to enable permission?",
         })
           .then(() => {
             pp.openSetting();
           })
           .catch(() => {});
       } else if (status === 2) {
-        // 已授权
+        // authorized
         this.allPermissionGranted();
       }
     },

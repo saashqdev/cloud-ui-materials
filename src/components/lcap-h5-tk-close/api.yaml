@@ -1,13 +1,13 @@
 - name: lcap-h5-tk-close
-  title: 泰康sdk关闭当前页面
-  description: 请在这里添加描述
+  title: SDK Close the Current Page
+  description: Please add a description here
   labels: [Runtime]
   icon: default
   attrs:
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
   methods:
     - name: invoke
-      title: 关闭当前页面
-      description: 关闭当前页面
+      title: Close the Current Page
+      description: Close the current page

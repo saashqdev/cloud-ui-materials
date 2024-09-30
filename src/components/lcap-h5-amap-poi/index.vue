@@ -2,11 +2,11 @@
 <div :class="$style.root" kubevue-disabled-copy>
     <div id="container-map" :class="$style.container" ref="container-map">
         <div id="pickerBox" ref="pickerBox">
-            <input id="pickerInput" placeholder="输入关键字选取地点" ref="pickerInput">
+            <input id="pickerInput" placeholder="Enter keywords to select a location" ref="pickerInput">
             <div id="poiInfo" ref="poiInfo"></div>
         </div>
         <div :class="$style.containertipwrap" v-show="show">
-            <div :class="$style.containertip">地图不可用，请前往「应用详情」页面「地图配置」，配置key和密钥。如果您已经配置Key，请重新打开可视化编辑页面。</div>
+            <div :class="$style.containertip">The map is not available. Please go to the "Map Configuration" on the "Application Details" page to configure the key and key. If you have configured Key, please reopen the visual editing page. </div>
         </div>
     </div>
 </div>
@@ -53,7 +53,7 @@ export default {
             };
         } else {
             this.show = true;
-            // this.$toast.show('请先配置高德地图的code');
+            // this.$toast.show('Please configure the code of Amap first');
         }
         // window._AMapSecurityConfig = {
         //     securityJsCode: 'aef6b461d527c3fb575e4e66a61c1d24',
@@ -69,7 +69,7 @@ export default {
         initMap() {
             const config = this.getJSON(window.appInfo && window.appInfo.extendedConfig);
             if (!config || !config.amapKey) {
-                // this.$toast.show('请先配置高德地图的key');
+                // this.$toast.show('Please configure the key of Amap first');
                 this.show = true;
                 return;
             }
@@ -140,13 +140,13 @@ export default {
                     input: inputWrapper,
                 });
 
-                // 初始化poiPicker
+                // Initialize poiPicker
                 poiPickerReady.call(this, this.poiPicker);
             });
         },
         poiPicked() {
             if (!this.poiInfo) {
-                this.$toast.show('请先选择POI信息');
+                this.$toast.show('Please select POI information first');
                 return {};
             }
             return this.poiInfo;

@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "popo-location",
+    "title": "Popo-location",
     "category": "Runtime",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

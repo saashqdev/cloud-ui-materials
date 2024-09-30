@@ -1,6 +1,6 @@
 <template>
 <div :class="$style.root">
-    <div @click="tkUser" :class="$style.btn">关闭当前页面</div>
+    <div @click="tkUser" :class="$style.btn">Close current page</div>
 </div>
 </template>
 

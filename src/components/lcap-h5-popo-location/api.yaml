@@ -1,26 +1,26 @@
 - name: lcap-h5-popo-location
-  title: popo定位
-  description: 请在这里添加描述
+  title: Popo Positioning
+  description: Please add a description here
   labels: [Runtime]
   icon: default
   attrs:
     - name: value
-      title: 值
+      title: Value
       type: string
       model: true
-      description: 值
+      description: Value
     - name: deviceid
-      title: 设备id
+      title: Device ID
       type: string
       model: true
-      description: 设备id
+      description: Device id
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
   methods:
     - name: getLocation
-      title: 获取地理位置
-      description: 获取地理位置
+      title: Get Geographical Location
+      description: Get geographical location
     - name: getDeviceID
-      title: 获取设备id
-      description: 获取设备id
+      title: Get Device ID
+      description: Get device id

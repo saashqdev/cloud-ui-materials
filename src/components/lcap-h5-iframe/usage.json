@@ -5,16 +5,16 @@
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "请在这里添加描述",
+    "description": "Please add description here",
     "labels": [
         "Container"
     ],
     "screenShot": "http://haproxy-ceph-rgw.qa-ci-lowcode.service.163.org/test/packages/lcap-h5-iframe@0.1.1/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-iframe src=\\\"https://sf.163.com\\\"></lcap-h5-iframe>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-iframe src=\\\"https://sf.s3.amazonaws.com\\\"></lcap-h5-iframe>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-iframe",
         "title": "iframe",
-        "description": "请在这里添加描述",
+        "description": "Please add description here",
         "category": "Container",
         "screenShot": "http://haproxy-ceph-rgw.qa-ci-lowcode.service.163.org/test/packages/lcap-h5-iframe@0.1.1/screenshots/0.png",
         "drawings": "",
@@ -22,7 +22,7 @@
             {
                 "title": "Basic Usage",
                 "description": "",
-                "code": "<template>\n<lcap-h5-iframe src=\"https://sf.163.com\"></lcap-h5-iframe>\n</template>\n"
+                "code": "<template>\n<lcap-h5-iframe src=\"https://sf.s3.amazonaws.com\"></lcap-h5-iframe>\n</template>\n"
             }
         ],
         "attrs": [
@@ -30,15 +30,15 @@
                 "name": "src",
                 "title": "地址",
                 "type": "string",
-                "description": "需要嵌入的网页地址"
+                "description": "Web page address to be embedded"
             }
         ],
         "slots": false,
         "events": [
             {
                 "name": "load",
-                "title": "加载完成",
-                "description": "网页加载完成时触发。",
+                "title": "Loading Completed",
+                "description": "Fires when the web page is loaded.",
                 "params": []
             }
         ],

@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "泰康sdk关闭页面",
+    "title": "Taikang SDK Close Page",
     "category": "Runtime",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

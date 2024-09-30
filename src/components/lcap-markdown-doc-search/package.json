@@ -5,7 +5,7 @@
   "main": "./index.js",
   "author": "",
   "repository": "",
-  "homepage": "http://lcap-official-bucket.codewave.163.com/lcap-markdown-doc-search@0.1.6/index.html",
+  "homepage": "http://lcap-official-bucket.codewave.s3.amazonaws.com/lcap-markdown-doc-search@0.1.6/index.html",
   "license": "MIT",
   "keywords": [
     "lcap",

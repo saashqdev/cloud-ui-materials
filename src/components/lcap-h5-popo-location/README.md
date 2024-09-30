@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapH5PopoLocation popo定位
+# LcapH5PopoLocation Popo Positioning
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Methods](#methods)
 
 **Runtime**
 
-请在这里添加描述
+Please add description here
 
 ## Example
 ### Basic Usage
@@ -25,22 +25,22 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value, v-model | string |  |  | 值 |
-| deviceid, v-model | string |  |  | 设备id |
+| value, v-model | string | | | Value |
+| deviceid, v-model | string | | | Device id |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 Methods
 
 #### getLocation()
 
-获取地理位置
+Get location
 
 #### getDeviceID()
 
-获取设备id
+Get device id
 

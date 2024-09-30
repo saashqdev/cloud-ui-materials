@@ -1,20 +1,20 @@
 {
     "symbol": "lcap-gantt",
-    "name": "甘特图",
+    "name": "Gantt Chart",
     "version": "0.1.10",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "请在这里添加描述",
+    "description": "Please add a description here",
     "labels": [
         "Chart"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-gantt></lcap-gantt>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<lcap-gantt></lcap-gantt>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-gantt",
-        "title": "甘特图",
-        "description": "请在这里添加描述",
+        "title": "Gantt Chart",
+        "description": "Please add a description here",
         "category": "Chart",
         "screenShot": "",
         "drawings": "",
@@ -28,148 +28,148 @@
         "attrs": [
             {
                 "name": "data-source",
-                "title": "数据源",
+                "title": "Data Source",
                 "type": "Array<Item> | Function | object | DataSource",
                 "designer-value": "[{}, {}, {}]",
-                "description": "甘特图的数据源，数据集对象或者返回数据集的逻辑",
-                "group": "数据属性"
+                "description": "Gantt chart data source, dataset object or logic for returning dataset",
+                "group": "Data attributes"
             },
             {
                 "name": "data-schema",
-                "title": "数据类型",
+                "title": "Data Type",
                 "type": "schema",
-                "description": "集合类型每一元素的数据类型",
-                "group": "数据属性",
+                "description": "The data type of each element of the collection type",
+                "group": "Data attributes",
                 "compType": "dataTypeSelect"
             },
             {
                 "name": "text-field",
-                "title": "文本字段",
+                "title": "Text Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图文本字段",
-                "group": "数据属性"
+                "description": "Set the swimlane diagram text field",
+                "group": "Data attributes"
             },
             {
                 "name": "start-field",
-                "title": "开始日期字段",
+                "title": "Start Date Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图开始日期字段",
-                "group": "数据属性"
+                "description": "Set the start date field for the swimlane diagram",
+                "group": "Data attributes"
             },
             {
                 "name": "duration-field",
-                "title": "持续时间字段",
+                "title": "Duration Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图持续时间字段",
-                "group": "数据属性"
+                "description": "Set the swimlane diagram duration field",
+                "group": "Data attributes"
             },
             {
                 "name": "progress-field",
-                "title": "进度字段",
+                "title": "Progress Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图进度字段",
-                "group": "数据属性"
+                "description": "Set the swimlane diagram progress field",
+                "group": "Data attributes"
             },
             {
                 "name": "id-field",
-                "title": "id字段",
+                "title": "ID Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图id字段",
-                "group": "数据属性"
+                "description": "Set the swimlane diagram id field",
+                "group": "Data attributes"
             },
             {
                 "name": "parent-field",
-                "title": "父级字段",
+                "title": "Parent Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图父级字段",
-                "group": "数据属性"
+                "description": "Set the parent field of the swimlane diagram",
+                "group": "Data attributes"
             },
             {
                 "name": "color-field",
-                "title": "数据颜色字段",
+                "title": "Data Color Field",
                 "type": "string",
                 "default": "",
-                "description": "设置泳道图数据颜色字段",
-                "group": "数据属性"
+                "description": "Set the swimlane diagram data color field",
+                "group": "Data attributes"
             },
             {
                 "name": "icon-field",
-                "title": "图标字段",
+                "title": "Icon Field",
                 "type": "string",
                 "default": "",
-                "description": "设置数据列表图标字段，仅支持png,jpg类型的图片链接",
-                "group": "数据属性"
+                "description": "Set the data list icon field, only support png,jpg type image links",
+                "group": "Data attributes"
             },
             {
                 "name": "ganttTableConfig",
-                "title": "甘特图表格配置",
+                "title": "Gantt Chart Table Configuration",
                 "type": "Array<Item>",
-                "description": "配置甘特图表格相",
-                "group": "数据属性"
+                "description": "Configure the Gantt chart",
+                "group": "Data attributes"
             },
             {
                 "name": "taskView",
-                "title": "切换日期视图",
+                "title": "Switch Date View",
                 "type": "string",
                 "default": "d",
-                "description": "切换日期视图",
+                "description": "Switch date view",
                 "options": [
                     {
                         "value": "d",
-                        "title": "日"
+                        "title": "Day"
                     },
                     {
                         "value": "w",
-                        "title": "周"
+                        "title": "Week"
                     },
                     {
                         "value": "m",
-                        "title": "月"
+                        "title": "Month"
                     },
                     {
                         "value": "y",
-                        "title": "年"
+                        "title": "Year"
                     }
                 ],
-                "group": "展示属性"
+                "group": "Display properties"
             },
             {
                 "name": "showToday",
-                "title": "显示今日标记线",
+                "title": "Show Today's Mark Line",
                 "type": "boolean",
                 "default": true,
-                "description": "设置显示今日标记线",
-                "group": "展示属性"
+                "description": "Set to display today's mark line",
+                "group": "Display properties"
             },
             {
                 "name": "skins",
-                "title": "皮肤",
+                "title": "Skin",
                 "type": "string",
                 "default": "default",
-                "description": "设置甘特图皮肤",
-                "group": "展示属性",
+                "description": "Set Gantt chart skin",
+                "group": "Display properties",
                 "options": [
                     {
                         "value": "default",
-                        "title": "默认"
+                        "title": "Default"
                     },
                     {
                         "value": "skyblue",
-                        "title": "天蓝"
+                        "title": "Sky Blue"
                     },
                     {
                         "value": "meadow",
-                        "title": "草地"
+                        "title": "Grassland"
                     },
                     {
                         "value": "broadway",
-                        "title": "百老汇"
+                        "title": "Broadway"
                     }
                 ]
             }
@@ -177,39 +177,39 @@
         "methods": [
             {
                 "name": "load",
-                "title": "重新加载",
-                "description": "重新加载甘特图",
+                "title": "Reload",
+                "description": "Reload Gantt chart",
                 "params": []
             },
             {
                 "name": "changeToday",
-                "title": "定位到今日标记线",
-                "description": "定位到今日标记线",
+                "title": "Locate Today's Mark Line",
+                "description": "Locate today's mark line",
                 "params": []
             }
         ],
         "events": [
             {
                 "name": "taskClick",
-                "title": "任务点击时",
-                "description": "任务点击时触发",
+                "title": "Task Clicked",
+                "description": "Task is triggered when clicked",
                 "params": [
                     {
                         "name": "$event",
                         "type": "Object",
-                        "description": "任务详情"
+                        "description": "Task details"
                     }
                 ]
             },
             {
                 "name": "scaleClick",
-                "title": "刻度点击时",
-                "description": "刻度点击时触发",
+                "title": "When the Scale is Clicked",
+                "description": "Triggered when the scale is clicked",
                 "params": [
                     {
                         "name": "$event",
                         "type": "string",
-                        "description": "点击时间"
+                        "description": "Click time"
                     }
                 ]
             }
@@ -217,83 +217,83 @@
         "themes": [
             {
                 "name": "--gantt-table-header-font-size",
-                "title": "表头字体大小",
-                "description": "设置表头字体大小",
+                "title": "Header Font Size",
+                "description": "Set the table header font size",
                 "type": "input",
                 "default": "12px",
-                "group": "表头"
+                "group": "Header"
             },
             {
                 "name": "--gantt-table-header-font-color",
-                "title": "表头字体颜色",
-                "description": "设置表头字体颜色",
+                "title": "Header Font Color",
+                "description": "Set the header font color",
                 "type": "color",
                 "default": "#000",
-                "group": "表头"
+                "group": "Header"
             },
             {
                 "name": "--gantt-table-header-text-align",
-                "title": "表头对齐方式",
-                "description": "设置表头对齐方式",
+                "title": "Header Alignment",
+                "description": "Set the header alignment",
                 "type": "input",
                 "default": "center",
-                "group": "表头"
+                "group": "Header"
             },
             {
                 "name": "--gantt-table-header-background-color",
-                "title": "表头背景颜色",
-                "description": "设置表头背景颜色",
+                "title": "Header Background Color",
+                "description": "Set the background color of the table header",
                 "type": "color",
                 "default": "#fff",
-                "group": "表头"
+                "group": "Header"
             },
             {
                 "name": "--gantt-table-header-font-weight",
-                "title": "表头字体加粗",
-                "description": "设置表头字体加粗",
+                "title": "Header Font Bold",
+                "description": "Set the header font to bold",
                 "type": "input",
                 "default": "normal",
-                "group": "表头"
+                "group": "Header"
             },
             {
                 "name": "--gantt-table-background-color",
-                "title": "表格背景颜色",
-                "description": "设置表格背景颜色",
+                "title": "Table Background Color",
+                "description": "Set the table background color",
                 "type": "color",
                 "default": "#fff",
-                "group": "表格行"
+                "group": "Table Row"
             },
             {
                 "name": "--gantt-table-background-color-hover",
-                "title": "表格鼠标悬浮背景颜色",
-                "description": "设置表格鼠标悬浮背景颜色",
+                "title": "Table Mouse Hover Background Color",
+                "description": "Set the table mouse hover background color",
                 "type": "color",
                 "default": "#f5f5f5",
-                "group": "表格行"
+                "group": "Table Row"
             },
             {
                 "name": "--gantt-table-background-color-striped",
-                "title": "表格斑马纹背景颜色",
-                "description": "设置表格斑马纹背景颜色",
+                "title": "Table Zebra Pattern Background Color",
+                "description": "Set the table zebra background color",
                 "type": "color",
                 "default": "#fff",
-                "group": "表格行"
+                "group": "Table Row"
             },
             {
                 "name": "--gantt-table-border-color",
-                "title": "表格边框颜色",
-                "description": "设置表格边框颜色",
+                "title": "Table Border Color",
+                "description": "Set the table border color",
                 "type": "color",
                 "default": "#ebeef5",
-                "group": "表格行"
+                "group": "Table Row"
             },
             {
                 "name": "--gantt-table-cell-color",
-                "title": "表格单元格字体颜色",
-                "description": "设置表格单元格颜色",
+                "title": "Table Cell Font Color",
+                "description": "Set table cell color",
                 "type": "color",
                 "default": "#000",
-                "group": "表格单元格"
+                "group": "Table Cell"
             }
         ],
         "children": []
