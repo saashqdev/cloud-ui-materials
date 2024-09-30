@@ -41,36 +41,36 @@ _root.nodes.forEach((node) => {
                 }
             }
         } else if (lastComponent) {
-            if (node.text.trim() === '@hidden') { // 不展示此变量
+            if (node.text.trim() === '@hidden') { // Do not display this variable
                 delete lastComponent.cssProperty[lastProp];
-            } else if (node.text.includes('@type ')) { // 变量展示、输入的类型
+            } else if (node.text.includes('@type ')) { // Variable display and input type
                 const cap = /@type\s+([\w-]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].type = cap[1].trim();
-            } else if (node.text.includes('@desc ')) { // 描述
-                const cap = /@desc\s+([\u4e00-\u9fa5|\w|,|\s|：|\#|（|）|(|)|\.|，]+)/.exec(node.text.trim());
+            } else if (node.text.includes('@desc ')) { // Description
+                const cap = /@desc\s+([\u4e00-\u9fa5|\w|,|\s|：|\#|(|)|(|)|\.|,]+)/.exec(node. text.trim());
                 lastComponent.cssProperty[lastProp].desc = cap[1].trim()
-            } else if (node.text.includes('@group ')) { // 变量的分组
+            } else if (node.text.includes('@group ')) { // Grouping of variables
                 const cap = /@group\s+([\S]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].group = cap[1].trim();
-            } else if (node.text.includes('@prefix ')) { // 变量前缀，方便让子组件去除变量前缀
+            } else if (node.text.includes('@prefix ')) { // Variable prefix, convenient for sub-components to remove variable prefixes
                 const cap = /@prefix\s+([\S]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].prefix = cap[1].trim();
-            } else if (node.text.includes('@depAttrs ')) { // 此变量依赖的属性
+            } else if (node.text.includes('@depAttrs ')) { // Attributes this variable depends on
                 const cap = /@depAttrs\s+(.*)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].depAttrs = JSON.parse(cap[1] || '{}');
-            } else if (node.text.includes('@excludeElTags ')) {  // 排除elTag
+            } else if (node.text.includes('@excludeElTags ')) { // exclude elTag
                 const cap = /@excludeElTags\s+([\S]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].excludeElTags = cap[1].trim().split(',');
-            } else if (node.text.includes('@excludeTags ')) { // 排除组件
+            } else if (node.text.includes('@excludeTags ')) { // Exclude components
                 const cap = /@excludeTags\s+([\S]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].excludeTags = cap[1].trim().split(',');
             } else if (node.text.includes('@title ')) {
                 const cap = /@title\s+([\S]+)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].title = cap[1].trim();
-            } else if (node.text.includes('@depParentAttrs ')) { // 此变量依赖的父组件属性
+            } else if (node.text.includes('@depParentAttrs ')) { // The parent component attributes that this variable depends on
                 const cap = /@depParentAttrs\s+(.*)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].depParentAttrs = JSON.parse(cap[1] || '{}');
-            } else if (node.text.includes('@depStaticStyles ')) { // 此变量依赖的静态样式属性
+            } else if (node.text.includes('@depStaticStyles ')) { // Static style properties that this variable depends on
                 const cap = /@depStaticStyles\s+(.*)/.exec(node.text.trim());
                 lastComponent.cssProperty[lastProp].depStaticStyles = JSON.parse(cap[1] || '[]');
             }

@@ -1,459 +1,539 @@
 {
-    "symbol": "lcap-echarts-bar",
-    "name": "柱状图",
+    "symbol": "lcap-echarts-line",
+    "name": "Line Chart",
     "version": "2.2.0",
-    "icon": "barchart",
+    "icon": "linechart",
     "repoAddr": "",
     "depDescription": {},
-    "description": "柱状图",
+    "description": "Line chart",
     "labels": [
         "Chart"
     ],
-    "screenShot": "http://static-kubevue.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-bar@2.2.0/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-echarts-bar xAxisTitle=\\\"X轴标题\\\" yAxisTitle=\\\"Y轴标题\\\" title=\\\"标题\\\" theme=\\\"theme1\\\"></lcap-echarts-bar>\\n</template>\\n\"}]",
+    "screenShot": "http://static-vusion.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-line@2.2.0/screenshots/0.png",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-echarts-line xAxisTitle=\\\"X-axis Title\\\" yAxisTitle=\\\"Y-axis Title\\\" title=\\\"Title\\\" theme=\\\"theme1\\\"></lcap-echarts-line>\\n</template>\\n\"}]",
     "jsonSchema": {
-        "name": "lcap-echarts-bar",
-        "title": "柱状图",
-        "description": "柱状图",
+        "name": "lcap-echarts-line",
+        "title": "Line Chart",
+        "description": "Line chart",
         "category": "Chart",
-        "screenShot": "http://static-kubevue.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-bar@2.2.0/screenshots/0.png",
+        "screenShot": "http://static-vusion.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-line@2.2.0/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {
                 "title": "Basic Usage",
                 "description": "",
-                "code": "<template>\n<lcap-echarts-bar xAxisTitle=\"X轴标题\" yAxisTitle=\"Y轴标题\" title=\"标题\" theme=\"theme1\"></lcap-echarts-bar>\n</template>\n"
+                "code": "<template>\n<lcap-echarts-line xAxisTitle=\"X-axis Title\" yAxisTitle=\"Y-axis Title\" title=\"Title\" theme=\"theme1\">< /lcap-echarts-line>\n</template>\n"
             }
         ],
         "attrs": [
             {
                 "name": "data-source",
-                "title": "数据源",
+                "title": "Data Source",
                 "type": "Array<Item> | Function | object | DataSource",
                 "designer-value": "[{}, {}, {}]",
-                "description": "表格的数据源，数据集对象或者返回数据集的逻辑",
-                "group": "数据源"
+                "description": "Table data source, dataset object or logic for returning dataset",
+                "group": "Data Source"
             },
             {
                 "name": "data-schema",
-                "title": "数据类型",
+                "title": "Data Type",
                 "type": "schema",
-                "description": "表格每一行的数据类型",
-                "group": "数据源",
+                "description": "The data type of each row in the table",
+                "group": "Data Source",
                 "compType": "dataTypeSelect"
             },
             {
                 "name": "undefinedToZero",
-                "title": "空值处理规则",
+                "title": "Empty Value Processing Rules",
                 "type": "string",
                 "default": "empty",
                 "options": [
                     {
                         "value": "empty",
-                        "title": "空距"
+                        "title": "Space"
                     },
                     {
                         "value": "zero",
-                        "title": "零"
+                        "title": "Zero"
                     }
                 ],
-                "description": "设置将未定义的值如undefined，null转换为0或空距",
-                "group": "数据源"
+                "description": "Set the conversion of undefined values   such as undefined and null to 0 or empty space",
+                "group": "Data Source"
             },
             {
                 "name": "initialLoad",
-                "title": "初始加载",
+                "title": "Initial Loading",
                 "type": "boolean",
                 "default": true,
-                "description": "是否在初始时立即加载",
-                "group": "数据源"
+                "description": "Whether to load immediately at the initialization",
+                "group": "Data Source"
             },
             {
                 "name": "xAxis",
-                "title": "维度",
+                "title": "Dimension",
                 "type": "string",
                 "default": "",
-                "description": "设置维度(统计类别)",
-                "group": "图表数据"
+                "description": "Set dimension (statistical category)",
+                "group": "Chart Data"
             },
             {
                 "name": "yAxis",
-                "title": "度量",
+                "title": "Measurement",
                 "type": "string",
                 "default": "",
-                "description": "设置度量（统计值）",
-                "group": "图表数据"
+                "description": "Set metrics (statistics)",
+                "group": "Chart Data"
             },
             {
-                "name": "xAxisType",
-                "title": "轴数据",
+                "name": "title",
+                "title": "Chart Title",
                 "type": "string",
-                "options": [
-                    {
-                        "value": "xBase",
-                        "title": "X轴表示分类（柱状图）"
-                    },
-                    {
-                        "value": "yBase",
-                        "title": "Y轴表示分类（条形图）"
-                    }
-                ],
-                "default": "xBase",
-                "group": "图表属性"
+                "default": "title",
+                "description": "Set the chart title",
+                "group": "Chart Properties"
             },
             {
                 "name": "axisSplitLine",
-                "title": "坐标系网格线",
+                "title": "Coordinate System Grid Lines",
                 "type": "string",
                 "default": "horizontal",
-                "description": "设置坐标系网格线",
+                "description": "Set the coordinate system grid lines",
                 "options": [
                     {
-                        "title": "无",
+                        "title": "None",
                         "value": "hidden"
                     },
                     {
-                        "title": "水平网格线",
+                        "title": "Horizontal Grid Lines",
                         "value": "horizontal"
                     },
                     {
-                        "title": "垂直网格线",
+                        "title": "Vertical Grid Lines",
                         "value": "vertical"
                     },
                     {
-                        "title": "全部网格线",
+                        "title": "All Grid Lines",
                         "value": "both"
                     }
                 ],
-                "group": "图表属性"
+                "group": "Chart Properties"
             },
             {
                 "name": "axisSplitLineType",
-                "title": "网格线线型",
+                "title": "Grid Line Style",
                 "type": "string",
                 "default": "solid",
-                "description": "设置网格线线型",
-                "group": "图表属性",
+                "description": "Set grid line style",
+                "group": "Chart Properties",
                 "options": [
                     {
-                        "title": "实线",
+                        "title": "Solid Line",
                         "value": "solid"
                     },
                     {
-                        "title": "虚线",
+                        "title": "Dashed Line",
                         "value": "dotted"
                     },
                     {
-                        "title": "点线",
+                        "title": "Dotted Line",
                         "value": "dashed"
                     }
                 ]
             },
             {
-                "name": "labelPosition",
-                "title": "数据标签位置",
-                "type": "string",
-                "default": "inside",
-                "options": [
-                    {
-                        "value": "top",
-                        "title": "上"
-                    },
-                    {
-                        "value": "bottom",
-                        "title": "下"
-                    },
-                    {
-                        "value": "left",
-                        "title": "左"
-                    },
-                    {
-                        "value": "right",
-                        "title": "右"
-                    },
-                    {
-                        "value": "inside",
-                        "title": "居中"
-                    },
-                    {
-                        "value": "hidden",
-                        "title": "无"
-                    }
-                ],
-                "description": "设置数据标签位置",
-                "group": "图表属性"
-            },
-            {
-                "name": "title",
-                "title": "标题",
-                "type": "string",
-                "default": "标题",
-                "description": "设置主标题",
-                "group": "图表基础"
-            },
-            {
                 "name": "theme",
-                "title": "配色方案",
+                "title": "Color Scheme",
                 "type": "string",
                 "default": "theme1",
-                "description": "设置图表配色方案",
+                "description": "Set the chart color scheme",
                 "options": [
                     {
                         "value": "theme1",
-                        "title": "科技"
+                        "title": "Technology"
                     },
                     {
                         "value": "theme2",
-                        "title": "清新"
+                        "title": "Fresh"
                     },
                     {
                         "value": "theme3",
-                        "title": "淡雅"
+                        "title": "Elegance"
                     },
                     {
                         "value": "theme4",
-                        "title": "经典"
+                        "title": "Classic"
                     }
                 ],
-                "group": "图表基础"
+                "group": "Chart Properties"
+            },
+            {
+                "name": "labelPosition",
+                "title": "Data Label Position",
+                "type": "string",
+                "default": "top",
+                "options": [
+                    {
+                        "value": "top",
+                        "title": "Top"
+                    },
+                    {
+                        "value": "bottom",
+                        "title": "Bottom"
+                    },
+                    {
+                        "value": "left",
+                        "title": "Left"
+                    },
+                    {
+                        "value": "right",
+                        "title": "Right"
+                    },
+                    {
+                        "value": "inside",
+                        "title": "Center"
+                    },
+                    {
+                        "value": "hidden",
+                        "title": "Hidden"
+                    }
+                ],
+                "description": "Set data label position",
+                "group": "Chart Properties"
             },
             {
                 "name": "allowShowHint",
-                "title": "显示提示",
+                "title": "Show Tips",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示提示",
-                "group": "图表基础"
+                "description": "Set whether to display prompts",
+                "group": "Chart Properties"
             },
             {
                 "name": "allowShowLegend",
-                "title": "显示图例",
+                "title": "Show Legend",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示图例",
-                "group": "图表基础"
+                "description": "Set whether to display the legend",
+                "group": "Chart Properties"
             },
             {
                 "name": "legendName",
-                "title": "图例别名",
+                "title": "Legend Alias",
                 "type": "string",
                 "default": "",
-                "description": "设置图例别名；修改成功后，图例名字会从\"指标\"改为\"别名\"",
-                "group": "图表基础"
+                "description": "Set the legend alias; after successful modification, the legend name will be changed from \"Indicator\" to \"Alias\"",
+                "group": "Chart Properties"
+            },
+            {
+                "name": "areaFilled",
+                "title": "Area Filling",
+                "type": "boolean",
+                "default": false,
+                "description": "Set whether to fill the area below the polyline",
+                "group": "Chart Properties"
+            },
+            {
+                "name": "lineType",
+                "title": "Line Type",
+                "type": "string",
+                "default": "solid",
+                "description": "Set line type",
+                "options": [
+                    {
+                        "value": "solid",
+                        "title": "Solid Line"
+                    },
+                    {
+                        "value": "dotted",
+                        "title": "Dashed Line"
+                    },
+                    {
+                        "value": "dashed",
+                        "title": "Dotted Line"
+                    }
+                ],
+                "group": "Line properties"
+            },
+            {
+                "name": "lineStyleSmooth",
+                "title": "Line Style",
+                "type": "string",
+                "default": "normal",
+                "options": [
+                    {
+                        "value": "normal",
+                        "title": "Basics"
+                    },
+                    {
+                        "value": "smooth",
+                        "title": "Smooth"
+                    }
+                ],
+                "description": "Set line style",
+                "group": "Line properties"
+            },
+            {
+                "name": "lineStyleSymbol",
+                "title": "Line Mark",
+                "type": "string",
+                "default": "emptyCircle",
+                "options": [
+                    {
+                        "value": "emptyCircle",
+                        "title": "Hollow Circle"
+                    },
+                    {
+                        "value": "circle",
+                        "title": "Circle"
+                    },
+                    {
+                        "value": "rect",
+                        "title": "Rectangle"
+                    },
+                    {
+                        "value": "triangle",
+                        "title": "Triangle"
+                    },
+                    {
+                        "value": "diamond",
+                        "title": "Rhombus"
+                    },
+                    {
+                        "value": "pin",
+                        "title": "Water Drops"
+                    },
+                    {
+                        "value": "arrow",
+                        "title": "Arrow"
+                    },
+                    {
+                        "value": "none",
+                        "title": "None"
+                    }
+                ],
+                "group": "Line properties"
             },
             {
                 "name": "xAxisTitle",
-                "title": "X轴标题",
+                "title": "X-axis Title",
                 "type": "string",
-                "default": "X轴标题",
-                "description": "设置x轴标题",
-                "group": "坐标轴"
+                "default": "X-axis title",
+                "description": "Set x-axis title",
+                "group": "Axis"
             },
             {
                 "name": "showXAxisLine",
-                "title": "显示X轴轴线",
+                "title": "Show X-Axis",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示X轴轴线",
-                "group": "坐标轴"
+                "description": "Set the display of X-axis",
+                "group": "Axis"
             },
             {
                 "name": "showXAxisLabel",
-                "title": "显示X轴文字标签",
+                "title": "Show X-axis Text Label",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示X轴文字标签",
-                "group": "坐标轴"
+                "description": "Set whether to display the X-axis text label",
+                "group": "Axis"
             },
             {
                 "name": "xAxisLabelRotate",
-                "title": "X轴文字标签方向",
+                "title": "X-axis Text Label Direction",
                 "type": "string",
                 "default": "0",
                 "options": [
                     {
                         "value": "0",
-                        "title": "横向"
+                        "title": "Horizontal"
                     },
                     {
                         "value": "90",
-                        "title": "纵向"
+                        "title": "Portrait"
                     },
                     {
                         "value": "45",
-                        "title": "左倾斜"
+                        "title": "Left Tilt"
                     },
                     {
                         "value": "-45",
-                        "title": "右倾斜"
+                        "title": "Lean Right"
                     }
                 ],
-                "description": "设置显示X轴文字标签的方向",
-                "group": "坐标轴"
+                "description": "Set the direction of displaying X-axis text labels",
+                "group": "Axis"
             },
             {
                 "name": "yAxisTitle",
-                "title": "Y轴标题",
+                "title": "Y Axis Title",
                 "type": "string",
-                "default": "Y轴标题",
-                "description": "设置Y轴标题",
-                "group": "坐标轴"
+                "default": "Y-axis title",
+                "description": "Set Y axis title",
+                "group": "Axis"
             },
             {
                 "name": "showYAxisLine",
-                "title": "显示Y轴轴线",
+                "title": "Show Y Axis",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示Y轴轴线",
-                "group": "坐标轴"
+                "description": "Set the display Y axis",
+                "group": "Axis"
             },
             {
                 "name": "showYAxisLabel",
-                "title": "显示Y轴数值标签",
+                "title": "Show Y-axis Value Label",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示Y轴数值标签",
-                "group": "坐标轴"
+                "description": "Set whether to display the Y-axis value label",
+                "group": "Axis"
             },
             {
                 "name": "titleFontStyle",
-                "title": "标题文字字体风格",
+                "title": "Title Font Style",
                 "type": "string",
                 "default": "normal",
-                "description": "设置普通文字字号",
+                "description": "Set normal text font size",
                 "options": [
                     {
                         "value": "normal",
-                        "title": "正常"
+                        "title": "Normal"
                     },
                     {
                         "value": "italic",
-                        "title": "斜体"
+                        "title": "Italic"
                     }
                 ],
-                "group": "标题"
+                "group": "Title"
             },
             {
                 "name": "allowDownload",
-                "title": "允许下载",
+                "title": "Allow Download",
                 "type": "boolean",
                 "default": true,
-                "description": "允许用户设置保存图片",
-                "group": "图表功能"
-            }
-        ],
-        "methods": [
-            {
-                "name": "reload",
-                "title": "reload",
-                "description": "刷新数据",
-                "params": []
+                "description": "Allow users to save pictures",
+                "group": "Chart Functions"
             }
         ],
         "themes": [
             {
                 "name": "--echart-title-font-size",
-                "title": "标题文字大小",
+                "title": "Title Text Size",
                 "default": 14,
                 "type": "input",
-                "description": "设置数据标签文字大小",
-                "group": "标题"
+                "description": "Set title label text size",
+                "group": "Title"
             },
             {
                 "name": "--title-font-color",
-                "title": "标题文字颜色",
+                "title": "Title Text Color",
                 "default": "#000",
                 "type": "color",
-                "description": "设置数据标签文字颜色",
-                "group": "标题"
+                "description": "Set title text color",
+                "group": "Title"
             },
             {
-                "name": "--bar-item-color",
-                "title": "柱条颜色",
+                "name": "--line-item-color",
+                "title": "Line Color",
                 "default": "none",
                 "type": "color",
-                "description": "设置柱条颜色",
-                "group": "柱条样式"
+                "description": "Set line color",
+                "group": "Line Style"
             },
             {
-                "name": "--bar-item-border-color",
-                "title": "柱条边框颜色",
-                "default": "none",
-                "type": "color",
-                "description": "设置柱条边框颜色",
-                "group": "柱条样式"
-            },
-            {
-                "name": "--bar-item-backgroundColor",
-                "title": "柱条背景颜色",
-                "default": "none",
-                "type": "color",
-                "description": "设置柱条背景颜色",
-                "group": "柱条样式"
+                "name": "--line-symbol-size",
+                "title": "Line Marker Size",
+                "default": 6,
+                "type": "input",
+                "description": "Set the line label text size",
+                "group": "Line Style"
             },
             {
                 "name": "--label-font-size",
-                "title": "数据标签文字大小",
+                "title": "Data Label Text Size",
                 "default": 12,
                 "type": "input",
-                "description": "设置数据签文字大小",
-                "group": "数据标签"
+                "description": "Set the data label text size",
+                "group": "Data Label"
             },
             {
                 "name": "--label-font-color",
-                "title": "数据标签文字颜色",
+                "title": "Data Label Text Color",
                 "default": "none",
                 "type": "color",
-                "description": "设置数据标签文字颜色",
-                "group": "数据标签"
+                "description": "Set data label text color",
+                "group": "Data Label"
             },
             {
                 "name": "--grid-line-background-color",
-                "title": "网格线背景颜色",
-                "default": "rgba(180, 180, 180, 0.2)",
+                "title": "Grid Line Background Color",
+                "default": "none",
                 "type": "color",
-                "description": "设置网格线背景颜色",
-                "group": "坐标系网格线"
+                "description": "Set the grid line background color",
+                "group": "Coordinate system grid lines"
             },
             {
                 "name": "--grid-line-border-color",
-                "title": "网格线边框颜色",
+                "title": "Grid Line Border Color",
                 "default": "none",
                 "type": "color",
-                "description": "设置网格线边框颜色",
-                "group": "坐标系网格线"
+                "description": "Set the grid line border color",
+                "group": "Coordinate system grid lines"
             },
             {
                 "name": "--grid-line-color",
-                "title": "网格线线条颜色",
+                "title": "Grid Line Color",
                 "default": "#ccc",
                 "type": "color",
-                "description": "设置网格线线条颜色",
-                "group": "坐标系网格线"
+                "description": "Set the grid line color",
+                "group": "Coordinate system grid lines"
             },
             {
                 "name": "--axis-line-color",
-                "title": "坐标轴线颜色",
+                "title": "Axis Color",
                 "default": "#333",
                 "type": "color",
-                "description": "设置坐标轴线颜色",
-                "group": "坐标轴"
+                "description": "Set the axis color",
+                "group": "Axis"
+            },
+            {
+                "name": "--area-fill-color",
+                "title": "Area Chart Fill Color",
+                "default": "none",
+                "type": "color",
+                "description": "Set the area chart fill color",
+                "group": "Area Color"
+            },
+            {
+                "name": "--area-linearGradient-color",
+                "title": "Area Chart Gradient Color",
+                "default": "none",
+                "type": "color",
+                "description": "Set the gradient color of the area chart",
+                "group": "Area Color"
             },
             {
                 "name": "--xAxis-label-font-size",
-                "title": "X轴文字大小",
+                "title": "X-Axis Text Size",
                 "default": 12,
                 "type": "input",
-                "description": "设置X轴文字大小, X轴文字显示不全时，需调小字体尺寸",
-                "group": "坐标轴"
+                "description": "Set the X-axis text size. When the X-axis text is not fully displayed, you need to reduce the font size",
+                "group": "Axis"
             },
             {
                 "name": "--yAxis-label-font-size",
-                "title": "Y轴文字大小",
+                "title": "Y-Axis Text Size",
                 "default": 12,
                 "type": "input",
-                "description": "设置Y轴文字大小，Y轴文字显示不全时，需调小字体尺寸",
-                "group": "坐标轴"
+                "description": "Set the Y-axis text size. If the Y-axis text is not fully displayed, you need to reduce the font size",
+                "group": "Axis"
+            }
+        ],
+        "methods": [
+            {
+                "name": "reload",
+                "title": "Reload",
+                "description": "Refresh data",
+                "params": []
             }
         ],
         "children": []

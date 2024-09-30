@@ -34,7 +34,7 @@ export default {
     height: {type: String, default: '300px'},
     xAxis: {type: String, default: ''},
     yAxis: {type: String, default: ''},
-    title: {type: String, default: '标题'},
+    title: {type: String, default: 'Title'},
     titleFontSize: {type: Number, default: 18},
     titleFontStyle: {type: String, default: 'normal'},
     allowDownload: {type: Boolean, default: true},
@@ -71,7 +71,7 @@ export default {
     }
   },
   mounted() {
-    // 监听style样式变化
+    // Monitor style changes
     this.customStyle = this.parseCustomStyle(this.$el);
     const observer = new MutationObserver(function (mutations) {
       mutations.map(function (mutation) {
@@ -143,11 +143,11 @@ export default {
       });
     },
     async init() {
-      // 本地启动和开发环境使用假数据，生产环境替换为真数据
+      // Use fake data for local startup and development environments, and replace it with real data for production environments
       const fnDataSource = (this.$env.VUE_APP_DESIGNER || !window.appInfo) ? fakeData : this.dataSource;
       this.sourceData = await this.handleDataSource(fnDataSource);
     },
-    // 删除不必要字段
+    // Delete unnecessary fields
     processRawData(data) {
       if (data.length === 0) {
         this.loading = true;
@@ -155,7 +155,7 @@ export default {
       }
       const content = Array.isArray(data) ? data: data.content;
       const key = Object.keys(content[0])[0];
-      // 删除自带的，不必要的属性
+      // Delete the built-in, unnecessary attributes
       for (let item of content) {
         const tempAttr = item[key];
         delete tempAttr.id && delete tempAttr.createdTime && delete tempAttr.updatedTime && delete tempAttr.createdBy && delete tempAttr.updatedBy

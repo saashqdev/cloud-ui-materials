@@ -52,7 +52,7 @@ export default {
       return {size, axisData, sourceData, customStyle};
     },
     formattedSize() {
-      // 外层挂了一个width，所以这里canvas画布实际尺寸要缩小，同时兼容老的以props传入的宽度
+      // A width is hung on the outer layer, so the actual size of the canvas here needs to be reduced, while being compatible with the old width passed in through props.
       const styleWidth = this.customStyle.width && Number(this.customStyle.width.replace("px", "")) - 30;
       const styleHeight = this.customStyle.height && Number(this.customStyle.height.replace("px", ""));
       const propsWidth = this.size.width && this.size.width.replace("px", "");
@@ -100,7 +100,7 @@ export default {
         });
       }
     },
-    // 递归列表中的数据，查找对应属性的值
+    // Recurse the data in the list to find the value of the corresponding attribute
     recurGetValue(obj, val) {
       if (!obj) return;
       if (obj.hasOwnProperty(val)) {
@@ -112,7 +112,7 @@ export default {
         }
       }
     },
-    // 根据用户输入的坐标轴属性，返还对应数据
+    // Return the corresponding data according to the axis attributes input by the user
     getAxisData(data, axis) {
       if (!data || !data instanceof Object) return [];
       const res = [];
@@ -169,19 +169,19 @@ export default {
       }
       this.axisData.xAxis = this.axisData.xAxis.split('.')[this.axisData.xAxis.split('.').length - 1] || '';
       this.axisData.yAxis = this.axisData.yAxis.split('.')[this.axisData.yAxis.split('.').length - 1] || '';
-      // IDE开发环境坐标轴替换为假数据坐标轴字段
+      // IDE development environment axis is replaced with fake data axis field
       if (this.$env.VUE_APP_DESIGNER || !window.appInfo) {
         this.axisData.xAxis = 'fakeXAxis';
-        this.axisData.yAxis = '指标1';
+        this.axisData.yAxis = 'Indicator 1';
       }
       let xAxisData = this.getAxisData(data, this.axisData.xAxis);
       let yAxisData = this.getAxisData(data, this.axisData.yAxis);
       const pieData = this.generatePieData(data, xAxisData, yAxisData);
       let labelData = this.generateLabelData();
       const showLabel = !this.axisData.showLabelName && !this.axisData.showLabelValue && !this.axisData.showLabelPercent ? false : true;
-      const multiXAxisList = this.axisData.xAxis.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
-      const multiYAxisList = this.axisData.yAxis.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
-      // 发布部署后，如果无数据和维度指标多于一个，加载默认图片
+      const multiXAxisList = this.axisData.xAxis.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
+      const multiYAxisList = this.axisData.yAxis.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
+      // After release and deployment, if there is no data and there is more than one dimension indicator, the default image will be loaded.
       if (!this.$env.VUE_APP_DESIGNER) {
         if (xAxisData.length === 0 || yAxisData.length === 0) {
           this.$emit("startLoading");

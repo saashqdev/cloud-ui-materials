@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "饼图",
+    "title": "Pie chart",
     "category": "Chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

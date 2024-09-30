@@ -1,343 +1,343 @@
 - name: lcap-echarts-line
-  title: 折线图
-  description: 折线图
+  title: Line Chart
+  description: Line chart
   labels: [Chart]
   icon: linechart
   attrs:
     - name: data-source
-      title: 数据源
+      title: Data Source
       type: Array<Item> | Function | object | DataSource
       designer-value: "[{}, {}, {}]"
-      description: 表格的数据源，数据集对象或者返回数据集的逻辑
-      group: 数据源
+      description: The data source of the table, the dataset object or the logic of returning the dataset
+      group: Data source
     - name: data-schema
-      title: 数据类型
+      title: Data Type
       type: schema
-      description: 表格每一行的数据类型
-      group: 数据源
+      description: The data type of each row in the table
+      group: Data source
       compType: dataTypeSelect
     - name: undefinedToZero
-      title: 空值处理规则
+      title: Null Value Processing Rules
       type: string
       default: empty
       options:
         - value: empty
-          title: 空距
+          title: Space
         - value: zero
-          title: 零
-      description: 设置将未定义的值如undefined，null转换为0或空距
-      group: 数据源
+          title: Zero
+      description: Sets the value of undefined, null to 0 or empty space.
+      group: Data source
     - name: initialLoad
-      title: 初始加载
+      title: Initial Loading
       type: boolean
       default: true
-      description: 是否在初始时立即加载
-      group: 数据源
+      description: Whether to load immediately at the beginning
+      group: Data source
     - name: xAxis
-      title: 维度
+      title: Dimension
       type: string
       default: ''
-      description: 设置维度(统计类别)
-      group: 图表数据
+      description: Set dimension (statistical category)
+      group: Chart data
     - name: yAxis
-      title: 度量
+      title: Measurement
       type: string
       default: ''
-      description: 设置度量（统计值）
-      group: 图表数据
+      description: Sets the metric (statistical value)
+      group: Chart data
     - name: title
-      title: 图表标题
+      title: Chart Title
       type: string
-      default: 标题
-      description: 设置图表标题
-      group: 图表属性
+      default: title
+      description: Set the chart title
+      group: Chart properties
     - name: axisSplitLine
-      title: 坐标系网格线
+      title: Coordinate System Grid Lines
       type: string
       default: horizontal
-      description: 设置坐标系网格线
+      description: Set the coordinate system grid lines
       options:
-        - title: 无
+        - title: None
           value: hidden
-        - title: 水平网格线
+        - title: Horizontal Grid Lines
           value: horizontal
-        - title: 垂直网格线
+        - title: Vertical Grid Lines
           value: vertical
-        - title: 全部网格线
+        - title: All Grid Lines
           value: both
-      group: 图表属性
+      group: Chart properties
     - name: axisSplitLineType
-      title: 网格线线型
+      title: Grid Line Style
       type: string
       default: solid
-      description: 设置网格线线型
-      group: 图表属性
+      description: Set the grid line type
+      group: Chart properties
       options:
-        - title: 实线
+        - title: Solid Line
           value: solid
-        - title: 虚线
+        - title: Dotted Line
           value: dotted
-        - title: 点线
+        - title: Dot Line
           value: dashed
     - name: theme
-      title: 配色方案
+      title: Color Scheme
       type: string
       default: theme1
-      description: 设置图表配色方案
+      description: Set the chart color scheme
       options:
         - value: theme1
-          title: 科技
+          title: Technology
         - value: theme2
-          title: 清新
+          title: Fresh
         - value: theme3
-          title: 淡雅
+          title: Elegant
         - value: theme4
-          title: 经典
-      group: 图表属性
+          title: Classic
+      group: Chart properties
     - name: labelPosition
-      title: 数据标签位置
+      title: Data Label Position
       type: string
       default: top
       options:
         - value: top
-          title: 上
+          Title: Top
         - value: bottom
-          title: 下
+          Title: Next
         - value: left
-          title: 左
+          title: Left
         - value: right
-          title: 右
+          title: Right
         - value: inside
-          title: 居中
+          title: Center
         - value: hidden
-          title: 无
-      description: 设置数据标签位置
-      group: 图表属性
+          title: None
+      description: Set the data label position
+      group: Chart properties
     - name: allowShowHint
-      title: 显示提示
+      title: Display Tips
       type: boolean
       default: true
-      description: 设置是否显示提示
-      group: 图表属性
+      description: Set whether to display the prompt
+      group: Chart properties
     - name: allowShowLegend
-      title: 显示图例
+      title: Display Legend
       type: boolean
       default: true
-      description: 设置是否显示图例
-      group: 图表属性
+      description: Set whether to display the legend
+      group: Chart properties
     - name: legendName
-      title: 图例别名
+      title: Legend Alias
       type: string
       default: ''
-      description: 设置图例别名；修改成功后，图例名字会从"指标"改为"别名"
-      group: 图表属性
+      description: Set the legend alias; after the modification is successful, the legend name will be changed from "Indicator" to "Alias"
+      group: Chart properties
     - name: areaFilled
-      title: 区域填充
+      title: Area Filling
       type: boolean
       default: false
-      description: 设置是否填充折线下方区域
-      group: 图表属性
+      description: Set whether to fill the area below the polyline
+      group: Chart properties
     - name: lineType
-      title: 线条类型
+      title: Line Type
       type: string
       default: solid
-      description: 设置线条类型
+      description: Set the line type
       options:
         - value: solid
-          title: 实线
+          title: Solid Line
         - value: dotted
-          title: 虚线
+          title: Dotted Line
         - value: dashed
-          title: 点线
-      group: 线条属性
+          title: Dots and Lines
+      group: Line properties
     - name: lineStyleSmooth
-      title: 线条样式
+      title: Line Style
       type: string
       default: normal
       options:
         - value: normal
-          title: 基础
+          title: Basics
         - value: smooth
-          title: 平滑
-      description: 设置线条样式
-      group: 线条属性
+          title: Smooth
+      description: Set the line style
+      group: Line properties
     - name: lineStyleSymbol
-      title: 线条标记
+      title: Line Mark
       type: string
       default: emptyCircle
       options:
         - value: emptyCircle
-          title: 空心圆
+          title: Hollow Circle
         - value: circle
-          title: 圆形
+          title: Circle
         - value: rect
-          title: 矩形
+          title: Rectangle
         - value: triangle
-          title: 三角形
+          title: Triangle
         - value: diamond
-          title: 菱形
+          title: Rhombus
         - value: pin
-          title: 水滴
+          title: Water Drop
         - value: arrow
-          title: 箭头
+          title: Arrow
         - value: none
-          title: 无
-      group: 线条属性
+          title: None
+      group: Line properties
     - name: xAxisTitle
-      title: X轴标题
+      title: X-Axis Title
       type: string
-      default: X轴标题
-      description: 设置x轴标题
-      group: 坐标轴
+      default: X-axis title
+      description: Set the x-axis title
+      group: Axis
     - name: showXAxisLine
-      title: 显示X轴轴线
+      title: Display the X-Axis
       type: boolean
       default: true
-      description: 设置显示X轴轴线
-      group: 坐标轴
+      description: Set the display X axis
+      group: Axis
     - name: showXAxisLabel
-      title: 显示X轴文字标签
+      title: Display the X-Axis Text Label
       type: boolean
       default: true
-      description: 设置是否显示X轴文字标签
-      group: 坐标轴
+      description: Set whether to display the X-axis text label
+      group: Axis
     - name: xAxisLabelRotate
-      title: X轴文字标签方向
+      title: X-Axis Text Label Direction
       type: string
       default: '0'
       options:
         - value: '0'
-          title: 横向
+          title: Horizontal
         - value: '90'
-          title: 纵向
+          title: Vertical
         - value: '45'
-          title: 左倾斜
+          title: Left Tilt
         - value: '-45'
-          title: 右倾斜
-      description: 设置显示X轴文字标签的方向
-      group: 坐标轴
+          title: Right Tilt
+      description: Set the direction of displaying the X-axis text label
+      group: Axis
     - name: yAxisTitle
-      title: Y轴标题
+      title: Y-Axis Title
       type: string
-      default: Y轴标题
-      description: 设置Y轴标题
-      group: 坐标轴
+      default: Y-axis title
+      description: Set the Y axis title
+      group: Axis
     - name: showYAxisLine
-      title: 显示Y轴轴线
+      title: Display Y Axis
       type: boolean
       default: true
-      description: 设置显示Y轴轴线
-      group: 坐标轴
+      description: Set the display Y axis
+      group: Axis
     - name: showYAxisLabel
-      title: 显示Y轴数值标签
+      title: Display the Y-Axis Value Label
       type: boolean
       default: true
-      description: 设置是否显示Y轴数值标签
-      group: 坐标轴
+      description: Set whether to display the Y-axis value label
+      group: Axis
     - name: titleFontStyle
-      title: 标题文字字体风格
+      title: Title Text Font Style
       type: string
       default: normal
-      description: 设置普通文字字号
+      description: Set the normal text font size
       options:
         - value: normal
-          title: 正常
+          title: Normal
         - value: italic
-          title: 斜体
-      group: 标题
+          title: Italic
+      group: Title
     - name: allowDownload
-      title: 允许下载
+      title: Allow Downloading
       type: boolean
       default: true
-      description: 允许用户设置保存图片
-      group: 图表功能
+      description: Allows users to save pictures
+      group: Chart function
   methods:
     - name: reload
-      title: reload
-      description: 刷新数据
+      title: Reload
+      description: Refresh data
       params: []
   themes:
     - name: --echart-title-font-size
-      title: 标题文字大小
+      title: Title Text Size
       default: 14
       type: input
-      description: 设置标题标签文字大小
-      group: 标题
+      description: Set the title label text size
+      group: Title
     - name: --title-font-color
-      title: 标题文字颜色
+      title: Title Text Color
       default: '#000'
       type: color
-      description: 设置标题文字颜色
-      group: 标题
+      description: Set the title text color
+      group: Title
     - name: --line-item-color
-      title: 线条颜色
+      title: Line Color
       default: 'none'
       type: color
-      description: 设置线条颜色
-      group: 线条样式
+      description: Set the line color
+      group: Line style
     - name: --line-symbol-size
-      title: 线条标记大小
+      title: Line Marker Size
       default: 6
       type: input
-      description: 设置线条标签文字大小
-      group: 线条样式
+      description: Set the line label text size
+      group: Line style
     - name: --label-font-size
-      title: 数据标签文字大小
+      title: Data Label Text Size
       default: 12
       type: input
-      description: 设置数据签文字大小
-      group: 数据标签
+      description: Set the data signature text size
+      group: Data label
     - name: --label-font-color
-      title: 数据标签文字颜色
+      title: Data Label Text Color
       default: 'none'
       type: color
-      description: 设置数据标签文字颜色
-      group: 数据标签
+      description: Set the data label text color
+      group: Data label
     - name: --grid-line-background-color
-      title: 网格线背景颜色
+      title: Grid Line Background Color
       default: 'none'
       type: color
-      description: 设置网格线背景颜色
-      group: 坐标系网格线
+      description: Set the grid line background color
+      group: Coordinate system grid lines
     - name: --grid-line-border-color
-      title: 网格线边框颜色
+      title: Grid Line Border Color
       default: 'none'
       type: color
-      description: 设置网格线边框颜色
-      group: 坐标系网格线
+      description: Set the grid line border color
+      group: Coordinate system grid lines
     - name: --grid-line-color
-      title: 网格线线条颜色
+      title: Grid Line Color
       default: '#ccc'
       type: color
-      description: 设置网格线线条颜色
-      group: 坐标系网格线
+      description: Set the grid line color
+      group: Coordinate system grid lines
     - name: --axis-line-color
-      title: 坐标轴线颜色
+      title: Axis Color
       default: '#333'
       type: color
-      description: 设置坐标轴线颜色
-      group: 坐标轴
+      description: Set the axis color
+      group: Axis
     - name: --area-fill-color
-      title: 面积图填充颜色
+      title: Area Chart Fill Color
       default: 'none'
       type: color
-      description: 设置面积图填充颜色
-      group: 面积颜色
+      description: Set the fill color of the area chart
+      group: Area color
     - name: --area-linearGradient-color
-      title: 面积图渐变颜色
+      title: Gradient Color of Area Chart
       default: 'none'
       type: color
-      description: 设置面积图渐变颜色
-      group: 面积颜色
+      description: Set the gradient color of the area chart
+      group: Area color
     - name: --xAxis-label-font-size
-      title: X轴文字大小
+      title: X-Axis Text Size
       default: 12
       type: input
-      description: 设置X轴文字大小, X轴文字显示不全时，需调小字体尺寸
-      group: 坐标轴
+      description: Set the X-axis text size. If the X-axis text is not fully displayed, you need to reduce the font size.
+      group: Axis
     - name: --yAxis-label-font-size
-      title: Y轴文字大小
+      title: Y-Axis Text Size
       default: 12
       type: input
-      description: 设置Y轴文字大小，Y轴文字显示不全时，需调小字体尺寸
-      group: 坐标轴
+      description: Set the Y-axis text size. If the Y-axis text is not fully displayed, you need to reduce the font size.
+      group: Axis

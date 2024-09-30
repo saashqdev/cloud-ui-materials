@@ -34,7 +34,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "折线图",
+    "title": "Line chart",
     "category": "Chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

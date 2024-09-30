@@ -30,7 +30,7 @@ export default {
       return {size, axisData, sourceData, customStyle};
     },
     formattedSize() {
-      // 外层挂了一个width，所以这里canvas画布实际尺寸要缩小，同时兼容老的以props传入的宽度
+      // A width is hung on the outer layer, so the actual size of the canvas here needs to be reduced, while being compatible with the old width passed in through props.
       const styleWidth = this.customStyle.width && Number(this.customStyle.width.replace("px", "")) - 30;
       const styleHeight = this.customStyle.height && Number(this.customStyle.height.replace("px", ""));
       const propsWidth = this.size.width && this.size.width.replace("px", "");
@@ -79,7 +79,7 @@ export default {
         });
       }
     },
-    // 递归列表中的数据，查找对应属性的值
+    // Recurse the data in the list to find the value of the corresponding attribute
     recurGetValue(obj, val) {
       if (!obj) return;
       if (obj.hasOwnProperty(val)) {
@@ -91,7 +91,7 @@ export default {
         }
       }
     },
-    // 根据用户输入的坐标轴属性，返还对应数据
+    // Return the corresponding data according to the axis attributes input by the user
     getAxisData(data, axis) {
       if (!data || !data instanceof Object) return [];
       const res = [];
@@ -199,30 +199,30 @@ export default {
       }
       return seriesData;
     },
-    // 处理不同环境下的数据展示
+    // Handle data display in different environments
     processLineData(data) {
       if (!data) {
         return;
       }
       let legendData;
-      let multiYAxisList = this.axisData.yAxis.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
-      let multiXAxisList = this.axisData.xAxis.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
-      // 针对多层嵌套的坐标轴输入，取最后一个值
+      let multiYAxisList = this.axisData.yAxis.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
+      let multiXAxisList = this.axisData.xAxis.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
+      // For multi-layer nested coordinate axis input, take the last value
       multiYAxisList = multiYAxisList.map((item) => item.split('.')[item.split('.').length - 1])
       multiXAxisList = multiXAxisList.map((item) => item.split('.')[item.split('.').length - 1])
-      // IDE开发环境坐标轴替换为假数据坐标轴字段
+      // IDE development environment axis is replaced with fake data axis field
       if (this.$env.VUE_APP_DESIGNER || !window.appInfo) {
-        multiYAxisList = ['指标1'];
+        multiYAxisList = ['Indicator 1'];
         multiXAxisList = ['fakeXAxis'];
-        legendData = ['指标1'];
+        legendData = ['Indicator 1'];
       } else {
-        // 制品应用生产环境
+        // Product application production environment
         legendData = multiYAxisList;
         this.axisData.xAxis = this.axisData.xAxis.split('.')[this.axisData.xAxis.split('.').length - 1] || '';
       }
       const seriesData = this.generateSeriesData(data, multiYAxisList);
       const xAxisData = this.generateXAxisData(data, multiXAxisList);
-      // 发布部署后，如果字段不合法，加载默认图片
+      // After release and deployment, if the field is illegal, load the default image
       if (!this.$env.VUE_APP_DESIGNER) {
         for (let axis of multiXAxisList) {
           if (this.getAxisData(data, axis).length === 0) {
@@ -239,19 +239,19 @@ export default {
       }
       this.lineOption = this.generateEchartOption(legendData, seriesData, xAxisData);
     },
-    // 处理自定义图例，开发环境修改成功，图例名称从"指标"->"别名"，生产环境会自动替换为真实数据
+    // Process the custom legend. The development environment is modified successfully. The legend name is changed from "Indicator" -> "Alias". The production environment will automatically replace it with real data.
     legendFormatter(name) {
-      let multiYAxisList = this.axisData.yAxis.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
-      let legendAliasList = this.axisData.legendName && this.axisData.legendName.replace(/，/g, ",").replace(/\s+/g, '').split(',') || [];
+      let multiYAxisList = this.axisData.yAxis.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
+      let legendAliasList = this.axisData.legendName && this.axisData.legendName.replace(/,/g, ",").replace(/\s+/g, '').split(',') || [];
       legendAliasList = legendAliasList.filter((item) => item !== '');
-      let fakeAliasList = ['别名1'];
-      // 因为生产环境展示的是假数据，所以指标数量无法根据实际情况渲染，默认展示三个图例，通过更改值提示用户修改成功
+      let fakeAliasList = ['Alias   1'];
+      // Because the production environment displays fake data, the number of indicators cannot be rendered according to the actual situation. Three legends are displayed by default, and the user is prompted to modify successfully by changing the value.
       if (this.$env.VUE_APP_DESIGNER || !window.appInfo) {
-        const showAxisList = ['指标1'];
+        const showAxisList = ['Indicator 1'];
         return (legendAliasList.length !== 0 && multiYAxisList.length === legendAliasList.length) ?
           fakeAliasList[showAxisList.indexOf(name)] : showAxisList[showAxisList.indexOf(name)];
       } else {
-        // 如果数量匹配则显示别名，不匹配显示指标原始值
+        // If the quantity matches, display the alias, if not, display the original value of the indicator.
         return (legendAliasList.length !== 0 && multiYAxisList.length === legendAliasList.length) ?
           legendAliasList[multiYAxisList.indexOf(name)] || this.axisData.legendName : name;
       }

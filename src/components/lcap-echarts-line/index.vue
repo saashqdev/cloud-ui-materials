@@ -35,9 +35,9 @@ export default {
     height: {type: String, default: '300px'},
     xAxis: {type: String, default: ''},
     yAxis: {type: String, default: ''},
-    xAxisTitle: {type: String, default: 'X轴标题'},
-    yAxisTitle: {type: String, default: 'Y轴标题'},
-    title: {type: String, default: '标题'},
+    xAxisTitle: {type: String, default: 'X-Axis Title'},
+    yAxisTitle: {type: String, default: 'Y-Axis Title'},
+    title: {type: String, default: 'title'},
     titleFontSize: {type: Number, default: 18},
     titleFontStyle: {type: String, default: 'normal'},
     allowDownload: {type: Boolean, default: true},
@@ -82,7 +82,7 @@ export default {
     }
   },
   mounted() {
-    // 监听style样式变化
+    // Monitor style changes
     this.customStyle = this.parseCustomStyle(this.$el);
     const observer = new MutationObserver(function (mutations) {
       mutations.map(function (mutation) {
@@ -164,7 +164,7 @@ export default {
       });
     },
     async init() {
-      // 本地启动和开发环境使用假数据，生产环境替换为真数据
+      // The local startup and development environment use fake data, and the production environment replaces it with real data
       const fnDataSource = (this.$env.VUE_APP_DESIGNER || !window.appInfo) ? fakeData : this.dataSource;
       // console.log('fnDataSource', fnDataSource);
       this.sourceData = await this.handleDataSource(fnDataSource);

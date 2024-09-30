@@ -1,281 +1,281 @@
 {
   "lcap-echarts-line/data-source": {
     "type": "Array<Item> | Function | object | DataSource",
-    "description": "表格的数据源，数据集对象或者返回数据集的逻辑"
+    "description": "The data source of the table, the data set object or the logic of returning the data set"
   },
   "lcap-echarts-line/data-schema": {
     "type": "schema",
-    "description": "表格每一行的数据类型"
+    "description": "Data type of each row of the table"
   },
   "lcap-echarts-line/undefinedToZero": {
     "type": "string",
     "options": [
       {
         "value": "empty",
-        "title": "空距"
+        "title": "Space"
       },
       {
         "value": "zero",
-        "title": "零"
+        "title": "Zero"
       }
     ],
-    "description": "设置将未定义的值如undefined，null转换为0或空距"
+    "description": "Set to convert undefined values   such as undefined, null to 0 or space"
   },
   "lcap-echarts-line/initialLoad": {
     "type": "boolean",
-    "description": "是否在初始时立即加载"
+    "description": "Whether to load immediately upon initialization"
   },
   "lcap-echarts-line/xAxis": {
     "type": "string",
-    "description": "设置维度(统计类别)"
+    "description": "Set dimensions (statistical categories)"
   },
   "lcap-echarts-line/yAxis": {
     "type": "string",
-    "description": "设置度量（统计值）"
+    "description": "Set measurement (statistical value)"
   },
   "lcap-echarts-line/title": {
     "type": "string",
-    "description": "设置图表标题"
+    "description": "Set chart title"
   },
   "lcap-echarts-line/axisSplitLine": {
     "type": "string",
     "options": [
       {
-        "title": "无",
+        "title": "None",
         "value": "hidden"
       },
       {
-        "title": "水平网格线",
+        "title": "Horizontal Grid Lines",
         "value": "horizontal"
       },
       {
-        "title": "垂直网格线",
+        "title": "Vertical Grid Lines",
         "value": "vertical"
       },
       {
-        "title": "全部网格线",
+        "title": "All Grid Lines",
         "value": "both"
       }
     ],
-    "description": "设置坐标系网格线"
+    "description": "Set coordinate system grid lines"
   },
   "lcap-echarts-line/axisSplitLineType": {
     "type": "string",
     "options": [
       {
-        "title": "实线",
+        "title": "Solid Line",
         "value": "solid"
       },
       {
-        "title": "虚线",
+        "title": "Dashed Line",
         "value": "dotted"
       },
       {
-        "title": "点线",
+        "title": "Dotted Line",
         "value": "dashed"
       }
     ],
-    "description": "设置网格线线型"
+    "description": "Set grid line style"
   },
   "lcap-echarts-line/theme": {
     "type": "string",
     "options": [
       {
         "value": "theme1",
-        "title": "科技"
+        "title": "Technology"
       },
       {
         "value": "theme2",
-        "title": "清新"
+        "title": "Fresh"
       },
       {
         "value": "theme3",
-        "title": "淡雅"
+        "title": "Elegance"
       },
       {
         "value": "theme4",
-        "title": "经典"
+        "title": "Classic"
       }
     ],
-    "description": "设置图表配色方案"
+    "description": "Set chart color scheme"
   },
   "lcap-echarts-line/labelPosition": {
     "type": "string",
     "options": [
       {
         "value": "top",
-        "title": "上"
+        "title": "Top"
       },
       {
         "value": "bottom",
-        "title": "下"
+        "title": "Bottom"
       },
       {
         "value": "left",
-        "title": "左"
+        "title": "Left"
       },
       {
         "value": "right",
-        "title": "右"
+        "title": "Right"
       },
       {
         "value": "inside",
-        "title": "居中"
+        "title": "Center"
       },
       {
         "value": "hidden",
-        "title": "无"
+        "title": "Hidden"
       }
     ],
-    "description": "设置数据标签位置"
+    "description": "Set data label position"
   },
   "lcap-echarts-line/allowShowHint": {
     "type": "boolean",
-    "description": "设置是否显示提示"
+    "description": "Set whether to display prompts"
   },
   "lcap-echarts-line/allowShowLegend": {
     "type": "boolean",
-    "description": "设置是否显示图例"
+    "description": "Set whether to display the legend"
   },
   "lcap-echarts-line/legendName": {
     "type": "string",
-    "description": "设置图例别名；修改成功后，图例名字会从\"指标\"改为\"别名\""
+    "description": "Set the legend alias; after the modification is successful, the legend name will be changed from \"indicator\" to \"alias\""
   },
   "lcap-echarts-line/areaFilled": {
     "type": "boolean",
-    "description": "设置是否填充折线下方区域"
+    "description": "Set whether to fill the area below the polyline"
   },
   "lcap-echarts-line/lineType": {
     "type": "string",
     "options": [
       {
         "value": "solid",
-        "title": "实线"
+        "title": "Solid Line"
       },
       {
         "value": "dotted",
-        "title": "虚线"
+        "title": "Dashed Line"
       },
       {
         "value": "dashed",
-        "title": "点线"
+        "title": "Dotted Line"
       }
     ],
-    "description": "设置线条类型"
+    "description": "Set line type"
   },
   "lcap-echarts-line/lineStyleSmooth": {
     "type": "string",
     "options": [
       {
         "value": "normal",
-        "title": "基础"
+        "title": "Basics"
       },
       {
         "value": "smooth",
-        "title": "平滑"
+        "title": "Smooth"
       }
     ],
-    "description": "设置线条样式"
+    "description": "Set line style"
   },
   "lcap-echarts-line/lineStyleSymbol": {
     "type": "string",
     "options": [
       {
         "value": "emptyCircle",
-        "title": "空心圆"
+        "title": "Hollow Circle"
       },
       {
         "value": "circle",
-        "title": "圆形"
+        "title": "Circle"
       },
       {
         "value": "rect",
-        "title": "矩形"
+        "title": "Rectangle"
       },
       {
         "value": "triangle",
-        "title": "三角形"
+        "title": "Triangle"
       },
       {
         "value": "diamond",
-        "title": "菱形"
+        "title": "Rhombus"
       },
       {
         "value": "pin",
-        "title": "水滴"
+        "title": "Water Drops"
       },
       {
         "value": "arrow",
-        "title": "箭头"
+        "title": "Arrow"
       },
       {
         "value": "none",
-        "title": "无"
+        "title": "None"
       }
     ]
   },
   "lcap-echarts-line/xAxisTitle": {
     "type": "string",
-    "description": "设置x轴标题"
+    "description": "Set x-axis title"
   },
   "lcap-echarts-line/showXAxisLine": {
     "type": "boolean",
-    "description": "设置显示X轴轴线"
+    "description": "Set to display X-axis axis"
   },
   "lcap-echarts-line/showXAxisLabel": {
     "type": "boolean",
-    "description": "设置是否显示X轴文字标签"
+    "description": "Set whether to display X-axis text labels"
   },
   "lcap-echarts-line/xAxisLabelRotate": {
     "type": "string",
     "options": [
       {
         "value": "0",
-        "title": "横向"
+        "title": "Horizontal"
       },
       {
         "value": "90",
-        "title": "纵向"
+        "title": "Portrait"
       },
       {
         "value": "45",
-        "title": "左倾斜"
+        "title": "Left Tilt"
       },
       {
         "value": "-45",
-        "title": "右倾斜"
+        "title": "Lean Right"
       }
     ],
-    "description": "设置显示X轴文字标签的方向"
+    "description": "Set the direction of displaying X-axis text labels"
   },
   "lcap-echarts-line/yAxisTitle": {
     "type": "string",
-    "description": "设置Y轴标题"
+    "description": "Set Y-axis title"
   },
   "lcap-echarts-line/showYAxisLine": {
     "type": "boolean",
-    "description": "设置显示Y轴轴线"
+    "description": "Set to display Y-axis axis"
   },
   "lcap-echarts-line/showYAxisLabel": {
     "type": "boolean",
-    "description": "设置是否显示Y轴数值标签"
+    "description": "Set whether to display Y-axis numerical labels"
   },
   "lcap-echarts-line/titleFontStyle": {
     "type": "string",
     "options": [
       {
         "value": "normal",
-        "title": "正常"
+        "title": "Normal"
       },
       {
         "value": "italic",
-        "title": "斜体"
+        "title": "Italic"
       }
     ],
-    "description": "设置普通文字字号"
+    "description": "Set normal text font size"
   },
   "lcap-echarts-line/allowDownload": {
     "type": "boolean",
-    "description": "允许用户设置保存图片"
+    "description": "Allow user settings to save images"
   }
 }

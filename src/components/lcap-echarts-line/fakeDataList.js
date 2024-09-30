@@ -10,10 +10,10 @@ export const fakeDataList =
       "property2": 1,
       "property3": 2,
       "property4": 3,
-      "fakeXAxis": "数据1",
-      "指标1": 90,
-      "指标2": 70,
-      "指标3": 80,
+      "fakeXAxis": "data1",
+      "Indicator 1": 90,
+      "Indicator 2": 70,
+      "Indicator 3": 80,
     }
   }, {
     "entity1": {
@@ -26,10 +26,10 @@ export const fakeDataList =
       "property2": 2,
       "property3": 3,
       "property4": 4,
-      "fakeXAxis": "数据2",
-      "指标1": 75,
-      "指标2": 100,
-      "指标3": 85,
+      "fakeXAxis": "data2",
+      "Indicator 1": 75,
+      "Indicator 2": 100,
+      "Indicator 3": 85,
     }
   }, {
     "entity1": {
@@ -42,9 +42,9 @@ export const fakeDataList =
       "property2": 2,
       "property3": 3,
       "property4": 4,
-      "fakeXAxis": "数据3",
-      "指标1": 60,
-      "指标2": 90,
-      "指标3": 80,
+      "fakeXAxis": "data3",
+      "Indicator 1": 60,
+      "Indicator 2": 90,
+      "Indicator 3": 80,
     }
   }]

@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "通用echarts图",
+    "title": "Universal eCharts Diagram",
     "category": "DataDisplay",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

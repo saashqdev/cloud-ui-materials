@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "柱状图",
+    "title": "Bar Chart",
     "category": "Chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

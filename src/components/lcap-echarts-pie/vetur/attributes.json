@@ -1,134 +1,134 @@
 {
   "lcap-echarts-pie/data-source": {
     "type": "Array<Item> | Function | object | DataSource",
-    "description": "表格的数据源，数据集对象或者返回数据集的逻辑"
+    "description": "The data source of the table, the dataset object or the logic of returning the dataset"
   },
   "lcap-echarts-pie/data-schema": {
     "type": "schema",
-    "description": "表格每一行的数据类型"
+    "description": "The data type of each row in the table"
   },
   "lcap-echarts-pie/undefinedToZero": {
     "type": "string",
     "options": [
       {
         "value": "empty",
-        "title": "空距"
+        "title": "Space"
       },
       {
         "value": "zero",
-        "title": "零"
+        "title": "Zero"
       }
     ],
-    "description": "设置将未定义的值如undefined，null转换为0或空距"
+    "description": "Set the conversion of undefined values   such as undefined and null to 0 or empty space"
   },
   "lcap-echarts-pie/initialLoad": {
     "type": "boolean",
-    "description": "是否在初始时立即加载"
+    "description": "Whether to load immediately at the initialization"
   },
   "lcap-echarts-pie/xAxis": {
     "type": "string",
-    "description": "设置维度(统计类别)"
+    "description": "Set dimension (statistical category)"
   },
   "lcap-echarts-pie/yAxis": {
     "type": "string",
-    "description": "设置度量（统计值）"
+    "description": "Set metrics (statistics)"
   },
   "lcap-echarts-pie/title": {
     "type": "string",
-    "description": "设置主标题"
+    "description": "Set the main title"
   },
   "lcap-echarts-pie/theme": {
     "type": "string",
     "options": [
       {
         "value": "theme1",
-        "title": "科技"
+        "title": "Technology"
       },
       {
         "value": "theme2",
-        "title": "清新"
+        "title": "Fresh"
       },
       {
         "value": "theme3",
-        "title": "淡雅"
+        "title": "Elegance"
       },
       {
         "value": "theme4",
-        "title": "经典"
+        "title": "Classic"
       }
     ],
-    "description": "设置图表配色方案"
+    "description": "Set the chart color scheme"
   },
   "lcap-echarts-pie/showLabelName": {
     "type": "boolean",
-    "description": "设置是否显示维度标签"
+    "description": "Set whether to display dimension labels"
   },
   "lcap-echarts-pie/showLabelValue": {
     "type": "boolean",
-    "description": "设置是否显示数值标签"
+    "description": "Set whether to display the value label"
   },
   "lcap-echarts-pie/showLabelPercent": {
     "type": "boolean",
-    "description": "设置是否显示占比标签"
+    "description": "Set whether to display the percentage label"
   },
   "lcap-echarts-pie/allowShowHint": {
     "type": "boolean",
-    "description": "设置是否显示提示"
+    "description": "Set whether to display prompts"
   },
   "lcap-echarts-pie/allowShowLegend": {
     "type": "boolean",
-    "description": "设置是否显示图例"
+    "description": "Set whether to display the legend"
   },
   "lcap-echarts-pie/legendPosition": {
     "type": "string",
     "options": [
       {
         "value": "top",
-        "title": "上"
+        "title": "Top"
       },
       {
         "value": "bottom",
-        "title": "下"
+        "title": "Bottom"
       },
       {
         "value": "left",
-        "title": "左"
+        "title": "Left"
       },
       {
         "value": "right",
-        "title": "右"
+        "title": "Right"
       }
     ],
-    "description": "设置图例位置"
+    "description": "Set legend position"
   },
   "lcap-echarts-pie/legendScroll": {
     "type": "string",
     "options": [
       {
         "value": "normal",
-        "title": "普通"
+        "title": "Normal"
       },
       {
         "value": "scroll",
-        "title": "滚动"
+        "title": "Scroll"
       }
     ],
-    "description": "设置图例是否滚动"
+    "description": "Set whether the legend should scroll"
   },
   "lcap-echarts-pie/pieType": {
     "type": "string",
     "options": [
       {
         "value": "pie",
-        "title": "饼型"
+        "title": "Pie Type"
       },
       {
         "value": "circle",
-        "title": "环型"
+        "title": "Ring Type"
       },
       {
         "value": "semiCircle",
-        "title": "半环形"
+        "title": "Semi-Circular"
       }
     ]
   },
@@ -137,17 +137,17 @@
     "options": [
       {
         "value": "normal",
-        "title": "正常"
+        "title": "Normal"
       },
       {
         "value": "italic",
-        "title": "斜体"
+        "title": "Italic"
       }
     ],
-    "description": "设置普通文字字号"
+    "description": "Set normal text font size"
   },
   "lcap-echarts-pie/allowDownload": {
     "type": "boolean",
-    "description": "允许用户设置保存图片"
+    "description": "Allows users to save pictures"
   }
 }

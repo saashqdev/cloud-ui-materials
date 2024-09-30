@@ -4,13 +4,13 @@
 <lcap-echarts-pie
     theme=""  
     xAxis="fakeXAxis" 
-    yAxis="指标1"
+    yAxis="Indicator 1"
     :titleFontSize=18
     titleFontStyle="normal"
     :allowDownload=true
     :allowShowHint=true
     :allowShowLegend=true
-    legendName="数学"
+    legendName="Mathematics"
     :showLabelName=true
     :showLabelValue=true
     :showLabelPercent=true

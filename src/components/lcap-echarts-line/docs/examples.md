@@ -6,12 +6,12 @@
     <lcap-echarts-line
       ref="line"
       xAxis="fakeXAxis"
-      yAxis="指标1，指标"
-      xAxisTitle="维度1111"
-      yAxisTitle="指标1222"
-      title="标题111"
+      yAxis="Indicator1, Indicator"
+      xAxisTitle="Dimension 1111"
+      yAxisTitle="Indicator 1222"
+      title="Title 111"
       theme="theme1"
-      legendName="数学"
+      legendName="Mathematics"
       :titleFontSize=16
       titleFontStyle="italic"
       :allowDownload=true
@@ -35,7 +35,7 @@
     --label-font-size: 14;
     ">
     </lcap-echarts-line>
-    <u-button @click="reload">reload</u-button>
+    <u-button @click="reload">Reload</u-button>
   </div>
 </template>
 <script>

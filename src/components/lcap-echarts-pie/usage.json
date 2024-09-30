@@ -1,310 +1,310 @@
 {
     "symbol": "lcap-echarts-pie",
-    "name": "饼图",
+    "name": "pie chart",
     "version": "2.2.0",
     "icon": "piechart",
     "repoAddr": "",
     "depDescription": {},
-    "description": "饼图",
+    "description": "Pie chart",
     "labels": [
         "Chart"
     ],
-    "screenShot": "http://static-kubevue.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-pie@2.2.0/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-echarts-pie title=\\\"标题\\\" theme=\\\"theme1\\\"></lcap-echarts-pie>\\n</template>\\n\"}]",
+    "screenShot": "http://static-vusion.nos.lcap.163yun.com/packages/lcap-echarts-pie@2.2.0/screenshots/0.png",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-echarts-pie title=\\\"Title\\\" theme=\\\"theme1\\\"></lcap-echarts-pie>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-echarts-pie",
-        "title": "饼图",
-        "description": "饼图",
+        "title": "Pie Chart",
+        "description": "Pie chart",
         "category": "Chart",
-        "screenShot": "http://static-kubevue.nos.lcap.s3.amazonaws.com/packages/lcap-echarts-pie@2.2.0/screenshots/0.png",
+        "screenShot": "http://static-vusion.nos.lcap.163yun.com/packages/lcap-echarts-pie@2.2.0/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {
                 "title": "Basic Usage",
                 "description": "",
-                "code": "<template>\n<lcap-echarts-pie title=\"标题\" theme=\"theme1\"></lcap-echarts-pie>\n</template>\n"
+                "code": "<template>\n<lcap-echarts-pie title=\"Title\" theme=\"theme1\"></lcap-echarts-pie>\n</template>\n"
             }
         ],
         "attrs": [
             {
                 "name": "data-source",
-                "title": "数据源",
+                "title": "Data Source",
                 "type": "Array<Item> | Function | object | DataSource",
                 "designer-value": "[{}, {}, {}]",
-                "description": "表格的数据源，数据集对象或者返回数据集的逻辑",
-                "group": "数据源"
+                "description": "Table data source, dataset object or logic for returning dataset",
+                "group": "Data Source"
             },
             {
                 "name": "data-schema",
-                "title": "数据类型",
+                "title": "Data Type",
                 "type": "schema",
-                "description": "表格每一行的数据类型",
-                "group": "数据源",
+                "description": "The data type of each row in the table",
+                "group": "Data Source",
                 "compType": "dataTypeSelect"
             },
             {
                 "name": "undefinedToZero",
-                "title": "空值处理规则",
+                "title": "Empty Value Processing Rules",
                 "type": "string",
                 "default": "empty",
                 "options": [
                     {
                         "value": "empty",
-                        "title": "空距"
+                        "title": "Space"
                     },
                     {
                         "value": "zero",
-                        "title": "零"
+                        "title": "Zero"
                     }
                 ],
-                "description": "设置将未定义的值如undefined，null转换为0或空距",
-                "group": "数据源"
+                "description": "Set the conversion of undefined values   such as undefined and null to 0 or empty space",
+                "group": "Data Source"
             },
             {
                 "name": "initialLoad",
-                "title": "初始加载",
+                "title": "Initial Loading",
                 "type": "boolean",
                 "default": true,
-                "description": "是否在初始时立即加载",
-                "group": "数据源"
+                "description": "Whether to load immediately at the initialization",
+                "group": "Data Source"
             },
             {
                 "name": "xAxis",
-                "title": "维度",
+                "title": "Dimension",
                 "type": "string",
                 "default": "",
-                "description": "设置维度(统计类别)",
-                "group": "图表数据"
+                "description": "Set dimension (statistical category)",
+                "group": "Chart Data"
             },
             {
                 "name": "yAxis",
-                "title": "度量",
+                "title": "Measurement",
                 "type": "string",
                 "default": "",
-                "description": "设置度量（统计值）",
-                "group": "图表数据"
+                "description": "Set metrics (statistics)",
+                "group": "Chart Data"
             },
             {
                 "name": "title",
-                "title": "标题",
+                "title": "Title",
                 "type": "string",
-                "default": "标题",
-                "description": "设置主标题",
-                "group": "图表属性"
+                "default": "title",
+                "description": "Set the main title",
+                "group": "Chart Properties"
             },
             {
                 "name": "theme",
-                "title": "配色方案",
+                "title": "Color Scheme",
                 "type": "string",
                 "default": "theme1",
-                "description": "设置图表配色方案",
+                "description": "Set the chart color scheme",
                 "options": [
                     {
                         "value": "theme1",
-                        "title": "科技"
+                        "title": "Technology"
                     },
                     {
                         "value": "theme2",
-                        "title": "清新"
+                        "title": "Fresh"
                     },
                     {
                         "value": "theme3",
-                        "title": "淡雅"
+                        "title": "Elegance"
                     },
                     {
                         "value": "theme4",
-                        "title": "经典"
+                        "title": "Classic"
                     }
                 ],
-                "group": "图表属性"
+                "group": "Chart Properties"
             },
             {
                 "name": "showLabelName",
-                "title": "显示维度标签",
+                "title": "Show Dimension Labels",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示维度标签",
-                "group": "图表属性"
+                "description": "Set whether to display dimension labels",
+                "group": "Chart Properties"
             },
             {
                 "name": "showLabelValue",
-                "title": "显示数值标签",
+                "title": "Show Value Labels",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示数值标签",
-                "group": "图表属性"
+                "description": "Set whether to display the value label",
+                "group": "Chart Properties"
             },
             {
                 "name": "showLabelPercent",
-                "title": "显示占比标签",
+                "title": "Show Percentage Label",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示占比标签",
-                "group": "图表属性"
+                "description": "Set whether to display the percentage label",
+                "group": "Chart Properties"
             },
             {
                 "name": "allowShowHint",
-                "title": "显示提示",
+                "title": "Show Tips",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示提示",
-                "group": "图表属性"
+                "description": "Set whether to display prompts",
+                "group": "Chart Properties"
             },
             {
                 "name": "allowShowLegend",
-                "title": "显示图例",
+                "title": "Show Legend",
                 "type": "boolean",
                 "default": true,
-                "description": "设置是否显示图例",
-                "group": "图表属性"
+                "description": "Set whether to display the legend",
+                "group": "Chart Properties"
             },
             {
                 "name": "legendPosition",
-                "title": "图例位置",
+                "title": "Legend Location",
                 "type": "string",
                 "default": "bottom",
                 "options": [
                     {
                         "value": "top",
-                        "title": "上"
+                        "title": "Top"
                     },
                     {
                         "value": "bottom",
-                        "title": "下"
+                        "title": "Bottom"
                     },
                     {
                         "value": "left",
-                        "title": "左"
+                        "title": "Left"
                     },
                     {
                         "value": "right",
-                        "title": "右"
+                        "title": "Right"
                     }
                 ],
-                "description": "设置图例位置",
-                "group": "图表属性"
+                "description": "Set legend position",
+                "group": "Chart Properties"
             },
             {
                 "name": "legendScroll",
-                "title": "图例类型",
+                "title": "Legend Type",
                 "type": "string",
                 "default": "normal",
                 "options": [
                     {
                         "value": "normal",
-                        "title": "普通"
+                        "title": "Normal"
                     },
                     {
                         "value": "scroll",
-                        "title": "滚动"
+                        "title": "Scroll"
                     }
                 ],
-                "description": "设置图例是否滚动",
-                "group": "图表属性"
+                "description": "Set whether the legend should scroll",
+                "group": "Chart Properties"
             },
             {
                 "name": "pieType",
-                "title": "饼类型",
+                "title": "Pie Type",
                 "type": "string",
                 "default": "pie",
                 "options": [
                     {
                         "value": "pie",
-                        "title": "饼型"
+                        "title": "Pie Type"
                     },
                     {
                         "value": "circle",
-                        "title": "环型"
+                        "title": "Ring Type"
                     },
                     {
                         "value": "semiCircle",
-                        "title": "半环形"
+                        "title": "Semi-Circular"
                     }
                 ]
             },
             {
                 "name": "titleFontStyle",
-                "title": "标题文字字体风格",
+                "title": "Title Font Style",
                 "type": "string",
                 "default": "normal",
-                "description": "设置普通文字字号",
+                "description": "Set normal text font size",
                 "options": [
                     {
                         "value": "normal",
-                        "title": "正常"
+                        "title": "Normal"
                     },
                     {
                         "value": "italic",
-                        "title": "斜体"
+                        "title": "Italic"
                     }
                 ],
-                "group": "标题"
+                "group": "Title"
             },
             {
                 "name": "allowDownload",
-                "title": "允许下载",
+                "title": "Allow Download",
                 "type": "boolean",
                 "default": true,
-                "description": "允许用户设置保存图片",
-                "group": "图表功能"
+                "description": "Allow users to save pictures",
+                "group": "Chart Functions"
             }
         ],
         "methods": [
             {
                 "name": "reload",
-                "title": "reload",
-                "description": "刷新数据",
+                "title": "Reload",
+                "description": "Refresh data",
                 "params": []
             }
         ],
         "themes": [
             {
                 "name": "--echart-title-font-size",
-                "title": "标题文字大小",
+                "title": "Title Text Size",
                 "default": 14,
                 "type": "input",
-                "description": "设置标题标签文字大小",
-                "group": "标题"
+                "description": "Set title label text size",
+                "group": "Title"
             },
             {
                 "name": "--title-font-color",
-                "title": "标题文字颜色",
+                "title": "Title Text Color",
                 "default": "#000",
                 "type": "color",
-                "description": "设置标题文字颜色",
-                "group": "标题"
+                "description": "Set title text color",
+                "group": "Title"
             },
             {
                 "name": "--label-font-size",
-                "title": "数据标签文字大小",
+                "title": "Data Label Text Size",
                 "default": 12,
                 "type": "input",
-                "description": "设置数据签文字大小",
-                "group": "数据标签"
+                "description": "Set the data label text size",
+                "group": "Data Label"
             },
             {
                 "name": "--label-font-color",
-                "title": "数据标签文字颜色",
+                "title": "Data Label Text Color",
                 "default": "#000",
                 "type": "color",
-                "description": "设置数据标签文字颜色",
-                "group": "数据标签"
+                "description": "Set data label text color",
+                "group": "Data Label"
             },
             {
                 "name": "--pie-sectors-color",
-                "title": "扇区颜色",
+                "title": "Sector Color",
                 "type": "input",
                 "default": "",
-                "description": "各个饼图扇区颜色，请输入对应数据类目的颜色数，用空格分隔，不填自动分配颜色",
-                "group": "扇区颜色"
+                "description": "Color of each pie chart sector. Please enter the number of colors for the corresponding data category, separated by spaces. If left blank, colors will be automatically assigned",
+                "group": "Sector Color"
             },
             {
                 "name": "--pie-sectors-border-color",
-                "title": "扇区边框颜色",
+                "title": "Sector Border Color",
                 "type": "color",
                 "default": "none",
-                "description": "饼图扇区边框颜色",
-                "group": "扇区颜色"
+                "description": "Pie slice border color",
+                "group": "Sector Color"
             }
         ],
         "children": []

@@ -1,6 +1,6 @@
-### Basic Usage
+### Basic usage
 
-``` vue
+``` view
 <template>
 <lcap-echarts-basic :options="data"></lcap-echarts-basic>
 </template>
@@ -19,10 +19,10 @@ export default {
   ],
   "legend": {
     "data": [
-      "累计关闭的需求",
-      "累计创建的需求",
-      "新增的需求",
-      "关闭的需求"
+      "Cumulative closed demand",
+      "Cumulative created requirements",
+      "New Requirements",
+      "Demand for closure"
     ]
   },
   "dataZoom": [
@@ -120,7 +120,7 @@ export default {
   },
   "series": [
     {
-      "name": "累计关闭的需求",
+      "name": "Total closed requirements",
       "type": "line",
       "yAxisIndex": 1,
       "data": [
@@ -183,7 +183,7 @@ export default {
       }
     },
     {
-      "name": "累计创建的需求",
+      "name": "Cumulatively created requirements",
       "type": "line",
       "yAxisIndex": 1,
       "data": [
@@ -246,7 +246,7 @@ export default {
       }
     },
     {
-      "name": "新增的需求",
+      "name": "Newly added requirements",
       "type": "bar",
       "data": [
         0,
@@ -266,7 +266,7 @@ export default {
       "barWidth": 8
     },
     {
-      "name": "关闭的需求",
+      "name": "Closed Request",
       "type": "bar",
       "data": [
         0,
@@ -293,7 +293,7 @@ export default {
 </script>
 ```
 
-``` vue
+``` view
 <template>
 <lcap-echarts-basic :options="data"></lcap-echarts-basic>
 </template>
@@ -304,7 +304,7 @@ export default {
         return {
             data: {
   "xAxis": {
-    "name": "时长（天）",
+    "name": "Duration (days)",
     "nameTextStyle": {
       "padding": [
         0,
@@ -377,7 +377,7 @@ export default {
       "markLine": {
         "symbol": "none",
         "tooltip": {
-          "formatter": "版本交付周期分布{b} : {c}天"
+          "formatter": "Version delivery cycle distribution {b} : {c} days"
         },
         "label": {
           "normal": {
@@ -443,7 +443,7 @@ export default {
 </script>
 ```
 
-``` vue
+``` view
 <template>
 <lcap-echarts-basic :options="data"></lcap-echarts-basic>
 </template>
@@ -457,7 +457,7 @@ export default {
     "text": 4,
     "top": "30%",
     "left": "center",
-    "subtext": "总数(个)",
+    "subtext": "Total number (number)",
     "subtextStyle": {
       "color": "#999999",
       "textAlign": "center",
@@ -501,19 +501,19 @@ export default {
             "value": 0
           },
           {
-            "name": "已解决",
+            "name": "Solved",
             "category": 4,
             "value": 1
           }
         ]
       },
       {
-        "name": "已完成",
+        "name": "Completed",
         "category": 3,
         "value": 2,
         "children": [
           {
-            "name": "已关闭",
+            "name": "Closed",
             "category": 3,
             "value": 1
           },

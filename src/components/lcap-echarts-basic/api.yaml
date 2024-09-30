@@ -1,32 +1,32 @@
 - name: lcap-echarts-basic
-  title: 通用echarts图
-  description: 请在这里添加描述
+  title: General eCharts Chart
+  description: Please add a description here
   labels: [DataDisplay]
   icon: default
   attrs:
     - name: options
       type: object | string
       default: ''
-      description: option配置项
+      description: Option configuration item
     - name: data-source
-      title: 数据源
+      title: Data Source
       type: Array<Item> | Function | object | DataSource
       designer-value: "[{}, {}, {}]"
-      description: 表格的数据源，数据集对象或者返回数据集的逻辑
+      description: The data source of the table, the dataset object or the logic of returning the dataset
     - name: width
-      title: 宽度
+      title: Width
       type: string
       default: 380px
-      description: 设置图宽度
-      group: 图表基础
+      description: Set the image width
+      group: Chart Basics
     - name: height
-      title: 高度
+      title: Height
       type: string
       default: 300px
-      description: 设置图高度
-      group: 图表基础
+      description: Set the image height
+      group: Chart Basics
   methods:
     - name: reload
-      title: reload
-      description: 刷新数据
+      title: Reload
+      description: Refresh data
       params: []

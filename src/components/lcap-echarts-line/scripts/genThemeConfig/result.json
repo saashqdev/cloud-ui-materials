@@ -1,13 +1,13 @@
 [
     {
         "id": 0.1,
-        "title": "高级设置",
+        "title": "Advanced Settings",
         "toPosition": "highLevelSetting",
         "items": [
             {
                 "id": 6,
                 "name": "lcap-echarts-line",
-                "title": "线性布局",
+                "title": "Linear Layout",
                 "toPosition": "materials",
                 "type": [
                     "vertical",
@@ -17,7 +17,7 @@
                 "cssProperty": {
                     "--echarts-line-color": {
                         "type": "color",
-                        "desc": "折线图线条颜色,如：#223325"
+                        "desc": "Line chart line color, such as: #223325"
                     }
                 }
             }

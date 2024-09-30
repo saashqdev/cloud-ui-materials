@@ -1,16 +1,16 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapEchartsPie 饼图
+# LcapEchartsPie Pie Chart
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Methods](#methods)
 
 **Chart**
 
-饼图
+Pie Chart
 
 ## Example
 ### Basic Usage
@@ -19,13 +19,13 @@
 <lcap-echarts-pie
     theme=""  
     xAxis="fakeXAxis" 
-    yAxis="指标1"
+    yAxis="Indicator 1"
     :titleFontSize=18
     titleFontStyle="normal"
     :allowDownload=true
     :allowShowHint=true
     :allowShowLegend=true
-    legendName="数学"
+    legendName="Mathematics"
     :showLabelName=true
     :showLabelValue=true
     :showLabelPercent=true
@@ -43,30 +43,30 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| data-source | Array\<Item\> \| Function \| object \| DataSource |  |  | 表格的数据源，数据集对象或者返回数据集的逻辑 |
-| data-schema | schema |  |  | 表格每一行的数据类型 |
-| undefinedToZero | string | `[object Object]`<br/>`[object Object]` | `'empty'` | 设置将未定义的值如undefined，null转换为0或空距 |
-| initialLoad | boolean |  | `true` | 是否在初始时立即加载 |
-| xAxis | string |  | `''` | 设置维度(统计类别) |
-| yAxis | string |  | `''` | 设置度量（统计值） |
-| title | string |  | `'标题'` | 设置主标题 |
-| theme | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'theme1'` | 设置图表配色方案 |
-| showLabelName | boolean |  | `true` | 设置是否显示维度标签 |
-| showLabelValue | boolean |  | `true` | 设置是否显示数值标签 |
-| showLabelPercent | boolean |  | `true` | 设置是否显示占比标签 |
-| allowShowHint | boolean |  | `true` | 设置是否显示提示 |
-| allowShowLegend | boolean |  | `true` | 设置是否显示图例 |
-| legendPosition | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'bottom'` | 设置图例位置 |
-| legendScroll | string | `[object Object]`<br/>`[object Object]` | `'normal'` | 设置图例是否滚动 |
-| pieType | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'pie'` | undefined |
-| titleFontStyle | string | `[object Object]`<br/>`[object Object]` | `'normal'` | 设置普通文字字号 |
-| allowDownload | boolean |  | `true` | 允许用户设置保存图片 |
+| data-source | Array\<Item\> \| Function \| object \| DataSource | | | The data source of the table, the data set object or the logic of returning the data set |
+| data-schema | schema | | | The data type of each row of the table |
+| undefinedToZero | string | `[object Object]`<br/>`[object Object]` | `'empty'` | Set to convert undefined values   such as undefined and null to 0 or empty space |
+| initialLoad | boolean | | `true` | Whether to load immediately during initialization |
+| xAxis | string | | `''` | Set dimension (statistical category) |
+| yAxis | string | | `''` | Set measure (statistical value) |
+| title | string | | `'Title'` | Set the main title |
+| theme | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'theme1'` | Set chart color scheme |
+| showLabelName | boolean | | `true` | Set whether to display dimension labels |
+| showLabelValue | boolean | | `true` | Set whether to display numerical labels |
+| showLabelPercent | boolean | | `true` | Set whether to display the percentage label |
+| allowShowHint | boolean | | `true` | Set whether to display hints |
+| allowShowLegend | boolean | | `true` | Set whether to display the legend |
+| legendPosition | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'bottom'` | Set legend Location |
+| legendScroll | string | `[object Object]`<br/>`[object Object]` | `'normal'` | Set whether the legend scrolls |
+| pieType | string | `[object Object]`<br/>`[object Object]`<br/>`[object Object]` | `'pie'` | Undefined |
+| titleFontStyle | string | `[object Object]`<br/>`[object Object]` | `'normal'` | Set the normal text font size |
+| allowDownload | boolean | | `true` | Allow users to set saved images |
 
 Methods
 
 #### reload()
 
-刷新数据
+Refresh data
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

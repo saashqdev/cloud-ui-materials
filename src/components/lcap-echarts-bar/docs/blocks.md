@@ -1,5 +1,5 @@
 ### Basic Usage
 
 ``` html
-<lcap-echarts-bar xAxisTitle="X轴标题" yAxisTitle="Y轴标题" title="标题" theme="theme1"></lcap-echarts-bar>
+<lcap-echarts-bar xAxisTitle="X-axis Title" yAxisTitle="Y-axis Title" title="Title" theme="theme1"></lcap-echarts-bar>
 ```

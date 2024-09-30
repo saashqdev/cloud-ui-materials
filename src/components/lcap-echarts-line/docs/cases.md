@@ -5,9 +5,9 @@
     xAxis="" 
     legendName=""
     yAxis="property2" 
-    xAxisTitle="维度" 
-    yAxisTitle="指标" 
-    title="标题"
+    xAxisTitle="Dimension"
+    yAxisTitle="Indicator"
+    title="Title"
     theme="theme1"
     >
 </lcap-echarts-line>

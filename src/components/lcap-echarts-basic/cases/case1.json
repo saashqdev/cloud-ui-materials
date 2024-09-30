@@ -8,10 +8,10 @@
   ],
   "legend": {
     "data": [
-      "累计关闭的需求",
-      "累计创建的需求",
-      "新增的需求",
-      "关闭的需求"
+      "Cumulative closed demand",
+      "Cumulative created requirements",
+      "New Requirements",
+      "Demand for closure"
     ]
   },
   "dataZoom": [
@@ -109,7 +109,7 @@
   },
   "series": [
     {
-      "name": "累计关闭的需求",
+      "name": "Total closed requirements",
       "type": "line",
       "yAxisIndex": 1,
       "data": [
@@ -172,7 +172,7 @@
       }
     },
     {
-      "name": "累计创建的需求",
+      "name": "Cumulatively created requirements",
       "type": "line",
       "yAxisIndex": 1,
       "data": [
@@ -235,7 +235,7 @@
       }
     },
     {
-      "name": "新增的需求",
+      "name": "Newly added requirements",
       "type": "bar",
       "data": [
         0,
@@ -255,7 +255,7 @@
       "barWidth": 8
     },
     {
-      "name": "关闭的需求",
+      "name": "Closed Request",
       "type": "bar",
       "data": [
         0,
