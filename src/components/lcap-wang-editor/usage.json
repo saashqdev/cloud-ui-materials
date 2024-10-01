@@ -1,20 +1,20 @@
 {
     "symbol": "lcap-wang-editor",
-    "name": "富文本",
+    "name": "Rich text",
     "version": "0.1.6",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "请在这里添加描述",
+    "description": "Please add a description here",
     "labels": [
         "Form"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-wang-editor scroll></lcap-wang-editor>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-wang- editor scroll></lcap-wang-editor>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-wang-editor",
-        "title": "富文本",
-        "description": "请在这里添加描述",
+        "title": "Rich Text",
+        "description": "Please add a description here",
         "category": "Form",
         "screenShot": "",
         "drawings": "",
@@ -28,76 +28,76 @@
         "attrs": [
             {
                 "name": "value",
-                "title": "内容",
+                "title": "Content",
                 "type": "string",
                 "default": "",
                 "sync": true,
                 "model": false,
-                "description": "需要传入的文本内容"
+                "description": "The text content that needs to be passed in"
             },
             {
                 "name": "readOnly",
                 "default": false,
-                "title": "启用只读模式",
+                "title": "Enable Read-Only Mode",
                 "type": "boolean",
-                "description": "启用只读模式"
+                "description": "Enable read-only mode"
             },
             {
                 "name": "scroll",
                 "default": true,
-                "title": "启用滚动",
+                "title": "Enable Scrolling",
                 "type": "boolean",
-                "description": "启用滚动"
+                "description": "Enable scrolling"
             },
             {
                 "name": "placeholder",
                 "default": "",
-                "title": "输入占位符",
+                "title": "Input Placeholder",
                 "type": "string",
-                "description": "输入提示"
+                "description": "Input prompt"
             },
             {
                 "name": "editorStyle",
                 "default": "",
-                "title": "编辑器样式",
+                "title": "Editor Style",
                 "type": "string",
-                "description": "编辑器样式CSS"
+                "description": "Editor style CSS"
             },
             {
                 "name": "uploadImgServer",
                 "default": "",
-                "title": "上传图片地址",
+                "title": "Upload Image Address",
                 "type": "string",
-                "description": "上传图片地址"
+                "description": "Upload image address"
             }
         ],
         "events": [
             {
                 "name": "change",
-                "title": "内容改变时",
-                "description": "内容修改时触发",
+                "title": "When the Content Changes",
+                "description": "Triggered when content is modified",
                 "params": [
                     {
                         "name": "$event.value",
                         "type": "string",
-                        "description": "当前输入区域的内容"
+                        "description": "Contents of the current input area"
                     },
                     {
                         "name": "$event.editor",
                         "type": "string",
-                        "description": "wangeditor 实例"
+                        "description": "Wangeditor instance"
                     }
                 ]
             },
             {
                 "name": "input",
-                "title": "输入时",
-                "description": "输入时触发",
+                "title": "When Typing",
+                "description": "Fire on input",
                 "params": [
                     {
                         "name": "value",
                         "type": "string",
-                        "description": "当前输入区域的内容"
+                        "description": "Contents of the current input area"
                     }
                 ]
             }

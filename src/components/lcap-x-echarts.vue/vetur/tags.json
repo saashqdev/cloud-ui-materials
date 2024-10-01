@@ -9,6 +9,6 @@
       "manual-update",
       "border"
     ],
-    "description": "本组件主要是给 Echarts 添加了主题，以及几个常见的 CSS 功能。"
+    "description": "This component mainly adds themes and several common CSS functions to Echarts."
   }
 }

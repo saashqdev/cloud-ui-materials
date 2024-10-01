@@ -1,4 +1,4 @@
-// 仅允许以下tag列表允许部分的属性展示
+// Only allow the following tag list to allow partial attribute display
 export default {
     a: ['href', 'title', 'target', 'style'],
     br: [],

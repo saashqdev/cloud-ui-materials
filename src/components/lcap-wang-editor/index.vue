@@ -8,7 +8,7 @@
         :mode="mode"
         v-show="!readOnly"
     ></toolbar>
-    <!-- v-viewer下所有图片能够进行放大操作 -->
+    <!-- All pictures under v-viewer can be enlarged -->
     <div v-viewer="{movable: false, zIndex: 8000}">
         <editor
             ref="editor"
@@ -68,9 +68,9 @@ export default {
                         server: this.uploadImgServer || '/gateway/lowcode/api/v1/app/upload',
                         fieldName: 'file',
                         maxFileSize: 50 * 1024 * 1024, // 50M
-                        // 自定义增加 http  header
+                        // Customize to add http header
                         headers,
-                        // 自定义插入图片
+                        // Customize inserted pictures
                         customInsert(res, insertFn) {
                             const url = res.result;
                             insertFn(url);
@@ -80,9 +80,9 @@ export default {
                         server: this.uploadImgServer || '/gateway/lowcode/api/v1/app/upload',
                         fieldName: 'file',
                         maxFileSize: 1000 * 1024 * 1024, // 1000M
-                        // 自定义增加 http  header
+                        // Customize to add http header
                         headers,
-                        // 自定义插入视频
+                        // Customized video insertion
                         customInsert(res, insertFn) {
                             const url = res.result;
                             insertFn(url);
@@ -121,12 +121,12 @@ export default {
         const { editor } = this;
         if (editor === null)
             return;
-        // 组件销毁时，及时销毁编辑器
+        //When the component is destroyed, destroy the editor in time
         editor.destroy();
     },
     methods: {
         onCreated(editor) {
-            // 一定要用 Object.seal() ，否则会报错
+            // Be sure to use Object.seal(), otherwise an error will be reported
             this.editor = Object.seal(editor);
             let height = this.$refs.root.style.height;
             setTimeout(() => {
@@ -134,7 +134,7 @@ export default {
                     const toolHeight = this.$refs.toolbar.$el.getBoundingClientRect().height;
                     height = this.removePX(height);
                     this.editorHeight.height = height - toolHeight - 2 + 'px';
-                    // 部分场景在编辑器内，删除高度会导致页面反复重新渲染，所以在编辑器下不删除高度
+                    // Some scenes are in the editor. Deleting the height will cause the page to be re-rendered repeatedly, so the height is not deleted in the editor.
                     if (!this.$env.VUE_APP_DESIGNER) {
                         this.$refs.root.style.removeProperty('height');
                     }
@@ -146,11 +146,11 @@ export default {
             });
         },
         onChange(editor) {
-            // 添加min-height时，container容器小于editor编辑器高度，click事件需精确触发，体验较差。所以当container容器大于editor编辑器高度时再添加min-height属性
+            // When adding min-height, the container container is smaller than the editor height, and the click event needs to be triggered accurately, resulting in a poor experience. So when the container container is larger than the editor height, add the min-height attribute
             if (!this.scroll) {
                 this.setHeight();
             }
-            // 内容为空时不重复赋值，防止表单错误校验
+            // Do not assign values repeatedly when the content is empty to prevent form error verification
             if (editor.isEmpty() && (!this.currentValue && this.currentValue !== 0))
                 return;
             const value = editor.isEmpty() ? '' : editor.getHtml();

@@ -1,5 +1,5 @@
-更多示例请查阅[官方示例](https://www.echartsjs.com/examples/zh/index.html)，
+For more examples, please refer to [Official Examples](https://www.echartsjs.com/examples/en/index.html),
 
-更多配置项请查阅[官方配置项](https://www.echartsjs.com/zh/option.html)，
+For more configuration items, please refer to [Official Configuration Items](https://www.echartsjs.com/en/option.html),
 
-更多详细信息请参考 [Echarts 的 API 文档](https://echarts.apache.org/zh/api.html)。
+For more details, please refer to [Echarts API documentation](https://echarts.apache.org/en/api.html).

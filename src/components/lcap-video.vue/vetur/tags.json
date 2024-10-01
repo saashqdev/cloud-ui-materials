@@ -8,6 +8,6 @@
       "draggable",
       "loop"
     ],
-    "description": "基于 video.js 的视频播放组件"
+    "description": "Video playback component based on video.js"
   }
 }

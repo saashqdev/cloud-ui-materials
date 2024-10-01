@@ -1,19 +1,19 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapWangEditor 富文本
+# LcapWangEditor rich text
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [自定义上传地址](#自定义上传地址)
-    - [只读模式](#只读模式)
-    - [表单验证](#表单验证)
-- [API]()
+    - [Customized Upload Address](#customized upload address)
+    - [Read-Only Mode](#read-only mode)
+    - [Form Validation](#formvalidation)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
 
 **Form**
 
-请在这里添加描述
+Please add description here
 
 ## Example
 ### Basic Usage
@@ -22,22 +22,22 @@
 <lcap-wang-editor value="<p>hello</p><img src='https://p3-passport.byteimg.com/img/user-avatar/834687b5e4137f4d998a95be7330f543~180x180.awebp'>"></lcap-wang-editor>
 ```
 
-### 自定义上传地址
+### Custom Upload Address
 
 ```html
-<lcap-wang-editor value="<p>hello</p><img src='https://p3-passport.byteimg.com/img/user-avatar/834687b5e4137f4d998a95be7330f543~180x180.awebp'" uploadImgServer="/upload/test"></lcap-wang-editor>
+<lcap-wang-editor value="<p>hello</p><img src='https://p3-passport.byteimg.com/img/user-avatar/834687b5e4137f4d998a95be7330f543~180x180.awebp'" uploadImgServer=" /upload/test"></lcap-wang-editor>
 ```
 
 
-### 只读模式
+### Read-Only Mode
 
-只读模式可以作为富文本编辑器的内容展示区，默认隐藏工具栏，通过`readOnly`设置
+Read-only mode can be used as the content display area of   the rich text editor. The toolbar is hidden by default and can be set through `readOnly`
 
 ```vue
 <template>
     <div>
         <lcap-wang-editor :readOnly="readOnly" value="<p>hello</p><img src='https://p3-passport.byteimg.com/img/user-avatar/834687b5e4137f4d998a95be7330f543~180x180.awebp'>"></lcap-wang-editor>
-        <u-button @click="handleReadOnly">切换</u-button>
+        <u-button @click="handleReadOnly">Switch</u-button>
     </div>
 </template>
 
@@ -57,16 +57,16 @@ export default {
 </script>
 ```
 
-### 表单验证
+### Form Validation
 
-``` vue
+```vue
 <template>
 <u-form ref="form" gap="large">
-    <u-form-item :required="true" layout="block" rules="required" label="业务口径">
+    <u-form-item :required="true" layout="block" rules="required" label="Business Caliber">
         <lcap-wang-editor :value.sync="value" :editorStyle="editorStyle"></lcap-wang-editor>
     </u-form-item>
     <u-form-item layout="block">
-        <u-button @click="onClick">验证</u-button>
+        <u-button @click="onClick">Verify</u-button>
     </u-form-item>
 </u-form>
 </template>
@@ -81,7 +81,7 @@ export default {
     },
     mounted() {
         setTimeout(() => {
-            this.value = '我有内容了';
+            this.value = 'I have content';
         }, 1000);
     },
     methods: {
@@ -98,29 +98,29 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync | string |  | `''` | 需要传入的文本内容 |
-| readOnly | boolean |  | `false` | 启用只读模式 |
-| scroll | boolean |  | `true` | 启用滚动 |
-| placeholder | string |  | `''` | 输入提示 |
-| editorStyle | string |  | `''` | 编辑器样式CSS |
-| uploadImgServer | string |  | `''` | 上传图片地址 |
+| value.sync | string | | `''` | The text content that needs to be passed in |
+| readOnly | boolean | | `false` | Enable read-only mode |
+| scroll | boolean | | `true` | Enable scrolling |
+| placeholder | string | | `''` | Input prompt |
+| editorStyle | string | | `''` | Editor style CSS |
+| uploadImgServer | string | | `''` | Upload image address |
 
 ### Events
 
 #### @change
 
-内容修改时触发
+Triggered when content is modified
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 当前输入区域的内容 |
-| $event.editor | string | wangeditor 实例 |
+| $event.value | string | The content of the current input area |
+| $event.editor | string | Wangeditor instance |
 
 #### @input
 
-输入时触发
+Fires on input
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| value | string | 当前输入区域的内容 |
+| value | string | The content of the current input area |
 

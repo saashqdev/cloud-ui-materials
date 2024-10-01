@@ -88,7 +88,7 @@ export default {
                 return;
             setTimeout(() => {
                 const percent = val.replace('%', '') / 100;
-                this.$toast.success('已为您跳转到上次观看位置');
+                this.$toast.success('Jumped to the last viewing position for you');
                 this.$refs.videoPlayer.currentTime = this.player.duration() * percent;
             }, 1500);
         },
@@ -96,7 +96,7 @@ export default {
     mounted() {
         this.init();
         clearInterval(this.progressTimer);
-        // 每10s同步视频播放进度
+        // Synchronize video playback progress every 10s
         this.progressTimer = setInterval(() => {
             const videoDuration = this.player && this.player.duration();
             const remainTime = this.player && this.player.remainingTime();
@@ -104,20 +104,20 @@ export default {
             this.$emit('videoProgress', videoProgress);
         }, 10000);
         const percent = this.breakProgress.replace('%', '') / 100;
-        // 仅第一次播放跳转到上次播放位置
+        // Only the first playback jumps to the last playback position
         if (this.breakProgress) {
             this.player.on('loadedmetadata', () => {
                 this.$refs.videoPlayer.currentTime = this.player.duration() * percent;
             });
             this.player.on('play', () => {
                 if (this.firstPlay) {
-                    // this.$toast.success('已为您跳转到上次观看位置');
+                    // this.$toast.success('Jumped to the last viewing position for you');
                     this.$refs.videoPlayer.currentTime = this.player.duration() * percent;
                     this.firstPlay = false;
                 }
             });
         }
-        // 拖动进度条时记录进度, 时间差大于3s视为拖动进度条
+        // Record the progress when dragging the progress bar. If the time difference is greater than 3s, it is regarded as dragging the progress bar.
         let lastDragProgress = 0;
         this.player.on('timeupdate', (e) => {
             const currentTime = this.$refs.videoPlayer.currentTime;
@@ -141,7 +141,7 @@ export default {
             const me = this;
             this.player = videojs(this.$refs.videoPlayer, {
                 ...options,
-                language: 'zh-CN',
+                language: 'en-US',
                 autoplay,
                 sources,
                 loop,
@@ -160,7 +160,7 @@ export default {
                 this.on('play', (e) => {
                     const { player } = e.target;
                     const currentTime = player.currentTime();
-                    // 初始播放时间 < 0.2s 认为是开始播放
+                    // Initial playback time < 0.2s is considered to be the start of playback
                     if (currentTime * 10 < 2) {
                         me.$emit('start', e.target.player);
                     } else {

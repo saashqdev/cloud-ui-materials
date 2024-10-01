@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "视频",
+    "title": "Video",
     "category": "Media",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

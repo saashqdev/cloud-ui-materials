@@ -5,7 +5,7 @@
   "main": "./index.js",
   "author": "",
   "repository": "",
-  "homepage": "http://lcap-static-saas.nos-eastchina1.126.net/lcap-wang-editor@0.1.5/index.html",
+  "homepage": "http://lcap-static-saas.s3.amazonaws.com/lcap-wang-editor@0.1.5/index.html",
   "license": "MIT",
   "keywords": [
     "lcap",
@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "富文本",
+    "title": "Rich text",
     "category": "Form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -1,18 +1,18 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapVideo 视频
+# LcapVideo Video
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [断点播放](#断点播放)
-- [API]()
+    - [Breakpoint Play](#Breakpoint play)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **Media**
 
-基于 video.js 的视频播放组件
+Video playback component based on video.js
 
 ## Example
 ### Basic Usage
@@ -26,21 +26,21 @@
 export default {
     data() {
         return {
-            src: 'https://static-kubevue.nos-eastchina1.126.net/tutorial/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E8%A7%86%E9%A2%91/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B%EF%BC%9AAPI%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.mp4',
+            src: 'https://static-kubevue.s3.amazonaws.com/tutorial/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E8%A7%86%E9%A2%91/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B%EF%BC%9AAPI%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.mp4',
         }
     },
     methods: {
         onStart() {
-            console.log('播放开始时');
+            console.log('When playback starts');
         },
         onPlay() {
-            console.log('继续播放时');
+            console.log('While continuing to play');
         },
     },
 }
 </script>
 ```
-### 断点播放
+### Breakpoint Playback
 
 ```vue
 <template>
@@ -51,7 +51,7 @@ export default {
 export default {
     data() {
         return {
-            src: 'https://static-kubevue.nos-eastchina1.126.net/tutorial/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E8%A7%86%E9%A2%91/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B%EF%BC%9AAPI%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.mp4',
+            src: 'https://static-kubevue.s3.amazonaws.com/tutorial/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83%E8%A7%86%E9%A2%91/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B/%E4%B8%93%E9%A2%98%E8%AF%BE%E7%A8%8B%EF%BC%9AAPI%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.mp4',
             progress: '',
         }
     },
@@ -60,10 +60,10 @@ export default {
     },
     methods: {
         onStart() {
-            console.log('播放开始时');
+            console.log('When playback starts');
         },
         onPlay() {
-            console.log('继续播放时');
+            console.log('While continuing to play');
         },
     },
 }
@@ -75,12 +75,12 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| src | string |  |  | 视频流地址 |
-| poster | image |  |  | 视频默认封面地址 |
-| breakProgress | string |  |  | 从中断的进度开始播放 |
-| autoplay | boolean |  | `false` | 是否自动播放 |
-| draggable | boolean |  | `true` | 是否可拖放 |
-| loop | boolean |  | `false` | 是否循环播放 |
+| src | string | | | Video stream address |
+| poster | image | | | Video default cover address |
+| breakProgress | string | | | Start playing from the interrupted progress |
+| autoplay | boolean | | `false` | Whether to play automatically |
+| draggable | boolean | | `true` | Whether draggable |
+| loop | boolean | | `false` | Whether to loop playback |
 
 ### Events
 
@@ -90,7 +90,7 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 播放器实例对象 |
+| $event | object | Player instance object |
 
 #### @pause
 
@@ -98,7 +98,7 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 播放器实例对象 |
+| $event | object | Player instance object |
 
 #### @play
 
@@ -106,7 +106,7 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 播放器实例对象 |
+| $event | object | Player instance object |
 
 #### @ended
 
@@ -114,7 +114,7 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 播放器实例对象 |
+| $event | object | Player instance object |
 
 #### @videoProgress
 
@@ -122,20 +122,20 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | 播放进度百分比 |
+| $event | string | Playback progress percentage |
 
 Methods
 
 #### play()
 
-继续播放
+continue playing
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### pause()
 
-暂停播放
+Pause playback
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

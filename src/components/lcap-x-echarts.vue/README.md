@@ -1,11 +1,11 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# LcapXEcharts 百度图表
+# LcapXEcharts Baidu Charts
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [添加边框](#添加边框)
-    - [设置宽高](#设置宽高)
+    - [Add Border](#Add border)
+    - [Set Width and Height](#Set width and height)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Computed](#computed)
@@ -14,16 +14,16 @@
 
 **Chart**
 
-本组件主要是给 Echarts 添加了主题，以及几个常见的 CSS 功能。
+This component mainly adds a theme to Echarts, as well as several common CSS functions.
 
-更多示例请查阅[官方示例](https://www.echartsjs.com/examples/zh/index.html)，
+For more examples, please refer to [official examples](https://www.echartsjs.com/examples/en/index.html),
 
-更多配置项请查阅[官方配置项](https://www.echartsjs.com/zh/option.html)，
+For more configuration items, please refer to [official configuration items](https://www.echartsjs.com/en/option.html),
 
-更多详细信息请参考 [Echarts 的 API 文档](https://echarts.apache.org/zh/api.html)。
+For more details, please refer to [Echarts API documentation](https://echarts.apache.org/en/api.html).
 
 ## Example
-### Basic Usage
+### Basic usage
 
 ``` vue
 <template>
@@ -41,7 +41,7 @@ export default {
                 return {
                     legend: {},
                     tooltip: {},
-                    dataset: {
+                    dataset:
                         // Provide data.
                         source: [
                             ['Product', '2015', '2016', '2017'],
@@ -75,32 +75,32 @@ export default {
 export default {
 	data() {
 		return {
-			options: {
-                title: {
-                    text: '饼图示例',
+			options:
+                title:
+                    text: 'Pie Chart Example',
                     x: 'center',
                 },
                 tooltip: {
                     trigger: 'item',
                     formatter: '{a} <br/>{b} : {c} ({d}%)',
                 },
-                legend: {
+                legend:
                     orient: 'vertical',
                     left: 'left',
-                    data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
+                    data: ['Direct Access', 'Email Marketing', 'Affiliate Advertising', 'Video Advertising', 'Search Engine'],
                 },
                 series: [
                     {
-                        name: '访问来源',
+                        name: 'Access source',
                         type: 'pie',
                         radius: '55%',
                         center: ['50%', '60%'],
                         data: [
-                            { value: 335, name: '直接访问' },
-                            { value: 310, name: '邮件营销' },
-                            { value: 234, name: '联盟广告' },
-                            { value: 135, name: '视频广告' },
-                            { value: 1548, name: '搜索引擎' },
+                            { value: 335, name: 'Direct Access' },
+                            { value: 310, name: 'Email Marketing' },
+                            { value: 234, name: 'Alliance Advertising' },
+                            { value: 135, name: 'Video Ad' },
+                            { value: 1548, name: 'Search Engine' },
                         ],
                         itemStyle: {
                             borderWidth: 2,
@@ -115,11 +115,11 @@ export default {
 </script>
 ```
 
-### 添加边框
+### Adding a Border
 
-默认的 ECharts 没有边框，为了方便，实现在了组件中。
+The default ECharts has no border, but for convenience, it is implemented in the component.
 
-只需开启`border`属性即可。
+Just turn on the `border` property.
 
 ``` vue
 <template>
@@ -129,23 +129,23 @@ export default {
 export default {
 	data() {
 		return {
-			options: {
-                title: {
-                    text: '甜圈图示例',
+			options:
+                title:
+                    text: 'Donut Chart Example',
                     x: 'left',
                 },
                 tooltip: {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
-                legend: {
+                legend:
                     orient: 'vertical',
                     x: 'right',
-                    data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                    data:['Direct Access', 'Email Marketing', 'Affiliate Advertising', 'Video Advertising', 'Search Engine']
                 },
                 series: [
                     {
-                        name:'访问来源',
+                        name:'Access Source',
                         type:'pie',
                         radius: ['45%', '60%'],
                         avoidLabelOverlap: false,
@@ -154,7 +154,7 @@ export default {
                                 show: false,
                                 position: 'center'
                             },
-                            emphasis: {
+                            emphasis:
                                 show: true,
                                 textStyle: {
                                     fontSize: '24',
@@ -162,9 +162,9 @@ export default {
                                 }
                             }
                         },
-                        labelLine: {
+                        labelLine:
                             normal: {
-                                show: false
+                                show:false
                             }
                         },
                         itemStyle: {
@@ -172,11 +172,11 @@ export default {
                             borderColor: 'white',
                         },
                         data:[
-                            { value: 335, name: '直接访问' },
-                            { value: 310, name: '邮件营销' },
-                            { value: 234, name: '联盟广告' },
-                            { value: 135, name: '视频广告' },
-                            { value: 1548, name: '搜索引擎' },
+                            { value: 335, name: 'Direct Access' },
+                            { value: 310, name: 'Email Marketing' },
+                            { value: 234, name: 'Alliance Advertising' },
+                            { value: 135, name: 'Video Ad' },
+                            { value: 1548, name: 'Search Engine' },
                         ],
                     },
                 ],
@@ -187,9 +187,9 @@ export default {
 </script>
 ```
 
-### 设置宽高
+### Set the Width and Height
 
-直接添加`style`属性。
+Add the `style` attribute directly.
 
 ``` vue
 <template>
@@ -199,23 +199,23 @@ export default {
 export default {
 	data() {
 		return {
-			options: {
-                title: {
-                    text: '甜圈图示例',
+			options:
+                title:
+                    text: 'Donut Chart Example',
                     x: 'left',
                 },
                 tooltip: {
                     trigger: 'item',
                     formatter: "{a} <br/>{b}: {c} ({d}%)"
                 },
-                legend: {
+                legend:
                     orient: 'vertical',
                     x: 'right',
-                    data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                    data:['Direct Access', 'Email Marketing', 'Affiliate Advertising', 'Video Advertising', 'Search Engine']
                 },
                 series: [
                     {
-                        name:'访问来源',
+                        name:'Access Source',
                         type:'pie',
                         radius: ['60%', '80%'],
                         avoidLabelOverlap: false,
@@ -224,7 +224,7 @@ export default {
                                 show: false,
                                 position: 'center'
                             },
-                            emphasis: {
+                            emphasis:
                                 show: true,
                                 textStyle: {
                                     fontSize: '24',
@@ -232,9 +232,9 @@ export default {
                                 }
                             }
                         },
-                        labelLine: {
+                        labelLine:
                             normal: {
-                                show: false
+                                show:false
                             }
                         },
                         itemStyle: {
@@ -242,11 +242,11 @@ export default {
                             borderColor: 'white',
                         },
                         data:[
-                            { value: 335, name: '直接访问' },
-                            { value: 310, name: '邮件营销' },
-                            { value: 234, name: '联盟广告' },
-                            { value: 135, name: '视频广告' },
-                            { value: 1548, name: '搜索引擎' },
+                            { value: 335, name: 'Direct Access' },
+                            { value: 310, name: 'Email Marketing' },
+                            { value: 234, name: 'Alliance Advertising' },
+                            { value: 135, name: 'Video Ad' },
+                            { value: 1548, name: 'Search Engine' },
                         ],
                     },
                 ],
@@ -258,25 +258,25 @@ export default {
 ```
 
 ## API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| init-options | object |  |  | 初始化实例 |
-| options | object |  |  | ECharts 实例的数据。修改这个 prop 会触发 ECharts 实例的 `setOption` 方法。如果直接修改 `options` 绑定的数据而对象引用保持不变，`setOption` 方法调用时将带有参数 `notMerge: false`。否则，如果为 `options` 绑定一个新的对象，`setOption` 方法调用时则将带有参数 `notMerge: true`。 |
-| theme | string |  |  | 设置主题 |
-| group | string |  |  | 实例的分组，会自动绑定到 ECharts 组件的同名属性上。 |
-| autoresize | boolean |  | `true` | 指定 ECharts 实例在组件根元素尺寸变化时是否需要自动进行重绘。 |
-| manual-update | boolean |  | `false` | 在性能敏感（数据量很大）的场景下，我们最好对于 `options` prop 绕过 Vue 的响应式系统。当将 `manual-update` prop 指定为 `true` 且不传入 `options` prop 时，数据将不会被监听。然后，你需要用 `ref` 获取组件实例以后手动调用 `mergeOptions` 方法来更新图表。 |
-| border | boolean |  | `false` | 是否添加边框 |
+| init-options | object | | | Initialize instance |
+| options | object | | | The data of the ECharts instance. Modifying this prop will trigger the `setOption` method of the ECharts instance. If you modify the data bound to `options` directly and the object reference remains unchanged, the `setOption` method will be called with the parameter `notMerge: false`. Otherwise, if you bind a new object to `options`, the `setOption` method will be called with the parameter `notMerge: true`. |
+| theme | string | | | Set theme |
+| group | string | | | The instance group will be automatically bound to the property of the same name in the ECharts component. |
+| autoresize | boolean | | `true` | Specifies whether the ECharts instance needs to be automatically redrawn when the size of the component's root element changes. |
+| manual-update | boolean | | `false` | In performance-sensitive (large amounts of data) scenarios, it is best to bypass Vue's responsive system for the `options` prop. When `manual-update` prop is specified as `true` and no `options` prop is passed, data will not be monitored. Then, you need to use `ref` to get the component instance and then manually call the `mergeOptions` method to update the chart. |
+| border | boolean | | `false` | Whether to add a border |
 
-### Computed
+Computed
 
 | Computed | Type | Description |
 | -------- | ---- | ----------- |
-| width | number | 用来获取 ECharts 实例的当前宽度。 |
-| height | number | 用来获取 ECharts 实例的当前高度。 |
-| computedOptions | object | 用来读取 ECharts 更新内部 `options` 后的实际数据。 |
+| width | number | Used to get the current width of the ECharts instance. |
+| height | number | Used to get the current height of the ECharts instance. |
+| computedOptions | object | Used to read the actual data after ECharts updates the internal `options`. |
 
 ### Events
 
@@ -536,7 +536,7 @@ Methods
 
 #### mergeOptions()
 
-（底层调用了 ECharts 实例的 `setOption` 方法）提供了一个更贴切的名称来描述 `setOption` 方法的实际行为。
+(The underlying `setOption` method of the ECharts instance is called) provides a more appropriate name to describe the actual behavior of the `setOption` method.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
@@ -666,4 +666,3 @@ Methods
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-

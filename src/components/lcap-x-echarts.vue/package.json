@@ -1,6 +1,6 @@
 {
   "name": "lcap-x-echarts",
-  "description": "本组件主要是给 Echarts 添加了主题，以及几个常见的 CSS 功能。",
+  "description": "This component mainly adds themes and several common CSS functions to Echarts.",
   "version": "0.1.0",
   "author": "wt911122",
   "main": "./index.js",
@@ -54,7 +54,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "图表",
+    "title": "Chart",
     "category": "chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

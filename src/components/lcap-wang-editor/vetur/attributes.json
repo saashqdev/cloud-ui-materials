@@ -1,26 +1,26 @@
 {
   "lcap-wang-editor/value": {
     "type": "string",
-    "description": "需要传入的文本内容"
+    "description": "The text content that needs to be passed in"
   },
   "lcap-wang-editor/readOnly": {
     "type": "boolean",
-    "description": "启用只读模式"
+    "description": "Enable read-only mode"
   },
   "lcap-wang-editor/scroll": {
     "type": "boolean",
-    "description": "启用滚动"
+    "description": "Enable scrolling"
   },
   "lcap-wang-editor/placeholder": {
     "type": "string",
-    "description": "输入提示"
+    "description": "Input prompt"
   },
   "lcap-wang-editor/editorStyle": {
     "type": "string",
-    "description": "编辑器样式CSS"
+    "description": "Editor style CSS"
   },
   "lcap-wang-editor/uploadImgServer": {
     "type": "string",
-    "description": "上传图片地址"
+    "description": "Upload image address"
   }
 }
