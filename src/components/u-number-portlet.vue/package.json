@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/u-number-portlet.vue",
-  "description": "数字窗格",
+  "description": "Number pane",
   "version": "0.9.1",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
@@ -39,7 +39,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "数字窗格",
+    "title": "Number pane",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

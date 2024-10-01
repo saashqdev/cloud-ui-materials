@@ -1,8 +1,8 @@
 {
   "name": "@cloud-ui/u-chips.vue",
-  "description": "@deprecated 请使用最新的 UChipInput 组件。表单输入组件，基于`<u-textarea>`控件进行了一些功能扩展，可以输入字符串卡片，并结合`<u-validator>`进行验证。",
+  "description": "@deprecated Please use the latest UChipInput component. The form input component has some functional extensions based on the `<u-textarea>` control. It can input string cards and combine it with `<u-validator>` for verification.",
   "version": "0.1.3",
-  "author": "th3eesome",
+  "author": "kubevue",
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "条目输入",
+    "title": "Entry input",
     "team": "Kubeworkz Cloud Computing Front End",
     "access": "public",
     "screenshots": [

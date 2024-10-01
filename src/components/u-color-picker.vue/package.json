@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/u-color-picker.vue",
-  "description": "颜色选择器",
+  "description": "Color Picker",
   "version": "0.1.5",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -35,7 +35,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "颜色选择器",
+    "title": "Color picker",
     "category": "form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

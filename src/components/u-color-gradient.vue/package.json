@@ -27,7 +27,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "颜色渐变",
+    "title": "Color gradient",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

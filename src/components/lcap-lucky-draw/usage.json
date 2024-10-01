@@ -9,14 +9,14 @@
     "labels": [
         "Other"
     ],
-    "screenShot": "http://ceph.lcap.hatest.163yun.com/lcap-test-static/packages/lcap-lucky-draw@0.3.2/screenshots/0.png",
+    "screenShot": "http://ceph.lcap.hatest.kubeworkz.io/lcap-test-static/packages/lcap-lucky-draw@0.3.2/screenshots/0.png",
     "blocks": "[{\"title\":\"Basic usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-lucky- draw\\n block1_name=\\\"Prize 1\\\"\\n block2_name=\\\"Prize 2\\\"\\n block3_name=\\\"Prize 3\\\"\\n block4_name =\\\"Prize 4\\\"\\n block5_name=\\\"Prize 5\\\"\\n block6_name=\\\"Prize 6\\\"\\n block7_name=\\\" Prize 7\\\"\\n block8_name=\\\"Prize 8\\\"\\n>\\n</lcap-lucky-draw>\\n</template>\\n\"}] ",
     "jsonSchema": {
         "name": "lcap-lucky-draw",
         "title": "Nine-grid lucky draw",
         "description": "Nine-grid lucky draw package price",
         "category": "Other",
-        "screenShot": "http://ceph.lcap.hatest.163yun.com/lcap-test-static/packages/lcap-lucky-draw@0.3.2/screenshots/0.png",
+        "screenShot": "http://ceph.lcap.hatest.kubeworkz.io/lcap-test-static/packages/lcap-lucky-draw@0.3.2/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {

@@ -1,19 +1,19 @@
-### 基本形式
+### Basic Form
 
-点击输入区域并进行输入。在完成输入后，通过鼠标失焦、空格、逗号或tab键生成字符串卡片。
+Click the input area and enter your input. After completing the input, generate a string card by losing focus on the mouse, using the space, comma, or tab key.
 
 ``` html
-<u-chips placeholder="请输入内容，按空格或逗号结束"></u-chips>
+<u-chips placeholder="Please enter the content, press space or comma to end"></u-chips>
 ```
 
-### 双向绑定
+### Two-Way Binding
 
-使用`v-model`或`:value.sync`进行双向绑定。
+Use `v-model` or `:value.sync` for two-way binding.
 
 ``` vue
 <template>
 <u-linear-layout>
-    <u-chips v-model="value"  placeholder="请输入日期"></u-chips>
+    <u-chips v-model="value" placeholder="Please enter the date"></u-chips>
 </u-linear-layout>
 </template>
 
@@ -28,33 +28,33 @@ export default {
 </script>
 ```
 
-### 禁用
+### Disable
 
 ``` html
 <u-linear-layout>
-    <u-chips placeholder="禁用" disabled></u-chips>
+    <u-chips placeholder="disabled" disabled></u-chips>
 </u-linear-layout>
 ```
 
-### 复制粘贴
+### Copy and Paste
 
-复制`2019-01-02 2019-01-03 2019-01-04 2019-02-05`，并粘贴到输入框。
+Copy `2019-01-02 2019-01-03 2019-01-04 2019-02-05` and paste it into the input box.
 
 ``` html
 <u-linear-layout>
-     <u-chips placeholder="请输入日期"></u-chips>
+     <u-chips placeholder="Please enter date"></u-chips>
 </u-linear-layout>
 ```
 
-### 输入内容验证
+### Input Content Validation
 
-通过`rules`属性，定义输入字符串的验证规则。具体的规则写法与`<u-validator>`中的写法一致。
+Use the `rules` attribute to define the validation rules for the input string. The specific rule writing method is the same as that in `<u-validator>`.
 
 ``` vue
 <template>
 <u-linear-layout>
     <u-validator>
-        <u-chips v-model="value"  placeholder="请输入IP地址" rules="ip"></u-chips>
+        <u-chips v-model="value" placeholder="Please enter the IP address" rules="ip"></u-chips>
     </u-validator>
 </u-linear-layout>
 </template>
@@ -70,41 +70,41 @@ export default {
 </script>
 ```
 
-### 数量验证与重复值检测
+### Quantity Verification and Duplicate Value Detection
 
-通过`list-rules`属性，定义生成项的验证规则，如非空和数量上限等。具体的规则写法与`<u-validator>`中的写法一致。
+Use the `list-rules` attribute to define validation rules for generated items, such as non-empty and quantity limit. The specific rule writing method is the same as that in `<u-validator>`.
 
 ``` html
 <u-linear-layout>
     <u-validator>
-        <u-chips placeholder="请输入IP地址，最多输入3个" rules="ip" list-rules="notEmpty | noDuplicates | maxLength(3)"></u-chips>
+        <u-chips placeholder="Please enter the IP address, up to 3" rules="ip" list-rules="notEmpty | noDuplicates | maxLength(3)"></u-chips>
     </u-validator>
 </u-linear-layout>
 ```
 
-### 分隔符
+### Separator
 
-通过`separators`属性，定义生成项的分隔符，默认为逗号和空格均可作为分隔符。
+Use the `separators` property to define the separators for generated items. By default, both commas and spaces can be used as separators.
 
 ``` html
 <u-linear-layout>
     <u-validator>
-        <u-chips placeholder="使用逗号作为分隔符" separators="comma"></u-chips>
+        <u-chips placeholder="Use commas as separators" separators="comma"></u-chips>
     </u-validator>
     <u-validator>
-        <u-chips placeholder="使用空格作为分隔符" separators="space"></u-chips>
+        <u-chips placeholder="Use space as separator" separators="space"></u-chips>
     </u-validator>
 </u-linear-layout>
 ```
 
 ### searchInput
 
-当`type='searchInput'`时，呈现为搜索框形式。
+When `type='searchInput'`, it will be rendered as a search box.
 
 ``` vue
 <template>
 <u-linear-layout>
-    <u-chips v-model="value"  placeholder="多个搜索条件用回车分隔" type="searchInput" list-rules="maxLength(6)"></u-chips>
+    <u-chips v-model="value" placeholder="Multiple search conditions are separated by carriage returns" type="searchInput" list-rules="maxLength(6)"></u-chips>
 </u-linear-layout>
 </template>
 
@@ -119,24 +119,24 @@ export default {
 </script>
 ```
 
-### 表单提交
+### Form Submission
 
-由于现在`<u-chips>`的验证由`<u-validator>`完成，所以可以作为`<u-form-item>`中的表单子组件，在表单提交时与其它内容一起验证
+Since the validation of `<u-chips>` is now completed by `<u-validator>`, it can be used as a form subcomponent in `<u-form-item>` and validated together with other content when the form is submitted
 
 ``` vue
 <template>
 <u-form ref="form" gap="large">
-    <u-form-item required label="用户名" rules="alphaNum | required">
-        <u-input v-model="name" placeholder="请输入用户名"></u-input>
+    <u-form-item required label="Username" rules="alphaNum | required">
+        <u-input v-model="name" placeholder="Please enter your username"></u-input>
     </u-form-item>
-    <u-form-item required label="密码" rules="alphaNum | required">
-         <u-input v-model="password" placeholder="请输入密码" type="password"></u-input>
+    <u-form-item required label="Password" rules="alphaNum | required">
+         <u-input v-model="password" placeholder="Please enter your password" type="password"></u-input>
     </u-form-item>
-    <u-form-item required label="白名单" layout="block" :bubble="true">
-         <u-chips v-model="list"  placeholder="请输入IP地址，最多三个" rules="ip" list-rules="notEmpty | maxLength(3) | noDuplicates"></u-chips>
+    <u-form-item required label="Whitelist" layout="block" :bubble="true">
+         <u-chips v-model="list" placeholder="Please enter the IP address, up to three" rules="ip" list-rules="notEmpty | maxLength(3) | noDuplicates"></u-chips>
     </u-form-item>
     <u-form-item>
-         <u-button color="primary" @click="submit">立即创建</u-button>
+         <u-button color="primary" @click="submit">Create Now</u-button>
     </u-form-item>
 </u-form>
 </template>
@@ -153,8 +153,8 @@ export default {
     methods: {
         submit() {
             this.$refs.form.validate()
-             .then(() => this.$toast.show('验证通过，提交成功！'))
-             .catch(() => this.$toast.show('验证失败！'));
+             .then(() => this.$toast.show('Verification passed, submission successful!'))
+             .catch(() => this.$toast.show('Verification failed!'));
             },
         },
 };

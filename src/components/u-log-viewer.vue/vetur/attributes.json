@@ -1,7 +1,7 @@
 {
   "u-log-viewer/content": {
     "type": "string",
-    "description": "日志内容"
+    "description": "Log content"
   },
   "u-log-viewer/color": {
     "type": "enum",
@@ -9,11 +9,11 @@
       "dark",
       "light"
     ],
-    "description": "日志查看器配色"
+    "description": "Log viewer color scheme"
   },
   "u-log-viewer/visible": {
     "type": "boolean",
-    "description": "控制日志查看器显示或者隐藏"
+    "description": "Controls the log viewer to show or hide"
   },
   "u-log-viewer/display": {
     "type": "enum",
@@ -24,7 +24,7 @@
       "fullWindow",
       "fullScreen"
     ],
-    "description": "显示方式"
+    "description": "Display mode"
   },
   "u-log-viewer/normal-display": {
     "type": "enum",
@@ -33,7 +33,7 @@
       "static",
       "fixed"
     ],
-    "description": "与最大化切换按钮相关。非最大化时的显示方式"
+    "description": "Related to the maximize toggle button. Display mode when not maximized."
   },
   "u-log-viewer/maximized-display": {
     "type": "enum",
@@ -41,7 +41,7 @@
       "fullWindow",
       "fullScreen"
     ],
-    "description": "与最大化切换按钮相关。最大化时的显示方式"
+    "description": "Related to the maximize toggle button. Display method when maximized."
   },
   "u-log-viewer/position": {
     "type": "enum",
@@ -55,22 +55,22 @@
       "bottom-left",
       "bottom-right"
     ],
-    "description": "固定模式时的位置"
+    "description": "Location in fixed mode"
   },
   "u-log-viewer/fetchLogs": {
     "type": "Function",
-    "description": "该属性有值时，“拉取日志”按钮才会显示。用于自定义拉取方法处理，因为组件自身不会实现拉取日志逻辑。"
+    "description": "The \"Pull Log\" button will only be displayed when this property has a value. It is used for custom pull method processing, because the component itself does not implement the pull log logic."
   },
   "u-log-viewer/openInNewTab": {
     "type": "string, Function",
-    "description": "该属性有值时，“在新窗口打开”按钮才会显示。如果为字符串，会按字符串打开。如果为函数，则按函数自定义。"
+    "description": "The \"Open in New Window\" button will only be displayed when this property has a value. If it is a string, it will be opened as a string. If it is a function, it will be customized as a function."
   },
   "u-log-viewer/buffer-wait": {
     "type": "number",
-    "description": "防止高频追加日志。设置日志节流间隔（ms）"
+    "description": "Prevent high-frequency log appending. Set the log throttling interval (ms)"
   },
   "u-log-viewer/view-count": {
     "type": "number",
-    "description": "防止大量日志渲染卡顿。设置实际渲染的 DOM 数。"
+    "description": "Prevent rendering lag due to a large number of logs. Set the number of DOMs actually rendered."
   }
 }

@@ -112,7 +112,7 @@
 </u-linear-layout>
 ```
 
-### 小邮局
+### Small Gap
 
 ``` html
 <u-linear-layout direction="vertical" gap="small">
@@ -121,7 +121,7 @@
 </u-linear-layout>
 ```
 
-### 小邮局
+### Small Gap
 
 ``` html
 <u-linear-layout direction="vertical" gap="small">
@@ -130,7 +130,7 @@
 </u-linear-layout>
 ```
 
-### 小邮局
+### Small Gap
 
 ``` html
 <u-linear-layout direction="vertical" gap="small">

@@ -1,14 +1,14 @@
 {
   "u-chip/removable": {
     "type": "boolean",
-    "description": "是否可以删除"
+    "description": "Can it be deleted?"
   },
   "u-chip/editing": {
     "type": "boolean",
-    "description": "是否正在编辑"
+    "description": "Whether you are editing"
   },
   "u-chip/error": {
     "type": "boolean",
-    "description": "是否显示红框错误提示"
+    "description": "Whether to display a red box error message"
   }
 }

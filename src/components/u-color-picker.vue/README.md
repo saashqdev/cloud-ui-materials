@@ -1,11 +1,11 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# UColorPicker 颜色选择器
+# UColorPicker Color Picker
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [直接使用调色板](#直接使用调色板)
-    - [直接使用默认值](#直接使用默认值)
+    - [Use the Palette Directly](#Use the palette directly)
+    - [Use Default Values Directly](#Use default values   directly)
 - [UColorPicker API](#ucolorpicker-api)
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -15,7 +15,7 @@
     - [Slots](#slots-2)
     - [Events](#events-2)
 
-用于选择颜色的组件。
+A component used to select a color.
 
 ## Example
 ### Basic Usage
@@ -35,7 +35,7 @@ export default {
 </script>
 ```
 
-### 直接使用调色板
+### Use the Palette Directly
 
 ``` vue
 <template>
@@ -53,7 +53,7 @@ export default {
 ```
 
 
-### 直接使用默认值
+### Use the Default Value Directly
 
 ``` vue
 <template>
@@ -70,17 +70,17 @@ export default {
 </script>
 ```
 ## UColorPicker API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | string |  | `'#000000'` | 十六进制颜色，或是 rgba() |
+| value.sync, v-model | string | | `'#000000'` | Hex color, or rgba() |
 
 ### Slots
 
 #### (default)
 
-在调色板中插入文本或 HTML。
+Insert text or HTML into the palette.
 
 ### Events
 
@@ -90,29 +90,29 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | 调整颜色时触发 |
+| $event | string | Triggered when the color is adjusted |
 
 #### @change
 
-修改时触发
+Triggered on modification
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 当前颜色 |
-| $event.oldValue | string | 旧的颜色 |
+| $event.value | string | Current color |
+| $event.oldValue | string | Old color |
 
 ## UPallette API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | string |  | `'#000000'` | 十六进制颜色，或是 rgba() |
+| value.sync, v-model | string | | `'#000000'` | Hex color, or rgba() |
 
 ### Slots
 
 #### (default)
 
-在调色板中插入文本或 HTML。
+Insert text or HTML into the palette.
 
 ### Events
 
@@ -122,32 +122,31 @@ export default {
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | 调整颜色时触发 |
+| $event | string | Triggered when the color is adjusted |
 
 #### @change
 
-修改时触发
+Triggered on modification
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 当前颜色 |
-| $event.oldValue | string | 旧的颜色 |
+| $event.value | string | Current color |
+| $event.oldValue | string | Old color |
 
 #### @open
 
-弹出时触发。
+Fired when popping up.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 弹出时的颜色值 |
-| senderVM | UColorPicker | 发送事件实例 |
+| $event.value | string | Popup color value |
+| senderVM | UColorPicker | Send event instance |
 
 #### @close
 
-隐藏时触发。
+Fired when hidden.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 隐藏时的颜色值 |
-| senderVM | UColorPicker | 发送事件实例 |
-
+| $event.value | string | Color value when hidden |
+| senderVM | UColorPicker | Send event instance |

@@ -1,6 +1,6 @@
 <template>
     <div :class="$style.root">
-        <!-- 方形拖拉选择区 -->
+        <!-- Square drag selection area-->
         <f-dragger immediate range="offset-parent" range-mode="center" 
             :disabled="readonly || disabled"
             :transfer="handleEl"
@@ -14,19 +14,19 @@
             </div>
         </f-dragger>
         <div :class="$style.bar">
-            <!-- 条形拖拉选择区 -->
+            <!-- Bar drag selection area-->
             <div :class="$style.sliders">
-                <!-- 颜色选择 -->
-                <u-pallette-slider :min="0"
+                <!-- Color Selection -->
+                <u-palette-slider :min="0"
                     :max="360"
                     :value="color.h"
                     :style="{
                         background: `linear-gradient(to right, red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)` 
                     }"
                     @input="onSetHue($event), onChange()">
-                </u-pallette-slider>
-                <!-- 透明度选择 -->
-                <u-pallette-slider :min="0"
+                </u-palette-slider>
+                <!-- Transparency Selection -->
+                <u-palette-slider :min="0"
                     :max="1"
                     :step="0.01"
                     :precision="0.01"
@@ -35,16 +35,16 @@
                         background: `linear-gradient(to right, ${`rgba(${color.r}, ${color.g}, ${color.b}, 0)` }, ${color.toRGB()})`
                     }"
                     @input="onSetRGBA('a', $event), onChange()">
-                </u-pallette-slider>
+                </u-palette-slider>
             </div>
-            <!-- 展示区 -->
+            <!-- Display Area -->
             <div :class="$style.color" :style="{
                 backgroundColor: color.toRGBA()
             }">
             </div>
         </div>
         <div :class="$style.items">
-            <!-- 16进制 -->
+            <!-- Hexadecimal -->
             <div :class="$style.item">
                 <u-input size="mini" role="hex"
                     :class="$style.input"
@@ -109,7 +109,7 @@
 </template>
 
 <script>
-import { MField } from 'cloud-ui.kubevue';
+import { MField } from 'cloud-ui.vusion';
 import Color from './Color';
 
 export default {
@@ -134,7 +134,7 @@ export default {
             color: Color.str2Color(this.value),
             grid: {
                 x: 1,
-                y: 1
+                and: 1
             },
             handleEl: undefined,
             tempColor: Color.str2Color(this.value),

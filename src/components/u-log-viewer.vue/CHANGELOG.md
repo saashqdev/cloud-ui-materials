@@ -1,24 +1,24 @@
 ## v0.2.0 (2020-03-03)
-### ⬆️ 更新依赖
-- 使用 cloud-ui.kubevue@0.6.7 的 `<f-virtual-list>`
+### ⬆️ Update Dependencies
+- Use `<f-virtual-list>` of cloud-ui.kubevue@0.6.7
 
-### 📝 优化文档
+### 📝 Optimize Documentation
 
 ## v0.1.3 (2020-02-13)
-### 🐛 修复：
-- 修复日志 timestamp 重复的问题
-- 修复 v-if 销毁组件内部节点的问题。日志和弹窗还是有所区别，日志大部分是组件自身的内容.
-- 修复 z-index 被盖掉的问题
+### 🐛 Fixes:
+-Fixed the problem of duplicate log timestamp
+- Fixed the problem of v-if destroying internal nodes of components. There is still a difference between logs and pop-up windows. Most of the logs are the content of the component itself.
+-Fixed the problem of z-index being covered
 
 ## v0.1.2 (2020-01-19)
-### ⚡️ 增强：
-- 使用节流函数和虚拟列表，解决高频大数据量的问题
+### ⚡️ Enhancements:
+- Use throttling functions and virtual lists to solve the problem of high frequency and large data volume
 
 ## v0.1.1 (2020-01-15)
-### ✨ 新特性：
-- 支持染色、切换深浅主题、最大化最小化等功能
+### ✨ New features:
+- Supports functions such as coloring, switching between dark and light themes, maximizing and minimizing, etc.
 
-### 📝 更新文档
+### 📝 Update documentation
 
 ## v0.1.0 (2020-01-14)
-### 🎉 初次发布
+### 🎉 First release

@@ -1,21 +1,21 @@
-### 分隔符与复制粘贴
+### Delimiters and Copy-Paste
 
-需要试验下面多种情况：
+You need to test the following situations:
 
 ```
-正确示例：www: 4444, xxx: 5555, yyy: 6666
+Correct example: www: 4444, xxx: 5555, yyy: 6666
 
-添加框，编辑框 key, 编辑框 value：
+Add box, edit box key, edit box value:
 www: 4444, xxx: 5555, y@yy: 666
 www: 4444, xxx: 5555, yyy: 666
 www: 4444, xxx: 5555, xxx:
 www: 4444, xxx: 5555,
 ```
 
-``` vue
+```vue
 <template>
-<u-form-item label="键值对" bubble>
-    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # 值不得少于 4 个数字"></u-pair-input>
+<u-form-item label="Key-Value Pair" bubble>
+    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # Value must not be less than 4 digits"></u-pair-input>
 </u-form-item>
 </template>
 <script>

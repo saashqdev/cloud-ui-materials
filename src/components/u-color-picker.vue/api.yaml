@@ -1,78 +1,78 @@
 - name: u-color-picker
-  title: 颜色选择器
-  description: 用于选择颜色的组件。
+  title: Color Picker
+  description: A component used to select a color.
   attrs:
     - name: value
       model: true
       sync: true
-      title: 颜色值
+      title: Color Value
       type: string
       default: '#000000'
-      description: 十六进制颜色，或是 rgba()
+      description: Hexadecimal color, or rgba()
   slots:
     - name: default
-      description: 在调色板中插入文本或 HTML。
+      description: Insert text or HTML into the palette.
   events:
     - name: input
-      title: 调整颜色时
+      title: When Adjusting Color
       params:
         - name: $event
           type: string
-          description: 调整颜色时触发
+          description: Triggered when adjusting the color
     - name: change
-      description: 修改时触发
+      description: Triggered when modified
       params:
         - name: $event.value
           type: string
-          description: 当前颜色
+          description: Current color
         - name: $event.oldValue
           type: string
-          description: 旧的颜色
+          description: Old color
 - name: u-pallette
-  title: 颜色选择器
-  description: 用于选择颜色的组件。
+  title: Color Picker
+  description: A component used to select a color.
   attrs:
     - name: value
-      title: 颜色值
+      title: Color Value
       model: true
       sync: true
       type: string
       default: '#000000'
-      description: 十六进制颜色，或是 rgba()
+      description: Hexadecimal color, or rgba()
   slots:
     - name: default
-      description: 在调色板中插入文本或 HTML。
+      description: Insert text or HTML into the palette.
   events:
     - name: input
-      title: 调整颜色时
+      title: When Adjusting Color
       params:
         - name: $event
           type: string
-          description: 调整颜色时触发
+          description: Triggered when adjusting the color
     - name: change
-      description: 修改时触发
+      description: Triggered when modified
       params:
         - name: $event.value
           type: string
-          description: 当前颜色
+          description: Current color
         - name: $event.oldValue
           type: string
-          description: 旧的颜色
+          description: Old color
     - name: open
-      description: 弹出时触发。
+      description: Triggered when popping up.
       params:
         - name: $event.value
           type: string
-          description: 弹出时的颜色值
+          description: The color value when popping up
         - name: senderVM
           type: UColorPicker
-          description: 发送事件实例
+          description: Send event instance
     - name: close
-      description: 隐藏时触发。
+      description: Triggered when hidden.
       params:
         - name: $event.value
           type: string
-          description: 隐藏时的颜色值
+          description: The color value when hidden
         - name: senderVM
           type: UColorPicker
-          description: 发送事件实例
+          description: Send event instance

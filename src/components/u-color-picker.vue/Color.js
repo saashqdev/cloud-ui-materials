@@ -1,10 +1,10 @@
 import { defineColor } from './colorsname.js';
 
-// rgb色值范围
+// rgb color value range
 const RGB_RANGE_REG = /^(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$/;
-// alpha范围
+// alpha range
 const ALPHA_RANGE_REG = /^(1.?0?|0.?[0-9]*)$/;
-// 16进制
+// Hexadecimal
 const HEX_REG = /^#([0-9a-fA-F]{3,8})$/;
 // rgb
 const RGB_REG = /^[rR][gG][Bb][\(]([\s]*(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)[\s]*,){2}[\s]*(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)[\s]*[\)]{1}$/
@@ -29,7 +29,7 @@ class Color {
         this.g = g;
         this.b = b;
         this.a = a;
-        // 将hsv也缓存下来好了，省事
+        // Cache hsv as well to save trouble
         /* eslint-disable new-cap */
         Object.assign(this, Color.RGB2HSV(this.r, this.g, this.b));
     }
@@ -72,7 +72,7 @@ class Color {
     }
 
     // toHSV()
-    // CSS不支持，先不做了。其实就两句话的事
+    // CSS is not supported, so don’t do it for now. Actually, it’s just a matter of two sentences.
 
     setHSV(h, s, v) {
         Object.assign(this, { h, s, v }, Color.HSV2RGB(h, s, v));
@@ -107,16 +107,16 @@ class Color {
         if (!value) {
             return new Color();
         }
-        // 不符合16进制规则
+        // Does not conform to the hexadecimal rule
         if (!HEX_REG.test(value)) {
             throw new SyntaxError('Unexpected params of hex function');
         }
         value = value.trim().slice(1);
-        // 5位或者7位都直接忽略最后一位
+        // 5 or 7 digits, just ignore the last digit
         if (value.length === 5 || value.length === 7) {
             value = value.slice(0, -1);
         }
-        // 3位或者4位都将位数补齐
+        // 3 or 4 digits will fill the digits
         if (value.length === 3 || value.length === 4) {
             const arr = Array.from(value)
             value = arr.reduce((prev, cur) => {
@@ -124,7 +124,7 @@ class Color {
             }, '')
         }
         let alphaStr;
-        // 8位表示有透明度
+        // 8 bits indicate transparency
         if (value.length === 8) {
             alphaStr = value.substr(value.length - 2, 2);
             value = value.slice(0, -2);
@@ -141,7 +141,7 @@ class Color {
         if (!value) {
             return new Color();
         }
-        // 不符合16进制规则
+        // Does not conform to the hexadecimal rule
         if (!RGB_REG.test(value)) {
             throw new SyntaxError('Unexpected params of rgb function');
         }
@@ -154,7 +154,7 @@ class Color {
         if (!value) {
             return new Color();
         }
-        // 不符合16进制规则
+        // Does not conform to the hexadecimal rule
         if (!RGBA_REG.test(value)) {
             throw new SyntaxError('Unexpected params of rgba function');
         }
@@ -164,7 +164,7 @@ class Color {
     }
 
     static fromNAME(value) {
-        // value不存在的情况下返回默认color实例
+        // If value does not exist, return the default color instance
         if (!value) {
             return new Color();
         }
@@ -175,22 +175,22 @@ class Color {
         if (!value) {
             throw new SyntaxError('Invalid params');
         }
-        // 调用16进制
+        //Call hexadecimal
         return Color.fromHEX(value)
     }
 
     /** @TODO: fromHSL */
     static parse(value) {
-        // value不存在的情况下返回默认color实例
+        // If value does not exist, return the default color instance
         if (!value) {
             return new Color();
         }
         if (!isString(value)) {
             throw new SyntaxError('Invalid: params should be a string');
         }
-        // 颜色类型
+        // Color type
         const colorType = Color.checkFormat(value)
-        if (!colorType) { // 不属于16进制/rgb(a)/hsl(a)/内置颜色
+        if (!colorType) { // Does not belong to hexadecimal/rgb(a)/hsl(a)/built-in color
             throw new SyntaxError('Invalid params');
         }
         return Color[`from${colorType}`](value);
@@ -321,7 +321,7 @@ class Color {
     }
 
     /**
-     * 透明度转十六进制
+     * Transparency to hexadecimal
      * @param {*} opacity 
      * @returns 
      */
@@ -330,17 +330,17 @@ class Color {
             throw new SyntaxError('Invalid params');
         }
         const num = Math.round(255 * opacity);
-        // 十进制转十六进制，缺位补0
+        // Convert decimal to hexadecimal, fill missing bits with 0
         return num.toString(16).padStart(2, '0');
     }
 
     /**
-     * 十六进制转透明度
-     * @param {*} str 
-     * @returns 
+     * Hexadecimal to transparency
+     * @param {*} str
+     * @returns
      */
     static hex2Opacity(str) {
-        // 十六进制转十进制
+        // Convert hexadecimal to decimal
         const num = `0x${str}`.toString(10);
         return +(num / 255).toFixed(2);
     }

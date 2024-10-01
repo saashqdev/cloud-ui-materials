@@ -6,9 +6,9 @@
 <u-chip editing error>Chip</u-chip>
 ```
 
-### 可删除的
+### Deletable
 
-删除逻辑需要利用`v-if`和`@remove`事件自己实现。
+The deletion logic needs to be implemented by yourself using `v-if` and `@remove` events.
 
 ``` html
 <u-chip removable>Chip</u-chip>

@@ -1,30 +1,30 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# ULogViewer 日志查看器
+# ULogViewer Log Viewer
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [日志多次追加](#日志多次追加)
-    - [高频大量日志](#高频大量日志)
-    - [设置显示方式](#设置显示方式)
-    - [设置初始深浅色](#设置初始深浅色)
-    - [按钮钩子](#按钮钩子)
+    - [Log Multiple Append](#Log multiple append)
+    - [High-Frequency and Large-Volume Logs](#High-frequency and large-volume logs)
+    - [Set Display Mode](#Set display mode)
+    - [Set Initial Light and Dark Colors](#Set initial light and dark colors)
+    - [Button Hook](#Button Hook)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Events](#events)
     - [Methods](#methods)
 
-用于查看日志。
+Used to view logs.
 
 ## Example
 ### Basic Usage
 
-将日志直接传入`content`属性。
+Pass logs directly into the `content` property.
 
-如果有 ANSI Color Codes，会自动染色。比如通过`webpack-cli --colors`输出的日志等。
+If there are ANSI Color Codes, they will be colored automatically, such as the log output by `webpack-cli --colors`.
 
-``` vue
+``` view
 <template>
 <u-log-viewer :content="content"></u-log-viewer>
 </template>
@@ -44,7 +44,7 @@ Assets:
   img/bg.51084630.jpg (672 KiB)
   js/chunk-vendors.19893bbc.js (575 KiB)
 
-[43m[30m warning [39m[49m
+[43m[30m warning [39m[49m
 
 entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 Entrypoints:
@@ -55,7 +55,7 @@ Entrypoints:
       js/index.00e713e9.js
 
 
-[43m[30m warning [39m[49m
+[43m[30m warning [39m[49m
 
 webpack performance recommendations:
 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
@@ -78,19 +78,19 @@ For more info visit https://webpack.js.org/guides/code-splitting/
 </script>
 ```
 
-### 日志多次追加
+### Log Multiple Appends
 
-使用`push`方法追加日志。
+Use the `push` method to append logs.
 
-日志如果在最底下，会持续跟随滚动；如果在中间，会保持当前位置。
+If the log is at the bottom, it will continue to scroll; if it is in the middle, it will maintain the current position.
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical" gap="small">
     <u-log-viewer ref="logViewer"></u-log-viewer>
     <u-linear-layout gap="small">
-        <u-button @click="fetchLog">单步获取</u-button>
-        <u-button @click="autoFetchLog">自动获取</u-button>
+        <u-button @click="fetchLog">Single-step fetch</u-button>
+        <u-button @click="autoFetchLog">Auto-fetch</u-button>
     </u-linear-layout>
 </u-linear-layout>
 </template>
@@ -169,11 +169,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]`,
 `     [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})`,
@@ -198,7 +198,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
@@ -334,21 +334,21 @@ export default {
 </script>
 ```
 
-### 高频大量日志
+### High Frequency and Large Amount of Logs
 
-组件利用节流函数和虚拟列表，对高频大量日志做了优化。
+The component uses throttling functions and virtual lists to optimize high-frequency and large-scale logs.
 
-一般不需要做任何设置，如果需要可以关注以下两个属性：
-- `buffer-wait`属性用于设置最短日志缓冲间隔。
-- `virtual-count`属性用于设置实际渲染的 DOM 数。
+Generally, no settings are required. If necessary, you can pay attention to the following two properties:
+- `buffer-wait` property is used to set the shortest log buffering interval.
+- The `virtual-count` attribute is used to set the number of DOM elements actually rendered.
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical" gap="small">
     <u-log-viewer ref="logViewer" style="height: 476px"></u-log-viewer>
     <u-linear-layout gap="small">
-        <u-button @click="fetchLog">单步获取</u-button>
-        <u-button @click="fetching ? (fetching = false) : startFetchLog()">{{ fetching ? '停止获取' : '自动获取' }}</u-button>
+        <u-button @click="fetchLog">Single-Step Fetch</u-button>
+        <u-button @click="fetching ? (fetching = false) : startFetchLog()">{{ fetching ? 'Stop Fetching' : 'Automatically Fetch' }}</u-button>
     </u-linear-layout>
 </u-linear-layout>
 </template>
@@ -365,7 +365,7 @@ Assets:
   img/bg.51084630.jpg (672 KiB)
   js/chunk-vendors.19893bbc.js (575 KiB)
 
-[43m[30m warning [39m[49m
+[43m[30m warning [39m[49m
 
 entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 Entrypoints:
@@ -377,7 +377,7 @@ Entrypoints:
 
 
 [43m[30m warning [39m[49m`,
-`[39m[90m 40:46:23[39m
+` [39m [90m 40:46:23 [39m
 
 webpack performance recommendations:
 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
@@ -434,47 +434,47 @@ export default {
 ```
 
 
-### 设置显示方式
+### Set the Display Mode
 
-通过`visible.sync`绑定显示/隐藏。
+Show/hide via `visible.sync` binding.
 
-默认显示方式为`'static'`，嵌入在文档流中。`'fixed'`表示固定显示，`'fullWindow'`表示全窗口显示，`'fullScreen'`表示全屏显示。
+The default display mode is `'static'`, which is embedded in the document flow. `'fixed'` means fixed display, `'fullWindow'` means full window display, and `'fullScreen'` means full screen display.
 
-通过`position`设置固定模式的位置。
+Use `position` to set the position of the fixed mode.
 
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical" gap="small" layout="block">
     <u-form gap="small">
-        <u-form-item label="可见性">
+        <u-form-item label="Visibility">
             <u-capsules v-model="visible">
-                <u-capsule :value="true">显示</u-capsule>
-                <u-capsule :value="false">隐藏</u-capsule>
+                <u-capsule :value="true">Display</u-capsule>
+                <u-capsule :value="false">Hide</u-capsule>
             </u-capsules>
         </u-form-item>
-        <u-form-item label="普通显示方式">
+        <u-form-item label="Normal display mode">
             <u-capsules v-model="display">
-                <u-capsule value="static">静态</u-capsule>
-                <u-capsule value="fixed">固定</u-capsule>
+                <u-capsule value="static">Static</u-capsule>
+                <u-capsule value="fixed">Fixed</u-capsule>
             </u-capsules>
         </u-form-item>
-        <u-form-item label="显示位置" v-if="display === 'fixed'">
+        <u-form-item label="Display Position" v-if="display === 'fixed'">
             <u-capsules v-model="position">
-                <u-capsule value="top">top</u-capsule>
-                <u-capsule value="top-center">top-center</u-capsule>
-                <u-capsule value="top-left">top-left</u-capsule>
-                <u-capsule value="top-right">top-right</u-capsule>
-                <u-capsule value="bottom">bottom</u-capsule>
-                <u-capsule value="bottom-center">bottom-center</u-capsule>
-                <u-capsule value="bottom-left">bottom-left</u-capsule>
-                <u-capsule value="bottom-right">bottom-right</u-capsule>
+                <u-capsule value="top">Top</u-capsule>
+                <u-capsule value="top-center">Top-Center</u-capsule>
+                <u-capsule value="top-left">Top-Left</u-capsule>
+                <u-capsule value="top-right">Top-Right</u-capsule>
+                <u-capsule value="bottom">Bottom</u-capsule>
+                <u-capsule value="bottom-center">Bottom-Center</u-capsule>
+                <u-capsule value="bottom-left">Bottom-Left</u-capsule>
+                <u-capsule value="bottom-right">Bottom-Right</u-capsule>
             </u-capsules>
         </u-form-item>
-        <u-form-item label="全屏显示方式">
+        <u-form-item label="Full Screen Display Mode">
             <u-capsules v-model="maximizedDisplay">
-                <u-capsule value="fullWindow">全窗口</u-capsule>
-                <u-capsule value="fullScreen">全屏幕</u-capsule>
+                <u-capsule value="fullWindow">Full Window</u-capsule>
+                <u-capsule value="fullScreen">Full Screen</u-capsule>
             </u-capsules>
         </u-form-item>
     </u-form>
@@ -563,11 +563,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]
      [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
@@ -592,7 +592,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
@@ -710,11 +710,11 @@ build total  second:175
 </script>
 ```
 
-### 设置初始深浅色
+### Set the Initial Dark and Light Colors
 
-默认`color="dark"`。通过设置`color="light"`，可以将初始显示设置为浅色。
+Defaults to `color="dark"`. By setting `color="light"`, the initial display can be set to a light color.
 
-``` vue
+``` view
 <template>
 <u-log-viewer :content="content" color="light"></u-log-viewer>
 </template>
@@ -796,11 +796,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]
      [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
@@ -825,7 +825,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
@@ -943,15 +943,15 @@ build total  second:175
 </script>
 ```
 
-### 按钮钩子
+### Button Hook
 
-通过设置`fetchLogs`函数，可以开启拉取日志按钮。
+By setting the `fetchLogs` function, you can turn on the log fetching button.
 
-通过设置`openInNewTab`属性，可以开启在新标签页打开按钮。
+By setting the `openInNewTab` property, you can enable the Open in New Tab button.
 
-``` vue
+``` view
 <template>
-<u-log-viewer ref="logViewer" :fetchLogs="fetchLogs" openInNewTab="https://s3.amazonaws.com/"></u-log-viewer>
+<u-log-viewer ref="logViewer" :fetchLogs="fetchLogs" openInNewTab="https://163yun.com/"></u-log-viewer>
 </template>
 <script>
 export default {
@@ -969,72 +969,71 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| content | string |  | `''` | 日志内容 |
-| color | enum | `'dark'`, `'light'` | `'dark'` | 日志查看器配色 |
-| visible.sync | boolean |  | `true` | 控制日志查看器显示或者隐藏 |
-| display.sync | enum | `'block'`, `'static'`, `'fixed'`, `'fullWindow'`, `'fullScreen'` | `'static'` | 显示方式 |
-| normal-display | enum | `'block'`, `'static'`, `'fixed'` | `'static'` | 与最大化切换按钮相关。非最大化时的显示方式 |
-| maximized-display | enum | `'fullWindow'`, `'fullScreen'` | `'fullWindow'` | 与最大化切换按钮相关。最大化时的显示方式 |
-| position | enum | `'top'`, `'top-center'`, `'top-left'`, `'top-right'`, `'bottom'`, `'bottom-center'`, `'bottom-left'`, `'bottom-right'` | `'bottom-right'` | 固定模式时的位置 |
-| fetchLogs | Function |  |  | 该属性有值时，“拉取日志”按钮才会显示。用于自定义拉取方法处理，因为组件自身不会实现拉取日志逻辑。 |
-| openInNewTab | string, Function |  |  | 该属性有值时，“在新窗口打开”按钮才会显示。如果为字符串，会按字符串打开。如果为函数，则按函数自定义。 |
-| buffer-wait | number |  | `200` | 防止高频追加日志。设置日志节流间隔（ms） |
-| view-count | number |  | `100` | 防止大量日志渲染卡顿。设置实际渲染的 DOM 数。 |
+| content | string | | `''` | Log content |
+| color | enum | `'dark'`, `'light'` | `'dark'` | Log viewer color scheme |
+| visible.sync | boolean | | `true` | Controls whether the log viewer is displayed or hidden |
+| display.sync | enum | `'block'`, `'static'`, `'fixed'`, `'fullWindow'`, `'fullScreen'` | `'static'` | Display mode |
+| normal-display | enum | `'block'`, `'static'`, `'fixed'` | `'static'` | Related to the maximize toggle button. Display mode when not maximized |
+| maximized-display | enum | `'fullWindow'`, `'fullScreen'` | `'fullWindow'` | Related to the maximize toggle button. Display mode when maximized |
+| position | enum | `'top'`, `'top-center'`, `'top-left'`, `'top-right'`, `'bottom'`, `'bottom-center'`, `'bottom-left'`, `'bottom-right'` | `'bottom-right'` | Position in fixed mode |
+| fetchLogs | Function | | | The "Pull Logs" button will only be displayed when this property has a value. Used for custom fetch method processing, because the component itself does not implement the fetch log logic. |
+| openInNewTab | string, Function | | | The "Open in New Window" button will be displayed only when this property has a value. If it is a string, it will be opened as a string. If it is a function, it will be customized as a function. |
+| buffer-wait | number | | `200` | Prevent high-frequency log appending. Set log throttling interval (ms) |
+| view-count | number | | `100` | Prevent rendering lags due to a large number of logs. Set the actual number of DOMs rendered. |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 ### Events
 
 #### @push
 
-追加日志时触发。由于设置了高频追加性能机制，刚追加日志时不一定会立即更新(flush)。
+Triggered when a log is appended. Due to the high-frequency append performance mechanism, the log may not be updated (flushed) immediately after it is appended.
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.logs | Array | 当前日志 |
-| $event.incremental | string | 增量日志 |
+| $event.logs | Array | Current log |
+| $event.incremental | string | Incremental log |
 
 #### @flush
 
-从缓存区更新日志时触发
+Triggered when a log is updated from the cache
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.logs | Array | 当前日志 |
-| $event.incremental | Array | 增量日志 |
+| $event.logs | Array | Current log |
+| $event.incremental | Array | Incremental log |
 
 #### @clear
 
-清除日志时触发
+Triggered when the log is cleared
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.logs | Array | 空日志 |
+| $event.logs | Array | Empty log |
 
 #### @display-change
 
-显示方式改变时触发
+Triggered when the display mode changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.display | enum | 改变后的显示方式 |
-| $event.oldDisplay | enum | 旧的显示方式 |
+| $event.display | enum | Display mode after change |
+| $event.oldDisplay | enum | Old display mode |
 
 Methods
 
 #### push(content)
 
-追加日志
+Append log
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| content | string |  | 需要追加的内容 |
+| content | string | | Content to be appended |
 
 #### clear()
 
-清除日志
-
+Clear Logs

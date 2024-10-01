@@ -15,9 +15,9 @@ export default {
 </script>
 ```
 
-### 直接使用调色板
+### Use the Palette Directly
 
-``` vue
+```vue
 <template>
 <u-pallette v-model="color"></u-pallette>
 </template>
@@ -33,7 +33,7 @@ export default {
 ```
 
 
-### 直接使用默认值
+### Use the Default Value Directly
 
 ``` vue
 <template>

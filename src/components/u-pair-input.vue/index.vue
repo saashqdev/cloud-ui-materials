@@ -3,7 +3,7 @@
     :clearable="clearable && currentValue.length" :prefix="prefix" :suffix="suffix"
     :tabindex="disabled ? '' : 0"
     @click="focus" @focusin="focused = true" :focus="focused" :error="error">
-    <span :class="$style.baseline">b</span><!-- 用于基线对齐 -->
+    <span :class="$style.baseline">b</span><!-- for baseline alignment -->
     <!-- <span v-show="!currentValue.length" :class="$style.placeholder">{{ placeholder }}</span> -->
     <span v-if="prefix" :class="$style.prefix" :name="prefix"><slot name="prefix"></slot></span>
     <div :class="$style.body">
@@ -94,7 +94,7 @@ export default {
         value: {
             immediate: true,
             handler(value) {
-                this.currentValue = value; // 当 Placeholder
+                this.currentValue = value; // When Placeholder
                 if (value.length) {
                     if (this.adding && !this.adding.key && !this.adding.value)
                         this.adding = undefined;
@@ -165,7 +165,7 @@ export default {
             const cap = remain.match(re);
             if (cap) {
                 part = remain.slice(0, cap.index).trim();
-                remain = remain.slice(cap.index + cap[0].length).trim(); // 有可能不是匹配单个字符
+                remain = remain.slice(cap.index + cap[0].length).trim(); // May not match a single character
             } else {
                 part = remain;
                 remain = '';
@@ -253,7 +253,7 @@ export default {
                 this.save(index);
         },
         save(index) {
-            // 先 enter 再 blur 会触发两次
+            // Enter first and then blur will trigger twice
             const editing = this.editingList[index];
             if (!editing)
                 return;
@@ -366,7 +366,7 @@ export default {
                             this.editAdding('key');
                         });
                     }
-                } // 编辑状态下，交互有些矛盾，先不实现
+                } // In the editing state, the interaction is somewhat contradictory, so I won’t implement it yet.
                 // else if (index > 0) {
                 //     if (type === 'key')
                 //         this.remove(index);

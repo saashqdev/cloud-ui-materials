@@ -1,18 +1,18 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# UPairInput 键值对输入框
+# UPairInput key-value pair input box
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [双向绑定](#双向绑定)
-    - [指定键值字段名](#指定键值字段名)
-    - [表单验证](#表单验证)
-    - [分隔符与复制粘贴](#分隔符与复制粘贴)
-    - [禁用状态](#禁用状态)
-    - [一键清除](#一键清除)
-    - [添加图标](#添加图标)
-    - [修改尺寸](#修改尺寸)
-    - [综合示例](#综合示例)
+    - [Two-Way Binding](#Two-way binding)
+    - [Specify Key Value Field Name](#Specify key value field name)
+    - [Form Validation](#Form Validation)
+    - [Separator and Copy and Paste](#Separator and copy and paste)
+    - [Disabled State](#Disabled state)
+    - [One-Click Clear](#One-click clear)
+    - [Add Icon](#Add Icon)
+    - [Change Size](#Change size)
+    - [Comprehensive Example](#Comprehensive Example)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -20,22 +20,22 @@
     - [Methods](#methods)
     - [ARIA and Keyboard](#aria-and-keyboard)
 
-用于输入一系列键值对。
+Used to input a series of key-value pairs.
 
 ## Example
 ### Basic Usage
 
-点击输入区域进行输入。在完成键或值的输入之后，可以通过 <kbd>Tab</kbd>, <kbd>Enter</kbd> 按键或鼠标失焦切换输入。
+Click the input area to enter. After completing the key or value input, you can switch input by pressing the <kbd>Tab</kbd>, <kbd>Enter</kbd> keys or losing the mouse focus.
 
 ``` html
 <u-pair-input></u-pair-input>
 ```
 
-### 双向绑定
+### Two-Way Binding
 
-使用`v-model`或`:value.sync`双向绑定一个数组。
+Use `v-model` or `:value.sync` to two-way bind an array.
 
-``` vue
+``` view
 <template>
 <u-pair-input v-model="pairs"></u-pair-input>
 </template>
@@ -54,13 +54,13 @@ export default {
 </script>
 ```
 
-### 指定键值字段名
+### Specify the Key Value Field Name
 
-可以使用`key-field`和`value-field`指定字段名。
+You can use `key-field` and `value-field` to specify the field name.
 
-``` vue
+``` view
 <template>
-<u-pair-input v-model="pairs" key-field="name" value-field="fingerprinter" key-placeholder="请输入 Name" value-placeholder="请输入指纹"></u-pair-input>
+<u-pair-input v-model="pairs" key-field="name" value-field="fingerprinter" key-placeholder="Please enter Name" value-placeholder="Please enter fingerprint"></u-pair-input>
 </template>
 <script>
 export default {
@@ -77,18 +77,18 @@ export default {
 </script>
 ```
 
-### 表单验证
+### Form Validation
 
-#### 键值的规则
+#### Key Value Rules
 
-通过`key-rules`和`value-rules`设置规则，条目输入框可以接入到 [Cloud UI 表单验证体系](https://kubevue.github.io/cloud-ui/components/cloud-ui/components/u-validator/examples)中，规则参见[UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules)。
+By setting rules through `key-rules` and `value-rules`, the entry input box can be connected to the [Cloud UI form validation system](https://kubevue.github.io/cloud-ui/components/cloud-ui/components/u-validator/examples). For the rules, see [UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules).
 
-比如在下面的例子中，键只能输入字母、数字，值只能输入数字，不得少于 4 位。
+For example, in the following example, the key can only input letters and numbers, and the value can only input numbers, and must not be less than 4 digits.
 
-``` vue
+``` view
 <template>
-<u-form-item label="键值对" bubble>
-    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # 值不得少于 4 个数字"></u-pair-input>
+<u-form-item label="Key-Value Pair" bubble>
+    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # The value must not be less than 4 digits"></u-pair-input>
 </u-form-item>
 </template>
 <script>
@@ -106,16 +106,16 @@ export default {
 </script>
 ```
 
-#### 列表的规则
+#### Rules for Lists
 
-通过`list-rules`设置键值对数组的规则，规则参见[UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules)中与数组相关的一些规则。
+Use `list-rules` to set the rules for the key-value array. For more information, see [UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules) for some rules related to arrays.
 
-下面的例子中，数组不能为空，且最多可以添加 2 个键值对。
+In the following example, the array cannot be empty and at most 2 key-value pairs can be added.
 
-``` vue
+``` view
 <template>
-<u-form-item label="键值对" bubble>
-    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4)" list-rules="notEmpty # 需要至少输入一个键值对 | maxLength(2) # 键值对不得超过 2 个"></u-pair-input>
+<u-form-item label="Key-Value Pair" bubble>
+    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4)" list-rules="notEmpty # You need to enter at least one key-value pair | maxLength(2) # The number of key-value pairs cannot exceed 2"></u-pair-input>
 </u-form-item>
 </template>
 <script>
@@ -129,22 +129,22 @@ export default {
 </script>
 ```
 
-### 分隔符与复制粘贴
+### Delimiters and Copy and Paste
 
-键与值之间的分隔符固定为`:`，不能修改。
+The separator between keys and values   is fixed to `:` and cannot be modified.
 
-键值对之间的分隔符为`,`，如果添加或修改时出现`,`，会将它前面的输入视为一个完成项进行添加。
+The separator between key-value pairs is `,`. If `,` appears when adding or modifying, the input before it will be treated as a completed item and added.
 
-另外，本组件支持一次粘贴多个键值对的功能。如果复制粘贴的键值对包括多个分隔符，会依次添加。
+In addition, this component supports pasting multiple key-value pairs at a time. If the copied and pasted key-value pair includes multiple separators, they will be added one by one.
 
-如果添加时验证到中间有错误的一项，会中止粘贴的操作。
+If an error is found in the middle of adding, the pasting operation will be aborted.
 
-在下面的例子中，可以尝试复制`www: 4444, xxx: 5555, yyy: 666, zzz: 7777`，粘贴到输入框中。
+In the example below, you can try copying `www: 4444, xxx: 5555, yyy: 666, zzz: 7777` and pasting it into the input box.
 
-``` vue
+``` view
 <template>
-<u-form-item label="键值对" bubble>
-    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # 值不得少于 4 个数字"></u-pair-input>
+<u-form-item label="Key-Value Pair" bubble>
+    <u-pair-input v-model="pairs" key-rules="alphaNum" value-rules="numeric | minLength(4) # The value must not be less than 4 digits"></u-pair-input>
 </u-form-item>
 </template>
 <script>
@@ -162,16 +162,16 @@ export default {
 </script>
 ```
 
-#### 修改分隔符
+#### Modify the Delimiter
 
-通过修改`separators`属性，设置分隔符。
+Set the separators by modifying the `separators` property.
 
-比如下面的例子中，需要用`;`分隔。尝试复制`www: 4444; xxx: 5555; yyy: 666; zzz: 7777`，粘贴到输入框中。
+For example, in the following example, `;` is needed to separate them. Try copying `www: 4444; xxx: 5555; yyy: 666; zzz: 7777` and pasting it into the input box.
 
-``` vue
+``` view
 <template>
-<u-form-item label="键值对" bubble>
-    <u-pair-input v-model="pairs" separators=";" key-rules="alphaNum" value-rules="numeric | minLength(4) # 值不得少于 4 个数字"></u-pair-input>
+<u-form-item label="Key-Value Pair" bubble>
+    <u-pair-input v-model="pairs" separators=";" key-rules="alphaNum" value-rules="numeric | minLength(4) # The value must not be less than 4 digits"></u-pair-input>
 </u-form-item>
 </template>
 <script>
@@ -189,9 +189,9 @@ export default {
 </script>
 ```
 
-### 禁用状态
+### Disabled State
 
-``` vue
+``` view
 <template>
 <u-pair-input v-model="pairs" disabled></u-pair-input>
 </template>
@@ -210,11 +210,11 @@ export default {
 </script>
 ```
 
-### 一键清除
+### One-Click Clear
 
-添加`clearable`属性，可以开启一键清除按钮。
+Add the `clearable` attribute to enable a one-click clear button.
 
-``` vue
+``` view
 <template>
 <u-pair-input v-model="pairs" clearable></u-pair-input>
 </template>
@@ -234,11 +234,11 @@ export default {
 ```
 
 
-### 添加图标
+### Add Icon
 
-可以使用`prefix`和`suffix`添加图标。
+Icons can be added using `prefix` and `suffix`.
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical">
     <u-pair-input v-model="list" prefix="search"></u-pair-input>
@@ -260,11 +260,11 @@ export default {
 </script>
 ```
 
-### 修改尺寸
+### Modify the Size
 
-支持`normal`、`large`、`huge`、`full`几种级别的宽高组合。
+Supports several levels of width and height combinations: `normal`, `large`, `huge`, and `full`.
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical">
     <u-pair-input size="normal large" v-model="list"></u-pair-input>
@@ -288,22 +288,22 @@ export default {
 </script>
 ```
 
-### 综合示例
+### Comprehensive Example
 
-``` vue
+``` view
 <template>
 <u-form ref="form">
-    <u-form-item required label="实例名称" rules="required | alphaNum">
-        <u-input v-model="model.name" placeholder="请输入实例名称"></u-input>
+    <u-form-item required label="Instance Name" rules="required | alphaNum">
+        <u-input v-model="model.name" placeholder="Please enter the instance name"></u-input>
     </u-form-item>
-    <u-form-item required label="端口" rules="required | port">
-        <u-input v-model="model.port" placeholder="请输入端口"></u-input>
+    <u-form-item required label="Port" rules="required | port">
+        <u-input v-model="model.port" placeholder="Please enter the port"></u-input>
     </u-form-item>
-    <u-form-item required label="环境变量" layout="block" :bubble="true">
-        <u-pair-input size="huge" v-model="model.whitelist" key-placeholder="请输入环境变量名称" value-placeholder="请输入环境变量的值" key-rules="required | alphaNumDash" value-rules="required | alphaNumDash" list-rules="notEmpty # 至少输入一个环境变量 | maxLength(3) # 环境变量不得超过 3 个"></u-pair-input>
+    <u-form-item required label="Environment Variables" layout="block" :bubble="true">
+        <u-pair-input size="huge" v-model="model.whitelist" key-placeholder="Please enter the environment variable name" value-placeholder="Please enter the value of the environment variable" key-rules= "required | alphaNumDash" value-rules="required | alphaNumDash" list-rules="notEmpty # Enter at least one environment variable | maxLength(3) # The number of environment variables cannot exceed 3"></u-pair-input >
     </u-form-item>
     <u-form-item>
-        <u-button color="primary" @click="submit">立即创建</u-button>
+        <u-button color="primary" @click="submit">Create Now</u-button>
     </u-form-item>
 </u-form>
 </template>
@@ -322,8 +322,8 @@ export default {
     methods: {
         submit() {
             this.$refs.form.validate()
-                .then(() => this.$toast.show('验证通过，提交成功！'))
-                .catch(() => this.$toast.show('验证失败！'));
+                .then(() => this.$toast.show('Verification passed, submission successful!'))
+                .catch(() => this.$toast.show('Verification failed!'));
             },
         },
 };
@@ -335,178 +335,178 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | Array |  | `'\[\]'` | 键值对列表 |
-| key-field | string |  | `'key'` | 键字段 |
-| value-field | string |  | `'value'` | 值字段 |
-| key-placeholder | string |  | `'请输入 Key 值'` | 键输入框的占位符 |
-| value-placeholder | string |  | `'请输入 Value 值'` | 值输入框的占位符 |
-| key-rules | string, Array\<Rule\> |  |  | 针对键的验证规则 |
-| value-rules | string, Array\<Rule\> |  |  | 针对值的验证规则 |
-| list-rules | string, Array\<Rule\> |  |  | 针对整个键值对列表的验证规则 |
-| separators | string |  | `','` | 分隔符 |
-| clearable | boolean |  |  | 是否显示一键清除按钮 |
-| prefix | enum | `'search'` |  | 前缀图标 |
-| suffix | enum | `'search'` |  | 后缀图标 |
-| size | string |  |  | `normal`、`large`、`huge` 几种级别的组合 |
-| disabled | boolean |  |  | 是否禁用 |
+| value.sync, v-model | Array | | `'\[\]'` | List of key-value pairs |
+| key-field | string | | `'key'` | Key-field |
+| value-field | string | | `'value'` | Value-field |
+| key-placeholder | string | | `'Please enter the Key value'` | Placeholder for the key input box |
+| value-placeholder | string | | `'Please enter the Value value'` | Placeholder for the value input box |
+| key-rules | string, Array\<Rule\> | | | Validation rules for keys |
+| value-rules | string, Array\<Rule\> | | | Validation rules for values   |
+| list-rules | string, Array\<Rule\> | | | Validation rules for the entire list of key-value pairs |
+| separators | string | | `','` | Separator |
+| clearable | boolean | | | Whether to display a one-click clear button |
+| prefix | enum | `'search'` | | Prefix icon |
+| suffix | enum | `'search'` | | Suffix icon |
+| size | string | | | A combination of `normal`, `large`, `huge` |
+| disabled | boolean | | | Whether to disable |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
-#### prefix
+#### Prefix
 
-自定义前缀内容
+Custom prefix content
 
-#### suffix
+#### Suffix
 
-自定义后缀内容
+Custom suffix content
 
 ### Events
 
 #### @before-add
 
-添加前触发
+Trigger before adding
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 待添加的项 |
-| $event.oldValue | Array | 旧的键值对数组 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | Item to be added |
+| $event.oldValue | Array | Old key-value array |
+| senderVM | UPairInput | Send event instance |
 
 #### @add
 
-添加后触发
+Triggered after adding
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 添加的项 |
-| $event.value | Array | 当前键值对数组 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | The item added |
+| $event.value | Array | Current key-value pair array |
+| senderVM | UPairInput | Send event instance |
 
 #### @before-edit
 
-编辑前触发
+Trigger before editing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldItem | { \[keyField\]: string, \[valueField\]: string } | 编辑前的项 |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 编辑后的项 |
-| $event.value | Array | 键值对数组 |
-| $event.index | number | 编辑的索引 |
-| $event.type | 'key' \| 'value' | 编辑的类型，为键还是为值 |
-| $event.field | string | 编辑的字段 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.oldItem | { \[keyField\]: string, \[valueField\]: string } | Item before editing |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | The edited item |
+| $event.value | Array | Array of key-value pairs |
+| $event.index | number | The index of the edit |
+| $event.type | 'key' \| 'value' | The type of edit, key or value |
+| $event.field | string | The field to edit |
+| senderVM | UPairInput | Send event instance |
 
 #### @edit
 
-编辑后触发
+Triggered after editing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 编辑后的项 |
-| $event.value | Array | 键值对数组 |
-| $event.index | number | 编辑的索引 |
-| $event.type | 'key' \| 'value' | 编辑的类型，为键还是为值 |
-| $event.field | string | 编辑的字段 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | The edited item |
+| $event.value | Array | Array of key-value pairs |
+| $event.index | number | The index of the edit |
+| $event.type | 'key' \| 'value' | The type of edit, key or value |
+| $event.field | string | The field to edit |
+| senderVM | UPairInput | Send event instance |
 
 #### @before-remove
 
-删除前触发
+Triggered before deletion
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 待删除的项 |
-| $event.oldValue | Array | 旧的键值对数组 |
-| $event.index | number | 删除项的索引 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | Item to be deleted |
+| $event.oldValue | Array | Old key-value array |
+| $event.index | number | Index of the item to delete |
+| senderVM | UPairInput | Send event instance |
 
 #### @remove
 
-删除后触发
+Triggered after deletion
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | Array | 当前键值对数组 |
-| $event.item | { \[keyField\]: string, \[valueField\]: string } | 待删除的项 |
-| $event.index | number | 删除项的索引 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.value | Array | Current key-value pair array |
+| $event.item | { \[keyField\]: string, \[valueField\]: string } | Item to be deleted |
+| $event.index | number | Index of the item to delete |
+| senderVM | UPairInput | Send event instance |
 
 #### @clear
 
-清除前触发
+Trigger before clearing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldValue | Array | 旧的键值对数组 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.oldValue | Array | Old key-value array |
+| senderVM | UPairInput | Send event instance |
 
 #### @before-clear
 
-清除前触发
+Trigger before clearing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | Array | 改变后的键值对数组 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.value | Array | Array of key-value pairs after the change |
+| senderVM | UPairInput | Send event instance |
 
 #### @change
 
-键值对数组改变后触发
+Triggered after the key-value array changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldValue | Array | 旧的键值对数组 |
-| $event.value | Array | 改变后的键值对数组 |
-| senderVM | UPairInput | 发送事件实例 |
+| $event.oldValue | Array | Old key-value array |
+| $event.value | Array | Array of key-value pairs after the change |
+| senderVM | UPairInput | Send event instance |
 
 Methods
 
 #### edit(index, type)
 
-编辑某一项
+Edit an item
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 编辑项的索引 |
-| type | enum |  | 编辑键还是值 |
+| index | number | | Index of the edit item |
+| type | enum | | Edit key or value |
 
 #### save(index)
 
-保存正在编辑的项
+Save the item being edited
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 保存项的索引 |
+| index | number | | Index of the saved item |
 
 #### remove(index)
 
-删除某一项
+Delete an item
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 删除项的索引 |
+| index | number | | Index of the item to delete |
 
 #### focus()
 
-让键值对输入框获取焦点。
+Let the key-value pair input box get the focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### blur()
 
-让键值对输入框失去焦点。
+Make the key-value input box lose focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### clear()
 
-清空输入框中所有键值对。
+Clear all key-value pairs in the input box.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
@@ -515,7 +515,6 @@ Methods
 
 | Key | Description |
 | --- | ----------- |
-| <kdb>Enter</kdb> | 完成当前项的输入 |
-| <kdb>Tab</kdb> | 完成当前项的输入 |
-| <kdb>Delete</kdb> | 删除前一项 |
-
+| <kdb>Enter</kdb> | Complete the input of the current item |
+| <kdb>Tab</kdb> | Complete the input of the current item |
+| <kdb>Delete</kdb> | Delete the previous item |

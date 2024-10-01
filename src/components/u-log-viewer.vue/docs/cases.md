@@ -1,16 +1,16 @@
-### 高频日志
+### High Frequency Log
 
-使用`push`方法追加日志。
+Use the `push` method to append logs.
 
-日志如果在最底下，会持续跟随滚动；如果在中间，会保持当前位置。
+If the log is at the bottom, it will continue to scroll; if it is in the middle, it will maintain its current position.
 
-``` vue
+```vue
 <template>
 <u-linear-layout direction="vertical" gap="small">
     <u-log-viewer ref="logViewer"></u-log-viewer>
     <u-linear-layout gap="small">
-        <u-button @click="fetchLog">单步获取</u-button>
-        <u-button @click="autoFetchLog">定时自动获取</u-button>
+        <u-button @click="fetchLog">Single-Step Fetch</u-button>
+        <u-button @click="autoFetchLog">Automatically Obtain Regularly</u-button>
     </u-linear-layout>
 </u-linear-layout>
 </template>

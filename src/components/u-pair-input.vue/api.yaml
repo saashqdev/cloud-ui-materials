@@ -1,232 +1,232 @@
 - name: u-pair-input
-  title: 键值对输入框
-  description: 用于输入一系列键值对。
+  title: Key-Value Pair Input Box
+  description: Used to enter a series of key-value pairs.
   attrs:
     - name: value
       type: Array
       model: true
       sync: true
       default: '[]'
-      description: 键值对列表
+      description: A list of key-value pairs
     - name: key-field
       type: string
       default: key
-      description: 键字段
+      description: Key field
     - name: value-field
       type: string
       default: value
-      description: 值字段
+      description: Value field
     - name: key-placeholder
       type: string
-      default: 请输入 Key 值
-      description: 键输入框的占位符
+      default: Please enter the Key value
+      description: Placeholder for the key input box
     - name: value-placeholder
       type: string
-      default: 请输入 Value 值
-      description: 值输入框的占位符
+      default: Please enter the value
+      description: Placeholder for the value input box
     - name: key-rules
       type: string, Array<Rule>
-      description: 针对键的验证规则
+      description: Validation rules for the key
     - name: value-rules
       type: string, Array<Rule>
-      description: 针对值的验证规则
+      description: Validation rules for the value
     - name: list-rules
       type: string, Array<Rule>
-      description: 针对整个键值对列表的验证规则
+      description: Validation rules for the entire key-value pair list
     - name: separators
       type: string
       default: ','
-      description: 分隔符
+      description: Separator
     - name: clearable
       type: boolean
-      description: 是否显示一键清除按钮
+      description: Whether to display a one-click clear button
     - name: prefix
       type: enum
       options: ['search']
-      description: 前缀图标
+      description: Prefix icon
     - name: suffix
       type: enum
       options: ['search']
-      description: 后缀图标
+      description: Suffix icon
     - name: size
       type: string
-      description: '`normal`、`large`、`huge` 几种级别的组合'
+      description: 'A combination of ``normal`, `large`, `huge`'
     - name: disabled
       type: boolean
-      description: 是否禁用
+      description: Whether to disable
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
     - name: prefix
-      description: 自定义前缀内容
+      description: Custom prefix content
     - name: suffix
-      description: 自定义后缀内容
+      description: Custom suffix content
   events:
     - name: before-add
-      description: 添加前触发
+      description: Triggered before adding
       params:
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 待添加的项
+          description: Item to be added
         - name: $event.oldValue
           type: Array
-          description: 旧的键值对数组
+          description: Old key-value array
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: add
-      description: 添加后触发
+      description: Triggered after adding
       params:
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 添加的项
+          description: Item added
         - name: $event.value
           type: Array
-          description: 当前键值对数组
+          description: Current key-value array
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-edit
-      description: 编辑前触发
+      description: Triggered before editing
       params:
         - name: $event.oldItem
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 编辑前的项
+          description: Item before editing
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 编辑后的项
+          description: The edited item
         - name: $event.value
           type: Array
-          description: 键值对数组
+          description: Array of key-value pairs
         - name: $event.index
           type: number
-          description: 编辑的索引
+          description: Edited index
         - name: $event.type
           type: "'key' | 'value'"
-          description: 编辑的类型，为键还是为值
+          description: The type of edit, key or value
         - name: $event.field
           type: string
-          description: 编辑的字段
+          description: The field to be edited
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: edit
-      description: 编辑后触发
+      description: Triggered after editing
       params:
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 编辑后的项
+          description: The edited item
         - name: $event.value
           type: Array
-          description: 键值对数组
+          description: Array of key-value pairs
         - name: $event.index
           type: number
-          description: 编辑的索引
+          description: Edited index
         - name: $event.type
           type: "'key' | 'value'"
-          description: 编辑的类型，为键还是为值
+          description: The type of edit, key or value
         - name: $event.field
           type: string
-          description: 编辑的字段
+          description: The field to be edited
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-remove
-      description: 删除前触发
+      description: Triggered before deletion
       params:
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 待删除的项
+          description: Item to be deleted
         - name: $event.oldValue
           type: Array
-          description: 旧的键值对数组
+          description: Old key-value array
         - name: $event.index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: remove
-      description: 删除后触发
+      description: Triggered after deletion
       params:
         - name: $event.value
           type: Array
-          description: 当前键值对数组
+          description: Current key-value array
         - name: $event.item
           type: '{ [keyField]: string, [valueField]: string }'
-          description: 待删除的项
+          description: Item to be deleted
         - name: $event.index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: clear
-      description: 清除前触发
+      description: Triggered before clearing
       params:
         - name: $event.oldValue
           type: Array
-          description: 旧的键值对数组
+          description: Old key-value array
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-clear
-      description: 清除前触发
+      description: Triggered before clearing
       params:
         - name: $event.value
           type: Array
-          description: 改变后的键值对数组
+          description: The changed key-value array
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
     - name: change
-      description: 键值对数组改变后触发
+      description: Triggered when the key-value array changes
       params:
         - name: $event.oldValue
           type: Array
-          description: 旧的键值对数组
+          description: Old key-value array
         - name: $event.value
           type: Array
-          description: 改变后的键值对数组
+          description: The changed key-value array
         - name: senderVM
           type: UPairInput
-          description: 发送事件实例
+          description: Send event instance
   methods:
     - name: edit
-      description: 编辑某一项
+      description: Edit an item
       params:
         - name: index
           type: number
-          description: 编辑项的索引
+          description: The index of the edited item
         - name: type
           type: enum
           options: ['key', 'value']
-          description: 编辑键还是值
+          description: Edit key or value
     - name: save
-      description: 保存正在编辑的项
+      description: Save the item being edited
       params:
         - name: index
           type: number
-          description: 保存项的索引
+          description: Index of the saved item
     - name: remove
-      description: 删除某一项
+      description: Delete an item
       params:
         - name: index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
     - name: focus
-      description: 让键值对输入框获取焦点。
+      description: Make the key-value pair input box get focus.
       params: []
     - name: blur
-      description: 让键值对输入框失去焦点。
+      description: Make the key-value input box lose focus.
       params: []
     - name: clear
-      description: 清空输入框中所有键值对。
+      description: Clear all key-value pairs in the input box.
       params: []
-  aria:
+  air:
     - key: Enter
-      description: 完成当前项的输入
+      description: Complete the input of the current item
     - key: Tab
-      description: 完成当前项的输入
+      description: Complete the input of the current item
     - key: Delete
-      description: 删除前一项
+      description: Delete the previous item

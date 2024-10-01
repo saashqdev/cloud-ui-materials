@@ -5,6 +5,6 @@
       "editing",
       "error"
     ],
-    "description": "类似于标签组件，用于条目的增删改查。"
+    "description": "Similar to the label component, it is used to add, delete, modify and check entries."
   }
 }

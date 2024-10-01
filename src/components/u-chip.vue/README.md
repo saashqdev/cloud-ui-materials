@@ -1,18 +1,18 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# UChip 薯条
+#UChipFries
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [可删除的](#可删除的)
-- [API]()
+    - [Deletable](#Deletable)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Events](#events)
 
-**行内展示**, **表单验证器**
+**Inline Display**, **Form Validator**
 
-类似于标签组件，用于条目的增删改查。
+Similar to the label component, it is used to add, delete, modify and check entries.
 
 ## Example
 ### Basic Usage
@@ -23,9 +23,9 @@
 <u-chip editing error>Chip</u-chip>
 ```
 
-### 可删除的
+### Deletable
 
-删除逻辑需要利用`v-if`和`@remove`事件自己实现。
+The deletion logic needs to be implemented by yourself using `v-if` and `@remove` events.
 
 ``` html
 <u-chip removable>Chip</u-chip>
@@ -36,24 +36,24 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| removable | boolean |  | `false` | 是否可以删除 |
-| editing | boolean |  | `false` | 是否正在编辑 |
-| error | boolean |  | `false` | 是否显示红框错误提示 |
+| removable | boolean | | `false` | Whether it can be deleted |
+| editing | boolean | | `false` | Whether editing |
+| error | boolean | | `false` | Whether to display a red box error prompt |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 ### Events
 
 #### @before-remove
 
-删除前触发
+Triggered before deletion
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | null | 无参数 |
-| senderVM | UChip | 发送事件实例 |
+| $event | null | No parameters |
+| senderVM | UChip | Send event instance |
 

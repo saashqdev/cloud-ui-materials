@@ -3,7 +3,7 @@
     "attributes": [
       "value"
     ],
-    "description": "用于选择颜色的组件。",
+    "description": "Component for selecting colors.",
     "subtags": [
       "u-pallette"
     ]
@@ -12,6 +12,6 @@
     "attributes": [
       "value"
     ],
-    "description": "用于选择颜色的组件。"
+    "description": "Component for selecting colors."
   }
 }
