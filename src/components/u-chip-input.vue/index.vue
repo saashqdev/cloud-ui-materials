@@ -3,7 +3,7 @@
     :clearable="clearable && currentValue.length" :prefix="prefix" :suffix="suffix"
     :tabindex="disabled ? '' : 0"
     @click="focus" @focusin="focused = true" :focus="focused" :error="error">
-    <span :class="$style.baseline">b</span><!-- 用于基线对齐 -->
+    <span :class="$style.baseline">b</span><!-- for baseline alignment -->
     <!-- <span v-show="!currentValue.length" :class="$style.placeholder">{{ placeholder }}</span> -->
     <span v-if="prefix" :class="$style.prefix" :name="prefix"><slot name="prefix"></slot></span>
     <div :class="$style.body">
@@ -72,7 +72,7 @@ export default {
         value: {
             immediate: true,
             handler(value) {
-                this.currentValue = value; // 当 Placeholder
+                this.currentValue = value; // When Placeholder
                 if (value.length) {
                     if (this.adding && !this.adding.text)
                         this.adding = undefined;
@@ -120,7 +120,7 @@ export default {
             const cap = remain.match(re);
             if (cap) {
                 part = remain.slice(0, cap.index).trim();
-                remain = remain.slice(cap.index + cap[0].length).trim(); // 有可能不是匹配单个字符
+                remain = remain.slice(cap.index + cap[0].length).trim(); // May not match a single character
             } else {
                 part = remain;
                 remain = '';
@@ -154,7 +154,7 @@ export default {
             else this.save(index);
         },
         save(index) {
-            // 先 enter 再 blur 会触发两次
+            // Enter first and then blur will trigger twice
             const editing = this.editingList[index];
             if (!editing) return;
             const text = this.currentValue[index];

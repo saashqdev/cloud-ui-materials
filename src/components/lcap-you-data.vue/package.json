@@ -37,7 +37,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "有数报表",
+    "title": "Numerous reports",
     "category": "chart",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

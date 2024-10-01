@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# UChipInput 条目输入框
+# UChipInput Entry Input Box
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [双向绑定](#双向绑定)
-    - [表单验证](#表单验证)
-    - [分隔符与复制粘贴](#分隔符与复制粘贴)
-    - [禁用状态](#禁用状态)
-    - [一键清除](#一键清除)
-    - [添加图标](#添加图标)
-    - [修改尺寸](#修改尺寸)
-    - [综合示例](#综合示例)
+    - [Two-Way Binding](#Two-way binding)
+    - [Form Validation](#Form Validation)
+    - [Separator and Copy and Paste](#Separator and copy and paste)
+    - [Disabled State](#Disabled state)
+    - [One-Click Clear](#One-click clear)
+    - [Add Icon](#Add Icon)
+    - [Change Size](#Change size)
+    - [Comprehensive Example](#Comprehensive Example)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -19,22 +19,22 @@
     - [Methods](#methods)
     - [ARIA and Keyboard](#aria-and-keyboard)
 
-**表单验证器**
+**Form Validator**
 
-用于输入一系列条目。
+Used to enter a series of entries.
 
 ## Example
 ### Basic Usage
 
-点击输入区域进行输入。在完成一项输入之后，可以通过 <kbd>Tab</kbd>, <kbd>Enter</kbd> 按键或鼠标失焦生成该项条目。
+Click the input area to input. After completing an input, you can generate the entry by pressing the <kbd>Tab</kbd>, <kbd>Enter</kbd> key or losing the mouse focus.
 
 ``` html
 <u-chip-input></u-chip-input>
 ```
 
-### 双向绑定
+### Two-Way Binding
 
-一般使用`v-model`或`:value.sync`双向绑定一个字符串数组。
+Generally use `v-model` or `:value.sync` to bind a string array bidirectionally.
 
 ``` vue
 <template>
@@ -55,18 +55,18 @@ export default {
 </script>
 ```
 
-### 表单验证
+### Form Validation
 
-#### 每项的规则
+#### Rules for Each Item
 
-通过`rules`设置规则，条目输入框可以接入到 [Cloud UI 表单验证体系](https://kubevue.github.io/cloud-ui/components/cloud-ui/components/u-validator/examples)中，各类规则参见[UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules)。
+By setting rules through `rules`, the entry input box can be connected to the [Cloud UI form validation system](https://kubevue.github.io/cloud-ui/components/cloud-ui/components/u-validator/examples). For various rules, see [UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules).
 
-比如在下面的例子中，要求用户输入正确的 IP 地址。
+For example, in the following example, the user is required to enter the correct IP address.
 
 ``` vue
 <template>
-<u-form-item label="IP 地址" bubble>
-    <u-chip-input v-model="list" placeholder="请输入 IP 地址" rules="ip # 请输入正确的 IP 地址"></u-chip-input>
+<u-form-item label="IP Address" bubble>
+    <u-chip-input v-model="list" placeholder="Please enter the IP address" rules="ip # Please enter the correct IP address"></u-chip-input>
 </u-form-item>
 </template>
 <script>
@@ -83,16 +83,16 @@ export default {
 </script>
 ```
 
-#### 列表的规则
+#### Rules for Lists
 
-通过`list-rules`设置整个数组的验证规则，比如列表项的数量等。规则参见[UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules)中与数组相关的一些规则。
+Use `list-rules` to set validation rules for the entire array, such as the number of list items. For more information, see [UValidator](https://kubevue.github.io/cloud-ui/components/u-validator/rules) for some rules related to arrays.
 
-下面的例子中，数组不能为空，最多可以添加 2 个条目，且不能有重复项。
+In the following example, the array cannot be empty, at most 2 items can be added, and there cannot be duplicates.
 
 ``` vue
 <template>
-<u-form-item label="数字列表" bubble>
-    <u-chip-input v-model="list" rules="numeric" list-rules="notEmpty # 需要至少输入一个数字项 | maxLength(2) # 数字项不得超过 2 个 | noDuplicates"></u-chip-input>
+<u-form-item label="number list" bubble>
+    <u-chip-input v-model="list" rules="numeric" list-rules="notEmpty # At least one numeric item must be entered | maxLength(2) # No more than 2 numeric items | noDuplicates"></u-chip-input>
 </u-form-item>
 </template>
 <script>
@@ -106,20 +106,20 @@ export default {
 </script>
 ```
 
-### 分隔符与复制粘贴
+### Delimiters and Copy and Paste
 
-默认分隔符为`,`，如果添加或修改条目时出现`,`，会将它前面字符串视为一个完成项进行添加。
+The default separator is `,`. If `,` appears when adding or modifying an entry, the string preceding it will be treated as a completed item and added.
 
-另外，本组件支持一次粘贴多个条目的功能。如果复制粘贴的字符串包括多个分隔符，会依次添加。
+In addition, this component supports the function of pasting multiple entries at a time. If the copied and pasted string includes multiple separators, they will be added one by one.
 
-如果添加时验证到中间有错误的一项，会中止粘贴的操作。
+If an error is found in the middle of adding, the pasting operation will be aborted.
 
-在下面的例子中，可以尝试复制`2020-02-02,2020-02-29,2019-12-18,2019-02-,2019-02-29`，粘贴到输入框中。
+In the example below, you can try copying `2020-02-02,2020-02-29,2019-12-18,2019-02-,2019-02-29` and pasting it into the input box.
 
 ``` vue
 <template>
-<u-form-item label="日期" bubble>
-    <u-chip-input v-model="list" separators="," placeholder="请输入多个日期" rules="iso8601(true) # 请输入合法的日期"></u-chip-input>
+<u-form-item label="Date" bubble>
+    <u-chip-input v-model="list" separators="," placeholder="Please enter multiple dates" rules="iso8601(true) # Please enter a valid date"></u-chip-input>
 </u-form-item>
 </template>
 <script>
@@ -135,16 +135,16 @@ export default {
 </script>
 ```
 
-#### 修改分隔符
+#### Modify the Delimiter
 
-通过修改`separators`属性，设置分隔符。
+Set the separators by modifying the `separators` property.
 
-比如下面的例子中，支持`,; `多种分隔。尝试复制`2020-02-02 2020-02-29 2019-12-18;2008-02-18,2003-05-16`，粘贴到输入框中。
+For example, in the following example, multiple separators including `,;` are supported. Try to copy `2020-02-02 2020-02-29 2019-12-18;2008-02-18,2003-05-16` and paste it into the input box.
 
 ``` vue
 <template>
-<u-form-item label="日期" bubble>
-    <u-chip-input v-model="list" separators=",; " placeholder="请输入多个日期" rules="iso8601(true) # 请输入合法的日期"></u-chip-input>
+<u-form-item label="Date" bubble>
+    <u-chip-input v-model="list" separators=",; " placeholder="Please enter multiple dates" rules="iso8601(true) # Please enter a valid date"></u-chip-input>
 </u-form-item>
 </template>
 <script>
@@ -160,22 +160,22 @@ export default {
 </script>
 ```
 
-单行输入框中会自动把`\n\t`等字符变成空格，如果需要按换行符分隔，可以通过设置空格或者`\\s`来实现。
+In the single-line input box, characters such as `\n\t` will be automatically converted to spaces. If you need to separate by newline characters, you can do so by setting spaces or `\\s`.
 
-在下面的例子中，尝试复制下面的代码到输入框中。
+In the example below, try copying the following code into the input box.
 
 ```
-2020-02-02
-2020-02-29
-2019-12-18
-2019-02-08
-2019-02-29
+2024-02-02
+2024-02-29
+2023-12-18
+2023-02-08
+2023-02-29
 ```
 
 ``` vue
 <template>
-<u-form-item label="日期" bubble>
-    <u-chip-input v-model="list" separators=" " placeholder="请输入多个日期" rules="iso8601(true) # 请输入合法的日期"></u-chip-input>
+<u-form-item label="Date" bubble>
+    <u-chip-input v-model="list" separators=" " placeholder="Please enter multiple dates" rules="iso8601(true) # Please enter a valid date"></u-chip-input>
 </u-form-item>
 </template>
 <script>
@@ -191,7 +191,7 @@ export default {
 </script>
 ```
 
-### 禁用状态
+### Disabled State
 
 ``` vue
 <template>
@@ -212,9 +212,9 @@ export default {
 </script>
 ```
 
-### 一键清除
+### One-Click Clear
 
-添加`clearable`属性，可以开启一键清除按钮。
+Add the `clearable` attribute to enable a one-click clear button.
 
 ``` vue
 <template>
@@ -235,9 +235,9 @@ export default {
 </script>
 ```
 
-### 添加图标
+### Add Icon
 
-可以使用`prefix`和`suffix`添加图标。
+Icons can be added using `prefix` and `suffix`.
 
 ``` vue
 <template>
@@ -261,9 +261,9 @@ export default {
 </script>
 ```
 
-### 修改尺寸
+### Modify the Size
 
-支持`normal`、`large`、`huge`、`full`几种级别的宽高组合。
+Supports several levels of width and height combinations: `normal`, `large`, `huge`, and `full`.
 
 ``` vue
 <template>
@@ -289,22 +289,22 @@ export default {
 </script>
 ```
 
-### 综合示例
+### Comprehensive Example
 
 ``` vue
 <template>
 <u-form ref="form">
-    <u-form-item required label="实例名称" rules="required | alphaNum">
-        <u-input v-model="model.name" placeholder="请输入实例名称"></u-input>
+    <u-form-item required label="Instance Name" rules="required | alphaNum">
+        <u-input v-model="model.name" placeholder="Please enter the instance name"></u-input>
     </u-form-item>
-    <u-form-item required label="端口" rules="required | port">
-        <u-input v-model="model.port" placeholder="请输入端口"></u-input>
+    <u-form-item required label="Port" rules="required | port">
+        <u-input v-model="model.port" placeholder="Please enter the port"></u-input>
     </u-form-item>
-    <u-form-item required label="白名单" layout="block" :bubble="true">
-        <u-chip-input size="huge" v-model="model.whitelist" placeholder="请输入 IP 地址" rules="ip" list-rules="notEmpty # 至少输入一个 IP | maxLength(3) # IP 不得超过 3 个 | noDuplicates"></u-chip-input>
+    <u-form-item required label="Whitelist" layout="block" :bubble="true">
+        <u-chip-input size="huge" v-model="model.whitelist" placeholder="Please enter the IP address" rules="ip" list-rules="notEmpty # Enter at least one IP | maxLength(3) # No more than 3 IPs | noDuplicates"></u-chip-input>
     </u-form-item>
     <u-form-item>
-        <u-button color="primary" @click="submit">立即创建</u-button>
+        <u-button color="primary" @click="submit">Create Now</u-button>
     </u-form-item>
 </u-form>
 </template>
@@ -323,8 +323,8 @@ export default {
     methods: {
         submit() {
             this.$refs.form.validate()
-                .then(() => this.$toast.show('验证通过，提交成功！'))
-                .catch(() => this.$toast.show('验证失败！'));
+                .then(() => this.$toast.show('Verification passed, submission successful!'))
+                .catch(() => this.$toast.show('Verification failed!'));
             },
         },
 };
@@ -332,182 +332,181 @@ export default {
 ```
 
 ## API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | Array |  | `'\[\]'` | 条目列表 |
-| placeholder | string |  | `'请输入内容'` | 输入框的占位符 |
-| rules | string, Array\<Rule\> |  |  | 针对每一项的验证规则 |
-| list-rules | string, Array\<Rule\> |  |  | 针对整个列表的验证规则 |
-| separators | string |  | `','` | 分隔符 |
-| clearable | boolean |  |  | 是否显示一键清除按钮 |
-| prefix | enum | `'search'` |  | 前缀图标 |
-| suffix | enum | `'search'` |  | 后缀图标 |
-| size | string |  |  | `normal`、`large`、`huge` 几种级别的组合 |
-| disabled | boolean |  |  | 是否禁用 |
+| value.sync, v-model | Array | | `'\[\]'` | List of items |
+| placeholder | string | | `'Please enter content'` | Placeholder for the input box |
+| rules | string, Array\<Rule\> | | | Validation rules for each item |
+| list-rules | string, Array\<Rule\> | | | Validation rules for the entire list |
+| separators | string | | `','` | Separator |
+| clearable | boolean | | | Whether to display a one-click clear button |
+| prefix | enum | `'search'` | | Prefix icon |
+| suffix | enum | `'search'` | | Suffix icon |
+| size | string | | | A combination of `normal`, `large`, `huge` |
+| disabled | boolean | | | Whether to disable |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
-#### prefix
+#### Prefix
 
-自定义前缀内容
+Custom prefix content
 
-#### suffix
+#### Suffix
 
-自定义后缀内容
+Custom suffix content
 
 ### Events
 
 #### @before-add
 
-添加前触发
+Trigger before adding
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.text | string | 待添加的项 |
-| $event.oldValue | Array | 旧的条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.text | string | Item to be added |
+| $event.oldValue | Array | List of old entries |
+| senderVM | UChipInput | Send event instance |
 
 #### @add
 
-添加后触发
+Triggered after adding
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.text | string | 添加的项 |
-| $event.value | Array | 当前条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.text | string | The item added |
+| $event.value | Array | Current item list |
+| senderVM | UChipInput | Send event instance |
 
 #### @before-edit
 
-编辑前触发
+Trigger before editing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldText | string | 编辑前的项 |
-| $event.text | string | 编辑后的项 |
-| $event.index | number | 编辑的索引 |
-| $event.value | Array | 条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.oldText | string | The item before editing |
+| $event.text | string | The edited item |
+| $event.index | number | The index of the edit |
+| $event.value | Array | List of items |
+| senderVM | UChipInput | Send event instance |
 
 #### @edit
 
-编辑后触发
+Triggered after editing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.text | string | 编辑后的项 |
-| $event.index | number | 编辑的索引 |
-| $event.value | Array | 条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.text | string | The edited item |
+| $event.index | number | The index of the edit |
+| $event.value | Array | List of items |
+| senderVM | UChipInput | Send event instance |
 
 #### @before-remove
 
-删除前触发
+Triggered before deletion
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.text | string | 待删除的项 |
-| $event.index | number | 删除项的索引 |
-| $event.oldValue | Array | 旧的条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.text | string | Item to be deleted |
+| $event.index | number | Index of the item to delete |
+| $event.oldValue | Array | List of old entries |
+| senderVM | UChipInput | Send event instance |
 
 #### @remove
 
-删除后触发
+Triggered after deletion
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.text | string | 待删除的项 |
-| $event.index | number | 删除项的索引 |
-| $event.value | Array | 当前条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.text | string | Item to be deleted |
+| $event.index | number | Index of the item to delete |
+| $event.value | Array | Current item list |
+| senderVM | UChipInput | Send event instance |
 
 #### @before-clear
 
-清除前触发
+Trigger before clearing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldValue | Array | 旧的条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.oldValue | Array | List of old entries |
+| senderVM | UChipInput | Send event instance |
 
 #### @clear
 
-清除前触发
+Trigger before clearing
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | Array | 改变后的条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.value | Array | List of changed items |
+| senderVM | UChipInput | Send event instance |
 
 #### @change
 
-条目列表改变后触发
+Fired after the item list changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.oldValue | Array | 旧的条目列表 |
-| $event.value | Array | 改变后的条目列表 |
-| senderVM | UChipInput | 发送事件实例 |
+| $event.oldValue | Array | List of old entries |
+| $event.value | Array | List of changed items |
+| senderVM | UChipInput | Send event instance |
 
 Methods
 
 #### edit(index)
 
-编辑某一项
+Edit an item
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 编辑项的索引 |
+| index | number | | Index of the edit item |
 
 #### save(index)
 
-保存正在编辑的项
+Save the item being edited
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 保存项的索引 |
+| index | number | | Index of the saved item |
 
 #### remove(index)
 
-删除某一项
+Delete an item
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-| index | number |  | 删除项的索引 |
+| index | number | | Index of the item to delete |
 
 #### focus()
 
-让输入框获取焦点。
+Give the input box focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### blur()
 
-让输入框失去焦点。
+Make the input box lose focus.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### clear()
 
-清空输入框中所有条目。
+Clear all entries in the input box.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
-### ARIA and Keyboard
+ARIA and Keyboard
 
 | Key | Description |
-| --- | ----------- |
-| <kdb>Enter</kdb> | 完成当前项的输入 |
-| <kdb>Tab</kdb> | 完成当前项的输入 |
-| <kdb>Delete</kdb> | 删除前一项 |
-
+|--- | ----------- |
+| <kdb>Enter</kdb> | Complete the input of the current item |
+| <kdb>Tab</kdb> | Complete the input of the current item |
+| <kdb>Delete</kdb> | Delete the previous item |

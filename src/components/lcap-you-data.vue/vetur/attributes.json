@@ -1,98 +1,98 @@
 {
   "lcap-you-data/src": {
     "type": "string",
-    "description": "报表地址"
+    "description": "Report address"
   },
   "lcap-you-data/scale": {
     "type": "string",
     "options": [
       {
         "name": "100",
-        "description": "缩放100%"
+        "description": "Zoom 100%"
       },
       {
         "name": "width",
-        "description": "自适应宽度"
+        "description": "Adaptive width"
       },
       {
         "name": "screen",
-        "description": "自适应窗口"
+        "description": "Adaptive window"
       }
     ],
-    "description": "有数缩放配置"
+    "description": "Number of scaling configurations"
   },
   "lcap-you-data/bottomBarPos": {
     "type": "string",
     "options": [
       {
         "value": "bottom",
-        "name": "底部栏放在底部"
+        "name": "Put the bottom bar at the bottom"
       },
       {
         "value": "top",
-        "name": "底部栏放在顶部"
+        "name": "Place the bottom bar at the top"
       }
     ],
-    "description": "有数底部栏位置配置"
+    "description": "Unlimited bottom bar position configuration"
   },
   "lcap-you-data/hideProgressBar": {
     "type": "boolean",
-    "description": "有数顶部进度条隐藏配置"
+    "description": "There are several top progress bar hidden configurations"
   },
   "lcap-you-data/hidePageBar": {
     "type": "boolean",
-    "description": "有数底部工具栏隐藏配置"
+    "description": "Several bottom toolbar hidden configurations"
   },
   "lcap-you-data/hideScaleBar": {
     "type": "boolean",
-    "description": "有数缩放栏隐藏配置"
+    "description": "There are several zoom bar hidden configurations"
   },
   "lcap-you-data/hideTitle": {
     "type": "boolean",
-    "description": "有数顶部标题栏隐藏配置"
+    "description": "There are several top title bar hidden configurations"
   },
   "lcap-you-data/hidePrivate": {
     "type": "boolean",
-    "description": "有数私有文件夹隐藏配置"
+    "description": "Numerous private folder hidden configurations"
   },
   "lcap-you-data/hidePublic": {
     "type": "boolean",
-    "description": "有数公共文件夹隐藏配置"
+    "description": "There are numerous public folder hidden configurations"
   },
   "lcap-you-data/side": {
     "type": "boolean",
-    "description": "有数侧边栏配置"
+    "description": "Numerous sidebar configurations"
   },
   "lcap-you-data/toolbar": {
     "type": "array",
     "options": [
       {
         "value": "export",
-        "name": "导出"
+        "name": "Export"
       },
       {
         "value": "refresh",
-        "name": "刷新"
+        "name": "Refresh"
       },
       {
         "value": "print",
-        "name": "打印"
+        "name": "Print"
       }
     ],
-    "description": "有数功能键配置"
+    "description": "Number of function key configurations"
   },
   "lcap-you-data/mode": {
     "type": "string",
     "options": [
       {
         "name": "simple",
-        "description": "箭头切换"
+        "description": "Arrow toggle"
       },
       {
         "name": "normal",
-        "description": "tab 页切换"
+        "description": "Tab page switching"
       }
     ],
-    "description": "有数底部导航条显示方式配置"
+    "description": "Several bottom navigation bar display configurations"
   }
 }

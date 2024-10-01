@@ -1,94 +1,94 @@
 - name: u-calendar-table
-  title: 日历表格
+  title: Calendar Table
   icon: table-view
   labels:
     - Table
-  description: 用于展示大量结构化数据。支持按月展示月内每天的数据。
+  description: Used to display a large amount of structured data. Supports displaying the data of each day of the month.
   next: true
   nested: false
   attrs:
     - name: data-source-parent
-      title: 主数据源
+      title: Primary Data Source
       type: Array<Item> | Function | object
       designer-value: "[{}, {}, {}]"
-      description: 日历表格主数据源，数组方式表示直接的数据，函数需要返回一个 Promise
-      group: 数据属性
+      description: The main data source of the calendar table. The array represents the direct data. The function needs to return a Promise.
+      group: Data attribute
     - name: data-source
-      title: 子数据源
+      title: Sub-Data Source
       type: Array<Item> | Function | object
       designer-value: "[{}, {}, {}]"
-      description: 日历表格子数据源，数组方式表示直接的数据，函数需要返回一个 Promise
-      group: 数据属性
+      description: Calendar table sub-data source, array represents direct data, the function needs to return a Promise
+      group: Data attribute
     - name: first-title
-      title: 表格首项标题
+      Title: Table First Item Title
       type: string
-      default: 姓名
-      description: 表格第一项内容的标题
+      default: name
+      description: The title of the first item in the table
     - name: first-field
-      title: 表格首项字段
+      title: The First Field of the Table
       type: string
       default: parent.name
-      group: 数据属性
-      description: 表格第一项内容的在 data-source 中的标识
+      group: Data attribute
+      description: The identifier of the first item in the table in the data-source
     - name: parent-key
-      title: 主关键字段
+      title: Primary Key Field
       type: String
       default: parent.name
-      group: 数据属性
-      description: 主数据源中的关键字段，用来将主/子数据源的数据关联
+      group: Data attribute
+      description: Key field in the primary data source, used to associate data from the primary and secondary data sources
     - name: child-key
-      title: 子关键字段
+      title: Sub-Key Field
       type: String
       default: child.name
-      group: 数据属性
-      description: 子数据源中的关键字段，用来将主/子数据源的数据关联
+      group: Data attribute
+      description: The key field in the sub-data source, used to associate the data of the main/sub-data source
     - name: page-size
-      title: 每页条数
+      Title: Number of Entries Per Page
       type: string | number
       default: 20
-      description: 每页条数
+      description: Number of entries per page
     - name: data-schema
-      title: 数据类型
+      title: Data Type
       type: schema
-      description: 日历表格中每项的数据类型
-      group: 数据属性
+      description: The data type of each item in the calendar table
+      group: Data attribute
       compType: dataTypeSelect
     - name: start-key
       type: string
-      title: 数据内表示开始时间的字段
+      title: The Field in the Data that Indicates the Start Time
       default: child.startTime
-      group: 数据属性
-      description: 数据内表示开始时间的字段
+      group: Data attribute
+      description: The field in the data that indicates the start time
     - name: end-key
       type: string
-      title: 数据内表示结束时间的字段
+      title: The Field in the Data that Indicates the End Time
       default: child.endTime
-      group: 数据属性
-      description: 数据内表示结束时间的字段
+      group: Data attribute
+      description: The field in the data that indicates the end time
     - name: min-date
-      title: 最小日期
+      title: Minimum Date
       type: Date | string ｜ number
       default: null
-      description: 最小日期，默认 5 年前
+      description: Minimum date, default is 5 years ago
     - name: max-date
-      title: 最大日期
+      title: Maximum Date
       type: Date | string ｜ number
       default: null
-      description: 最大日期，默认 4 年后
+      description: Maximum date, default is 4 years later
     - name: width
-      title: 表格项宽度
+      title: Table Item Width
       type: string | number
       default: 48
-      description: 表格每一项内容的宽度，默认 48 表示 '48px'
+      description: The width of each item in the table, the default value is 48, which means '48px'
     - name: first-width
-      title: 表格首项宽度
+      title: Table First Item Width
       type: string | number
       default: 64
-      description: 表格首项宽度，默认 64 表示 '64px'
+      description: The width of the first item in the table, the default value is 64, which means '64px'
   slots:
     - concept: Slot
       name: default
-      description: 自定义选项的结构和样式
+      description: Customize the structure and style of options
       slotProps:
         concept: Param
         name: scope
@@ -103,8 +103,8 @@
               typeName: T
   methods:
     - name: load
-      description: 带缓存地加载
+      description: Load with cache
       params: []
     - name: reload
-      description: 清除缓存，重新加载
+      description: Clear cache and reload
       params: []

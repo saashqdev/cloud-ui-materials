@@ -1,48 +1,48 @@
 {
   "u-chip-input/value": {
     "type": "Array",
-    "description": "条目列表"
+    "description": "List of entries"
   },
   "u-chip-input/placeholder": {
     "type": "string",
-    "description": "输入框的占位符"
+    "description": "Placeholder for input box"
   },
   "u-chip-input/rules": {
     "type": "string, Array<Rule>",
-    "description": "针对每一项的验证规则"
+    "description": "Validation rules for each item"
   },
   "u-chip-input/list-rules": {
     "type": "string, Array<Rule>",
-    "description": "针对整个列表的验证规则"
+    "description": "Validation rules for the entire list"
   },
   "u-chip-input/separators": {
     "type": "string",
-    "description": "分隔符"
+    "description": "Delimiter"
   },
   "u-chip-input/clearable": {
     "type": "boolean",
-    "description": "是否显示一键清除按钮"
+    "description": "Whether to display a one-click clear button"
   },
   "u-chip-input/prefix": {
     "type": "enum",
     "options": [
       "search"
     ],
-    "description": "前缀图标"
+    "description": "Prefix icon"
   },
   "u-chip-input/suffix": {
     "type": "enum",
     "options": [
       "search"
     ],
-    "description": "后缀图标"
+    "description": "Suffix icon"
   },
   "u-chip-input/size": {
     "type": "string",
-    "description": "`normal`、`large`、`huge` 几种级别的组合"
+    "description": "A combination of `normal`, `large`, `huge` levels"
   },
   "u-chip-input/disabled": {
     "type": "boolean",
-    "description": "是否禁用"
+    "description": "Whether to disable"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "u-calendar-table",
-  "description": "用于展示大量结构化数据。支持按月展示月内每天的数据。",
+  "description": "Used to display large amounts of structured data. Supports displaying data for each day of the month on a monthly basis.",
   "version": "0.1.6",
   "main": "./index.js",
   "author": "",
@@ -27,7 +27,7 @@
   "babel": {},
   "kubevue": {
     "type": "component",
-    "title": "日历表格",
+    "title": "Calendar form",
     "category": "Container",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -1,19 +1,19 @@
 {
     "symbol": "lcap-you-data",
-    "name": "有数报表",
+    "name": "Statistical Report",
     "jsonSchema": {
         "name": "lcap-you-data",
-        "title": "有数报表",
-        "description": "有数报表集成组件",
+        "title": "Statistical Report",
+        "description": "Youshu report integration component",
         "category": "chart",
-        "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-you-data@0.1.8/screenshots/0.png",
-        "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-you-data src=\\\"https://fengchao.youdata.netease.com/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33\\\" scale=\\\"width\\\" style=\\\"width:1200px;height:1100px\\\"></lcap-you-data>\\n</template>\\n\"}]",
+        "screenShot": "https://static-kubeworkz.s3.amazonaws.com/packages/lcap-you-data@0.1.8/screenshots/0.png",
+        "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-you-data src=\\\"https://kubevue.youdata.kubeworkz.io/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33\\\" scale=\\\"width\\\" style=\\\"width:1200px;height:1100px\\\"></lcap-you-data>\\n</template>\\n\"}]",
         "attrs": [
             {
                 "name": "src",
                 "type": "string",
                 "default": "",
-                "description": "报表地址"
+                "description": "Report address"
             },
             {
                 "name": "scale",
@@ -22,19 +22,19 @@
                 "options": [
                     {
                         "name": "100",
-                        "description": "缩放100%"
+                        "description": "Zoom 100%"
                     },
                     {
                         "name": "width",
-                        "description": "自适应宽度"
+                        "description": "Adaptive width"
                     },
                     {
                         "name": "screen",
-                        "description": "自适应窗口"
+                        "description": "Adaptive Window"
                     }
                 ],
                 "default": "100",
-                "description": "有数缩放配置"
+                "description": "Number of zoom configurations"
             },
             {
                 "name": "bottomBarPos",
@@ -44,63 +44,63 @@
                 "options": [
                     {
                         "value": "bottom",
-                        "name": "底部栏放在底部"
+                        "name": "Bottom bar at the bottom"
                     },
                     {
                         "value": "top",
-                        "name": "底部栏放在顶部"
+                        "name": "Bottom bar on top"
                     }
                 ],
-                "description": "有数底部栏位置配置"
+                "description": "There are several bottom bar position configurations"
             },
             {
                 "name": "hideProgressBar",
                 "type": "boolean",
                 "advanced": true,
                 "default": true,
-                "description": "有数顶部进度条隐藏配置"
+                "description": "There are several top progress bar hidden configurations"
             },
             {
                 "name": "hidePageBar",
                 "type": "boolean",
                 "default": true,
                 "advanced": true,
-                "description": "有数底部工具栏隐藏配置"
+                "description": "There are several bottom toolbar hidden configurations"
             },
             {
                 "name": "hideScaleBar",
                 "type": "boolean",
                 "default": true,
                 "advanced": true,
-                "description": "有数缩放栏隐藏配置"
+                "description": "Hide the zoom bar configuration"
             },
             {
                 "name": "hideTitle",
                 "type": "boolean",
                 "advanced": true,
                 "default": true,
-                "description": "有数顶部标题栏隐藏配置"
+                "description": "There are several top title bar hidden configurations"
             },
             {
                 "name": "hidePrivate",
                 "type": "boolean",
                 "advanced": true,
                 "default": true,
-                "description": "有数私有文件夹隐藏配置"
+                "description": "There are several private folders with hidden configuration"
             },
             {
                 "name": "hidePublic",
                 "type": "boolean",
                 "advanced": true,
                 "default": true,
-                "description": "有数公共文件夹隐藏配置"
+                "description": "Hidden configuration of several public folders"
             },
             {
                 "name": "side",
                 "type": "boolean",
                 "advanced": true,
                 "default": false,
-                "description": "有数侧边栏配置"
+                "description": "Several sidebar configurations"
             },
             {
                 "name": "toolbar",
@@ -110,23 +110,23 @@
                 "options": [
                     {
                         "value": "export",
-                        "name": "导出"
+                        "name": "Export"
                     },
                     {
                         "value": "refresh",
-                        "name": "刷新"
+                        "name": "Refresh"
                     },
                     {
                         "value": "print",
-                        "name": "打印"
+                        "name": "Print"
                     }
                 ],
                 "default": [
-                    "export",
-                    "refresh",
-                    "print"
+                    "Export",
+                    "Refresh",
+                    "Print"
                 ],
-                "description": "有数功能键配置"
+                "description": "Number of function key configurations"
             },
             {
                 "name": "mode",
@@ -135,30 +135,30 @@
                 "options": [
                     {
                         "name": "simple",
-                        "description": "箭头切换"
+                        "description": "Arrow switch"
                     },
                     {
                         "name": "normal",
-                        "description": "tab 页切换"
+                        "description": "Switch tab pages"
                     }
                 ],
                 "default": "normal",
-                "description": "有数底部导航条显示方式配置"
+                "description": "There are several bottom navigation bar display configurations"
             }
         ],
         "events": [
             {
                 "name": "load",
-                "description": "加载完成后触发"
+                "description": "Triggered after loading is complete"
             }
         ],
         "children": []
     },
-    "description": "有数报表集成组件",
+    "description": "Kubevue report integration component",
     "labels": [
         "chart",
         "runtime"
     ],
-    "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/lcap-you-data@0.1.8/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-you-data src=\\\"https://fengchao.youdata.netease.com/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33\\\" scale=\\\"width\\\" style=\\\"width:1200px;height:1100px\\\"></lcap-you-data>\\n</template>\\n\"}]"
+    "screenShot": "https://static-kubeworkz.s3.amazonaws.com/packages/lcap-you-data@0.1.8/screenshots/0.png",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-you-data src=\\\"https://kubevue.youdata.kubeworkz.io/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33\\\" scale=\\\"width\\\" style=\\\"width:1200px;height:1100px\\\"></lcap-you-data>\\n</template>\\n\"}]"
 }

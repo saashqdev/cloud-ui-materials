@@ -110,7 +110,7 @@ export default {
       parentData: [],
       date,
       year: date.year(),
-      month: date.month(), // 月份从 0 开始
+      month: date.month(), // Month starts from 0
       years: [],
       minDay: null,
       minYear: null,
@@ -271,7 +271,7 @@ export default {
       if (!minDay || !maxDay) return;
 
       if (minDay.isSameOrBefore(maxDay)) {
-        // 当前日期不在配置日期范围内，重新赋值成最小日期
+        // The current date is not within the configured date range and is reassigned to the minimum date.
         if (maxDay.isBefore(date) || minDay.isAfter(date)) {
           this.year = minYear;
           this.month = minMonth;
@@ -284,7 +284,7 @@ export default {
       }
     },
     /**
-     * 计算可选年份
+     * Calculate optional years
      */
     getYears() {
       const { minYear, maxYear } = this;
@@ -298,7 +298,7 @@ export default {
       this.years = years;
     },
     /**
-     * 计算可选月份
+     * Calculate optional months
      */
     getMonths() {
       const { minYear, minMonth, maxYear, maxMonth, monthTexts } = this;

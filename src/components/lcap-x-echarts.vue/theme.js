@@ -1,5 +1,5 @@
 import ECharts from 'echarts';
-// import styles from '../../src/base/global.css?variables'; 先写死吧
+// import styles from '../../src/base/global.css?variables'; Write it to end first
 
 const styles = {
     'theme-chart-color1': 'rgb(103, 170, 245)',

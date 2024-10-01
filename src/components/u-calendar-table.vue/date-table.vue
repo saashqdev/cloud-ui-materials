@@ -91,7 +91,7 @@ export default {
             for (let i = 0; i < lastDateOfMonth.date(); i++) {
                 const currentMonthDate = firstDateOfMonth.add(i, 'day');
                 if (currentMonthDate.isBefore(maxDay) && currentMonthDate.isAfter(minDay)) {
-                    // dayjs#date 日期，#day 星期几 0(星期天)到6(星期六)
+                    // dayjs#date date, #day day of the week 0 (Sunday) to 6 (Saturday)
                     const day = currentMonthDate.day();
                     const dayText = weekDayTexts[day === 0 ? 6 : day - 1];
                     ths.push({

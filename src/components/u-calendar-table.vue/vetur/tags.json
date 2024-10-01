@@ -16,6 +16,6 @@
       "width",
       "first-width"
     ],
-    "description": "用于展示大量结构化数据。支持按月展示月内每天的数据。"
+    "description": "Used to display large amounts of structured data. Supports displaying data for each day of the month on a monthly basis."
   }
 }

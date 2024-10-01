@@ -7,7 +7,7 @@
         justify="center"
         alignment="center">
         <div>
-            <u-spinner></u-spinner>正在加载中...
+            <u-spinner></u-spinner>Loading...
         </div>
     </u-linear-layout>
     <u-linear-layout
@@ -17,7 +17,7 @@
         justify="center"
         alignment="center">
         <div>
-            报表地址缺失
+            Report address is missing
         </div>
     </u-linear-layout>
     <div :class="$style.wrapper">
@@ -85,7 +85,7 @@ export default {
         },
         toolbar: {
             type: Array,
-            default: () => ['export', 'refresh', 'print'],
+            default: () => ['Export', 'Refresh', 'Print'],
         },
         mode: {
             type: String,

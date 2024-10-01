@@ -1,203 +1,203 @@
 - name: u-chip-input
-  title: 条目输入框
-  labels: [表单验证器]
-  description: 用于输入一系列条目。
+  title: Entry Input Box
+  labels: [Form Validator]
+  description: Used to enter a series of entries.
   attrs:
     - name: value
       type: Array
       model: true
       sync: true
       default: '[]'
-      description: 条目列表
+      description: List of items
     - name: placeholder
       type: string
-      default: 请输入内容
-      description: 输入框的占位符
+      default: Please enter content
+      description: Placeholder for the input box
     - name: rules
       type: string, Array<Rule>
-      description: 针对每一项的验证规则
+      description: Validation rules for each item
       compType: validationRulesSelect
     - name: list-rules
       type: string, Array<Rule>
-      description: 针对整个列表的验证规则
+      description: Validation rules for the entire list
     - name: separators
       type: string
       default: ','
-      description: 分隔符
+      description: Separator
     - name: clearable
       type: boolean
-      description: 是否显示一键清除按钮
+      description: Whether to display a one-click clear button
     - name: prefix
       type: enum
       options: ['search']
-      description: 前缀图标
+      description: Prefix icon
     - name: suffix
       type: enum
       options: ['search']
-      description: 后缀图标
+      description: Suffix icon
     - name: size
       type: string
-      description: '`normal`、`large`、`huge` 几种级别的组合'
+      description: 'A combination of ``normal`, `large`, `huge`'
     - name: disabled
       type: boolean
-      description: 是否禁用
+      description: Whether to disable
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
     - name: prefix
-      description: 自定义前缀内容
+      description: Custom prefix content
     - name: suffix
-      description: 自定义后缀内容
+      description: Custom suffix content
   events:
     - name: before-add
-      description: 添加前触发
+      description: Triggered before adding
       params:
         - name: $event.text
           type: string
-          description: 待添加的项
+          description: Item to be added
         - name: $event.oldValue
           type: Array
-          description: 旧的条目列表
+          description: Old list of items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: add
-      description: 添加后触发
+      description: Triggered after adding
       params:
         - name: $event.text
           type: string
-          description: 添加的项
+          description: Item added
         - name: $event.value
           type: Array
-          description: 当前条目列表
+          description: Current entry list
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-edit
-      description: 编辑前触发
+      description: Triggered before editing
       params:
         - name: $event.oldText
           type: string
-          description: 编辑前的项
+          description: Item before editing
         - name: $event.text
           type: string
-          description: 编辑后的项
+          description: The edited item
         - name: $event.index
           type: number
-          description: 编辑的索引
+          description: Edited index
         - name: $event.value
           type: Array
-          description: 条目列表
+          description: List of items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: edit
-      description: 编辑后触发
+      description: Triggered after editing
       params:
         - name: $event.text
           type: string
-          description: 编辑后的项
+          description: The edited item
         - name: $event.index
           type: number
-          description: 编辑的索引
+          description: Edited index
         - name: $event.value
           type: Array
-          description: 条目列表
+          description: List of items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-remove
-      description: 删除前触发
+      description: Triggered before deletion
       params:
         - name: $event.text
           type: string
-          description: 待删除的项
+          description: Item to be deleted
         - name: $event.index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
         - name: $event.oldValue
           type: Array
-          description: 旧的条目列表
+          description: Old list of items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: remove
-      description: 删除后触发
+      description: Triggered after deletion
       params:
         - name: $event.text
           type: string
-          description: 待删除的项
+          description: Item to be deleted
         - name: $event.index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
         - name: $event.value
           type: Array
-          description: 当前条目列表
+          description: Current entry list
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: before-clear
-      description: 清除前触发
+      description: Triggered before clearing
       params:
         - name: $event.oldValue
           type: Array
-          description: 旧的条目列表
+          description: Old list of items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: clear
-      description: 清除前触发
+      description: Triggered before clearing
       params:
         - name: $event.value
           type: Array
-          description: 改变后的条目列表
+          description: List of changed items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
     - name: change
-      description: 条目列表改变后触发
+      description: Triggered when the item list changes
       params:
         - name: $event.oldValue
           type: Array
-          description: 旧的条目列表
+          description: Old list of items
         - name: $event.value
           type: Array
-          description: 改变后的条目列表
+          description: List of changed items
         - name: senderVM
           type: UChipInput
-          description: 发送事件实例
+          description: Send event instance
   methods:
     - name: edit
-      description: 编辑某一项
+      description: Edit an item
       params:
         - name: index
           type: number
-          description: 编辑项的索引
+          description: The index of the edited item
     - name: save
-      description: 保存正在编辑的项
+      description: Save the item being edited
       params:
         - name: index
           type: number
-          description: 保存项的索引
+          description: Index of the saved item
     - name: remove
-      description: 删除某一项
+      description: Delete an item
       params:
         - name: index
           type: number
-          description: 删除项的索引
+          description: The index of the item to delete
     - name: focus
-      description: 让输入框获取焦点。
+      description: Make the input box get focus.
       params: []
     - name: blur
-      description: 让输入框失去焦点。
+      description: Make the input box lose focus.
       params: []
     - name: clear
-      description: 清空输入框中所有条目。
+      description: Clear all entries in the input box.
       params: []
-  aria:
+  air:
     - key: Enter
-      description: 完成当前项的输入
+      description: Complete the input of the current item
     - key: Tab
-      description: 完成当前项的输入
+      description: Complete the input of the current item
     - key: Delete
-      description: 删除前一项
+      description: Delete the previous item

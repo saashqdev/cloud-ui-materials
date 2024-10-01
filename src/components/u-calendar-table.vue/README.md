@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# UCalendarTable 日历表格
+# UCalendarTable Calendar Table
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Methods](#methods)
 
 **Table**
 
-用于展示大量结构化数据。支持按月展示月内每天的数据。
+Used to display large amounts of structured data. Supports displaying data for each day of the month on a monthly basis.
 
 ## Example
 ### Basic Usage
@@ -19,7 +19,7 @@
 ```vue
 <template>
   <u-calendar-table
-    first-title="姓名"
+    first-title="Name"
     first-field="${parent.name} (${parent.age}) [${parent.home}]"
     :data-source-parent="dateSourceParent"
     :data-source="dateSourceChild"
@@ -45,11 +45,11 @@ export default {
     return {
       dateSourceParent: {
         content: [
-          { parent: { name: "张三", age: 17, home: "浙江" } },
-          { parent: { name: "李四", age: 18, home: "浙江" } },
-          { parent: { name: "王五", age: 19, home: "浙江" } },
-          { parent: { name: "阿大", age: 20, home: "浙江" } },
-          { parent: { name: "阿二", age: 21, home: "浙江" } },
+          { parent: { name: "Homer Simpson", age: 17, home: "Fort Erie" } },
+          { parent: { name: "Marge Simpson", age: 18, home: "Fort Erie" } },
+          { parent: { name: "Bart Simpson", age: 19, home: "Fort Erie" } },
+          { parent: { name: "Ned Flanders", age: 20, home: "Fort Erie" } },
+          { parent: { name: "John Doe", age: 21, home: "Fort Erie" } },
         ],
         number: 1,
         size: 20,
@@ -58,17 +58,17 @@ export default {
       },
       dateSourceChild: {
         content: [
-          { child: { name: "张三", count: 3, startTime: "2021-10-14" } },
-          { child: { name: "李四", count: 4, startTime: "2021-10-01" } },
-          { child: { name: "王五", count: 5, startTime: "2021-10-02" } },
-          { child: { name: "阿大", count: 1, startTime: "2021-10-03" } },
-          { child: { name: "阿二", count: 2, startTime: "2021-10-04" } },
-          { child: { name: "张三", count: 3, startTime: "2021-10-01" } },
-          { child: { name: "李四", count: 4, startTime: "2021-10-04" } },
-          { child: { name: "张三", count: 8, startTime: "2021-10-13" } },
-          { child: { name: "王五", count: 5, startTime: "2021-10-01" } },
-          { child: { name: "张三", count: 9, startTime: "2021-10-12" } },
-          { child: { name: "李四", count: 4, startTime: "2021-10-05" } },
+          { child: { name: "Homer Simpson", count: 3, startTime: "2021-10-14" } },
+          { child: { name: "Marge Simpson", count: 4, startTime: "2021-10-01" } },
+          { child: { name: "Bart Simpson", count: 5, startTime: "2021-10-02" } },
+          { child: { name: "Ned Flanders", count: 1, startTime: "2021-10-03" } },
+          { child: { name: "John Doe", count: 2, startTime: "2021-10-04" } },
+          { child: { name: "Homer Simpson", count: 3, startTime: "2021-10-01" } },
+          { child: { name: "Marge Simpson", count: 4, startTime: "2021-10-04" } },
+          { child: { name: "Homer Simpson", count: 8, startTime: "2021-10-13" } },
+          { child: { name: "Bart Simpson", count: 5, startTime: "2021-10-01" } },
+          { child: { name: "Homer Simpson", count: 9, startTime: "2021-10-12" } },
+          { child: { name: "Marge Simpson", count: 4, startTime: "2021-10-05" } },
         ],
         number: 1,
         size: 20,
@@ -87,39 +87,39 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| data-source-parent | Array\<Item\> \| Function \| object |  |  | 日历表格主数据源，数组方式表示直接的数据，函数需要返回一个 Promise |
-| data-source | Array\<Item\> \| Function \| object |  |  | 日历表格子数据源，数组方式表示直接的数据，函数需要返回一个 Promise |
-| first-title | string |  | `'姓名'` | 表格第一项内容的标题 |
-| first-field | string |  | `'parent.name'` | 表格第一项内容的在 data-source 中的标识 |
-| parent-key | String |  | `'parent.name'` | 主数据源中的关键字段，用来将主/子数据源的数据关联 |
-| child-key | String |  | `'child.name'` | 子数据源中的关键字段，用来将主/子数据源的数据关联 |
-| page-size | string \| number |  | `20` | 每页条数 |
-| data-schema | schema |  |  | 日历表格中每项的数据类型 |
-| start-key | string |  | `'child.startTime'` | 数据内表示开始时间的字段 |
-| end-key | string |  | `'child.endTime'` | 数据内表示结束时间的字段 |
-| min-date | Date \| string ｜ number |  |  | 最小日期，默认 5 年前 |
-| max-date | Date \| string ｜ number |  |  | 最大日期，默认 4 年后 |
-| width | string \| number |  | `48` | 表格每一项内容的宽度，默认 48 表示 '48px' |
-| first-width | string \| number |  | `64` | 表格首项宽度，默认 64 表示 '64px' |
+| data-source-parent | Array\<Item\> \| Function \| object | | | The main data source of the calendar table. The array represents direct data. The function needs to return a Promise |
+| data-source | Array\<Item\> \| Function \| object | | | Calendar table sub-data source, array representation of direct data, the function needs to return a Promise |
+| first-title | string | | `'Name'` | The title of the first item in the table |
+| first-field | string | | `'parent.name'` | The identifier of the first item in the table in the data-source |
+| parent-key | String | | `'parent.name'` | Key field in the main data source, used to associate data from the main/sub data source |
+| child-key | String | | `'child.name'` | The key field in the child data source, used to associate data from the main/child data source |
+| page-size | string \| number | | `20` | Number of items per page |
+| data-schema | schema | | | The data type of each item in the calendar table |
+| start-key | string | | `'child.startTime'` | A field in the data indicating the start time |
+| end-key | string | | `'child.endTime'` | A field in the data indicating the end time |
+| min-date | Date \| string | number | | | Minimum date, default 5 years ago |
+| max-date | Date \| string | number | | | Maximum date, default is 4 years later |
+| width | string \| number | | `48` | The width of each item in the table, default 48 means '48px' |
+| first-width | string \| number | | `64` | Width of the first item of the table, default 64 means '64px' |
 
 ### Slots
 
 #### (default)
 
-自定义选项的结构和样式
+Structure and styling of custom options
 
 Methods
 
 #### load()
 
-带缓存地加载
+Load with cache
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
 
 #### reload()
 
-清除缓存，重新加载
+Clear cache and reload
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

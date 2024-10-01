@@ -1,92 +1,92 @@
 - name: lcap-you-data
-  title: 有数报表
-  description: 有数报表集成组件
-  labels: ['chart', 'runtime']
+  Title: Countable Reports
+  description: Kubevue report integration component
+  labels: ['Chart', 'Runtime']
   attrs:
     - name: src
       type: string
       default: ''
-      description: 报表地址
+      description: Report address
     - name: scale
       type: string
       advanced: true
       options: 
         - name: '100'
-          description: 缩放100%
+          description: Zoom 100%
         - name: width
-          description: 自适应宽度
+          description: Adaptive width
         - name: screen
-          description: 自适应窗口
+          description: Adaptive window
       default: '100'
-      description: 有数缩放配置
+      description: Number of zoom configurations
     - name: bottomBarPos
       type: string
       default: bottom
       advanced: true
-      options: 
+      options:
         - value: bottom
-          name: 底部栏放在底部
+          name: Bottom bar is placed at the bottom
         - value: top
-          name: 底部栏放在顶部
-      description: 有数底部栏位置配置
+          name: Bottom bar on top
+      description: There are several bottom bar position configurations
     - name: hideProgressBar
       type: boolean
       advanced: true
       default: true
-      description: 有数顶部进度条隐藏配置
+      description: There are several top progress bar hidden configurations
     - name: hidePageBar
       type: boolean
       default: true
       advanced: true
-      description: 有数底部工具栏隐藏配置
+      description: There are several bottom toolbar hidden configurations
     - name: hideScaleBar
       type: boolean
       default: true
       advanced: true
-      description: 有数缩放栏隐藏配置
+      description: There are several zoom bar hidden configurations
     - name: hideTitle
       type: boolean
       advanced: true
       default: true
-      description: 有数顶部标题栏隐藏配置
+      description: There are several top title bar hidden configurations
     - name: hidePrivate
       type: boolean
       advanced: true
       default: true
-      description: 有数私有文件夹隐藏配置
+      description: There are several private folders hidden configuration
     - name: hidePublic
       type: boolean
       advanced: true
       default: true
-      description: 有数公共文件夹隐藏配置
+      description: There are several public folder hidden configurations
     - name: side
       type: boolean
       advanced: true
       default: false
-      description: 有数侧边栏配置
+      description: Several sidebar configurations
     - name: toolbar
       advanced: true
       type: array
       multi: true
       options:
         - value: export
-          name: 导出
+          name: Export
         - value: refresh
-          name: 刷新
+          name: Refresh
         - value: print
-          name: 打印
-      default: ["export", "refresh", "print"]
-      description: 有数功能键配置
+          name: Print
+      default: ["Export", "Refresh", "Print"]
+      description: There are several function key configurations
     - name: mode
       type: string
       advanced: true
       options:
         - name: simple
-          description: 箭头切换
+          description: Arrow switch
         - name: normal
-          description: tab 页切换
+          description: Tab page switch
       default: normal
-      description: 有数底部导航条显示方式配置
+      description: The bottom navigation bar display mode configuration
   events:
     - name: load
-      description: 加载完成后触发
+      description: Triggered after loading is complete

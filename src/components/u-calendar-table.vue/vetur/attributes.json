@@ -1,58 +1,58 @@
 {
   "u-calendar-table/data-source-parent": {
     "type": "Array<Item> | Function | object",
-    "description": "日历表格主数据源，数组方式表示直接的数据，函数需要返回一个 Promise"
+    "description": "The main data source of the calendar table, the array represents direct data, and the function needs to return a Promise"
   },
   "u-calendar-table/data-source": {
     "type": "Array<Item> | Function | object",
-    "description": "日历表格子数据源，数组方式表示直接的数据，函数需要返回一个 Promise"
+    "description": "The calendar table sub-data source, the array represents direct data, the function needs to return a Promise"
   },
   "u-calendar-table/first-title": {
     "type": "string",
-    "description": "表格第一项内容的标题"
+    "description": "The title of the first item in the table"
   },
   "u-calendar-table/first-field": {
     "type": "string",
-    "description": "表格第一项内容的在 data-source 中的标识"
+    "description": "The identifier of the first item in the table in the data-source"
   },
   "u-calendar-table/parent-key": {
     "type": "String",
-    "description": "主数据源中的关键字段，用来将主/子数据源的数据关联"
+    "description": "Key field in the primary data source, used to associate data from the primary and sub-data sources"
   },
   "u-calendar-table/child-key": {
     "type": "String",
-    "description": "子数据源中的关键字段，用来将主/子数据源的数据关联"
+    "description": "Key field in the sub-data source, used to associate data from the main/sub-data sources"
   },
   "u-calendar-table/page-size": {
     "type": "string | number",
-    "description": "每页条数"
+    "description": "Number of entries per page"
   },
   "u-calendar-table/data-schema": {
     "type": "schema",
-    "description": "日历表格中每项的数据类型"
+    "description": "The data type of each item in the calendar table"
   },
   "u-calendar-table/start-key": {
     "type": "string",
-    "description": "数据内表示开始时间的字段"
+    "description": "The field in the data indicating the start time"
   },
   "u-calendar-table/end-key": {
     "type": "string",
-    "description": "数据内表示结束时间的字段"
+    "description": "The field in the data indicating the end time"
   },
   "u-calendar-table/min-date": {
     "type": "Date | string ｜ number",
-    "description": "最小日期，默认 5 年前"
+    "description": "Minimum date, default is 5 years ago"
   },
   "u-calendar-table/max-date": {
     "type": "Date | string ｜ number",
-    "description": "最大日期，默认 4 年后"
+    "description": "Maximum date, default is 4 years later"
   },
   "u-calendar-table/width": {
     "type": "string | number",
-    "description": "表格每一项内容的宽度，默认 48 表示 '48px'"
+    "description": "The width of each item in the table, the default value is 48, which means '48px'"
   },
   "u-calendar-table/first-width": {
     "type": "string | number",
-    "description": "表格首项宽度，默认 64 表示 '64px'"
+    "description": "Width of the first item in the table, default 64 means '64px'"
   }
 }

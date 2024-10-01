@@ -1,22 +1,22 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapYouData 有数报表
+# LcapYouData Count Report
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
 
-**chart**, **runtime**
+**Chart**, **Runtime**
 
-有数报表集成组件
+Numerous report integration components
 
 ## Example
 ### Basic Usage
 
 ``` html
-<lcap-you-data src="https://fengchao.youdata.netease.com/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33" scale="width" style="width:1200px;height:1100px"></lcap-you-data>
+<lcap-you-data src="https://kubevue.youdata.kubeworkz.io/dash/integration/450200717?rid=38269&token=159989189077219a5e8f0bfc4674648569b33" scale="width" style="width:1200px;height:1100px"></lcap-you-data>
 ```
 
 ## API
@@ -24,22 +24,22 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| src | string |  | `''` | 报表地址 |
-| scale | string | `'100'` (缩放100%)<br/>`'width'` (自适应宽度)<br/>`'screen'` (自适应窗口) | `'100'` | 有数缩放配置 |
-| bottomBarPos | string | `'底部栏放在底部'` ()<br/>`'底部栏放在顶部'` () | `'bottom'` | 有数底部栏位置配置 |
-| hideProgressBar | boolean |  | `true` | 有数顶部进度条隐藏配置 |
-| hidePageBar | boolean |  | `true` | 有数底部工具栏隐藏配置 |
-| hideScaleBar | boolean |  | `true` | 有数缩放栏隐藏配置 |
-| hideTitle | boolean |  | `true` | 有数顶部标题栏隐藏配置 |
-| hidePrivate | boolean |  | `true` | 有数私有文件夹隐藏配置 |
-| hidePublic | boolean |  | `true` | 有数公共文件夹隐藏配置 |
-| side | boolean |  | `false` | 有数侧边栏配置 |
-| toolbar | array | `'导出'` ()<br/>`'刷新'` ()<br/>`'打印'` () | `[export, refresh, print]` | 有数功能键配置 |
-| mode | string | `'simple'` (箭头切换)<br/>`'normal'` (tab 页切换) | `'normal'` | 有数底部导航条显示方式配置 |
+| src | string | | `''` | Report address |
+| scale | string | `'100'' (zoom 100%)<br/>`'width'` (adaptive width)<br/>`'screen'` (adaptive window) | `'100'' | Numerous scaling configurations |
+| bottomBarPos | string | `'Place the bottom bar at the bottom'` ()<br/>`'Place the bottom bar at the top'` () | `'bottom'` | There are several bottom bar position configurations |
+| hideProgressBar | boolean | | `true` | There are several top progress bar hidden configurations |
+| hidePageBar | boolean | | `true` | There are several bottom toolbar hiding configurations |
+| hideScaleBar | boolean | | `true` | Configurable hiding of scale bar |
+| hideTitle | boolean | | `true` | There are several top title bar hidden configurations |
+| hidePrivate | boolean | | `true` | Numerous private folder hiding configurations |
+| hidePublic | boolean | | `true` | Several public folder hiding configurations |
+| side | boolean | | `false` | Numerous sidebar configurations |
+| toolbar | array | `'Export'` ()<br/>`'Refresh'` ()<br/>`'Print'` () | `[export, refresh, print]` | Numerous function key configurations |
+| mode | string | `'simple'` (arrow switching)<br/>`'normal'` (tab switching) | `'normal'` | Several bottom navigation bar display mode configurations |
 
 ### Events
 
 #### @load
 
-加载完成后触发
+Triggered after loading is complete
 

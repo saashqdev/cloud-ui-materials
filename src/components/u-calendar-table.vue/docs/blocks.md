@@ -1,8 +1,8 @@
-### 普通日历
+### Ordinary Calendar
 
 ```html
 <u-calendar-table
-    first-title="姓名"
+    first-title="Name"
     first-field="parent.name"
     parent-key="parent.name"
     child-key="child.name"

@@ -1,143 +1,143 @@
 {
     "symbol": "u-calendar-table",
-    "name": "日历表格",
+    "name": "Calendar Table",
     "version": "0.1.6",
     "icon": "table-view",
     "repoAddr": "",
     "depDescription": {},
-    "description": "用于展示大量结构化数据。支持按月展示月内每天的数据。",
+    "description": "Used to display a large amount of structured data. Supports displaying data for each day of the month.",
     "labels": [
         "Table"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"普通日历\",\"description\":\"\",\"code\":\"<template>\\n<u-calendar-table\\n    first-title=\\\"姓名\\\"\\n    first-field=\\\"parent.name\\\"\\n    parent-key=\\\"parent.name\\\"\\n    child-key=\\\"child.name\\\"\\n    start-key=\\\"child.startTime\\\"\\n>\\n    <template #default=\\\"scope\\\">\\n        <u-linear-layout gap=\\\"small\\\"></u-linear-layout>\\n    </template>\\n</u-calendar-table>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Ordinary Calendar\",\"description\":\"\",\"code\":\"<template>\\n<u-calendar-table\\n    first-title=\\\"Name\\\"\\n    first-field=\\\"parent.name\\\"\\n    parent-key=\\\"parent.name\\\"\\n    child-key=\\\"child.name\\\"\\n    start-key=\\\"child.startTime\\\"\\n>\\n    <template #default=\\\"scope\\\">\\n        <u-linear-layout gap=\\\"small\\\"></u-linear-layout>\\n    </template>\\n</u-calendar-table>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "u-calendar-table",
-        "title": "日历表格",
-        "description": "用于展示大量结构化数据。支持按月展示月内每天的数据。",
+        "title": "Calendar Table",
+        "description": "Used to display a large amount of structured data. Supports displaying data for each day of the month.",
         "category": "Table",
         "screenShot": "",
         "drawings": "",
         "blocks": [
             {
-                "title": "普通日历",
+                "title": "Normal Calendar",
                 "description": "",
-                "code": "<template>\n<u-calendar-table\n    first-title=\"姓名\"\n    first-field=\"parent.name\"\n    parent-key=\"parent.name\"\n    child-key=\"child.name\"\n    start-key=\"child.startTime\"\n>\n    <template #default=\"scope\">\n        <u-linear-layout gap=\"small\"></u-linear-layout>\n    </template>\n</u-calendar-table>\n</template>\n"
+                "code": "<template>\n<u-calendar-table\n    first-title=\"Name\"\n    first-field=\"parent.name\"\n    parent-key=\"parent.name\"\n    child-key=\"child.name\"\n    start-key=\"child.startTime\"\n>\n    <template #default=\"scope\">\n        <u-linear-layout gap=\"small\"></u-linear-layout>\n    </template>\n</u-calendar-table>\n</template>\n"
             }
         ],
         "attrs": [
             {
                 "name": "data-source-parent",
-                "title": "主数据源",
+                "title": "Primary Data Source",
                 "type": "Array<Item> | Function | object",
                 "designer-value": "[{}, {}, {}]",
-                "description": "日历表格主数据源，数组方式表示直接的数据，函数需要返回一个 Promise",
-                "group": "数据属性"
+                "description": "The main data source of the calendar table, the array represents direct data, the function needs to return a Promise",
+                "group": "Data attributes"
             },
             {
                 "name": "data-source",
-                "title": "子数据源",
+                "title": "Sub Data Source",
                 "type": "Array<Item> | Function | object",
                 "designer-value": "[{}, {}, {}]",
-                "description": "日历表格子数据源，数组方式表示直接的数据，函数需要返回一个 Promise",
-                "group": "数据属性"
+                "description": "The calendar table sub-data source, the array represents the direct data, the function needs to return a Promise",
+                "group": "Data attributes"
             },
             {
                 "name": "first-title",
-                "title": "表格首项标题",
+                "title": "Table First Item Title",
                 "type": "string",
-                "default": "姓名",
-                "description": "表格第一项内容的标题"
+                "default": "Name",
+                "description": "The title of the first item in the table"
             },
             {
                 "name": "first-field",
-                "title": "表格首项字段",
+                "title": "Table First Field",
                 "type": "string",
                 "default": "parent.name",
-                "group": "数据属性",
-                "description": "表格第一项内容的在 data-source 中的标识"
+                "group": "Data attributes",
+                "description": "The identifier of the first item in the table in the data-source"
             },
             {
                 "name": "parent-key",
-                "title": "主关键字段",
+                "title": "Primary Key Field",
                 "type": "String",
                 "default": "parent.name",
-                "group": "数据属性",
-                "description": "主数据源中的关键字段，用来将主/子数据源的数据关联"
+                "group": "Data attributes",
+                "description": "Key field in the primary data source, used to associate data from the primary and sub-data sources"
             },
             {
                 "name": "child-key",
-                "title": "子关键字段",
+                "title": "Sub-Key Field",
                 "type": "String",
                 "default": "child.name",
-                "group": "数据属性",
-                "description": "子数据源中的关键字段，用来将主/子数据源的数据关联"
+                "group": "Data attributes",
+                "description": "Key field in the sub-data source, used to associate data from the main/sub-data sources"
             },
             {
                 "name": "page-size",
-                "title": "每页条数",
+                "title": "Number of Entries Per Page",
                 "type": "string | number",
                 "default": 20,
-                "description": "每页条数"
+                "description": "Number of entries per page"
             },
             {
                 "name": "data-schema",
-                "title": "数据类型",
+                "title": "Data Type",
                 "type": "schema",
-                "description": "日历表格中每项的数据类型",
-                "group": "数据属性",
+                "description": "The data type of each item in the calendar table",
+                "group": "Data attributes",
                 "compType": "dataTypeSelect"
             },
             {
                 "name": "start-key",
                 "type": "string",
-                "title": "数据内表示开始时间的字段",
+                "title": "The Field in the Data Indicating the Start Time",
                 "default": "child.startTime",
-                "group": "数据属性",
-                "description": "数据内表示开始时间的字段"
+                "group": "Data attributes",
+                "description": "The field in the data indicating the start time"
             },
             {
                 "name": "end-key",
                 "type": "string",
-                "title": "数据内表示结束时间的字段",
+                "title": "The Field in the Data Indicating the End Time",
                 "default": "child.endTime",
-                "group": "数据属性",
-                "description": "数据内表示结束时间的字段"
+                "group": "Data attributes",
+                "description": "The field in the data indicating the end time"
             },
             {
                 "name": "min-date",
-                "title": "最小日期",
+                "title": "Minimum Date",
                 "type": "Date | string ｜ number",
                 "default": null,
-                "description": "最小日期，默认 5 年前"
+                "description": "Minimum date, default is 5 years ago"
             },
             {
                 "name": "max-date",
-                "title": "最大日期",
+                "title": "Maximum Date",
                 "type": "Date | string ｜ number",
                 "default": null,
-                "description": "最大日期，默认 4 年后"
+                "description": "Maximum date, default is 4 years later"
             },
             {
                 "name": "width",
-                "title": "表格项宽度",
+                "title": "Table Item Width",
                 "type": "string | number",
                 "default": 48,
-                "description": "表格每一项内容的宽度，默认 48 表示 '48px'"
+                "description": "The width of each item in the table, the default value is 48, which means '48px'"
             },
             {
                 "name": "first-width",
-                "title": "表格首项宽度",
+                "title": "Width of First Item in Table",
                 "type": "string | number",
                 "default": 64,
-                "description": "表格首项宽度，默认 64 表示 '64px'"
+                "description": "Width of the first item in the table, default 64 means '64px'"
             }
         ],
         "slots": [
             {
                 "concept": "Slot",
                 "name": "default",
-                "description": "自定义选项的结构和样式",
+                "description": "Customize the structure and style of options",
                 "slotProps": {
                     "concept": "Param",
                     "name": "scope",
@@ -160,12 +160,12 @@
         "methods": [
             {
                 "name": "load",
-                "description": "带缓存地加载",
+                "description": "Load with cache",
                 "params": []
             },
             {
                 "name": "reload",
-                "description": "清除缓存，重新加载",
+                "description": "Clear cache, reload",
                 "params": []
             }
         ],
