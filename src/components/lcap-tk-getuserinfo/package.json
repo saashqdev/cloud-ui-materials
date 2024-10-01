@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "泰康sdk获取用户信息",
+    "title": "Taikang sdk obtains user information",
     "category": "Runtime",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

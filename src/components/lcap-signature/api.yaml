@@ -1,62 +1,60 @@
 - name: lcap-signature
-  title: 签名板
-  description: 用于获取电子签名
+  title: Signature Pad
+  description: Used to obtain electronic signatures
   labels: [Form]
   icon: default
   attrs:
     - name: language
-      title: 语言
+      title: Language
       type: string
       default: english
       options:
         - value: english
-          title: 英文
-        - value: chinese
-          title: 中文
-      description: 语言版本
+          title: English
+      description: language version
     - name: openSmooth
-      title: 是否开启笔锋
+      title: Whether to Enable Pen Edge
       type: boolean
       default: true
-      description: 是否开启笔锋
+      description: Whether to enable pen edge
     - name: penColor
-      title: 画笔颜色
+      title: Brush Color
       type: string
       default: black
-      description: 设置画笔颜色
+      description: Set brush color
     - name: reSignName
-      title: 是否允许重新签名
+      title: Whether to Allow Re-Signing
       type: boolean
       default: false
-      description: 是否允许用户重新签名
+      description: Whether to allow users to re-sign
     - name: penWidth
-      title: 画笔宽度
+      title: Brush Width
       type: number
       default: 2
-      description: 设置画笔宽度
+      description: Set brush width
     - name: bgColor
-      title: 画布背景颜色
+      title: Canvas Background Color
       type: string
       default: "#F8F9FA"
-      description: 设置画布背景颜色
+      description: Set the canvas background color
   methods:
     - name: openSignatureModal
-      title: 打开签名版
-      description: 打开签名版
+      title: Open Signed Version
+      description: Open signed version
       params: []
   events:
     - name: openSignatureModal
-      title: 打开签名版时
-      description: 打开签名版时触发
+      title: When Opening the Signed Version
+      description: Triggered when opening a signed version
     - name: clearSignature
-      title: 清空签名版时
-      description: 清空签名版时触发
+      title: When Clearing the Signed Version
+      description: Triggered when clearing the signed version
     - name: saveSignature
-      title: 保存签名时
+      title: When Saving Signature
       params:
         - name: $event.signature
           type: any
-          description: 返还签名的base64
-          schema:
+          description: Return signed base64
+          Schema:
             $ref: "#/basicTypes/Binary"
-      description: 保存签名时触发
+      description: Triggered when saving signature

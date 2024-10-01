@@ -126,7 +126,7 @@
 }
 
 .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
-    content: '保存';
+    content: 'Save';
     display: inline-block;
     width: 80px;
     margin-left: 11px;
@@ -138,15 +138,15 @@
 }
 
 .ql-snow .ql-tooltip[data-mode=video]::before {
-    content: '插入视频';
+    content: 'Insert Video';
 }
 
 .ql-snow .ql-tooltip[data-mode=formula]::before {
-    content: '插入公式';
+    content: 'Insert Formula';
 }
 
 .ql-snow .ql-tooltip[data-mode=link]::before{
-    content: '插入链接';
+    content: 'Insert Link';
 }
 
 .ql-snow .ql-picker {

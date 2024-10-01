@@ -1,6 +1,6 @@
 ### Basic Usage
 
-通过双向绑定输入内容
+Enter content via two-way binding
 
 ``` vue
 <template>
@@ -14,7 +14,7 @@
 export default {
     data() {
         return {
-            tip: "测试内容",
+            tip: "Test content",
             bool: true
         }
     }
@@ -22,12 +22,12 @@ export default {
 </script>
 ```
 
-输入提示
+Input prompt
 
-``` vue
+```vue
 <template>
 <div>
-<u-input v-model="tip" placeholder="请输入" style="margin-bottom: 10px;"></u-input>
+<u-input v-model="tip" placeholder="Please enter" style="margin-bottom: 10px;"></u-input>
 <lcap-rich-text-editor :placeholder="tip"></lcap-rich-text-editor>
 </div>
 </template>
@@ -43,9 +43,9 @@ export default {
 </script>
 ```
 
-### 只读模式
+### Read-Only Mode
 
-只读模式可以作为富文本编辑器的内容展示区，默认隐藏工具栏，通过`readOnly`设置
+Read-only mode can be used as the content display area of   the rich text editor. The toolbar is hidden by default and can be set through `readOnly`
 
 ``` vue
 <template>
@@ -66,9 +66,9 @@ export default {
 </script>
 ```
 
-### 可选功能
+### Optional Features
 
-给`formula`设置`true`可以开启公式输入功能, 给`textSub`设置`true`可以开启文本下标功能, 给`textSuper`设置`true`可以开启文本上标功能
+Setting `true` to `formula` can enable the formula input function, setting `true` to `textSub` can enable the text subscript function, and setting `true` to `textSuper` can enable the text superscript function.
 
 ``` vue
 <template>
@@ -95,16 +95,16 @@ export default {
 </script>
 ```
 
-### 表单校验
+### Form Verification
 
-``` vue
+```vue
 <template>
 <u-form ref="form" gap="large">
-    <u-form-item label-size="large" :required="true" layout="block" rules="required" label="业务口径">
+    <u-form-item label-size="large" :required="true" layout="block" rules="required" label="Business caliber">
         <lcap-rich-text-editor :readOnly="true" :formula="false" :value.sync="tip"></lcap-rich-text-editor>
     </u-form-item>
     <u-form-item label-size="large" layout="block">
-        <u-button @click="onClick">创建</u-button>
+        <u-button @click="onClick">Create</u-button>
     </u-form-item>
 </u-form>
 </template>
@@ -119,7 +119,7 @@ export default {
     },
     mounted() {
         setTimeout(() => {
-            this.tip = '测试1';
+            this.tip = 'Test1';
         }, 1000);
     },
     methods: {

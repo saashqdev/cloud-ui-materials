@@ -1,20 +1,20 @@
 {
     "symbol": "lcap-rich-text-editor",
-    "name": "富文本编辑器",
+    "name": "Rich Text Editor",
     "version": "1.3.12",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "基于第三方富文本插件Quill Editor进行封装",
+    "description": "Encapsulated based on the third-party rich text plug-in Quill Editor",
     "labels": [
         "Editor"
     ],
     "screenShot": "",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-rich-text-editor></lcap-rich-text-editor>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-rich- text-editor></lcap-rich-text-editor>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-rich-text-editor",
-        "title": "富文本编辑器",
-        "description": "基于第三方富文本插件Quill Editor进行封装",
+        "title": "Rich Text Editor",
+        "description": "Encapsulated based on the third-party rich text plug-in Quill Editor",
         "category": "Editor",
         "screenShot": "",
         "drawings": "",
@@ -28,92 +28,92 @@
         "attrs": [
             {
                 "name": "value",
-                "title": "内容",
+                "title": "Content",
                 "type": "string",
                 "default": "",
                 "sync": true,
                 "model": false,
-                "description": "需要传入的文本内容"
+                "description": "The text content that needs to be passed in"
             },
             {
                 "name": "readOnly",
                 "default": false,
-                "title": "启用只读模式",
+                "title": "Enable Read-Only Mode",
                 "type": "boolean",
-                "description": "启用只读模式"
+                "description": "Enable read-only mode"
             },
             {
                 "name": "textSub",
-                "title": "启用文本下标",
+                "title": "Enable Text Subscripting",
                 "default": false,
                 "type": "boolean",
-                "description": "启用文本下标工具"
+                "description": "Enable text subscripting tool"
             },
             {
                 "name": "textSuper",
                 "default": false,
-                "title": "启用文本上标",
+                "title": "Enable Text Superscript",
                 "type": "boolean",
-                "description": "启用文本上标工具"
+                "description": "Enable text superscript tool"
             },
             {
                 "name": "formula",
                 "default": false,
-                "title": "启用公式",
+                "title": "Enable Formula",
                 "type": "boolean",
-                "description": "启用公式输入工具"
+                "description": "Enable formula input tool"
             },
             {
                 "name": "disablescroll",
                 "default": false,
-                "title": "禁用滚动",
+                "title": "Disable Scrolling",
                 "type": "boolean",
-                "description": "禁用滚动"
+                "description": "Disable scrolling"
             },
             {
                 "name": "placeholder",
                 "default": "",
-                "title": "输入占位符",
+                "title": "Input Placeholder",
                 "type": "string",
-                "description": "输入提示"
+                "description": "Input prompt"
             },
             {
                 "name": "imgUploadUrl",
                 "default": "/gateway/lowcode/api/v1/app/upload",
-                "title": "上传图片路径",
+                "title": "Upload Image Path",
                 "type": "string",
-                "description": "请填入上传图片的接口路径"
+                "description": "Please fill in the interface path for uploading images"
             }
         ],
         "slots": [
             {
                 "name": "default",
                 "advanced": true,
-                "description": "插入文本或 HTML。"
+                "description": "Insert text or HTML."
             }
         ],
         "events": [
             {
                 "name": "change",
-                "title": "内容改变时",
-                "description": "内容修改时触发",
+                "title": "When the Content Changes",
+                "description": "Triggered when content is modified",
                 "params": [
                     {
                         "name": "$event.value",
                         "type": "string",
-                        "description": "当前输入区域的内容"
+                        "description": "Contents of the current input area"
                     }
                 ]
             },
             {
                 "name": "input",
-                "title": "输入时",
-                "description": "输入时触发",
+                "title": "When Typing",
+                "description": "Fire on input",
                 "params": [
                     {
                         "name": "$event",
                         "type": "string",
-                        "description": "当前输入区域的内容"
+                        "description": "Contents of the current input area"
                     }
                 ]
             }

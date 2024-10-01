@@ -19,15 +19,15 @@
             @close="closeSignatureModal"
         >
             <div slot="title">
-                {{ this.language === 'english' ? 'Please Sign Below' : '请在下方签名' }}
+                {{ this.language === 'english' ? 'Please Sign Below' : 'Please sign below' }}
             </div>
             <div slot="foot">
                 <u-linear-layout justify="space-between">
                     <u-text @click="clearSignature" :class="$style.clearText">
-                        {{ this.language === 'english' ? 'Clear' : '清除' }}
+                        {{ this.language === 'english' ? 'Clear' : 'Clear' }}
                     </u-text>
                     <u-button color="primary" @click="handleOk" :disabled="disabled">
-                        {{ this.language === 'english' ? 'Save' : '保存' }}
+                        {{ this.language === 'english' ? 'Save' : 'Save' }}
                     </u-button>
                 </u-linear-layout>
             </div>
@@ -152,7 +152,7 @@ export default {
 }
 
 .clearText {
-    font-family: 'PingFang SC';
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

@@ -4,33 +4,29 @@
     "options": [
       {
         "value": "english",
-        "title": "英文"
-      },
-      {
-        "value": "chinese",
-        "title": "中文"
+        "title": "English"
       }
     ],
-    "description": "语言版本"
+    "description": "Language version"
   },
   "lcap-signature/openSmooth": {
     "type": "boolean",
-    "description": "是否开启笔锋"
+    "description": "Whether to enable pen edge"
   },
   "lcap-signature/penColor": {
     "type": "string",
-    "description": "设置画笔颜色"
+    "description": "Set brush color"
   },
   "lcap-signature/reSignName": {
     "type": "boolean",
-    "description": "是否允许用户重新签名"
+    "description": "Whether the user is allowed to re-sign"
   },
   "lcap-signature/penWidth": {
     "type": "number",
-    "description": "设置画笔宽度"
+    "description": "Set brush width"
   },
   "lcap-signature/bgColor": {
     "type": "string",
-    "description": "设置画布背景颜色"
+    "description": "Set canvas background color"
   }
 }

@@ -1,59 +1,58 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapSignature 签名板
+# LcapSignature Signature Pad
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-    - [切换语言版本](#切换语言版本)
-    - [关闭笔锋](#关闭笔锋)
-    - [是否允许重新签名](#是否允许重新签名)
-    - [改变画笔颜色](#改变画笔颜色)
-    - [改变画笔粗细](#改变画笔粗细)
-    - [改变背景颜色](#改变背景颜色)
-- [API]()
+    - [Switch Language Version](#switch language version)
+    -[Close](#close)
+    - [Whether Re-Signing is Allowed](#Whether re-signing is allowed)
+    - [Change Brush Color](#change brush color)
+    - [Change Brush Thickness](#Change Brush Thickness)
+    - [Change Background Color](#changebackground color)
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
 **Form**
 
-用于获取电子签名
+For obtaining electronic signatures
 
 ## Example
 ### Basic Usage
 
 ``` html
 <lcap-signature></lcap-signature>
-<u-button ref="button1" color="primary" text="确定"></u-button>
+<u-button ref="button1" color="primary" text="OK"></u-button>
 ```
 
-### 切换语言版本
+### Switch Language Version
 ``` html
 <lcap-signature language="english"></lcap-signature>
-<lcap-signature language="chinese"></lcap-signature>
 ```
 
-### 关闭笔锋
+### Close
 ``` html
 <lcap-signature :openSmooth=false></lcap-signature>
 ```
 
-### 是否允许重新签名
+### Whether to Allow Re-Signing
 ``` html
 <lcap-signature :openSmooth=false :reSignName=true></lcap-signature>
 ```
 
-### 改变画笔颜色
+### Change Brush Color
 ``` html
 <lcap-signature penColor="red"></lcap-signature>
 ```
 
-### 改变画笔粗细
+### Change Brush Thickness
 ``` html
 <lcap-signature :penWidth=20></lcap-signature>
 ```
 
-### 改变背景颜色
+### Change Background Color
 ``` html
 <lcap-signature bgColor="#FFFFFF"></lcap-signature>
 ```
@@ -63,36 +62,36 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| language | string | `[object Object]`<br/>`[object Object]` | `'english'` | 语言版本 |
-| openSmooth | boolean |  | `true` | 是否开启笔锋 |
-| penColor | string |  | `'black'` | 设置画笔颜色 |
-| reSignName | boolean |  | `false` | 是否允许用户重新签名 |
-| penWidth | number |  | `2` | 设置画笔宽度 |
-| bgColor | string |  | `'#F8F9FA'` | 设置画布背景颜色 |
+| language | string | `[object Object]`<br/>`[object Object]` | `'english'` | Language version |
+| openSmooth | boolean | | `true` | Whether to turn on pen edge |
+| penColor | string | | `'black'` | Set pen color |
+| reSignName | boolean | | `false` | Whether to allow the user to re-sign |
+| penWidth | number | | `2` | Set the brush width |
+| bgColor | string | | `'#F8F9FA'` | Set the canvas background color |
 
 ### Events
 
 #### @openSignatureModal
 
-打开签名版时触发
+Triggered when opening a signed version
 
 #### @clearSignature
 
-清空签名版时触发
+Triggered when clearing the signed version
 
 #### @saveSignature
 
-保存签名时触发
+Triggered when saving signature
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.signature | any | 返还签名的base64 |
+| $event.signature | any | Return the base64 of the signature |
 
 Methods
 
 #### openSignatureModal()
 
-打开签名版
+Open signed version
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |

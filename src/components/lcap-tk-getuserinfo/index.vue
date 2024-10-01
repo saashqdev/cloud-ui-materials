@@ -1,6 +1,6 @@
 <template>
 <div :class="$style.root">
-    <div :class="$style.btn" @click="tkUser">点击获取用户信息</div>
+    <div :class="$style.btn" @click="tkUser">Click to get user information</div>
 </div>
 </template>
 

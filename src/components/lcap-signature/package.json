@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "签名板",
+    "title": "Signature pad",
     "category": "Form",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -1,22 +1,22 @@
 - name: lcap-h5-tk-getuserinfo
-  title: 泰康sdk获取用户信息
-  description: 请在这里添加描述
+  title: Taikang SDK Obtains User Information
+  description: Please add a description here
   labels: [Runtime]
   icon: default
   attrs:
     - name: value
-      title: 值
+      title: Value
       type: number, string, object
       sync: true
       model: true
-      description: 需要传入的值
+      description: The value that needs to be passed in
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
   methods:
     - name: getMsg
-      title: 获取用户信息
-      description: 获取扫码后信息
+      title: Get User Information
+      description: Get the information after scanning the QR code
     - name: invoke
-      title: 调起获取用户信息
-      description: 调起获取用户信息
+      title: Call Up to Obtain User Information
+      description: Called up to obtain user information

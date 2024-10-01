@@ -2,36 +2,35 @@
 
 ``` html
 <lcap-signature></lcap-signature>
-<u-button ref="button1" color="primary" text="确定"></u-button>
+<u-button ref="button1" color="primary" text="OK"></u-button>
 ```
 
-### 切换语言版本
+### Switch Language Version
 ``` html
 <lcap-signature language="english"></lcap-signature>
-<lcap-signature language="chinese"></lcap-signature>
 ```
 
-### 关闭笔锋
+### Close
 ``` html
 <lcap-signature :openSmooth=false></lcap-signature>
 ```
 
-### 是否允许重新签名
+### Whether to Allow Re-signing
 ``` html
 <lcap-signature :openSmooth=false :reSignName=true></lcap-signature>
 ```
 
-### 改变画笔颜色
+### Change Brush Color
 ``` html
 <lcap-signature penColor="red"></lcap-signature>
 ```
 
-### 改变画笔粗细
+### Change Brush Thickness
 ``` html
 <lcap-signature :penWidth=20></lcap-signature>
 ```
 
-### 改变背景颜色
+### Change Background Color
 ``` html
 <lcap-signature bgColor="#FFFFFF"></lcap-signature>
 ```

@@ -23,15 +23,15 @@ import Quill from 'quill';
 import { addQuillTitle } from './js/addToolTip.js';
 import customIcon from './js/custom-Icon.js';
 
-// 自定义工具栏图标
+// Customize toolbar icon
 customIcon();
 
-// 替换自定义字体设置
-const fonts = [false, 'SimSun', 'Hiragino-Sans-GB', 'PingFang-SC', 'STSong', 'STFangsong', 'STKaiti', 'Arial', 'Times-New-Roman', 'Comic-Sans-MS', 'Courier-New', 'Georgia'];
+// Replace custom font settings
+const fonts = [false, 'Arial', 'Times-New-Roman', 'Comic -Sans-MS', 'Courier-New', 'Georgia'];
 const Font = Quill.import('formats/font');
 Font.whitelist = fonts;
 
-// 替换自定义字号大小设置
+// Replace custom font size settings
 const Size = Quill.import('attributors/style/size');
 const sizes = ['9px', '10px', '11px', '12px', false, '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '42px', '48px', '72px'];
 Size.whitelist = sizes;
@@ -121,7 +121,7 @@ export default {
                 readOnly: this.readOnly,
             },
             uploadUrl: this.imgUploadUrl,
-            write: true, //Bug-51423 光标左移
+            write: true, // Bug-51423 Cursor moves left
         };
     },
     watch: {
@@ -178,7 +178,7 @@ export default {
             } else if (!val) {
                 this.editor.setContents('');
             } else {
-                this.$toast.warning('编辑区目前只支持展示文本类型或数字类型的变量!');
+                this.$toast.warning('The editing area currently only supports displaying variables of text type or numeric type.!');
             }
         },
         textSub(val) {
@@ -219,24 +219,24 @@ export default {
         reRender() {
             this.init();
             this.isShowToolBar(this.readOnly);
-            // 添加气泡提示（暂时使用原生的title属性实现）
+            // Add a bubble prompt (temporarily implemented using the native title attribute)
             addQuillTitle();
         },
         init() {
             const editorDom = this.$el.querySelector('.in-editor');
             let content = '';
 
-            // 删除quill实例以及工具栏DOM
+            // Delete the quill instance and toolbar DOM
             if (this.editor !== null) {
                 content = this.editor.root.innerHTML;
                 this.$refs.root.querySelector('.ql-toolbar.ql-snow').remove();
-                /** readOnly由true变为false时， ql-disabled类没有删除，导致公式编辑框看不见*/
+                /** When readOnly changes from true to false, the ql-disabled class is not deleted, causing the formula edit box to be invisible*/
                 const container = this.$refs.root.querySelector('.in-editor.ql-container.ql-snow.ql-disabled');
                 container && container.classList.remove('ql-disabled');
                 this.editor = null;
                 editorDom.innerHTML = '';
             } else {
-                // 处理初始化的props
+                // Process initialization props
                 content = this.value;
                 this.options.readOnly = this.readOnly;
                 this.options.placeholder = this.placeholder;
@@ -247,12 +247,12 @@ export default {
 
             this.editor = new Quill(editorDom, this.options);
 
-            // 自定义图片上传
+            // Custom image upload
             const toolbar = this.editor.getModule('toolbar');
             toolbar.addHandler('image', () => {
                 document.getElementById('uploadButton').click();
             });
-            // 兼容处理 截图自动上传
+            // Compatibility processing, screenshots are automatically uploaded
             this.editor.root.addEventListener('paste', (event) => {
                 if (
                     event.clipboardData
@@ -264,7 +264,7 @@ export default {
                 }
             }, true);
 
-            // 恢复内容区文本
+            //Restore content area text
 
             if (this.readOnly) {
                 this.editor.root.innerHTML = content;
@@ -358,7 +358,7 @@ export default {
             this.$toast.warning($event.message);
         },
         /**
-         * 插入公式后会有<math></math>标签，导致渲染报错，去除
+         * After inserting the formula, there will be <math></math> tags, which will cause rendering errors. Remove them.
          */
         removeMathTag(content) {
             const mathReg = new RegExp('<math.*?>.*?<\\/math>', 'g');
