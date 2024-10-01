@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "泰康sdk分享",
+    "title": "Taikang sdk sharing",
     "category": "Runtime",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

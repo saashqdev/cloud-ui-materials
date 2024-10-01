@@ -1,63 +1,63 @@
 - name: lcap-video-flv
-  title: FLV 视频流播放器
+  title: FLV Video Streaming Player
   labels: [Media]
   icon: video
-  description: FLV 视频流播放器
+  description: FLV video streaming player
   attrs:
     - name: src
-      title: 视频流地址
+      title: Video Stream Address
       type: string
-      description: 视频流地址
+      description: Video stream address
     - name: type
-      title: 视频编码格式
+      title: Video Encoding Format
       type: string
       default: flv
       options:
         - name: flv
-          title: flv
+          title: FLV
         - name: mp4
-          title: mp4
-      description: 视频编码格式
+          title: MP4
+      description: Video encoding format
     - name: autoplay
-      title: 开启自动播放
+      title: Turn on Autoplay
       type: boolean
-      description: 是否自动播放
+      description: Whether to play automatically
       default: false
     - name: isLive
-      title: 开启直播流
+      title: Start Live Streaming
       type: boolean
-      description: 是否直播流
+      description: Whether to live stream
       default: false
     - name: hasVideo
-      title: 开启视频
+      title: Start Video
       type: boolean
-      description: 是否有视频
+      description: Is there a video?
       default: true
     - name: hasAudio
-      title: 开启音频
+      title: Turn on Audio
       type: boolean
-      description: 是否有音频
+      description: Is there audio?
       default: true
     - name: cors
-      title: 是否支持第三方视频服务
+      title: Whether to Support Third-Party Video Services
       type: boolean
-      description: 是否支持第三方视频服务
+      description: Whether to support third-party video services
       default: true
     - name: withCredentials
-      title: 第三方视频服务传递登录凭证
+      title: Third-Party Video Service Passes Login Credentials
       type: boolean
-      description: 是否向第三方视频服务传递登录凭证
+      description: Whether to pass login credentials to the third-party video service
       default: false
     - name: config
-      title: 其他配置
+      title: Other Configurations
       type: object
-      description: flv.js 其他配置
+      description: flv.js other configurations
   event:
     - name: play
-      description: 视频播放事件
+      description: Video playback event
     - name: pause
-      description: 视频暂停事件
+      description: Video pause event
     - name: destroy
-      description: 视频销毁事件
+      description: Video destruction event
       
 

@@ -1,6 +1,6 @@
 <template>
 <div :class="$style.root">
-    <div :class="$style.btn" @click="tkScan">点我扫码</div>
+    <div :class="$style.btn" @click="tkScan">Click me to scan the code</div>
 </div>
 </template>
 

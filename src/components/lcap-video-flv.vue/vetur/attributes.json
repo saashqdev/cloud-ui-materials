@@ -1,48 +1,48 @@
 {
   "lcap-video-flv/src": {
     "type": "string",
-    "description": "视频流地址"
+    "description": "Video stream address"
   },
   "lcap-video-flv/type": {
     "type": "string",
     "options": [
       {
         "name": "flv",
-        "title": "flv"
+        "title": "FLV"
       },
       {
         "name": "mp4",
-        "title": "mp4"
+        "title": "MP4"
       }
     ],
-    "description": "视频编码格式"
+    "description": "Video encoding format"
   },
   "lcap-video-flv/autoplay": {
     "type": "boolean",
-    "description": "是否自动播放"
+    "description": "Whether to play automatically"
   },
   "lcap-video-flv/isLive": {
     "type": "boolean",
-    "description": "是否直播流"
+    "description": "Whether to live stream"
   },
   "lcap-video-flv/hasVideo": {
     "type": "boolean",
-    "description": "是否有视频"
+    "description": "Is there a video?"
   },
   "lcap-video-flv/hasAudio": {
     "type": "boolean",
-    "description": "是否有音频"
+    "description": "Whether there is audio"
   },
   "lcap-video-flv/cors": {
     "type": "boolean",
-    "description": "是否支持第三方视频服务"
+    "description": "Whether third-party video services are supported"
   },
   "lcap-video-flv/withCredentials": {
     "type": "boolean",
-    "description": "是否向第三方视频服务传递登录凭证"
+    "description": "Whether to pass login credentials to third-party video services"
   },
   "lcap-video-flv/config": {
     "type": "object",
-    "description": "flv.js 其他配置"
+    "description": "flv.js other configurations"
   }
 }

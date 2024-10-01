@@ -33,10 +33,10 @@ function createListener(handler, data) {
     };
 }
 
-// 判断是否叶子节点
+// Determine whether it is a leaf node
 const isLeaf = (data, prop) => !(Array.isArray(data[prop]) && data[prop].length > 0);
 
-// 创建 node 节点
+// Create node node
 export function renderNode(h, data, context) {
     const { props, listeners } = context;
     const toggleExpandHandler = listeners[EVENTS.TOGGLE];
@@ -76,7 +76,7 @@ export function renderNode(h, data, context) {
     ];
 }
 
-// 创建展开折叠按钮
+// Create expand collapse button
 export function renderBtn(h, data, context, isLeafV) {
     const { props, listeners } = context;
     const expandHandler = listeners['on-expand'];
@@ -104,7 +104,7 @@ export function renderBtn(h, data, context, isLeafV) {
     ];
 }
 
-// 创建 label 节点
+// Create label node
 export function renderLabel(h, data, context) {
     const { props, listeners } = context;
     // const expandHandler = listeners['on-expand'];
@@ -178,7 +178,7 @@ export function renderLabel(h, data, context) {
     }, childNodes)]);
 }
 
-// 创建 node 子节点
+// Create node child nodes
 export function renderChildren(h, list, context) {
     if (Array.isArray(list) && list.length) {
         const children = list.map((item) => renderNode(h, item, context));

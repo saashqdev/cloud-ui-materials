@@ -21,7 +21,7 @@ export const addTreeLevel = function (data) {
 export const listToTree = function (data, options) {
     const { valueField, parentField, childrenField } = options;
 
-    // Map记录一下
+    // Map record it
     const nodes = {}; // Record<id, { entity }>
     data.forEach((item) => {
         const id = this.$at(item, valueField);
@@ -34,7 +34,7 @@ export const listToTree = function (data, options) {
     data.forEach((item) => {
         const parentId = this.$at(item, parentField);
         const parent = nodes[parentId];
-        // 没有parentId 或者 parent不存在的不处理
+        // If there is no parentId or the parent does not exist, it will not be processed.
         if (!parentId || !parent) {
             tree.push(item);
         } else {

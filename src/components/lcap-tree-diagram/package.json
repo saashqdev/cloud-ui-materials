@@ -35,7 +35,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "树形结构图",
+    "title": "Tree structure diagram",
     "category": "Other",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "泰康sdk扫码",
+    "title": "Taikang sdk code scanning",
     "category": "Runtime",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

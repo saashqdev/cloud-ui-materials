@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapH5TkScan 泰康sdk扫码
+# LcapH5TkScan Taikang SDK Scan Code
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Methods](#methods)
 
 **Runtime**
 
-请在这里添加描述
+Please add description here
 
 ## Example
 ### Basic Usage
@@ -25,21 +25,21 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | string |  |  | 需要传入的值 |
+| value.sync, v-model | string | | | The value that needs to be passed in |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 Methods
 
 #### getMsg()
 
-获取扫码后信息
+Get information after scanning the QR code
 
 #### invoke()
 
-调起扫码
+Call up scan code
 

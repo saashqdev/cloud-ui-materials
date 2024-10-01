@@ -1,20 +1,20 @@
 {
     "symbol": "lcap-h5-tk-share",
-    "name": "泰康sdk分享",
+    "name": "Taikang sdk sharing",
     "version": "0.1.9",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "请在这里添加描述",
+    "description": "Please add a description here",
     "labels": [
         "Runtime"
     ],
     "screenShot": "http://ceph.lcap.ha.test.com/lcap-test-static/packages/lcap-h5-tk-share@0.1.9/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5-tk-share></lcap-h5-tk-share>\\n</template>\\n\"}]",
+    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<lcap-h5- tk-share></lcap-h5-tk-share>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "lcap-h5-tk-share",
-        "title": "泰康sdk分享",
-        "description": "请在这里添加描述",
+        "title": "Taikang SDK Sharing",
+        "description": "Please add a description here",
         "category": "Runtime",
         "screenShot": "http://ceph.lcap.ha.test.com/lcap-test-static/packages/lcap-h5-tk-share@0.1.9/screenshots/0.png",
         "drawings": "",
@@ -32,55 +32,55 @@
                 "sync": true,
                 "model": true,
                 "advanced": true,
-                "description": "需要传入的值"
+                "description": "The value that needs to be passed in"
             },
             {
                 "name": "secret",
-                "title": "秘钥",
+                "title": "Secret Key",
                 "type": "string",
-                "description": "秘钥,字母或数字,不使用可不填"
+                "description": "Secret key, letters or numbers, please leave it blank if not used"
             },
             {
                 "name": "shareUrl",
-                "title": "分享地址",
+                "title": "Share Address",
                 "type": "string",
-                "description": "分享地址(默认为当前页地址)"
+                "description": "Share address (default is current page address)"
             },
             {
                 "name": "shareTitle",
-                "title": "分享标题",
+                "title": "Share Title",
                 "type": "string",
-                "description": "微信朋友圈标题(默认为当前页标题)"
+                "description": "Title of FB Moments (default is the title of the current page)"
             },
             {
                 "name": "shareBitmap",
-                "title": "分享题图",
+                "title": "Share the Question Picture",
                 "type": "image",
-                "description": "分享图片的URL(过大或者不可访问会导致失败)"
+                "description": "The URL of the shared image (too large or inaccessible will cause failure)"
             },
             {
                 "name": "shareIntroduce",
-                "title": "简介",
+                "title": "Introduction",
                 "type": "string",
-                "description": "朋友圈简介"
+                "description": "Introduction to Moments"
             }
         ],
         "slots": [
             {
                 "name": "default",
-                "description": "插入文本或 HTML。"
+                "description": "Insert text or HTML."
             }
         ],
         "methods": [
             {
                 "name": "getMsg",
-                "title": "获取分享后回调信息",
-                "description": "获取分享后回调信息"
+                "title": "Get Callback Information After Sharing",
+                "description": "Get callback information after sharing"
             },
             {
                 "name": "invoke",
-                "title": "调起分享",
-                "description": "调起分享"
+                "title": "Calling Up Sharing",
+                "description": "call up sharing"
             }
         ],
         "children": []

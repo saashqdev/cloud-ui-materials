@@ -11,6 +11,6 @@
       "withCredentials",
       "config"
     ],
-    "description": "FLV 视频流播放器"
+    "description": "FLV video streaming player"
   }
 }

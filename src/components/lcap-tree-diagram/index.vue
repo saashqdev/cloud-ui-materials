@@ -56,12 +56,12 @@
         <div
           :class="[$style.edit]"
           @click.stop="onEdit"
-        >编辑</div>
+          >Edit</div>
         <div
           :class="[$style.delete]"
           @click.stop="onDelete"
-        >删除</div>
-        <div :class="$style['recent-edit']">最近编辑 </div>
+        >Delete</div>
+        <div :class="$style['recent-edit']">Recently Edited </div>
         <div :class="$style.info"><span>{{ updateTime }}</span> <span>{{updateBy}}</span></div>
       </div>
     </m-popper>
@@ -121,35 +121,35 @@ export default {
       curEventsData: {},
       fakeData: {
         id: 1,
-        label: 'XXXPOC测试',
+        label: 'XXXPOC Test',
         parentId: 0,
         expand: true,
         curIndex: 1,
         children: [
           {
             id: 2,
-            label: '产品研发部',
+            label: 'Product R&D Department',
             parentId: 1,
             expand: true,
             curIndex: 2,
             children: [
               {
                 id: 5,
-                label: '研发-前端',
+                label: 'R&D-Front-End',
                 parentId: 2,
                 expand: true,
                 curIndex: 3,
               },
               {
                 id: 6,
-                label: '研发-后端1',
+                label: 'R&D-Backend 1',
                 parentId: 2,
                 expand: true,
                 curIndex: 3,
                 children: [
                   {
                     id: 8,
-                    label: '研发-后端11研发-',
+                    label: 'R&D-Backend 11 R&D-',
                     parentId: 2,
                     expand: true,
                     curIndex: 3,
@@ -160,14 +160,14 @@ export default {
           },
           {
             id: 10,
-            label: '研发',
+            label: 'R&D',
             parentId: 2,
             expand: true,
             curIndex: 2,
           },
         ],
       },
-      updateBy: '轻舟',
+      updateBy: 'Homer Simpson',
       updateTime: '',
        dataFromDataSource: []
 
@@ -260,7 +260,7 @@ export default {
       this.showPopper = false;
       this.dialogEditHover = false;
       setTimeout(() => {
-        // 为了不触发input的blur，否则会有两次blur
+        // In order not to trigger the blur of the input, otherwise there will be two blurs
         this.preventBlur = false;
       }, 0);
     },

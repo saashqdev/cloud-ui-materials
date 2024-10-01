@@ -1,17 +1,17 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# LcapH5TkShare 泰康sdk分享
+# LcapH5TkShare Taikang SDK Share
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Methods](#methods)
 
 **Runtime**
 
-请在这里添加描述
+Please add description here
 
 ## Example
 ### Basic Usage
@@ -25,26 +25,26 @@
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | number, string, object |  |  | 需要传入的值 |
-| secret | string |  |  | 秘钥,字母或数字,不使用可不填 |
-| shareUrl | string |  |  | 分享地址(默认为当前页地址) |
-| shareTitle | string |  |  | 微信朋友圈标题(默认为当前页标题) |
-| shareBitmap | image |  |  | 分享图片的URL(过大或者不可访问会导致失败) |
-| shareIntroduce | string |  |  | 朋友圈简介 |
+| value.sync, v-model | number, string, object | | | The value that needs to be passed in |
+| secret | string | | | Secret key, letters or numbers, please leave it blank if not used |
+| shareUrl | string | | | Share address (default is the current page address) |
+| shareTitle | string | | | FB Moments title (default is the current page title) |
+| shareBitmap | image | | | URL to share the image (too large or inaccessible will cause failure) |
+| shareIntroduce | string | | | Introduction to Moments |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 Methods
 
 #### getMsg()
 
-获取分享后回调信息
+Get callback information after sharing
 
 #### invoke()
 
-调起分享
+Call up share
 

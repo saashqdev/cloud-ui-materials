@@ -1,10 +1,10 @@
 <template>
 <div :class="$style.root">
     <template v-if="status === 'noSource'">
-        设置正确的视频源
+        Set the correct video source
     </template>
     <template v-else-if="status === 'noSupport'">
-        当前浏览器不支持该视频源
+        The current browser does not support this video source
     </template>
     <template v-else>
         <video :class="$style.video" ref="video" @play="$emit('play', $event)"

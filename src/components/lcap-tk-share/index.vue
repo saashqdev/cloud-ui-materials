@@ -1,6 +1,6 @@
 <template>
 <div :class="$style.root">
-    <div :class="$style.btn" @click="tkShare">分享到朋友圈</div>
+    <div :class="$style.btn" @click="tkShare">Share to Moments</div>
 </div>
 </template>
 
@@ -58,14 +58,14 @@ export default {
                     baseMenu: ['1'], // ['0', '1', '2', '3', '10', '11'],
                     // otherMenu: ['6', '7', '8', '9'],
                     h5BtnShare: true,
-                    moments: { // 分享朋友圈
-                        secret: this.secret || '', // 16位以内秘钥 字母或数字,不使用可填空字符串
-                        shareUrl: this.shareUrl || window.location.href, // 分享地址
-                        shareTitle: this.shareTitle || window.document.title, // 分享标题,
-                        shareBitmap: this.shareBitmap || '', // 分享图片的URL，图片过大或者不可访问会导致分享失败
-                        shareIntroduce: this.shareIntroduce || '', // 分享简介
+                    moments: { // Share Moments
+                        secret: this.secret || '', // Secret key within 16 characters, letters or numbers, do not use fill-in-the-blank strings
+                        shareUrl: this.shareUrl || window.location.href, // Share address
+                        shareTitle: this.shareTitle || window.document.title, // Share title,
+                        shareBitmap: this.shareBitmap || '', // URL of the shared image. If the image is too large or inaccessible, the sharing will fail.
+                        shareIntroduce: this.shareIntroduce || '', // Share introduction
                         callback(res) {
-                            console.log('分享微信朋友圈——回调：：：', res);
+                            console.log('Share FB Moments - callback:::', res);
                             that.msg = JSON.stringify(res);
                             resolve(res);
                         },
