@@ -109,7 +109,7 @@
 </template>
 
 <script>
-import { MField } from 'cloud-ui.vusion';
+import { MField } from 'cloud-ui.kubevue';
 import Color from './Color';
 
 export default {

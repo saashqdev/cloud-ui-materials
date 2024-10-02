@@ -169,11 +169,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]`,
 `     [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})`,
@@ -198,7 +198,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
@@ -563,11 +563,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]
      [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
@@ -592,7 +592,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
@@ -796,11 +796,11 @@ webapp:
      [exec] > https://opencollective.com/husky/donate
      [exec]
      [exec] npm notice created a lockfile as package-lock.json. You should commit this file.
-     [exec] npm WARN eslint-config-vusion@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN stylelint-config-vusion@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN eslint-config-kubevue@3.0.3 requires a peer of eslint@^5.12.0 but none is installed. You must install peer dependencies yourself.
+     [exec] npm WARN stylelint-config-kubevue@1.1.2 requires a peer of stylelint@^9.3.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN eslint-plugin-vue@5.2.3 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
      [exec] npm WARN vue-eslint-parser@5.0.0 requires a peer of eslint@^5.0.0 but none is installed. You must install peer dependencies yourself.
-     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/vusion-api/node_modules/fsevents):
+     [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/kubevue-api/node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
@@ -825,7 +825,7 @@ webapp:
      [exec]
      [exec] > node -e "try{require('./postinstall')}catch(e){}"
      [exec]
-     [exec] npm WARN vusion-materials-platform@0.0.2 No repository field.
+     [exec] npm WARN kubevue-materials-platform@0.0.2 No repository field.
      [exec] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules/fsevents):
      [exec] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
      [exec]
