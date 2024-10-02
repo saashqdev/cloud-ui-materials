@@ -40,7 +40,7 @@ export default {
         },
         buttonText: {
             type: String,
-            default: '侧边栏弹窗'
+            default: 'Sidebar popup'
         }
     },
     data() {
@@ -54,7 +54,7 @@ export default {
     mounted() {
         this.$nextTick(() => {
             this.updateView();
-            // 监听内容区dom元素的宽度变化，自适应定位的偏移量
+            // Monitor the width changes of the DOM element in the content area and the offset of adaptive positioning
             let resizeObserver = new ResizeObserver(() => {
                 this.updateView();
             })

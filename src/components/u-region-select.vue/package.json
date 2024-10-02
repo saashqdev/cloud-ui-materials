@@ -1,8 +1,8 @@
 {
   "name": "@cloud-ui/u-region-select.vue",
-  "description": "地区选择器，该组件从 UCascadeSelect 继承，仅填充了中国的行政区数据，其他功能与 UCascadeSelect 相同。",
+  "description": "Region selector, this component inherits from UCascadeSelect and only fills in the administrative region data of China. Other functions are the same as UCascadeSelect.",
   "version": "0.9.0",
-  "author": "zhangsanshi5566@gmail.com",
+  "author": "kubeworkz@gmail.com",
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -45,7 +45,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "地区选择",
+    "title": "Region selection",
     "category": "data",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

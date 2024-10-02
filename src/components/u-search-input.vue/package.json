@@ -35,7 +35,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "联想搜索框",
+    "title": "Lenovo search box",
     "screenshots": [
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-search-input.vue@0.1.4/screenshots/0.png",
       "https://static-kubevue.s3.amazonaws.com/packages/@cloud-ui/u-search-input.vue@0.1.4/screenshots/1.png",

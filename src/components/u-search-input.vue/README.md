@@ -1,13 +1,13 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# USearchInput 联想搜索框
+# USearchInput Predictive Search Box
 
-u-input 联想搜索框，自动补全输入内容
+u-input predictive search box, automatically completes the input content
 
 ## Example
-### 基本形式
+### Basic Form
 
-``` vue
+``` view
 <template>
 <u-linear-layout style="height:100px">
     <u-search-input :loadList="loadList"></u-search-input>
@@ -19,16 +19,16 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },{
-                text: 'jiande-public',
+                text: 'simpson-public',
                 value: '2',
             },{
-                text: 'yiqiao-public',
+                text: 'marge-public',
                 value: '3',
             },{
-                text: 'liantong-public',
+                text: 'bart-public',
                 value: '4',
             },{
                 text: 'region-1',
@@ -46,11 +46,11 @@ export default {
 };
 </script>
 ```
-### 搜索内容双向绑定
+### Search Content Two-Way Binding
 
-u-search-input与一般的u-input不太相同，u-search-input用户可绑定的数据有两个searchWord与value，其中searchWord是input输入框中的实际值，value为用户选择值的对象，这种设计方式主要是有些业务场景中使用者只关心input中的输入值，而有些场景下使用者需要的是loaderList中的value值而不是text。任选其一作为双向绑定的参数,searchWord实时变化，而value只有选中某一个值是才会出现变动其等于loadlist中的选中项
+u-search-input is different from general u-input. There are two data that users can bind to u-search-input: searchWord and value. SearchWord is the actual value in the input box, and value is the object selected by the user. This design method is mainly used in some business scenarios where users only care about the input value in the input, while in some scenarios, users need the value in loaderList instead of text. Select one of them as a parameter for two-way binding. SearchWord changes in real time, and value will only change when a certain value is selected. It is equal to the selected item in loadlist.
 
-``` vue
+``` view
 <template>
 <div>
     <div>
@@ -68,36 +68,36 @@ export default {
     data() {
         return {
             value: {
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },
-            searchWord: 'yiqiao-public',
+            searchWord: 'marge-public',
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -105,7 +105,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -137,11 +137,11 @@ export default {
 </script>
 ```
 
-### searchWord与value一致性检查
+### SearchWord and Value Consistency Check
 
-value与searchWord存在偏差，所以在此提供keyWord与value的一致性检查开关，设置为true将在输入框失焦时检查并同步keyWord为value的text
+There is a deviation between value and searchWord, so a consistency check switch for keyWord and value is provided here. If set to true, the text with keyWord as value will be checked and synchronized when the input box loses focus.
 
-``` vue
+``` view
 <template>
 <div>
     <div>
@@ -155,35 +155,35 @@ export default {
     data() {
         return {
             value: {
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -191,7 +191,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -223,8 +223,8 @@ export default {
 </script>
 ```
 
-### 下拉框位置偏移
-``` vue
+### Drop-Down Box Position Offset
+``` view
 <template>
 <div>
     <div>
@@ -238,31 +238,31 @@ export default {
     data() {
         return {
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -270,7 +270,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -301,9 +301,9 @@ export default {
 };
 </script>
 ```
-### 输入框尺寸
-搜索输入框尺寸设置方式与u-input相同，通过设置与u-input相同size尺寸可以控制达到所有u-input效果
-``` vue
+### Input Box Size
+The search input box size setting method is the same as u-input. By setting the same size as u-input, you can control all u-input effects.
+``` view
 <template>
 <div>
 <u-linear-layout style="height:100px">
@@ -322,16 +322,16 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },{
-                text: 'jiande-public',
+                text: 'simpson-public',
                 value: '2',
             },{
-                text: 'yiqiao-public',
+                text: 'marge-public',
                 value: '3',
             },{
-                text: 'liantong-public',
+                text: 'bart-public',
                 value: '4',
             },{
                 text: 'region-1',
@@ -349,9 +349,9 @@ export default {
 };
 </script>
 ```
-### 可清除
-搜索输入框尺寸设置方式与u-input相同，通过设置与u-input相同size尺寸可以控制达到所有u-input效果
-``` vue
+### Clearable
+The search input box size setting method is the same as u-input. By setting the same size as u-input, you can control all u-input effects.
+``` view
 <template>
 <u-linear-layout style="height:100px">
     <u-search-input :loadList="loadList" clearable></u-search-input>
@@ -362,16 +362,16 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },{
-                text: 'jiande-public',
+                text: 'simpson-public',
                 value: '2',
             },{
-                text: 'yiqiao-public',
+                text: 'marge-public',
                 value: '3',
             },{
-                text: 'liantong-public',
+                text: 'bart-public',
                 value: '4',
             },{
                 text: 'region-1',
@@ -389,8 +389,8 @@ export default {
 };
 </script>
 ```
-### 搜索图标
-``` vue
+### Search Icon
+``` view
 <template>
 <div>
     <div>
@@ -406,16 +406,16 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
+                text: 'simpson-private',
                 value: '1',
             },{
-                text: 'jiande-public',
+                text: 'simpson-public',
                 value: '2',
             },{
-                text: 'yiqiao-public',
+                text: 'marge-public',
                 value: '3',
             },{
-                text: 'liantong-public',
+                text: 'bart-public',
                 value: '4',
             },{
                 text: 'region-1',
@@ -434,8 +434,8 @@ export default {
 </script>
 ```
 
-### 自定义搜索列表项
-``` vue
+### Custom Search List Items
+``` view
 <template>
 <div>
     <div>
@@ -453,24 +453,24 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
-                description: '建德私有云环境',
+                text: 'simpson-private',
+                description: 'Simpson private cloud environment',
                 value: '1',
             },{
-                text: 'jiande-public',
-                description: '建德公有云环境',
+                text: 'simpson-public',
+                description: 'Simpson public cloud environment',
                 value: '2',
             },{
-                text: 'yiqiao-public',
-                description: '义桥公有云环境',
+                text: 'marge-public',
+                description: 'Marge public cloud environment',
                 value: '3',
             },{
-                text: 'liantong-public',
-                description: '联通公有云环境',
+                text: 'bart-public',
+                description: 'US Unicom public cloud environment',
                 value: '4',
             },{
                 text: 'region-1',
-                description: 'region云环境',
+                description: 'Region cloud environment',
                 value: '5',
             }],
         };
@@ -486,8 +486,8 @@ export default {
 </script>
 ```
 
-### 自定义搜索列表项
-``` vue
+### Custom Search List Items
+``` view
 <template>
 <div>
     <div>
@@ -505,24 +505,24 @@ export default {
     data() {
         return {
             data: [{
-                text: 'jiande-private',
-                description: '建德私有云环境',
+                text: 'simpson-private',
+                description: 'Simpson private cloud environment',
                 value: '1',
             },{
-                text: 'jiande-public',
-                description: '建德公有云环境',
+                text: 'simpson-public',
+                description: 'Simpson public cloud environment',
                 value: '2',
             },{
-                text: 'yiqiao-public',
-                description: '义桥公有云环境',
+                text: 'marge-public',
+                description: 'Marge public cloud environment',
                 value: '3',
             },{
-                text: 'liantong-public',
-                description: '联通公有云环境',
+                text: 'bart-public',
+                description: 'US Unicom public cloud environment',
                 value: '4',
             },{
                 text: 'region-1',
-                description: 'region云环境',
+                description: 'Region cloud environment',
                 value: '5',
             }],
         };
@@ -538,8 +538,8 @@ export default {
 </script>
 ```
 
-### 搜索内容分组
-``` vue
+### Search Content Grouping
+``` view
 <template>
 <div>
     <div>
@@ -557,31 +557,31 @@ export default {
     data() {
         return {
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -589,7 +589,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -620,15 +620,15 @@ export default {
 };
 </script>
 ```
-### 自定义搜索内容分组
-``` vue
+### Custom Search Content Grouping
+``` view
 <template>
 <div>
     <div>
         <u-search-input :loadList="loadList" size="large" search="left" clearable>
             <u-linear-layout justify="space-between" style="padding:5px 10px;border-bottom:1px solid #dfe4ec;border-top:1px solid #dfe4ec;" slot="header" slot-scope="scope">
                 <span>{{scope.group.title}}</span>
-                <u-link>查看更多</u-link>
+                <u-link>View more</u-link>
             </u-linear-layout>
             <div slot-scope="scope">
                 <p style="margin: 5px 0px;line-height: 12px;">{{scope.item.text}}</p>
@@ -643,31 +643,31 @@ export default {
     data() {
         return {
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -675,7 +675,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -707,13 +707,13 @@ export default {
 </script>
 ```
 
-### 默认占位提示
+### Default Placeholder Hint
 
-``` vue
+``` view
 <template>
 <div>
     <div>
-        <u-search-input placeholder="请输入环境名称" :valueCheck="true"  :loadList="loadList" size="large" search="left" clearable>
+        <u-search-input placeholder="Please enter an environment name" :valueCheck="true"  :loadList="loadList" size="large" search="left" clearable>
         </u-search-input>
     </div>
 </div>
@@ -723,31 +723,31 @@ export default {
     data() {
         return {
             list: [{
-                text: '建德',
-                value: 'jiande',
+                text: 'Simpson',
+                value: 'simpson',
                 children: [{
-                    text: 'jiande-private',
-                    description: '建德私有云环境',
+                    text: 'simpson-private',
+                    description: 'Simpson private cloud environment',
                     value: '1',
                 },{
-                    text: 'jiande-public',
-                    description: '建德公有云环境',
+                    text: 'simpson-public',
+                    description: 'Simpson public cloud environment',
                     value: '2',
                 }]
             }, {
-                text: '义桥',
-                value: 'yiqiao',
+                text: 'Marge',
+                value: 'marge',
                 children: [{
-                    text: 'yiqiao-public',
-                    description: '义桥公有云环境',
+                    text: 'marge-public',
+                    description: 'Marge public cloud environment',
                     value: '3',
                 }],
             }, {
-                text: '联通',
-                value: 'liantong',
+                text: 'US Unicom',
+                value: 'bart',
                 children: [{
-                    text: 'liantong-public',
-                    description: '联通公有云环境',
+                    text: 'bart-public',
+                    description: 'US Unicom public cloud environment',
                     value: '4',
                 }],
             }, {
@@ -755,7 +755,7 @@ export default {
                 value: 'region',
                 children: [{
                     text: 'region-1',
-                    description: 'region云环境',
+                    description: 'Region cloud environment',
                     value: '5',
                 }],
             }],
@@ -791,98 +791,98 @@ export default {
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | object |  |  | 选中对象 |
-| search-word | string |  |  | 输入框内容 |
-| offset | number |  | `0` | 输入框x轴方向偏移量 |
-| load-list | Function |  |  | 搜索列表返回函数，接受搜索关键字作为参数，以promise或者array返回值 |
-| value-check | boolean |  | `false` | 失焦时search与value值同步, 仅在value值绑定时生效 |
-| type | string |  | `'text'` | 输入框的类型，目前支持两种：`'text'`和`'password'` |
-| clearable | boolean |  |  | 是否可清空。开启并在输入框有内容时会显示清空按钮。 |
-| placeholder | string |  |  | 原生属性。对 IE9 做了兼容。 |
-| minlength | number |  |  | 原生属性 |
-| maxlength | number |  |  | 原生属性 |
-| spellcheck | boolean |  |  | 原生属性 |
-| autofocus | boolean |  |  | 是否自动获取焦点 |
-| readonly | boolean |  | `false` | 是否只读 |
-| disabled | boolean |  | `false` | 是否禁用 |
-| size | string |  | `'normal'` | 大小扩展，支持一个值：`'mini'`, `'small'`, `'normal'`, `'large'`, `'huge'`, `'full'`，或两个值的组合，前者表示高度，后者表示宽度，类似CSS的padding书写格式 |
-| search | string |  |  | 搜索标志，支持位置自定义，默认搜索标志在最右边，值为`left`即表示搜索标志在左边 |
-| maxlength-message | string |  |  | 输入内容达到上限时的错误提示，且被 [FormItem](#/components/u-form) 包裹时生效 |
+| value.sync, v-model | object | | | Selected object |
+| search-word | string | | | Input box content |
+| offset | number | | `0` | Input box x-axis offset |
+| load-list | Function | | | Search list return function, accept search keyword as parameter, return value as promise or array |
+| value-check | boolean | | `false` | When out of focus, search is synchronized with value. This only works when value is bound. |
+| type | string | | `'text'` | The type of the input box. Currently two types are supported: `'text'` and `'password'` |
+| clearable | boolean | | | Whether it can be cleared. If it is turned on, a clear button will be displayed when there is content in the input box. |
+| placeholder | string | | | Native property. Compatible with IE9. |
+| minlength | number | | | Native property |
+| maxlength | number | | | Native properties |
+| spellcheck | boolean | | | Native property |
+| autofocus | boolean | | | Whether to automatically get focus |
+| readonly | boolean | | `false` | Read-only |
+| disabled | boolean | | `false` | Disabled |
+| size | string | | `'normal'` | Size extension, supports one value: `'mini'`, `'small'`, `'normal'`, `'large'`, `'huge'`, `'full'`, or a combination of two values, the former represents the height and the latter represents the width, similar to the CSS padding writing format |
+| search | string | | | Search mark, supports position customization, the default search mark is on the far right, the value of `left` means the search mark is on the left |
+| maxlength-message | string | | | Error message when the input content reaches the upper limit, and takes effect when wrapped by [FormItem](#/components/u-form) |
 
 ### Slots
 
 #### (default)
 
-插入  HTML或 `Component`, 下来框单项展示。
+Insert HTML or `Component`, and display the items in the drop-down box.
 
-#### header
+#### Header
 
-分组数据，组标题
+Grouped data, group header
 
 ### Events
 
 #### @input
 
-value值更改时触发
+Triggered when the value changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | object | 选中下拉框中的值 |
+| $event | object | Select the value in the drop-down box |
 
 #### @change
 
-value值更改时触发
+Triggered when the value changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | object | 改变后的值 |
-| $event.oldValue | object | 旧的值 |
+| $event.value | object | Changed value |
+| $event.oldValue | object | Old value |
 
 #### @blur
 
-输入框失焦事件透传
+Input box out of focus event transparent transmission
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | vue失焦事件对象 |
+| $event | string | Vue focus loss event object |
 
 #### @focus
 
-输入框聚焦焦事件透传
+Input box focus event transparent transmission
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | vue聚焦事件对象 |
+| $event | string | Vue focus event object |
 
 #### @keyenter
 
-enter输入事件
+enter input event
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | vue keydown.enter事件对象 |
+| $event | string | Vue keydown.enter event object |
 
 #### @keydown
 
-down输入事件
+down input event
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | vue keydown.down事件对象 |
+| $event | string | Vue keydown.down event object |
 
 #### @keyup
 
-up输入事件
+up input event
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | string | vue keydown.up事件对象 |
+| $event | string | Vue keydown.up event object |
 
 #### @keychange
 
-searchWord更改事件
+searchWordChangedEvent
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 改变后的值 |
-| $event.oldValue | string | 旧的值 |
+| $event.value | string | The changed value |
+| $event.oldValue | string | Old value |

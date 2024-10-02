@@ -1,8 +1,8 @@
 ### Basic Usage
 
-在`data`属性中传入`nodes`和`edges`的数据。
+Pass the data for `nodes` and `edges` in the `data` attribute.
 
-使用`layout`属性设置布局，可选项有：
+Use the `layout` property to set the layout. The options are:
 - null
 - random
 - preset
@@ -10,33 +10,33 @@
 - circle
 - concentric
 - breadthfirst
-- cose
+- things
 
-但一般需要设置布局参数，详见 [Cytoscape.js - Layouts](https://js.cytoscape.org/#layouts)。
+However, you generally need to set layout parameters, see [Cytoscape.js - Layouts](https://js.cytoscape.org/#layouts) for details.
 
-对原始 Cytoscape.js 节点做了简化：
+The original Cytoscape.js node is simplified:
 
 ``` ts
 interface node {
-    id: string, // 节点 id
-    label: string, // 节点标签，如果不填按 id 显示
-    parent: string, // 组合方式中的父节点
-    color: string, // 配色
-    position: { x: number, y: number }, // 初始化位置
+    id: string, // node id
+    label: string, // Node label, if not filled in, it will be displayed as id
+    parent: string, // parent node in combination
+    color: string, // color scheme
+    position: { x: number, y: number }, // Initialize position
 };
 interface edge {
-    id: string, // 节点 id 和名称
-    source: string, // 起始节点
-    target: string, // 目标节点
-    color: string, // 配色
-    label: string, // 边的标签
-    'source-label': string, // 边的起始标签
-    'target-label': string, // 边的结束标签
-    curve: string, // 曲线类型
-    'source-arrow': string, // 边的起始箭头类型
-    'target-arrow': string, // 边的结束箭头类型
-    'mid-source-arrow': string, // 边的中间起始箭头类型
-    'mid-target-arrow': string, // 边的中间结束箭头类型
+    id: string, // node id and name
+    source: string, // starting node
+    target: string, // target node
+    color: string, // color scheme
+    label: string, // edge label
+    'source-label': string, // The starting label of the edge
+    'target-label': string, // End label of edge
+    curve: string, // curve type
+    'source-arrow': string, // The starting arrow type of the edge
+    'target-arrow': string, // The end arrow type of the edge
+    'mid-source-arrow': string, // The middle starting arrow type of the edge
+    'mid-target-arrow': string, // The middle end arrow type of the edge
 };
 ```
 
@@ -61,11 +61,11 @@ interface edge {
 }"></u-relations-diagram>
 ```
 
-### 图例与配色
+### Legend and Color Scheme
 
-使用`legend`属性添加图例，使用`color`属性设置节点或边的颜色。
+Use the `legend` property to add a legend and the `color` property to set the color of a node or edge.
 
-本组件根据 Cloud UI 主题适配了一套配色方案。
+This component adapts a color scheme based on the Cloud UI theme.
 
 ``` html
 <u-relations-diagram :data="{
@@ -106,11 +106,11 @@ interface edge {
 ]"></u-relations-diagram>
 ```
 
-### 节点形状
+### Node Shape
 
-在 node 对象中，使用`shape`参数指定节点类型。默认为`rectangle`。
+In the node object, use the `shape` parameter to specify the node type. The default is `rectangle`.
 
-shape 的各种类型请直接看下面的示例，其它说明详见 [Cytoscape.js - Node shape](https://js.cytoscape.org/#style/node-body)。
+For more information about the various types of shapes, please see the examples below. For other descriptions, please see [Cytoscape.js - Node shape](https://js.cytoscape.org/#style/node-body).
 
 ``` html
 <u-relations-diagram :data="{
@@ -146,21 +146,21 @@ shape 的各种类型请直接看下面的示例，其它说明详见 [Cytoscape
 }"></u-relations-diagram>
 ```
 
-### 曲线类型
+### Curve Type
 
-在 edge 对象中，使用`curve`参数指定曲线类型。默认为`bezier`曲线。
+In the edge object, use the `curve` parameter to specify the curve type. The default is a `bezier` curve.
 
-curve 可选类型：
-- bezier：集束贝塞尔曲线，对于相同节点之间平行的贝塞尔曲线，会通过调整曲率使它们分型。
-- unbundled-bezier：非集束贝塞尔曲线，用于手动控制点。
-- haystack：草堆线，一般用于快速绘制两个节点之间的直线。不支持组合父节点，不能使用起始和结束箭头。
-- straight：普通直线。
-- segments：分段折线
-- taxi：直角线
+curve optional types:
+- bezier: Clustered Bezier curves. For Bezier curves parallel to the same nodes, they will be separated by adjusting the curvature.
+- unbundled-bezier: Unbundled Bezier curve, for manual control points.
+- haystack: haystack line, generally used to quickly draw a straight line between two nodes. It does not support combining parent nodes and cannot use start and end arrows.
+- straight: a normal straight line.
+- segments: segmented polyline
+- taxi: right angle line
 
-具体说明详见 [Cytoscape.js - Edge line](https://js.cytoscape.org/#style/edge-line)。
+For details, see [Cytoscape.js - Edge line](https://js.cytoscape.org/#style/edge-line).
 
-本组件的 edge 类型的参数是对 curve 的使用方式做了简化，如果需要对曲线的参数进一步设置，请使用`element-style`自定义样式。
+The edge type parameters of this component simplify the usage of curve. If you need to further set the parameters of the curve, please use `element-style` to customize the style.
 
 ``` html
 <u-relations-diagram :data="{
@@ -189,13 +189,13 @@ curve 可选类型：
 }"></u-relations-diagram>
 ```
 
-### 箭头类型
+### Arrow Type
 
-在 edge 对象中，使用`source-arrow`参数指定边起始箭头类型，使用`source-arrow`参数指定边结束箭头类型。
+In the edge object, use the `source-arrow` parameter to specify the edge start arrow type, and use the `source-arrow` parameter to specify the edge end arrow type.
 
-默认`source-arrow`为空，`target-arrow`为`triangle`。
+By default, `source-arrow` is empty and `target-arrow` is `triangle`.
 
-箭头的各种类型请直接看下面的示例，其它说明详见 [Cytoscape.js - Edge arrow](https://js.cytoscape.org/#style/edge-arrow)。
+For various types of arrows, please see the examples below. For other instructions, see [Cytoscape.js - Edge arrow](https://js.cytoscape.org/#style/edge-arrow).
 
 ``` html
 <u-relations-diagram :data="{
@@ -236,25 +236,25 @@ curve 可选类型：
 }]"></u-relations-diagram>
 ```
 
-### 自定义样式
+### Custom Styles
 
-使用`element-style`属性对本组件的默认样式进行覆盖和扩展。样式设置详见 [Cytoscape.js - Style](https://js.cytoscape.org/#style)。
+Use the `element-style` property to override and extend the default style of this component. For more information on style settings, see [Cytoscape.js - Style](https://js.cytoscape.org/#style).
 
 ``` html
 <u-relations-diagram :data="{
     nodes: [
-        { id: '建德私有云' },
-        { id: '滨江私有云', color: 'success' },
-        { id: '萧山私有云', color: 'success' },
+        { id: 'Homer Private Cloud' },
+        { id: 'Skunkhollow Private Cloud', color: 'success' },
+        { id: 'Camden Private Cloud', color: 'success' },
     ],
     edges: [
-        { source: '建德私有云', target: '滨江私有云', color: 'primary' },
-        { source: '滨江私有云', target: '萧山私有云', color: 'primary' },
-        { source: '萧山私有云', target: '建德私有云', color: 'primary' },
+        { source: 'Homer Private Cloud', target: 'Skunkhollow Private Cloud', color: 'primary' },
+        { source: 'Skunkhollow Private Cloud', target: 'Camden Private Cloud', color: 'primary' },
+        { source: 'Camden Private Cloud', target: 'Homer Private Cloud', color: 'primary' },
     ],
 }" :legend="[
-    { label: '评估完成', color: 'success' },
-    { label: '评估中', color: 'default' },
+    { label: 'Assessment Completed', color: 'success' },
+    { label: 'Evaluating', color: 'default' },
 ]" :layout="{
     name: 'circle',
 }" :element-style="[{
@@ -266,28 +266,28 @@ curve 可选类型：
 }]"></u-relations-diagram>
 ```
 
-### 事件
+### Event
 
-透传所有 Cytoscape.js 事件，一般通过`e.target`获取到 Cytoscape 元素进行处理。事件对象详见 [Cytoscape.js - Events](https://js.cytoscape.org/#events)。
+Transmits all Cytoscape.js events, usually through `e.target` to get the Cytoscape element for processing. For details of the event object, see [Cytoscape.js - Events](https://js.cytoscape.org/#events).
 
-下面是一个给节点绑定 click 事件的例子：
+The following is an example of binding a click event to a node:
 
-``` vue
+``` view
 <template>
 <u-relations-diagram :data="{
     nodes: [
-        { id: '建德私有云' },
-        { id: '滨江私有云', color: 'success' },
-        { id: '萧山私有云', color: 'success' },
+        { id: 'Homer Private Cloud' },
+        { id: 'Skunkhollow Private Cloud', color: 'success' },
+        { id: 'Camden Private Cloud', color: 'success' },
     ],
     edges: [
-        { source: '建德私有云', target: '滨江私有云', color: 'primary' },
-        { source: '滨江私有云', target: '萧山私有云', color: 'primary' },
-        { source: '萧山私有云', target: '建德私有云', color: 'primary' },
+        { source: 'Homer Private Cloud', target: 'Skunkhollow Private Cloud', color: 'primary' },
+        { source: 'Skunkhollow Private Cloud', target: 'Camden Private Cloud', color: 'primary' },
+        { source: 'Camden Private Cloud', target: 'Homer Private Cloud', color: 'primary' },
     ],
 }" :legend="[
-    { label: '评估完成', color: 'success' },
-    { label: '评估中', color: 'default' },
+    { label: 'Assessment Completed', color: 'success' },
+    { label: 'Evaluating', color: 'default' },
 ]" :layout="{
     name: 'circle',
 }" :element-style="[{
@@ -302,47 +302,47 @@ export default {
     methods: {
         onClick(e) {
             const target = e.target;
-            this.$toast.show('点击了 ' + target.id());
+            this.$toast.show('clicked' + target.id());
         },
     },
 };
 </script>
 ```
 
-### 配置
+### Configuration
 
-配置 Cytoscape.js 选项。
+Configure Cytoscape.js options.
 
-本组件按照常用习惯，配置了一些默认参数。
+This component configures some default parameters according to common practices.
 
 ``` js
 {
-    userZoomingEnabled: false, // 禁止用户放大缩小，因为该功能经常与滚动冲突。如果需要，开发者可以将这个配置打开。
-    minZoom: 0.5, // 缩放的最小倍数
-    maxZoom: 2, // 缩放的最大倍数
+    userZoomingEnabled: false, // Disable user zooming because this feature often conflicts with scrolling. Developers can turn this configuration on if necessary.
+    minZoom: 0.5, // minimum zoom multiple
+    maxZoom: 2, // Maximum zoom multiple
 }
 ```
 
-其它参数详见 [Cytoscape.js - Initialisation](https://js.cytoscape.org/#core/initialisation)。
+For other parameters, see [Cytoscape.js - Initialisation](https://js.cytoscape.org/#core/initialisation).
 
-比如下面的配置禁用了移动位置、开启了方框选择。
+For example, the following configuration disables moving positions and enables box selection.
 
-``` vue
+``` view
 <template>
 <u-relations-diagram :data="{
     nodes: [
-        { id: '建德私有云' },
-        { id: '滨江私有云', color: 'success' },
-        { id: '萧山私有云', color: 'success' },
+        { id: 'Homer Private Cloud' },
+        { id: 'Skunkhollow Private Cloud', color: 'success' },
+        { id: 'Camden Private Cloud', color: 'success' },
     ],
     edges: [
-        { source: '建德私有云', target: '滨江私有云', color: 'primary' },
-        { source: '滨江私有云', target: '萧山私有云', color: 'primary' },
-        { source: '萧山私有云', target: '建德私有云', color: 'primary' },
+        { source: 'Homer Private Cloud', target: 'Skunkhollow Private Cloud', color: 'primary' },
+        { source: 'Skunkhollow Private Cloud', target: 'Camden Private Cloud', color: 'primary' },
+        { source: 'Camden Private Cloud', target: 'Homer Private Cloud', color: 'primary' },
     ],
 }" :legend="[
-    { label: '评估完成', color: 'success' },
-    { label: '评估中', color: 'default' },
+    { label: 'Assessment Completed', color: 'success' },
+    { label: 'Evaluating', color: 'default' },
 ]" :layout="{
     name: 'circle',
 }" :config="{
@@ -351,17 +351,17 @@ export default {
 }"></u-relations-diagram>
 ```
 
-### 复杂示例
+### Complex Example
 
-下面是一个较复杂的示例，使用了[cose Layout](https://js.cytoscape.org/#layouts/cose)。
+Here is a more complex example using the [cose Layout](https://js.cytoscape.org/#layouts/cose).
 
-``` vue
+``` view
 <template>
 <u-relations-diagram :data="data" :legend="[
-    { label: '正常', color: 'normal' },
-    { label: '风险', color: 'danger' },
+    { label: 'Normal', color: 'normal' },
+    { label: 'Risk', color: 'danger' },
 ]" :layout="{
-    name: 'cose',
+    name: 'things',
     animate: false,
     componentSpacing: 80,
 }"></u-relations-diagram>
@@ -397,7 +397,7 @@ export default {
             ],
         };
 
-        // layout 使用 cose 的话，最好初始把节点拉开，否则每次位置都是随机的。
+        // If you use cose for layout, it is best to initially pull the nodes apart, otherwise the positions will be random each time.
         data.nodes.forEach((node, index) => {
             node.position = { x: index * 60, y: index * 60 };
         });

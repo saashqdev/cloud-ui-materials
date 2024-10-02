@@ -1,22 +1,22 @@
 {
     "symbol": "u-sider-modal",
-    "name": "侧边栏弹窗",
+    "name": "Sidebar pop-up",
     "version": "0.2.24",
     "icon": "default",
     "repoAddr": "",
     "depDescription": {},
-    "description": "侧边栏弹窗组件",
+    "description": "Sidebar pop-up component",
     "labels": [
         "Container"
     ],
-    "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/u-sider-modal@0.2.24/screenshots/0.png",
-    "blocks": "[{\"title\":\"Basic Usage\",\"description\":\"\",\"code\":\"<template>\\n<u-sider-modal></u-sider-modal>\\n</template>\\n\"}]",
+    "screenShot": "https://static-kubevue.kubeworkz.io/packages/u-sider-modal@0.2.24/screenshots/0.png",
+    "blocks": "[{\"title\":\"基本用法\",\"description\":\"\",\"code\":\"<template>\\n<u-sider-modal></u-sider-modal>\\n</template>\\n\"}]",
     "jsonSchema": {
         "name": "u-sider-modal",
-        "title": "侧边栏弹窗",
-        "description": "侧边栏弹窗组件",
+        "title": "Sidebar Popup",
+        "description": "Sidebar pop-up component",
         "category": "Container",
-        "screenShot": "https://static-kubevue.s3.amazonaws.com/packages/u-sider-modal@0.2.24/screenshots/0.png",
+        "screenShot": "https://static-kubevue.kubeworkz.io/packages/u-sider-modal@0.2.24/screenshots/0.png",
         "drawings": "",
         "blocks": [
             {
@@ -28,100 +28,100 @@
         "attrs": [
             {
                 "name": "position",
-                "title": "停靠位置",
+                "title": "Docking location",
                 "type": "string",
                 "options": [
                     {
                         "value": "left",
-                        "title": "左边"
+                        "title": "Left"
                     },
                     {
                         "value": "right",
-                        "title": "右边"
+                        "title": "Right"
                     }
                 ],
                 "default": "right",
-                "description": "侧边栏弹窗停靠的位置（目前只支持左边和右边）"
+                "description": "The location where the sidebar pop-up window is docked (currently only supports the left and right sides)"
             },
             {
                 "name": "toggleShow",
-                "title": "切换显示",
+                "title": "Toggle Display",
                 "type": "boolean",
                 "default": false,
-                "description": "是否显示侧边栏弹窗"
+                "description": "Whether to display the sidebar pop-up window"
             },
             {
                 "name": "buttonText",
-                "title": "展开/收缩 按钮文本",
+                "title": "Expand/Collapse Button Text",
                 "type": "string",
-                "default": "侧边栏弹窗",
-                "description": "弹窗展开/收起按钮的显示文字"
+                "default": "Sidebar popup",
+                "description": "The text displayed on the pop-up expand/collapse button"
             },
             {
                 "name": "positionY",
-                "title": "垂直方向位置",
+                "title": "Vertical Position",
                 "type": "string",
                 "default": "0",
-                "description": "侧边栏弹窗Y轴的位置"
+                "description": "The Y-axis position of the sidebar pop-up window"
             }
         ],
         "slots": [
             {
                 "name": "default",
-                "description": "插入文本或 HTML。"
+                "description": "Insert text or HTML."
             }
         ],
         "events": [
             {
                 "name": "before-open",
-                "title": "打开前",
-                "description": "打开弹窗前触发",
+                "title": "Before Opening",
+                "description": "Triggered before opening the pop-up window",
                 "params": [
                     {
                         "name": "senderVM",
                         "type": "UModal",
-                        "description": "发送事件实例"
+                        "description": "Send event instance"
                     }
                 ]
             },
             {
                 "name": "open",
-                "title": "打开后",
-                "description": "打开弹窗后触发",
+                "title": "After Opening",
+                "description": "Triggered after opening the pop-up window",
                 "params": [
                     {
                         "name": "senderVM",
                         "type": "UModal",
-                        "description": "发送事件实例"
+                        "description": "Send event instance"
                     }
                 ]
             },
             {
                 "name": "before-close",
-                "title": "关闭前",
-                "description": "关闭弹窗前触发",
+                "title": "Before Close",
+                "description": "Triggered before closing the pop-up window",
                 "params": [
                     {
                         "name": "$event.preventDefault",
                         "type": "Function",
-                        "description": "阻止关闭流程"
+                        "description": "Prevent process from closing"
                     },
                     {
                         "name": "senderVM",
                         "type": "UModal",
-                        "description": "发送事件实例"
+                        "description": "Send event instance"
                     }
                 ]
             },
             {
                 "name": "close",
-                "title": "关闭后",
-                "description": "关闭弹窗时触发",
+                "title": "After Closing",
+                "description": "Triggered when closing the popup window",
                 "params": [
                     {
                         "name": "senderVM",
                         "type": "UModal",
-                        "description": "发送事件实例"
+                        "description": "Send event instance"
                     }
                 ]
             }

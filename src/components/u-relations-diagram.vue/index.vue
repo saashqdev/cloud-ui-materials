@@ -4,10 +4,10 @@
         <cy-element v-for="(el, index) in elements" :key="el.data.id !== undefined ? el.data.id : index" :definition="el"></cy-element>
     </cytoscape>
     <cytoscape v-if="legend" :class="$style.legend" ref="legend" :config="legendConfig">
-        图例：<cy-element v-for="(el, index) in legendElements" :key="el.data.label !== undefined ? el.data.label : index" :definition="el"></cy-element>
+        Legend:<cy-element v-for="(el, index) in legendElements" :key="el.data.label !== undefined ? el.data.label : index" :definition="el"></cy-element>
     </cytoscape>
 <!-- <div :class="$style.legend" v-if="legend">
-    图例：<div :class="$style['legend-item']" v-for="item in legend" :key="item.label" :color="item.color">{{ item.label }}</div>
+    Legend:<div :class="$style['legend-item']" v-for="item in legend" :key="item.label" :color="item.color">{{ item.label }}</div>
 </div> -->
     <slot></slot>
 </div>
@@ -249,7 +249,7 @@ export default {
             () => setTimeout(() => this.runLayout(), 20),
             80,
         );
-        window.addEventListener('resize', this.debouncedRunLayout); // 即使 mounted 时，容器也有可能宽度为0，因此必须要加 setTimeout
+        window.addEventListener('resize', this.debouncedRunLayout); // Even when mounted, the width of the container may be 0, so setTimeout must be added.
         setTimeout(() => {
             this.runLayout();
             if (!this.legend) return;

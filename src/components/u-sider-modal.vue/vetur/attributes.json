@@ -4,25 +4,25 @@
     "options": [
       {
         "value": "left",
-        "title": "左边"
+        "title": "Left"
       },
       {
         "value": "right",
-        "title": "右边"
+        "title": "Right"
       }
     ],
-    "description": "侧边栏弹窗停靠的位置（目前只支持左边和右边）"
+    "description": "The location where the sidebar pop-up window stops (currently only supports the left and right sides)"
   },
   "u-sider-modal/toggleShow": {
     "type": "boolean",
-    "description": "是否显示侧边栏弹窗"
+    "description": "Whether to display the sidebar pop-up window"
   },
   "u-sider-modal/buttonText": {
     "type": "string",
-    "description": "弹窗展开/收起按钮的显示文字"
+    "description": "Display text of pop-up window expand/collapse button"
   },
   "u-sider-modal/positionY": {
     "type": "string",
-    "description": "侧边栏弹窗Y轴的位置"
+    "description": "The position of the Y-axis of the sidebar pop-up window"
   }
 }

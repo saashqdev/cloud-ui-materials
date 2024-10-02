@@ -1,135 +1,135 @@
 - name: u-search-input
-  title: 联想搜索框
-  description: u-input 联想搜索框，自动补全输入内容
+  title: Predictive Search Box
+  description: u-input predictive search box, automatically completes the input content
   attrs:
     - name: value
       sync: true
       model: true
       type: object
       default: null
-      description: 选中对象
+      description: Selected object
     - name: search-word
       type: string
       default: null
-      description: 输入框内容
+      description: Input box content
     - name: offset
       type: number
       default: 0
-      description: 输入框x轴方向偏移量
+      description: Input box x-axis offset
     - name: load-list
       type: Function
       default: null
-      description: 搜索列表返回函数，接受搜索关键字作为参数，以promise或者array返回值
+      description: Search list return function, accepts search keyword as parameter, returns value as promise or array
     - name: value-check
       type: boolean
       default: false
-      description: 失焦时search与value值同步, 仅在value值绑定时生效
+      description: When out of focus, search is synchronized with value, which is only effective when value is bound
     - name: type
       type: string
       default: text
-      description: 输入框的类型，目前支持两种：`'text'`和`'password'`
+      description: The type of the input box. Currently two types are supported - `'text'` and `'password'`
     - name: clearable
       type: boolean
       default: null
-      description: 是否可清空。开启并在输入框有内容时会显示清空按钮。
+      description: Whether it can be cleared. If it is turned on, a clear button will be displayed when there is content in the input box.
     - name: placeholder
       type: string
       default: null
-      description: 原生属性。对 IE9 做了兼容。
+      description: Native property. Compatible with IE9.
     - name: minlength
       type: number
       default: null
-      description: 原生属性
+      description: Native property
     - name: maxlength
       type: number
       default: null
-      description: 原生属性
+      description: Native property
     - name: spellcheck
       type: boolean
       default: null
-      description: 原生属性
+      description: Native property
     - name: autofocus
       type: boolean
       default: null
-      description: 是否自动获取焦点
+      description: Whether to automatically get the focus
     - name: readonly
       type: boolean
       default: false
-      description: 是否只读
+      description: Read-only
     - name: disabled
       type: boolean
       default: false
-      description: 是否禁用
+      description: Whether to disable
     - name: size
       type: string
       default: normal
-      description: 大小扩展，支持一个值：`'mini'`, `'small'`, `'normal'`, `'large'`, `'huge'`,
-        `'full'`，或两个值的组合，前者表示高度，后者表示宽度，类似CSS的padding书写格式
+      description: Size extension, supports one value - `'mini'`, `'small'`, `'normal'`, `'large'`, `'huge'`,
+        `'full'`, or a combination of two values, the former represents the height, the latter represents the width, similar to the CSS padding writing format
     - name: search
       type: string
       default: null
-      description: 搜索标志，支持位置自定义，默认搜索标志在最右边，值为`left`即表示搜索标志在左边
+      description: Search mark, supports custom position, the default search mark is on the far right, the value of `left` means the search mark is on the left
     - name: maxlength-message
       type: string
       default: null
-      description: "\b\b输入内容达到上限时的错误提示，且被 [FormItem](#/components/u-form) 包裹时生效"
+      description: "\b\bError message when the input content reaches the upper limit, and it takes effect when wrapped by [FormItem](#/components/u-form)"
   slots:
     - name: default
-      description: "插入  HTML或 `Component`, \b下来框单项展示。"
+      description: "Insert HTML or `Component`, \bThe drop-down box displays each item individually."
     - name: header
-      description: 分组数据，组标题
+      description: Group data, group title
   events:
     - name: input
-      description: value值更改时触发
+      description: Triggered when the value changes
       params:
         - name: $event
           type: object
-          description: 选中下拉框中的值
+          description: Select the value in the drop-down box
     - name: change
-      description: value值更改时触发
+      description: Triggered when the value changes
       params:
         - name: $event.value
           type: object
-          description: 改变后的值
+          description: The changed value
         - name: $event.oldValue
           type: object
-          description: 旧的值
+          description: Old value
     - name: blur
-      description: 输入框失焦事件透传
+      description: Input box focus loss event transparent transmission
       params:
         - name: $event
           type: string
-          description: vue失焦事件对象
+          description: Vue focus loss event object
     - name: focus
-      description: 输入框聚焦焦事件透传
+      description: Input box focus event transparent transmission
       params:
         - name: $event
           type: string
-          description: vue聚焦事件对象
+          description: Vue focus event object
     - name: keyenter
-      description: enter输入事件
+      description: Enter input event
       params:
         - name: $event
           type: string
-          description: vue keydown.enter事件对象
+          description: Vue keydown.enter event object
     - name: keydown
-      description: down输入事件
+      description: Down input event
       params:
         - name: $event
           type: string
-          description: vue keydown.down事件对象
+          description: Vue keydown.down event object
     - name: keyup
-      description: up输入事件
+      description: Up input event
       params:
         - name: $event
           type: string
-          description: vue keydown.up事件对象
+          description: Vue keydown.up event object
     - name: keychange
-      description: searchWord更改事件
+      description: SearchWord change event
       params:
         - name: $event.value
           type: string
-          description: 改变后的值
+          description: The changed value
         - name: $event.oldValue
           type: string
-          description: 旧的值
+          description: Old value

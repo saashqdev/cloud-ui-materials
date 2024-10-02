@@ -1,32 +1,32 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- The README.md is automatically generated based on api.yaml and docs/*.md for easy viewing on GitHub and NPM. If you need to modify, please view the source file -->
 
-# USiderModal 侧边栏弹窗
+# USiderModal Sidebar Pop-Up Window
 
-- [示例](#示例)
+- [Example](#example)
     - [Basic Usage](#Basic Usage)
-- [API]()
+-[API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Events](#events)
 
 **Container**
 
-侧边栏弹窗组件
+Sidebar popup component
 
 ## Example
 ### Basic Usage
 
-设置位置
+Set location
 
 ```vue
 <template>
 <div>
-位置切换<u-switch v-model="switchToggle" style="margin:0 20px 10px 0;">Switch</u-switch>
-上下位置设置：<u-input style="margin:0 20px 10px 0;" type="number" v-model="posY"></u-input>
-button文本：<u-input style="margin:0 20px 10px 0;" v-model="btnText"></u-input>
-<u-button style="margin:0 20px 10px 0;" @click="() => {this.toggle = !this.toggle}">显示/隐藏</u-button>
+Position switch<u-switch v-model="switchToggle" style="margin:0 20px 10px 0;">Switch</u-switch>
+Upper and lower position settings: <u-input style="margin:0 20px 10px 0;" type="number" v-model="posY"></u-input>
+Button text: <u-input style="margin:0 20px 10px 0;" v-model="btnText"></u-input>
+<u-button style="margin:0 20px 10px 0;" @click="() => {this.toggle = !this.toggle}">Show/Hide</u-button>
 <u-sider-modal :position="posValue" :toggleShow="toggle" :buttonText="btnText" :positionY="posY">
-    <div style="height:40px">content</div>
+    <div style="height:40px">Content</div>
 </u-sider-modal>
 </div>
 </template>
@@ -61,49 +61,49 @@ button文本：<u-input style="margin:0 20px 10px 0;" v-model="btnText"></u-inpu
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| position | string | `[object Object]`<br/>`[object Object]` | `'right'` | 侧边栏弹窗停靠的位置（目前只支持左边和右边） |
-| toggleShow | boolean |  | `false` | 是否显示侧边栏弹窗 |
-| buttonText | string |  | `'侧边栏弹窗'` | 弹窗展开/收起按钮的显示文字 |
-| positionY | string |  | `'0'` | 侧边栏弹窗Y轴的位置 |
+| position | string | `[object Object]`<br/>`[object Object]` | `'right'` | The position where the sidebar pop-up window stops (currently only supports the left and right sides) |
+| toggleShow | boolean | | `false` | Whether to display the sidebar pop-up window |
+| buttonText | string | | `'Sidebar pop-up window' | The display text of the pop-up window expand/collapse button |
+| positionY | string | | `'0'` | The position of the Y axis of the sidebar pop-up window |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 ### Events
 
 #### @before-open
 
-打开弹窗前触发
+Triggered before opening the pop-up window
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| senderVM | UModal | 发送事件实例 |
+| senderVM | UModal | Send event instance |
 
 #### @open
 
-打开弹窗后触发
+Triggered after opening the pop-up window
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| senderVM | UModal | 发送事件实例 |
+| senderVM | UModal | Send event instance |
 
 #### @before-close
 
-关闭弹窗前触发
+Triggered before closing the pop-up window
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.preventDefault | Function | 阻止关闭流程 |
-| senderVM | UModal | 发送事件实例 |
+| $event.preventDefault | Function | Prevent the shutdown process |
+| senderVM | UModal | Send event instance |
 
 #### @close
 
-关闭弹窗时触发
+Triggered when closing the pop-up window
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| senderVM | UModal | 发送事件实例 |
+| senderVM | UModal | Send event instance |
 

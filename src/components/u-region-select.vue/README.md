@@ -1,35 +1,35 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# URegionSelect 地区选择
+# URegionSelect Region selection
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [双向绑定](#双向绑定)
+    - [Two-Way Binding](#Two-way binding)
     - [Placeholder](#placeholder)
-    - [隐藏空列表](#隐藏空列表)
+    - [Hide Empty List](#Hide empty list)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
 
-**UI 组件**, **表单控件**, **块级展示**
+**UI Components**, **Form Controls**, **Block-Level Display**
 
-该组件从 UCascadeSelect 继承，仅填充了中国的行政区数据，其他功能与 UCascadeSelect 相同。
+This component inherits from UCascadeSelect and is only populated with China's administrative district data. Other functions are the same as UCascadeSelect.
 
 ## Example
-### Basic Usage
+### Basic usage
 
 ``` html
 <u-linear-layout direction="vertical">
     <u-region-select></u-region-select>
-    <u-region-select value="浙江,杭州,滨江区"></u-region-select>
+    <u-region-select value="Fort Erie, Ontario, Lincoln District"></u-region-select>
 </u-linear-layout>
 ```
 
-### 双向绑定
+### Two-Way Binding
 
-使用`v-model`进行双向绑定。
+Use `v-model` for two-way binding.
 
-```vue
+```Vue
 <template>
     <u-region-select v-model="address"></u-region-select>
 </template>
@@ -48,69 +48,68 @@ export default {
 
 ``` html
 <u-region-select :categories="[
-    { label: '省', placeholder: '请选择省份' },
-    { label: '市', placeholder: '请选择城市' },
-    { label: '区', placeholder: '请选择县区' },
+    { label: 'Province', placeholder: 'Please select a province' },
+    { label: 'City', placeholder: 'Please select a city' },
+    { label: 'District', placeholder: 'Please select a county' },
 ]"></u-region-select>
 ```
 
-### 隐藏空列表
+### Hide Empty Lists
 
 ``` html
 <u-region-select hide-empty :categories="[
-    { label: '省', placeholder: '请选择省份' },
-    { label: '市', placeholder: '请选择城市' },
-    { label: '区', placeholder: '请选择县区' },
+    { label: 'Province', placeholder: 'Please select a province' },
+    { label: 'City', placeholder: 'Please select a city' },
+    { label: 'District', placeholder: 'Please select a county' },
 ]"></u-region-select>
 ```
 
 ## API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| data | Array\<{ text, value }\> |  | `'数据'` | 数据列表 |
-| value.sync, v-model | any |  |  | 当前选择的值 |
-| categories | Array\<{ label, key, placeholder }\> |  | `'数据'` | 多级分类 |
-| hide-empty | boolean |  | `false` | 是否隐藏空列表 |
-| converter | string, object |  | `'join'` | value 与 values 的转换器。可选值：`'join'`表示将 values 数组 join 之后变成 value，`'join.number'`与`join`类似，只是会考虑它为数字的情况。也可以用`:`修改分隔符，类似 Vue 的指令参数，`'last-value'`表示以最后一项的值作为 value。也可以传入一个包含 { get, set } 的一个对象 |
-| field | string |  | `'value'` | 显示文本字段 |
-| readonly | boolean |  | `false` | 是否只读 |
-| disabled | boolean |  | `false` | 是否禁用 |
+| data | Array\<{ text, value }\> | | `'data'` | Data list |
+| value.sync, v-model | any | | | The currently selected value |
+| categories | Array\<{ label, key, placeholder }\> | | `'Data'` | Multi-level classification |
+| hide-empty | boolean | | `false` | Whether to hide empty lists |
+| converter | string, object | | `'join'` | Converter between value and values. Optional values: `'join'` means joining the values   array to become value, `'join.number'` is similar to `join`, except that it will be considered as a number. You can also use `:` to modify the separator, similar to the directive parameter of Vue, `'last-value'` means taking the value of the last item as value. You can also pass in an object containing { get, set } |
+| field | string | | `'value'` | Display text field |
+| readonly | boolean | | `false` | Read-only |
+| disabled | boolean | | `false` | Disabled |
 
 ### Events
 
 #### @input
 
-选择某一项时触发
+Triggered when an item is selected
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event | any | 选择项的值 |
-| senderVM | URegionSelect | 发送事件实例 |
+| $event | any | Value of the selection |
+| senderVM | URegionSelect | Send event instance |
 
 #### @select
 
-选择某一项时触发
+Triggered when an item is selected
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.level | number | 选择的层级 |
-| $event.value | any | 改变后的值 |
-| $event.values | Array | 改变后每项值的数组 |
-| $event.item | object | 选择项相关对象 |
-| $event.itemVM | ListViewItem | 选择项子组件 |
-| senderVM | URegionSelect | 发送事件实例 |
+| $event.level | number | The selected level |
+| $event.value | any | Changed value |
+| $event.values   | Array | An array of each value after the change |
+| $event.item | object | Select item related object |
+| $event.itemVM | ListViewItem | Select item subcomponent |
+| senderVM | URegionSelect | Send event instance |
 
 #### @change
 
-选择值改变时触发
+Fired when the selected value changes
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | any | 改变后的值 |
-| $event.oldValue | any | 旧的值 |
-| $event.values | Array | 改变后每项值的数组 |
-| $event.oldValues | Array | 旧的每项值的数组 |
-| senderVM | URegionSelect | 发送事件实例 |
-
+| $event.value | any | Changed value |
+| $event.oldValue | any | Old value |
+| $event.values   | Array | An array of each value after the change |
+| $event.oldValues   | Array | An array of old values   for each item |
+| senderVM | URegionSelect | Send event instance |

@@ -2,7 +2,7 @@
   "name": "@cloud-ui/s-sidebar.vue",
   "description": "Cloud UI - SSidebar, nestable sidebar",
   "version": "0.1.2",
-  "author": "zhangsanshi5566@gmail.com",
+  "author": "kubeworkz@gmail.com",
   "main": "./index.js",
   "repository": {
     "type": "git",

@@ -27,7 +27,7 @@
   "babel": {},
   "kubevue": {
     "type": "component",
-    "title": "侧边栏弹窗",
+    "title": "Sidebar popup",
     "category": "Container",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

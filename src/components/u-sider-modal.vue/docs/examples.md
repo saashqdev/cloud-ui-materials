@@ -1,16 +1,16 @@
 ### Basic Usage
 
-设置位置
+Set location
 
 ```vue
 <template>
 <div>
-位置切换<u-switch v-model="switchToggle" style="margin:0 20px 10px 0;">Switch</u-switch>
-上下位置设置：<u-input style="margin:0 20px 10px 0;" type="number" v-model="posY"></u-input>
-button文本：<u-input style="margin:0 20px 10px 0;" v-model="btnText"></u-input>
-<u-button style="margin:0 20px 10px 0;" @click="() => {this.toggle = !this.toggle}">显示/隐藏</u-button>
+Position switch<u-switch v-model="switchToggle" style="margin:0 20px 10px 0;">Switch</u-switch>
+Upper and lower position settings: <u-input style="margin:0 20px 10px 0;" type="number" v-model="posY"></u-input>
+Button text: <u-input style="margin:0 20px 10px 0;" v-model="btnText"></u-input>
+<u-button style="margin:0 20px 10px 0;" @click="() => {this.toggle = !this.toggle}">Show/Hide</u-button>
 <u-sider-modal :position="posValue" :toggleShow="toggle" :buttonText="btnText" :positionY="posY">
-    <div style="height:40px">content</div>
+    <div style="height:40px">Content</div>
 </u-sider-modal>
 </div>
 </template>

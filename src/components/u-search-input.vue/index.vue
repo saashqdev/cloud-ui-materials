@@ -88,7 +88,7 @@ export default {
                 this.resultList = loadResult;
             } else {
                 throw Error(
-                    '[cloud-ui] <u-search-input></u-search-input> loadList返回值仅接受数组类型或者是Promise对象',
+                    '[cloud-ui] <u-search-input></u-search-input> The return value of loadList only accepts array types or Promise objects',
                 );
             }
         },

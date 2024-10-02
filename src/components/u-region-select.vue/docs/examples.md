@@ -3,13 +3,13 @@
 ``` html
 <u-linear-layout direction="vertical">
     <u-region-select></u-region-select>
-    <u-region-select value="浙江,杭州,滨江区"></u-region-select>
+    <u-region-select value="Fort Erie, Ontario, Lincoln District"></u-region-select>
 </u-linear-layout>
 ```
 
-### 双向绑定
+### Two-Way Binding
 
-使用`v-model`进行双向绑定。
+Use `v-model` for two-way binding.
 
 ```vue
 <template>
@@ -30,18 +30,18 @@ export default {
 
 ``` html
 <u-region-select :categories="[
-    { label: '省', placeholder: '请选择省份' },
-    { label: '市', placeholder: '请选择城市' },
-    { label: '区', placeholder: '请选择县区' },
+    { label: 'Province', placeholder: 'Please select a province' },
+    { label: 'City', placeholder: 'Please select a city' },
+    { label: 'District', placeholder: 'Please select a county' },
 ]"></u-region-select>
 ```
 
-### 隐藏空列表
+### Hide Empty List
 
 ``` html
 <u-region-select hide-empty :categories="[
-    { label: '省', placeholder: '请选择省份' },
-    { label: '市', placeholder: '请选择城市' },
-    { label: '区', placeholder: '请选择县区' },
+    { label: 'Province', placeholder: 'Please select a province' },
+    { label: 'City', placeholder: 'Please select a city' },
+    { label: 'District', placeholder: 'Please select a county' },
 ]"></u-region-select>
 ```
