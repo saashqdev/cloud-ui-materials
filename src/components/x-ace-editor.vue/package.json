@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/x-ace-editor.vue",
-  "description": "本组件对 Ace Editor 进行了封装，添加样式修饰，接入了 Cloud UI 表单验证体系。",
+  "description": "This component encapsulates Ace Editor, adds style modifications, and is connected to the Cloud UI form verification system.",
   "version": "0.9.0",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
@@ -42,7 +42,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "Ace编辑器",
+    "title": "Ace Editor",
     "category": "editor",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

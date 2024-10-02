@@ -1,37 +1,37 @@
 - name: x-monaco-editor
-  title: Monaco 编辑器
-  description: 本组件对 [Monaco Editor]([https://microsoft.github.io/monaco-editor/index.html]) 进行了 Vue 的封装，添加样式修饰，接入了 Cloud UI 表单验证体系。
+  title: Monaco Editor
+  description: This component encapsulates [Monaco Editor]([https://microsoft.github.io/monaco-editor/index.html]) with Vue, adds style modifications, and connects to the Cloud UI form validation system.
   attrs:
     - name: value
-      title: 值
+      title: Value
       model: true
       sync: true
       type: string
       default: ''
-      description: 代码段
+      description: Code snippet
   slots:
     - name: default
-      title: 默认
-      description: 插入文本或 HTML。
+      title: default
+      description: Insert text or HTML.
   events:
     - name: before-init
-      title: 初始化前
-      description: 初始化编辑器前触发
+      title: Before Initialization
+      description: Triggered before initializing the editor
     - name: init
-      title: 初始化后
-      description: 初始化编辑器后触发
+      title: After Initialization
+      description: Triggered after the editor is initialized
     - name: input
-      title: 输入时
-      description: 输入时触发
+      title: When Entering
+      description: Triggered on input
     - name: change
-      description: 改变时触发
+      description: Triggered when changed
       params:
         - name: $event.value
           type: string
-          description: 改变后的值
+          description: The changed value
         - name: $event.oldValue
           type: string
-          description: 旧的值
+          description: Old value
         - name: $event.event
           type: object
-          description: Monaco 的事件
+          description: Monaco's events

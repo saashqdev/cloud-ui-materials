@@ -35,7 +35,7 @@ export default {
         },
     },
     data() {
-        // 就不监听了
+        // No more monitoring
         this.editor = undefined;
         return {
             currentValue: '',
@@ -88,7 +88,7 @@ export default {
             if (this.lang === 'json') valid = this.validateJSON(value);
             this.$emit('validate', { valid });
             this.$emit('change', { value, oldValue });
-        }); // 其他事件直接透传
+        }); // Other events are directly transmitted transparently
         [
             'blur',
             'changeSelectionStyle',
@@ -98,7 +98,7 @@ export default {
             'paste',
         ].forEach((event) => {
             this.editor.on(event, (e) => this.$emit(event, e));
-        }); // @TODO: 方法要不要透传
+        }); // @TODO: Should methods be passed transparently?
         this.$emit('init', { editor: this.editor });
     },
     methods: {

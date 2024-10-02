@@ -12,7 +12,7 @@
 </u-timeline>
 ```
 
-### 修改颜色
+### Modify Color
 
 ``` html
 <u-timeline>

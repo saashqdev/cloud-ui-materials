@@ -4,7 +4,7 @@
         <slot></slot>
     </div>
     <div v-if="legend && legend.length" :class="$style.legend">
-        图例：
+        Legend:
         <div :class="$style.item_button" v-for="item in legend" :key="item.label" :status="item.color">{{ item.label }}</div>
     </div>
 </div>
@@ -16,9 +16,9 @@ export default {
     childName: 'u-workflow-item',
     props: {
         legend: { type: Array, default: () => [
-            { label: '已完成', color: 'done' },
-            { label: '进行中', color: 'doing' },
-            { label: '未开始', color: 'todo' },
+            { label: 'Done', color: 'done' },
+            { label: 'In Progress', color: 'doing' },
+            { label: 'Not Started', color: 'todo' },
         ] },
         labelSize: { type: String, default: 'normal' },
     },

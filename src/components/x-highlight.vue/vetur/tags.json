@@ -7,6 +7,6 @@
       "preRender",
       "postRender"
     ],
-    "description": "本组件对 [highlight.js](https://highlightjs.org/usage/) 进行了封装，方便代码高亮展示。"
+    "description": "This component encapsulates [highlight.js](https://highlightjs.org/usage/) to facilitate code highlighting."
   }
 }

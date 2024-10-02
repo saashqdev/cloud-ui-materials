@@ -4,7 +4,7 @@
       "legend",
       "label-size"
     ],
-    "description": "用于展示工作流程的图。",
+    "description": "Diagram used to show workflow.",
     "subtags": [
       "u-workflow-item",
       "u-workflow-branch"

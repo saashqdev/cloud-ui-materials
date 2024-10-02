@@ -1,23 +1,23 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# XMonacoEditor Monaco 编辑器
+# XMonacoEditor Monaco Editor
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [设置主题](#设置主题)
-    - [设置语言](#设置语言)
-    - [目前存在的问题](#目前存在的问题)
+    - [Set Theme](#Set theme)
+    - [Set Language](#Set language)
+    - [Current Problems](#Current Problems)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
     - [Events](#events)
 
-本组件对 [Monaco Editor]([https://microsoft.github.io/monaco-editor/index.html]) 进行了 Vue 的封装，添加样式修饰，接入了 Cloud UI 表单验证体系。
+This component encapsulates [Monaco Editor]([https://microsoft.github.io/monaco-editor/index.html]) with Vue, adds style modifications, and connects to the Cloud UI form validation system.
 
 ## Example
 ### Basic Usage
 
-使用`v-model`或`:value.sync`双向绑定。
+Use `v-model` or `:value.sync` for two-way binding.
 
 ``` vue
 <template>
@@ -34,12 +34,12 @@ export default {
 </script>
 ```
 
-### 设置主题
+### Setting the Theme
 
 ``` vue
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换主题：">
+    <u-form-item label="Switch Theme:">
         <u-select v-model="selectedTheme">
             <u-select-item v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</u-select-item>
         </u-select>
@@ -83,12 +83,12 @@ module Conway {
 </script>
 ```
 
-### 设置语言
+### Set the Language
 
 ``` vue
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换语言：">
+    <u-form-item label="Switch Language:">
         <u-select v-model="selectedLang">
             <u-select-item v-for="lang in langs" :key="lang" :value="lang">{{ lang }}</u-select-item>
         </u-select>
@@ -136,45 +136,44 @@ module Conway {
 </script>
 ```
 
-### 目前存在的问题
+### Current Issues
 
-- [多个编辑器共享同一主题](https://github.com/microsoft/monaco-editor/issues/1289)
-- [多个编辑器共享 TypeScript Service](https://github.com/microsoft/monaco-editor/issues/262)
+- [Multiple Editors Share the Same Theme](https://github.com/microsoft/monaco-editor/issues/1289)
+- [Multiple Editors Share TypeScript Service](https://github.com/microsoft/monaco-editor/issues/262)
 
 ## API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| value.sync, v-model | string |  | `''` | 代码段 |
+| value.sync, v-model | string | | `''` | Code snippet |
 
 ### Slots
 
 #### (default)
 
-插入文本或 HTML。
+Insert text or HTML.
 
 ### Events
 
 #### @before-init
 
-初始化编辑器前触发
+Fired before the editor is initialized
 
 #### @init
 
-初始化编辑器后触发
+Fired after the editor is initialized
 
 #### @input
 
-输入时触发
+Trigger on input
 
 #### @change
 
-改变时触发
+Triggered on change
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.value | string | 改变后的值 |
-| $event.oldValue | string | 旧的值 |
-| $event.event | object | Monaco 的事件 |
-
+| $event.value | string | The changed value |
+| $event.oldValue | string | Old value |
+| $event.event | object | Monaco's event |

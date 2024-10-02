@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/x-highlight.vue",
-  "description": "本组件对 [highlight.js](https://highlightjs.org/usage/) 进行了封装，方便代码高亮展示。",
+  "description": "This component encapsulates [highlight.js](https://highlightjs.org/usage/) to facilitate code highlighting.",
   "version": "0.9.0",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
@@ -48,7 +48,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "代码高亮",
+    "title": "Code highlighting",
     "category": "editor",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

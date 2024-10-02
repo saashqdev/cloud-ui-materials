@@ -1,21 +1,21 @@
 - name: u-timeline
-  title: 时间线
-  description: 垂直展示的时间流信息。
+  title: Timeline
+  description: Time flow information displayed vertically.
   attrs:
     - name: value
       type: number
       default: 0
-      description: 需要传入的值
+      description: The value that needs to be passed in
   slots:
     - name: default
-      description: 插入文本或 HTML。
+      description: Insert text or HTML.
   events:
     - name: change
-      description: 修改时触发
+      description: Triggered when modified
       params:
         - name: $event.param1
           type: string
-          description: 参数1
+          description: Parameter 1
         - name: $event.param2
           type: number
-          description: 参数2
+          description: Parameter 2

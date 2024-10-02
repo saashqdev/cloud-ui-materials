@@ -1,71 +1,71 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# XHighlight 代码高亮
+# XHighlight Code Highlighting
 
-- [安装配置](#安装配置)
-    - [安装](#安装)
-    - [引入](#引入)
-    - [打包配置](#打包配置)
-- [示例](#示例)
+- [Installation Configuration](#Installation Configuration)
+    - [Installation](#Installation)
+    - [Introduction](#Introduction)
+    - [Packaging Configuration](#Packaging Configuration)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
 - [API]()
     - [Props/Attrs](#propsattrs)
     - [Events](#events)
     - [Methods](#methods)
 
-**三方组件**, **块级展示**
+**Third-Party Components**, **Block-Level Display**
 
-本组件对 [highlight.js](https://highlightjs.org/usage/) 进行了封装，方便代码高亮展示。
+This component encapsulates [highlight.js](https://highlightjs.org/usage/) to facilitate code highlighting.
 
-## 安装配置
-### 安装
+## Installation Configuration
+### Install
 
-``` shell
+``` Shell
 npm i --save @cloud-ui/x-highlight.vue
 ```
 
-### 引入
+### Import
 
-直接注册
+Direct registration
 
-``` js
+```js
 import XHighlight from '@cloud-ui/x-highlight.vue';
 
 Vue.component('x-highlight', XHighlight);
 ```
 
-或者使用 kubevue-utils 安装（常用于同时安装多个组件）
+Or use kubevue-utils to install (often used to install multiple components at the same time)
 
-``` js
+```js
 import { install } from 'kubevue-utils';
 import XHighlight from '@cloud-ui/x-highlight.vue';
 
 install(Vue, { XHighlight });
 ```
 
-### 打包配置
+### Packaging Configuration
 
-由于 highlight.js 包较大，可以添加在 Webpack 的配置里 externals 中。
+Since the highlight.js package is large, it can be added to the externals in the Webpack configuration.
 
-或者用 dll 进行处理。
+Or use dll to process it.
 
 ## Example
 ### Basic Usage
 
-在组件上设置`lang`和`content`属性。
+Set the `lang` and `content` properties on the component.
 
-为了控制打包大小，我们没有引入全量包。使用时还需按照下面的方式，自行引入语言包和样式包。
+In order to control the package size, we did not import the full package. When using it, you need to import the language package and style package yourself according to the following method.
 
-``` js
+```js
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 import 'highlight.js/styles/tomorrow.css';
 ```
 
-更多语言和样式可以查看源码中的[语言目录](https://github.com/highlightjs/highlight.js/tree/master/src/languages)，[样式目录](https://github.com/highlightjs/highlight.js/tree/master/src/styles)。
+For more languages and styles, please check the [language directory](https://github.com/highlightjs/highlight.js/tree/master/src/languages) and [style directory](https://github.com/highlightjs/highlight.js/tree/master/src/styles) in the source code.
 
-下面是一段 javascript 的例子。
+Below is an example of javascript.
 
 ``` vue
 <template>
@@ -94,7 +94,7 @@ const flat = {};
 </script>
 ```
 
-下面是一段 html 的例子，html 的语言包名称是 xml。
+The following is an example of html. The language package name of html is xml.
 
 ``` vue
 <template>
@@ -121,47 +121,46 @@ export default {
 ```
 
 ## API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| content | string |  | `''` | 原始代码内容 |
-| lang | string |  | `''` | 语言 |
-| auto | boolean |  | `false` | 是否自动探测代码中的语言 |
-| preRender | Function\<content: string, lang: string\> |  | `'this.defaultPreRender'` | 渲染前对代码的处理函数 |
-| postRender | Function\<result: string\> |  | `'this.defaultPostRender'` | 渲染后对结果的处理函数 |
+| content | string | | `''` | Original code content |
+| lang | string | | `''` | Language |
+| auto | boolean | | `false` | Whether to automatically detect the language in the code |
+| preRender | Function\<content: string, lang: string\> | | `'this.defaultPreRender'` | Function to process code before rendering |
+| postRender | Function\<result: string\> | | `'this.defaultPostRender'` | Function to process the result after rendering |
 
 ### Events
 
 #### @before-render
 
-渲染前触发
+Triggered before rendering
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.content | string | 原始代码内容 |
-| $event.lang | string | 语言 |
-| $event.result | string | 渲染后的结果 |
-| $event.preventDefault | Function | 阻止渲染流程 |
-| senderVM | XHighlight | 发送事件实例 |
+| $event.content | string | Original code content |
+| $event.lang | string | Language |
+| $event.result | string | Rendered result |
+| $event.preventDefault | Function | Prevent rendering process |
+| senderVM | XHighlight | Send event instance |
 
 #### @render
 
-渲染后触发
+Triggered after rendering
 
 | Param | Type | Description |
 | ----- | ---- | ----------- |
-| $event.content | string | 原始代码内容 |
-| $event.lang | string | 语言 |
-| $event.result | string | 渲染后的结果 |
-| senderVM | XHighlight | 发送事件实例 |
+| $event.content | string | Original code content |
+| $event.lang | string | Language |
+| $event.result | string | Rendered result |
+| senderVM | XHighlight | Send event instance |
 
 Methods
 
 #### render()
 
-渲染代码。初始化时和`content`属性改变时会自动调用。
+Rendering code. Called automatically during initialization and when the `content` property changes.
 
 | Param | Type | Default | Description |
 | ----- | ---- | ------- | ----------- |
-

@@ -1,57 +1,57 @@
 - name: u-workflow
-  title: 工作流程
-  description: 用于展示工作流程的图。
+  title: Workflow
+  description: A diagram used to show the workflow.
   attrs:
     - name: legend
       type: 'Array<{ label: string, color: string }>'
       default: '...'
-      description: 图例。图例项中的样式与图节点的一致
+      description: Legend. The style of the legend item is consistent with the graph node
     - name: label-size
       type: enum
       options: [small, normal, large]
       default: normal
-      description: 左侧标签的宽度
+      description: Width of the left label
   slots:
     - name: default
-      description: 插入 `<u-workflow-item>`。
+      description: Insert `<u-workflow-item>`。
 - name: u-workflow-item
   attrs:
     - name: title
       type: string
       default:
-      description: 步骤标题
+      description: Step title
     - name: label
       type: string
       default:
-      description: 左侧标签
+      description: Left label
     - name: href
       type: string
       default:
-      description: 链接地址
+      description: Link address
     - name: target
       type: string
       default:
-      description: （原生属性）。比如设置`_blank`，会打开新的空白页。
+      description: (native property). For example, if you set `_blank`, a new blank page will be opened.
     - name: to
       type: string, Location
       default:
-      description: 需要 vue-router，与`<router-link>`的`to`属性相同。可以是一个字符串或者是描述目标位置的对象。
+      description: Requires vue-router, same as the `to` property of `<router-link>`. Can be a string or an object describing the target location.
     - name: replace
       type: boolean
       default: false
-      description: 需要
-        vue-router，与`<router-link>`的`replace`属性相同。如果为`true`，当点击时，会调用`router.replace()`而不是`router.push()`，于是导航后不会留下`history
-        `记录。
+      description: Required
+        vue-router, same as the `replace` property of `<router-link>`. If `true`, when clicking, `router.replace()` will be called instead of `router.push()`, so that `history` will not be left after navigation
+        `Record.
     - name: append
       type: boolean
       default: false
-      description: 需要 vue-router，与`<router-link>`的`append`属性相同。如果为`true`，则在当前路径后追加`to`的路径。
+      description: Requires vue-router, same as the `append` property of `<router-link>`. If `true`, append the path of `to` after the current path.
   slots:
     - name: default
-      description: 插入 `<u-workflow-branch>`。
+      description: Insert `<u-workflow-branch>`。
     - name: tooltip
-      description: 自定义工具提示。
+      description: Custom tooltip.
 - name: u-workflow-branch
   slots:
     - name: default
-      description: 插入 `<u-workflow-item>`。
+      description: Insert `<u-workflow-item>`。

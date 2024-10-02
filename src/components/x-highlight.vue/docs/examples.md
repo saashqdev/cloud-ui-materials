@@ -1,8 +1,8 @@
 ### Basic Usage
 
-在组件上设置`lang`和`content`属性。
+Set the `lang` and `content` properties on the component.
 
-为了控制打包大小，我们没有引入全量包。使用时还需按照下面的方式，自行引入语言包和样式包。
+In order to control the package size, we did not introduce full packages. When using it, you need to introduce the language pack and style pack yourself as follows.
 
 ``` js
 import hljs from 'highlight.js/lib/highlight';
@@ -11,9 +11,9 @@ hljs.registerLanguage('javascript', javascript);
 import 'highlight.js/styles/tomorrow.css';
 ```
 
-更多语言和样式可以查看源码中的[语言目录](https://github.com/highlightjs/highlight.js/tree/master/src/languages)，[样式目录](https://github.com/highlightjs/highlight.js/tree/master/src/styles)。
+For more languages   and styles, you can view the [Language Directory](https://github.com/highlightjs/highlight.js/tree/master/src/languages) and [Style Directory](https://github.com) in the source code /highlightjs/highlight.js/tree/master/src/styles).
 
-下面是一段 javascript 的例子。
+Below is an example of javascript.
 
 ``` vue
 <template>
@@ -42,7 +42,7 @@ const flat = {};
 </script>
 ```
 
-下面是一段 html 的例子，html 的语言包名称是 xml。
+The following is an example of a piece of html. The language pack name of html is xml.
 
 ``` vue
 <template>

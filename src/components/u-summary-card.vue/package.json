@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/u-summary-card.vue",
-  "description": "摘要卡片",
+  "description": "Summary card",
   "version": "0.9.0",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -35,7 +35,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "摘要卡片",
+    "title": "SUmmary card",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

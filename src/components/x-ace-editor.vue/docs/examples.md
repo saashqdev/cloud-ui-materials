@@ -1,8 +1,8 @@
 ### Basic Usage
 
-使用`v-model`或`:value.sync`双向绑定。
+Use `v-model` or `:value.sync` for two-way binding.
 
-``` vue
+``` view
 <template>
 <x-ace-editor v-model="value"></x-ace-editor>
 </template>
@@ -17,18 +17,18 @@ export default {
 </script>
 ```
 
-### 设置语言
+### Set the Language
 
-通过`lang`属性设置语言。更多语言包请查看 [brace mode](https://github.com/thlorenz/brace/tree/master/mode)。
+Set the language via the `lang` property. For more language packs, see [brace mode](https://github.com/thlorenz/brace/tree/master/mode).
 
-注意：需要用如下方式引入 brace 包中的语言包。
+Note: The language package in the brace package needs to be imported as follows.
 
 ``` js
 import 'brace';
 import 'brace/mode/json';
 ```
 
-``` vue
+``` view
 <template>
 <x-ace-editor v-model="value" lang="json"></x-ace-editor>
 </template>
@@ -52,12 +52,12 @@ export default {
 </script>
 ```
 
-下面再多举一些例子：
+Here are some more examples:
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换语言：">
+    <u-form-item label="Switch Language:">
         <u-select v-model="selectedLang">
             <u-select-item v-for="lang in langs" :key="lang" :value="lang">{{ lang }}</u-select-item>
         </u-select>
@@ -89,7 +89,7 @@ export default {
         };
     },
     computed: {
-        langs() {
+        by() {
             return Object.keys(this.values);
         },
     },
@@ -97,13 +97,13 @@ export default {
 </script>
 ```
 
-### 设置主题
+### Setting the Theme
 
-通过`theme`属性设置常见的编辑器主题。更多主题请查看 [brace theme](https://github.com/thlorenz/brace/tree/master/theme)。
+Use the `theme` property to set common editor themes. For more themes, see [brace theme](https://github.com/thlorenz/brace/tree/master/theme).
 
-注意：同样需要提前引入 brace 包中的主题文件。
+Note: You also need to import the theme file in the brace package in advance.
 
-``` vue
+``` view
 <template>
 <x-ace-editor v-model="value" lang="json" theme="monokai"></x-ace-editor>
 </template>
@@ -128,12 +128,12 @@ export default {
 </script>
 ```
 
-下面再多举一些例子：
+Here are some more examples:
 
-``` vue
+``` view
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换主题：">
+    <u-form-item label="Switch theme:">
         <u-select v-model="selectedTheme">
             <u-select-item v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</u-select-item>
         </u-select>
@@ -164,20 +164,20 @@ export default {
 </script>
 ```
 
-### 只读和禁用
+### Read-Only and Disabled
 
 ``` html
 <u-grid-layout :repeat="2">
     <u-grid-layout-column>
-        <x-ace-editor value="var i = 0; // 只读" readonly></x-ace-editor>
+        <x-ace-editor value="var i = 0; // Read-only" readonly></x-ace-editor>
     </u-grid-layout-column>
     <u-grid-layout-column>
-        <x-ace-editor value="var i = 0; // 禁用" disabled></x-ace-editor>
+        <x-ace-editor value="var i = 0; // Disable" disabled></x-ace-editor>
     </u-grid-layout-column>
 </u-grid-layout>
 ```
 
-### 设置尺寸
+### Setting the Size
 
 ``` html
 <u-linear-layout direction="vertical">
@@ -189,15 +189,15 @@ export default {
 </u-linear-layout>
 ```
 
-### 调整大小
+### Resize
 
-通过设置`resize`属性，决定水平垂直方向是否可以调整大小。
+By setting the `resize` property, you can decide whether the horizontal and vertical dimensions can be resized.
 
 ``` html
 <u-linear-layout direction="vertical">
-    <div><x-ace-editor value="none：默认不可以调整大小" resize="none"></x-ace-editor></div>
-    <div><x-ace-editor value="vertical：仅允许垂直方向调整大小" resize="vertical"></x-ace-editor></div>
-    <div><x-ace-editor value="horizontal：仅允许水平方向调整大小" resize="horizontal"></x-ace-editor></div>
-    <div><x-ace-editor value="both：垂直水平方向均可" resize="both"></x-ace-editor></div>
+    <div><x-ace-editor value="none: cannot be resized by default" resize="none"></x-ace-editor></div>
+    <div><x-ace-editor value="vertical: Only allow vertical resizing" resize="vertical"></x-ace-editor></div>
+    <div><x-ace-editor value="horizontal: Only allow horizontal resizing" resize="horizontal"></x-ace-editor></div>
+    <div><x-ace-editor value="both: both vertical and horizontal directions" resize="both"></x-ace-editor></div>
 </u-linear-layout>
 ```

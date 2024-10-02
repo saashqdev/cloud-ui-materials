@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/x-monaco-editor.vue",
-  "description": "Monaco 编辑器",
+  "description": "Monaco Editor",
   "version": "0.1.1",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
@@ -33,7 +33,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "Monaco 编辑器",
+    "title": "Monaco Editor",
     "category": "editor",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

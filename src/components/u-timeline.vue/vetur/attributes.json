@@ -1,6 +1,6 @@
 {
   "u-timeline/value": {
     "type": "number",
-    "description": "需要传入的值"
+    "description": "The value that needs to be passed in"
   }
 }

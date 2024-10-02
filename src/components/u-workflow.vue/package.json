@@ -1,6 +1,6 @@
 {
   "name": "@cloud-ui/u-workflow.vue",
-  "description": "用于展示工作流程各节点的示意图",
+  "description": "Schematic diagram showing each node of the workflow",
   "version": "0.9.0",
   "main": "./index.js",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
@@ -36,7 +36,7 @@
   },
   "kubevue": {
     "type": "component",
-    "title": "工作流程",
+    "title": "Workflow",
     "category": "info",
     "base": "vue",
     "ui": "cloud-ui.kubevue",

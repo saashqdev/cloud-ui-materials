@@ -1,30 +1,30 @@
 {
   "x-ace-editor/value": {
     "type": "string",
-    "description": "代码段"
+    "description": "Code snippet"
   },
   "x-ace-editor/lang": {
     "type": "string",
-    "description": "设置语言"
+    "description": "Set language"
   },
   "x-ace-editor/theme": {
     "type": "string",
-    "description": "设置主题。如果不设置，默认使用 Cloud UI 风格的主题。"
+    "description": "Set the theme. If not set, the Cloud UI style theme will be used by default."
   },
   "x-ace-editor/readonly": {
     "type": "boolean",
-    "description": "是否只读"
+    "description": "Whether it is read-only"
   },
   "x-ace-editor/disabled": {
     "type": "boolean",
-    "description": "是否禁用"
+    "description": "Whether to disable"
   },
   "x-ace-editor/options": {
     "type": "object",
-    "description": "配置项对象"
+    "description": "Configuration item object"
   },
   "x-ace-editor/autofocus": {
     "type": "boolean",
-    "description": "组件挂载时自动获取焦点"
+    "description": "Automatically obtain focus when the component is mounted"
   }
 }

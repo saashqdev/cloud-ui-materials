@@ -1,11 +1,11 @@
-<!-- 该 README.md 根据 api.yaml 和 docs/*.md 自动生成，为了方便在 GitHub 和 NPM 上查阅。如需修改，请查看源文件 -->
+<!-- This README.md is automatically generated based on api.yaml and docs/*.md for easy reference on GitHub and NPM. If you need to modify it, please view the source file -->
 
-# UWorkflow 工作流程
+# UWorkflow
 
-- [示例](#示例)
+- [Example](#Example)
     - [Basic Usage](#Basic Usage)
-    - [添加左侧标签](#添加左侧标签)
-    - [复杂场景](#复杂场景)
+    - [Add Left Label](#Add left label)
+    - [Complex Scenes](#Complex scenes)
 - [UWorkflow API](#uworkflow-api)
     - [Props/Attrs](#propsattrs)
     - [Slots](#slots)
@@ -15,145 +15,144 @@
 - [UWorkflowBranch API](#uworkflowbranch-api)
     - [Slots](#slots-3)
 
-用于展示工作流程的图。
+Diagrams used to illustrate workflows.
 
 ## Example
 ### Basic Usage
 
-使用`<u-workflow>`、`<u-workflow-item>`、`<u-workflow-branch>`三个组件组织图的基本结构。
+Use the three components `<u-workflow>`, `<u-workflow-item>`, and `<u-workflow-branch>` to organize the basic structure of the chart.
 
-其中`<u-workflow-item>`包含 Cloud UI 中`<u-button>`的所有属性，这意味着你可以使用`href`和`to`等属性很方便地添加链接。
+The `<u-workflow-item>` contains all the properties of the `<u-button>` in the Cloud UI, which means you can easily add links using attributes such as `href` and `to`.
 
 ``` html { width: 600px }
 <u-workflow>
-    <u-workflow-item title="立项" tooltip="提示" status="done" href="https://kubevue.github.io" target="_blank"></u-workflow-item>
-    <u-workflow-item title="需求沟通" status="done" href="https://kubevue.github.io" target="_blank">
+    <u-workflow-item title="Project establishment" tooltip="Prompt" status="done" href="https://kubevue.github.io" target="_blank"></u-workflow-item>
+    <u-workflow-item title="Requirements communication" status="done" href="https://kubevue.github.io" target="_blank">
         <div slot="tooltip">
-            使用 Slot 的工具提示
+            Using Slot Tooltips
         </div>
     </u-workflow-item>
     <u-workflow-item>
         <u-workflow-branch>
-            <u-workflow-item title="机器上架" status="done"></u-workflow-item>
+            <u-workflow-item title="Machine on the Shelf" status="done"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="网络打通" status="done"></u-workflow-item>
+            <u-workflow-item title="Network Connection" status="done"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="服务版本适配" status="doing"></u-workflow-item>
+            <u-workflow-item title="Service Version Adaptation" status="doing"></u-workflow-item>
         </u-workflow-branch>
     </u-workflow-item>
-    <u-workflow-item title="交付验收" status="todo"></u-workflow-item>
+    <u-workflow-item title="Delivery and Acceptance" status="todo"></u-workflow-item>
 </u-workflow>
 ```
 
-### 添加左侧标签
+### Add Left Label
 
-在最外面一层的`<u-workflow-item>`上，添加`label`属性，可以显示左侧标签。
+Add the `label` attribute to the outermost `<u-workflow-item>` to display the label on the left.
 
 ``` html { width: 600px }
 <u-workflow>
-    <u-workflow-item label="步骤1" title="立项" tooltip="提示" status="done" href="https://kubevue.github.io" target="_blank"></u-workflow-item>
-    <u-workflow-item label="步骤2" title="需求沟通" status="done" href="https://kubevue.github.io" target="_blank">
+    <u-workflow-item label="Step 1" title="Project Establishment" tooltip="Prompt" status="done" href="https://kubevue.github.io" target="_blank"></u-workflow-item>
+    <u-workflow-item label="Step 2" title="Requirements Communication" status="done" href="https://kubevue.github.io" target="_blank">
         <div slot="tooltip">
-            使用 Slot 的工具提示
+            Using Slot Tooltips
         </div>
     </u-workflow-item>
-    <u-workflow-item label="步骤3">
+    <u-workflow-item label="Step 3">
         <u-workflow-branch>
-            <u-workflow-item title="机器上架" status="done"></u-workflow-item>
+            <u-workflow-item title="Machine on the Shelf" status="done"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="网络打通" status="done"></u-workflow-item>
+            <u-workflow-item title="Network Connection" status="done"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="服务版本适配" status="doing"></u-workflow-item>
+            <u-workflow-item title="Service Version Adaptation" status="doing"></u-workflow-item>
         </u-workflow-branch>
     </u-workflow-item>
-    <u-workflow-item label="步骤4" title="交付验收" status="todo"></u-workflow-item>
+    <u-workflow-item label="Step 4" title="Delivery and Acceptance" status="todo"></u-workflow-item>
 </u-workflow>
 ```
 
-### 复杂场景
+Complex scenes
 
-下面是一个结构更加复杂的示例。
+Here is an example with a more complex structure.
 
 ``` html
 <u-workflow label-size="small">
-    <u-workflow-item label="步骤1" title="立项" status="done"></u-workflow-item>
-    <u-workflow-item label="步骤2" title="需求A" status="done"></u-workflow-item>
-    <u-workflow-item label="步骤3" title="需求B" status="done"></u-workflow-item>
-    <u-workflow-item label="步骤4">
+    <u-workflow-item label="Step 1" title="Project Establishment" status="done"></u-workflow-item>
+    <u-workflow-item label="Step 2" title="Requirement A" status="done"></u-workflow-item>
+    <u-workflow-item label="Step 3" title="Requirement B" status="done"></u-workflow-item>
+    <u-workflow-item label="Step 4">
         <u-workflow-branch>
-            <u-workflow-item title="分支1-A" status="doing"></u-workflow-item>
-            <u-workflow-item title="分支1-未完成" status="todo"></u-workflow-item>
+            <u-workflow-item title="Branch 1-A" status="doing"></u-workflow-item>
+            <u-workflow-item title="Branch 1-Unfinished" status="todo"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="分支2" status="done"></u-workflow-item>
-            <u-workflow-item title="分支2" status="doing"></u-workflow-item>
-            <u-workflow-item title="分支2" status="todo"></u-workflow-item>
+            <u-workflow-item title="Branch 2" status="done"></u-workflow-item>
+            <u-workflow-item title="Branch 2" status="doing"></u-workflow-item>
+            <u-workflow-item title="Branch 2" status="todo"></u-workflow-item>
         </u-workflow-branch>
         <u-workflow-branch>
-            <u-workflow-item title="分支3" status="done"></u-workflow-item>
+            <u-workflow-item title="Branch 3" status="done"></u-workflow-item>
             <u-workflow-item>
                 <u-workflow-branch>
-                    <u-workflow-item title="分支3-1" status="done"></u-workflow-item>
-                    <u-workflow-item title="分支3-1" status="doing"></u-workflow-item>
-                    <u-workflow-item title="分支3-1" status="todo"></u-workflow-item>
+                    <u-workflow-item title="Branch 3-1" status="done"></u-workflow-item>
+                    <u-workflow-item title="Branch 3-1" status="doing"></u-workflow-item>
+                    <u-workflow-item title="Branch 3-1" status="todo"></u-workflow-item>
                 </u-workflow-branch>
                 <u-workflow-branch>
-                    <u-workflow-item title="分支3-2" status="done"></u-workflow-item>
-                    <u-workflow-item title="分支3-2" status="doing"></u-workflow-item>
+                    <u-workflow-item title="Branch 3-2" status="done"></u-workflow-item>
+                    <u-workflow-item title="Branch 3-2" status="doing"></u-workflow-item>
                 </u-workflow-branch>
             </u-workflow-item>
-            <u-workflow-item title="分支3-3" status="todo"></u-workflow-item>
+            <u-workflow-item title="Branch 3-3" status="todo"></u-workflow-item>
         </u-workflow-branch>
     </u-workflow-item>
-    <u-workflow-item title="交付验收"></u-workflow-item>
+    <u-workflow-item title="Delivery and Acceptance"></u-workflow-item>
 </u-workflow>
 ```
 
 ## UWorkflow API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| legend | Array\<{ label: string, color: string }\> |  | `'...'` | 图例。图例项中的样式与图节点的一致 |
-| label-size | enum | `'small'`, `'normal'`, `'large'` | `'normal'` | 左侧标签的宽度 |
+| legend | Array\<{ label: string, color: string }\> | | `'...'` | Legend. The style of legend items is consistent with that of graph nodes |
+| label-size | enum | `'small'`, `'normal'`, `'large'` | `'normal'` | Width of the left label |
 
 ### Slots
 
 #### (default)
 
-插入 `<u-workflow-item>`。
+Insert `<u-workflow-item>`.
 
 ## UWorkflowItem API
-### Props/Attrs
+Props/Attrs
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| title | string |  |  | 步骤标题 |
-| label | string |  |  | 左侧标签 |
-| href | string |  |  | 链接地址 |
-| target | string |  |  | （原生属性）。比如设置`_blank`，会打开新的空白页。 |
-| to | string, Location |  |  | 需要 vue-router，与`<router-link>`的`to`属性相同。可以是一个字符串或者是描述目标位置的对象。 |
-| replace | boolean |  | `false` | 需要 vue-router，与`<router-link>`的`replace`属性相同。如果为`true`，当点击时，会调用`router.replace()`而不是`router.push()`，于是导航后不会留下`history `记录。 |
-| append | boolean |  | `false` | 需要 vue-router，与`<router-link>`的`append`属性相同。如果为`true`，则在当前路径后追加`to`的路径。 |
+| title | string | | | Step title |
+| label | string | | | Left label |
+| href | string | | | Link address |
+| target | string | | | (native attribute). For example, if you set `_blank`, a new blank page will be opened. |
+| to | string, Location | | | Requires vue-router, same as `to` property of `<router-link>`. Can be a string or an object describing the target location. |
+| replace | boolean | | `false` | Requires vue-router, same as `replace` property of `<router-link>`. If `true`, when clicked, `router.replace()` will be called instead of `router.push()`, so no `history` record will be left after navigation. |
+| append | boolean | | `false` | Requires vue-router, same as the `append` property of `<router-link>`. If `true`, append the path of `to` after the current path. |
 
 ### Slots
 
 #### (default)
 
-插入 `<u-workflow-branch>`。
+Insert `<u-workflow-branch>`.
 
 #### tooltip
 
-自定义工具提示。
+Customize tooltips.
 
 ## UWorkflowBranch API
 ### Slots
 
 #### (default)
 
-插入 `<u-workflow-item>`。
-
+Insert `<u-workflow-item>`.

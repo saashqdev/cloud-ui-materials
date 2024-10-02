@@ -1,9 +1,9 @@
-### 在表单中显示
+### Display in Form
 
-``` vue
+```vue
 <template>
 <u-form>
-    <u-form-item label="代码段" layout="block" rules="required | minLength(10)">
+    <u-form-item label="Code Snippet" layout="block" rules="required | minLength(10)">
         <x-ace-editor v-model="value"></x-ace-editor>
     </u-form-item>
 </u-form>

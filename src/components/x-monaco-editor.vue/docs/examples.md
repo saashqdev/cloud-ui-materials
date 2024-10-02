@@ -1,8 +1,8 @@
 ### Basic Usage
 
-使用`v-model`或`:value.sync`双向绑定。
+Use `v-model` or `:value.sync` for two-way binding.
 
-``` vue
+```vue
 <template>
 <x-monaco-editor v-model="value" theme="vs-dark"></x-monaco-editor>
 </template>
@@ -17,12 +17,12 @@ export default {
 </script>
 ```
 
-### 设置主题
+### Set Theme
 
-``` vue
+```vue
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换主题：">
+    <u-form-item label="Switch Theme:">
         <u-select v-model="selectedTheme">
             <u-select-item v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</u-select-item>
         </u-select>
@@ -66,12 +66,12 @@ module Conway {
 </script>
 ```
 
-### 设置语言
+### Set Language
 
-``` vue
+```vue
 <template>
 <u-linear-layout direction="vertical">
-    <u-form-item label="切换语言：">
+    <u-form-item label="Switch Language:">
         <u-select v-model="selectedLang">
             <u-select-item v-for="lang in langs" :key="lang" :value="lang">{{ lang }}</u-select-item>
         </u-select>
@@ -119,7 +119,7 @@ module Conway {
 </script>
 ```
 
-### 目前存在的问题
+### Current Problems
 
-- [多个编辑器共享同一主题](https://github.com/microsoft/monaco-editor/issues/1289)
-- [多个编辑器共享 TypeScript Service](https://github.com/microsoft/monaco-editor/issues/262)
+- [Multiple Editors Sharing the Same Theme](https://github.com/microsoft/monaco-editor/issues/1289)
+- [Multiple Editors Share TypeScript Service](https://github.com/microsoft/monaco-editor/issues/262)

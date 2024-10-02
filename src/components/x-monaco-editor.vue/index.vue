@@ -43,7 +43,7 @@ export default {
             this.editor && this.monaco.editor.setModelLanguage(this.editor.getModel(), language);
         },
         theme(theme) {
-            // VSCode Monaco 全局只支持一套
+            // VSCode Monaco only supports one set globally
             this.monaco && this.monaco.editor.setTheme(theme);
         },
         readonly(readonly) {
