@@ -32,5 +32,5 @@ Ripple, inserted inside the element or component where the ripple needs to be ad
 
 | Prop/Attr | Type | Options | Default | Description |
 | --------- | ---- | ------- | ------- | ----------- |
-| color | enum | `'light'`, `'dark'` | `'light'` | ripple color |
+| color | enum | `'light'`, `'dark'` | `'light'` | Ripple color |
 
